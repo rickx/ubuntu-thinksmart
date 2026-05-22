@@ -70,9 +70,9 @@ sync
 reboot
 ```
 
-## Open Issue To Resolve Before Publication
+## Current Publication State
 
-The remaining open issue is not the absence of GPT data; it is finalizing the user-facing bootstrap artifact. The current safest prepared path is a smaller SSH-capable pmOS bootstrap image plus an on-device `sfdisk` rewrite. The older self-executing pmOS bootstrap path remains available for testing, but should not be treated as the default publication flow without hardware validation.
+The GPT side is no longer a publication blocker. The published first-time flashing flow is the smaller SSH-capable pmOS bootstrap image plus an on-device `sfdisk` rewrite. The older self-executing pmOS bootstrap path still exists for testing, but it remains an experimental fallback rather than the default documented flow.
 
 What is already solid:
 
@@ -80,10 +80,9 @@ What is already solid:
 - the staged `ubuntu_layout.sfdisk` file exists in this repo
 - the Ubuntu layout with `system` at `p24` and `persist` at `p27` is corroborated by `sfdisk` and prior partition notes
 - a prepared bootstrap image can carry `ubuntu_layout.sfdisk` and auto-run the GPT rewrite at boot without keyboard or SSH intervention
-- the repo now has a prepared generic SSH bootstrap artifact with saved WiFi profiles and SSH host keys stripped so a user-specific copy can be generated safely before flashing
+- the repo now has a published generic SSH bootstrap artifact with saved WiFi profiles and SSH host keys stripped so a user-specific copy can be generated safely before flashing
 
-What still needs one clean verification before publication:
+Remaining follow-up notes:
 
-- attach the generic sanitized SSH bootstrap image to a GitHub Release, then document the WiFi-injection command that produces the personalized flashing copy
 - only keep the unattended pmOS GPT-apply service as an experimental fallback until it is validated once on hardware
 - one final reconciliation note explaining why the saved `printgpt` text does not show the tail entries even though later partition views do

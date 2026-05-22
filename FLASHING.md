@@ -90,7 +90,7 @@ The alternative future path is:
 
 1. build or recover a small Ubuntu image that still fits the stock 1.5 GiB `system` partition
 2. run `sources/scripts/prepare-ubuntu-ssh-bootstrap-image.sh` to inject WiFi, enable SSH, and stage `apply-ubuntu-gpt.sh`
-3. flash that image with EDL
+3. run `python edl.py w system <your-bootstrap-image>.img`
 4. let it join WiFi automatically
 5. SSH in and run `sudo /usr/local/sbin/apply-ubuntu-gpt.sh`
 6. re-enter EDL and run `python edl.py w system ubuntu-qcom-msm8953.img`
