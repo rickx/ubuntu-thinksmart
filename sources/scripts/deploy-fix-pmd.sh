@@ -8,8 +8,6 @@
 set -e
 
 DEVICE_USER=user
-DEVICE_IP=192.168.0.85
-MODULE_SRC=/home/fleverato/tas5782m-src/snd-soc-tas5782m-dbg.ko
 MODULE_DEST=/lib/modules/6.19.5-msm8953/extra/snd-soc-tas5782m-dbg.ko
 
 echo "=== Installing module ==="

@@ -7,8 +7,16 @@ SCRIPT_DIR="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)"
 REPO_ROOT="$(CDPATH= cd -- "$SCRIPT_DIR/../.." && pwd)"
 DRIVER_DIR="$REPO_ROOT/sources/driver"
 PREBUILT_DIR="$REPO_ROOT/prebuilt"
-WSLSRC="/home/fleverato/tas5782m-src"
-KSRC="/home/fleverato/kernel-build-v619"
+WSLSRC="${WSLSRC:-$HOME/tas5782m-src}"
+KSRC="${KSRC:-$HOME/kernel-build-v619}"
+
+if [ ! -d "$KSRC" ]; then
+     echo "ERROR: kernel build tree not found: $KSRC" >&2
+     echo "Set KSRC to your prepared kernel build tree before running this script." >&2
+     exit 1
+fi
+
+mkdir -p "$WSLSRC"
 
 mkdir -p "$PREBUILT_DIR"
 

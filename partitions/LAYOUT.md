@@ -4,7 +4,7 @@ The Ubuntu image for this device does not fit into the stock Android `system` pa
 
 ## Verified Android Baseline
 
-From Lenovo's Android `rawprogram0.xml.bak`:
+In the stock Android layout:
 
 - `system` starts at sector `923648`
 - Android `system` size is `3145728` sectors = `1.5 GiB`
@@ -14,20 +14,20 @@ That is why repartitioning is mandatory: the Ubuntu image reuses the same `syste
 
 ## Current Ubuntu Layout Evidence
 
-The repo now includes staged GPT binary dumps for the Ubuntu-installed layout:
+The repo includes GPT binary dumps for the Ubuntu-installed layout:
 
-- `gpt_ubuntu_main.bin` — copied from `goodbackups/mmcblk0_gpt_primary.bin`
+- `gpt_ubuntu_main.bin`
 	- size: `17408` bytes
 	- sha256: `c62e6b310ff0550a7adff647babdcad69ecb264095d4af67f1061c10023d8682`
-- `gpt_ubuntu_backup.bin` — copied from `goodbackups/mmcblk0_gpt_secondary.bin`
+- `gpt_ubuntu_backup.bin`
 	- size: `16896` bytes
 	- sha256: `c87f1cd620d3ed08b001749c694409b9c231931e435a5abdb489d8170a43d873`
 
-These binaries are currently the best available reproduction artifact for the Ubuntu-installed GPT.
+These binaries are the byte-exact reproduction artifacts for the known-good Ubuntu-installed GPT.
 
 The repo also now includes a text restore file:
 
-- `ubuntu_layout.sfdisk` — copied from `goodbackups/mmcblk0.sfdisk`
+- `ubuntu_layout.sfdisk`
 
 This is the cleanest documented Linux-side way to rewrite the GPT from a running rescue/bootstrap system:
 
@@ -37,12 +37,12 @@ sync
 reboot
 ```
 
-Additional corroborating evidence comes from `goodbackups/mmcblk0.sfdisk` and `goodbackups/PARTITION_LAYOUT_2026-04-29.md`, which both show:
+The installed Ubuntu layout places:
 
 - `system` as partition `p24`, start sector `923648`, size `14280671`
 - `persist` as partition `p27`, start sector `15204319`, size `65536`
 
-The current `edl printgpt` capture is still useful, but it appears truncated in the saved log.
+Recorded `edl printgpt` output is also useful, even though one saved capture is truncated near the tail entries.
 
 Key points from the captured output:
 
@@ -69,20 +69,3 @@ sudo partprobe /dev/mmcblk0 || true
 sync
 reboot
 ```
-
-## Current Publication State
-
-The GPT side is no longer a publication blocker. The published first-time flashing flow is the smaller SSH-capable pmOS bootstrap image plus an on-device `sfdisk` rewrite. The older self-executing pmOS bootstrap path still exists for testing, but it remains an experimental fallback rather than the default documented flow.
-
-What is already solid:
-
-- the staged GPT binary dumps exist in this repo
-- the staged `ubuntu_layout.sfdisk` file exists in this repo
-- the Ubuntu layout with `system` at `p24` and `persist` at `p27` is corroborated by `sfdisk` and prior partition notes
-- a prepared bootstrap image can carry `ubuntu_layout.sfdisk` and auto-run the GPT rewrite at boot without keyboard or SSH intervention
-- the repo now has a published generic SSH bootstrap artifact with saved WiFi profiles and SSH host keys stripped so a user-specific copy can be generated safely before flashing
-
-Remaining follow-up notes:
-
-- only keep the unattended pmOS GPT-apply service as an experimental fallback until it is validated once on hardware
-- one final reconciliation note explaining why the saved `printgpt` text does not show the tail entries even though later partition views do

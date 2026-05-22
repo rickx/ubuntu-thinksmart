@@ -80,7 +80,7 @@ sound_card: sound@... {
 **Build:** `CC=clang-18` (KCFI mandatory — GCC builds fail silently at `do_one_initcall`)  
 **Auto-load:** `/etc/modules-load.d/audio-cd18781y.conf` → `snd_soc_tas5782m_dbg`
 
-**Source files (WSL `/home/fleverato/tas5782m-src/`, copied from [sources/driver/](sources/driver/)):**
+**Source files ([sources/driver/](sources/driver/)):**
 
 | File | Purpose |
 |------|---------|
@@ -181,11 +181,14 @@ The `0x25 = 0x18` write is **critical** — without it the chip stays in Sleep m
 #### Build Command
 
 ```bash
-# In WSL — MUST use CC=clang-18 (KCFI alignment with kernel)
+# In WSL or Linux — MUST use CC=clang-18 (KCFI alignment with kernel)
+export KSRC=/path/to/kernel-build-v619
+export WSLSRC=/path/to/tas5782m-src
+
 make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- CC=clang-18 \
      KBUILD_MODPOST_WARN=1 \
-     -C /home/fleverato/kernel-build-v619 \
-     M=/home/fleverato/tas5782m-src \
+  -C "$KSRC" \
+  M="$WSLSRC" \
      modules
 ```
 

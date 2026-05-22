@@ -7,8 +7,8 @@ This repo ships the TAS5782M driver source under `sources/driver/` and a prebuil
 - WSL or Linux build host
 - `clang-18`
 - `aarch64-linux-gnu-` cross toolchain
-- kernel build tree at `/home/fleverato/kernel-build-v619`
-- WSL staging directory at `/home/fleverato/tas5782m-src`
+- prepared kernel build tree for the target kernel (`KSRC`)
+- writable staging directory for the out-of-tree module (`WSLSRC`, defaults to `$HOME/tas5782m-src`)
 
 ## Why Clang-18 Is Mandatory
 
@@ -28,16 +28,20 @@ CC=clang-18
 
 ## Recommended Build Path
 
-From WSL or a Linux shell with the expected local paths available:
+From WSL or a Linux shell:
 
 ```bash
+export KSRC=/path/to/kernel-build-v619
+# optional; defaults to $HOME/tas5782m-src
+export WSLSRC=/path/to/tas5782m-src
+
 bash sources/scripts/build-wsl.sh
 ```
 
 That script:
 
-1. copies `sources/driver/` into `/home/fleverato/tas5782m-src`
-2. builds against `/home/fleverato/kernel-build-v619`
+1. copies `sources/driver/` into `$WSLSRC`
+2. builds against `$KSRC`
 3. writes the new debug module back to `prebuilt/`
 
 ## Manual Build
@@ -45,20 +49,24 @@ That script:
 If you prefer to do the same build steps yourself:
 
 ```bash
-cp sources/driver/* /home/fleverato/tas5782m-src/
+export KSRC=/path/to/kernel-build-v619
+export WSLSRC=/path/to/tas5782m-src
+
+mkdir -p "$WSLSRC"
+cp sources/driver/* "$WSLSRC"/
 
 make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- CC=clang-18 \
      KBUILD_MODPOST_WARN=1 \
-     -C /home/fleverato/kernel-build-v619 \
-     M=/home/fleverato/tas5782m-src \
+     -C "$KSRC" \
+     M="$WSLSRC" \
      modules
 ```
 
 Useful verification after build:
 
 ```bash
-sha256sum /home/fleverato/tas5782m-src/snd-soc-tas5782m-dbg.ko
-modinfo /home/fleverato/tas5782m-src/snd-soc-tas5782m-dbg.ko | grep -E 'vermagic|alias'
+sha256sum "$WSLSRC"/snd-soc-tas5782m-dbg.ko
+modinfo "$WSLSRC"/snd-soc-tas5782m-dbg.ko | grep -E 'vermagic|alias'
 ```
 
 ## Related Docs
