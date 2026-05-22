@@ -10,7 +10,7 @@ Only Qualcomm EDL should be used for flashing on this device. fastboot may appea
 - host with [bkerler/edl](https://github.com/bkerler/edl)
 - USB cable
 - [prebuilt/lk2nd.img](prebuilt/lk2nd.img)
-- generic bootstrap image `bootstrap-pmos-ssh-generic-qcom-msm8953.img`
+- generic bootstrap image `bootstrap-pmos-ssh-generic-qcom-msm8953.img` ([GitHub Release](https://github.com/rickx/ubuntu-thinksmart/releases/tag/bootstrap-2026-05-22), includes `.sha256`)
 - Ubuntu image `ubuntu-qcom-msm8953.img` ([MEGA download](https://mega.nz/file/Qn1SBS4Y#A449WO9ZHH9Pw2JtBwHXAW008tw4uUX2POrSnNHAs_A))
 - GPT layout artifacts from `partitions/`:
 	- `partitions/ubuntu_layout.sfdisk`
@@ -19,7 +19,7 @@ Only Qualcomm EDL should be used for flashing on this device. fastboot may appea
 
 ## Current Publication Caveat
 
-The official first-time flashing flow is now the smaller SSH-capable bootstrap image plus an on-device GPT rewrite with `sfdisk`. The current public-safe bootstrap base lives at `rootfs/bootstrap-pmos-ssh-generic-qcom-msm8953.img`; it was generated from `Felix_known_working/pmos-customized-rootfs.img` by `sources/scripts/prepare-pmos-ssh-bootstrap-image.sh` and includes:
+The official first-time flashing flow is now the smaller SSH-capable bootstrap image plus an on-device GPT rewrite with `sfdisk`. The current public-safe bootstrap base is published at [bootstrap-2026-05-22](https://github.com/rickx/ubuntu-thinksmart/releases/tag/bootstrap-2026-05-22); the local build copy lives at `rootfs/bootstrap-pmos-ssh-generic-qcom-msm8953.img`, was generated from `Felix_known_working/pmos-customized-rootfs.img` by `sources/scripts/prepare-pmos-ssh-bootstrap-image.sh`, and includes:
 
 - `/usr/local/sbin/apply-ubuntu-gpt.sh`
 - `/usr/local/sbin/bootstrap-auto-apply-ubuntu-gpt.sh`
@@ -104,9 +104,9 @@ The alternative future path is:
 
 ## Notes
 
-- the bootstrap image should be published as a GitHub Release asset rather than committed into git history
+- the bootstrap image is published as a GitHub Release asset at [bootstrap-2026-05-22](https://github.com/rickx/ubuntu-thinksmart/releases/tag/bootstrap-2026-05-22)
 - the Ubuntu image is too large for a normal GitHub release asset and is currently hosted on [MEGA](https://mega.nz/file/Qn1SBS4Y#A449WO9ZHH9Pw2JtBwHXAW008tw4uUX2POrSnNHAs_A)
-- the working copies under `rootfs/` are local staging artifacts until the bootstrap asset is attached to a GitHub Release
+- the working copies under `rootfs/` are local staging artifacts; use the GitHub Release asset and its matching `.sha256` for downloads
 - GPT background notes belong in [partitions/LAYOUT.md](partitions/LAYOUT.md)
 - the current public-safe bootstrap base is `rootfs/bootstrap-pmos-ssh-generic-qcom-msm8953.img`; the personalized bootstrap image should be generated locally with `sources/scripts/prepare-pmos-ssh-bootstrap-image.sh` before flashing
 - the separate small Ubuntu bootstrap route is still optional future work, not the current blocker
