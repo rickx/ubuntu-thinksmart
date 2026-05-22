@@ -1,0 +1,11 @@
+Repository licensing is still being finalized before publication.
+
+Current intended split:
+
+- `sources/driver/` and `sources/patches/`: GPL-2.0-only
+- userspace helper scripts and daemons under `sources/`: pending final confirmation
+- documentation: pending final confirmation
+
+Third-party reference material remains under its original license terms.
+
+Do not treat this file as final publication metadata yet.

@@ -1,0 +1,12 @@
+rootfs/*.img
+rootfs/*.img.gz
+rootfs/*.img.xz
+rootfs/*.img.zst
+rootfs/*.img.*
+
+*.log
+*.tmp
+*.bak
+
+__pycache__/
+*.pyc

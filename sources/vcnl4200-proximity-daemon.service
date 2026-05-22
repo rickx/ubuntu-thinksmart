@@ -1,0 +1,17 @@
+[Unit]
+Description=VCNL4200 Proximity Sensor Daemon (standalone)
+Documentation=file:///home/user/proximity-daemon.md
+After=network.target graphical-session-pre.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /usr/local/bin/vcnl4200-proximity-daemon.py
+Restart=on-failure
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+Environment="DISPLAY=:0"
+Environment="XAUTHORITY=/tmp/.Xauth"
+
+[Install]
+WantedBy=graphical-session.target

@@ -1,0 +1,10 @@
+vendor_blobs/etc/camera/camera_config.xml
+vendor_blobs/etc/camera/s5kc505a_chromatix.xml
+vendor_blobs/lib/libmmcamera_s5kc505a.so
+vendor_blobs/lib/libchromatix_s5kc505a_common.so
+vendor_blobs/lib/libchromatix_s5kc505a_default_preview_3a.so
+vendor_blobs/lib/libchromatix_s5kc505a_default_video_3a.so
+vendor_blobs/lib/libchromatix_s5kc505a_preview.so
+vendor_blobs/lib/libchromatix_s5kc505a_snapshot.so
+vendor_blobs/lib/hw/camera.msm8953.so
+vendor_blobs/bin/mm-qcamera-daemon

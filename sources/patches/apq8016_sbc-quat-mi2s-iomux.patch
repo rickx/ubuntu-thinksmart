@@ -1,0 +1,20 @@
+--- a/sound/soc/qcom/apq8016_sbc.c
++++ b/sound/soc/qcom/apq8016_sbc.c
+@@ -82,6 +82,16 @@ static int apq8016_dai_init(struct snd_soc_pcm_runtime *rtd, int mi2s)
+ 	case MI2S_QUATERNARY:
+ 		/* Configure the Quat MI2S to TLMM */
+ 		writel(readl(pdata->mic_iomux) | MIC_CTRL_QUA_WS_SLAVE_SEL_10 |
+ 			MIC_CTRL_TLMM_SCLK_EN,
+ 			pdata->mic_iomux);
++		/*
++		 * On MSM8953 boards like the Lenovo CD-18781Y, QUAT MI2S output
++		 * is routed through the SEC MI2S physical pins (GPIO 135-138).
++		 * The spkr_iomux must be configured to enable these pins, same
++		 * as the SECONDARY case.
++		 */
++		value = readl(pdata->spkr_iomux) &
++			~(SPKR_CTL_TLMM_WS_OUT_SEL_MASK | SPKR_CTL_TLMM_WS_EN_SEL_MASK);
++		writel(value | SPKR_CTL_TLMM_MCLK_EN | SPKR_CTL_TLMM_SCLK_EN |
++			SPKR_CTL_TLMM_DATA1_EN | SPKR_CTL_TLMM_WS_OUT_SEL_SEC |
++			SPKR_CTL_TLMM_WS_EN_SEL_SEC, pdata->spkr_iomux);
+ 		break;

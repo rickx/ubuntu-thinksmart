@@ -1,0 +1,9 @@
+#!/sbin/openrc-run
+
+description="Automatically rewrite Ubuntu GPT and power off"
+command="/usr/local/sbin/bootstrap-auto-apply-ubuntu-gpt.sh"
+command_background=false
+
+depend() {
+    need localmount
+}
