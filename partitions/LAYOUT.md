@@ -80,7 +80,7 @@ What is already solid:
 - the staged `ubuntu_layout.sfdisk` file exists in this repo
 - the Ubuntu layout with `system` at `p24` and `persist` at `p27` is corroborated by `sfdisk` and prior partition notes
 - a prepared bootstrap image can carry `ubuntu_layout.sfdisk` and auto-run the GPT rewrite at boot without keyboard or SSH intervention
-- the repo now has a prepared generic SSH bootstrap artifact derived from `Felix_known_working/pmos-customized-rootfs.img`, with saved WiFi profiles and SSH host keys stripped so a user-specific copy can be generated safely before flashing
+- the repo now has a prepared generic SSH bootstrap artifact with saved WiFi profiles and SSH host keys stripped so a user-specific copy can be generated safely before flashing
 
 What still needs one clean verification before publication:
 

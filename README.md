@@ -62,21 +62,20 @@ See [FLASHING.md](FLASHING.md) for the full stock-Android to Ubuntu flow.
 Short version:
 
 1. Enter Qualcomm EDL mode.
-2. Flash `prebuilt/lk2nd.img` to the `boot` partition.
-3. Prepare a personalized bootstrap image from `bootstrap-pmos-ssh-generic-qcom-msm8953.img` with `sources/scripts/prepare-pmos-ssh-bootstrap-image.sh --ssid ... --psk ... --login-password thinksmart`.
-4. Flash that personalized bootstrap image to the `system` partition.
-5. Let it join WiFi automatically, then SSH in as `pmos` and run `sudo /usr/local/sbin/apply-ubuntu-gpt.sh`.
+2. Flash `lk2nd` with `python edl.py w boot prebuilt/lk2nd.img`.
+3. Build a personalized bootstrap image with `sources/scripts/prepare-pmos-ssh-bootstrap-image.sh` using your WiFi SSID and password.
+4. Flash the personalized bootstrap image with `python edl.py w system rootfs/bootstrap-pmos-ssh-personalized-qcom-msm8953.img`.
+5. Wait for it to join WiFi, then SSH in as `pmos` / `thinksmart` and run `sudo /usr/local/sbin/apply-ubuntu-gpt.sh`.
 6. Re-enter EDL.
-7. Flash `ubuntu-qcom-msm8953.img` to the `system` partition.
+7. Flash the Ubuntu image with `python edl.py w system ubuntu-qcom-msm8953.img`.
 8. Boot the device and connect to WiFi from the touchscreen before attempting SSH.
 
 Current publication caveats:
 
 - the first-time flashing flow still requires a smaller bootstrap image plus on-device `sfdisk` GPT rewrite
 - the current public-safe bootstrap base is `rootfs/bootstrap-pmos-ssh-generic-qcom-msm8953.img`, validated with no saved WiFi profiles, no SSH host keys, and the GPT helper payload staged
-- the older `rootfs/bootstrap-pmos-ssh-qcom-msm8953.img` remains a private local staging image only; it preserves a saved WiFi profile from the Felix base and must not be published
 - the unattended self-executing bootstrap path exists, but it should not be the default published flow until it is tested once on hardware
-- `sources/scripts/prepare-pmos-ssh-bootstrap-image.sh` can take the Felix base or the generic release asset, strip private state, optionally inject WiFi credentials, and keep boot-time GPT auto-run disabled by default
+- `sources/scripts/prepare-pmos-ssh-bootstrap-image.sh` can take the generic release asset or another suitable pmOS base, strip private state, optionally inject WiFi credentials, and keep boot-time GPT auto-run disabled by default
 - the bootstrap image is published as a GitHub Release asset at [bootstrap-2026-05-22](https://github.com/rickx/ubuntu-thinksmart/releases/tag/bootstrap-2026-05-22); the sanitized Ubuntu release image is available at [MEGA](https://mega.nz/file/UnsAjSyK#HmUBaxrxxT-Uej4K7eL1vsyYq0l6NygX_w3D5G6hnDo)
 - the bootstrap login should be `pmos` / `thinksmart`, hostname `thinksmarter`; the final Ubuntu image target access remains `ubuntu` / `thinksmart`
 
@@ -95,7 +94,7 @@ These systemd services are required for correct operation and are pre-installed 
 
 | Service | Purpose |
 |---------|---------|
-| `msm-firmware-loader.service` | Mounts eMMC partitions (modem, DSP, persist) and creates firmware symlinks in `/lib/firmware/` |
+| `msm-firmware-loader.service` | Mounts the `modem`, `dsp`, and `persist` partitions, then exposes firmware from `modem` and `dsp` via symlinks under `/lib/firmware/` |
 | `adsp-start.service` | Starts the Qualcomm ADSP remoteproc after firmware is available |
 | `qup-i2c-pinctrl-fix.service` | Restores GPIO2/3 mux to I2C mode after PM autosuspend resets them (required for TAS5782M I2C) |
 | `alsa-restore.service` | Restores ALSA mixer state (volume) at boot |
