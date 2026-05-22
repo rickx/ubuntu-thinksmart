@@ -94,7 +94,6 @@ These systemd services are required for correct operation and are pre-installed 
 
 | Service | Purpose |
 |---------|---------|
-| `msm-firmware-loader.service` | Mounts the `modem`, `dsp`, and `persist` partitions, then exposes firmware from `modem` and `dsp` via symlinks under `/lib/firmware/` |
 | `adsp-start.service` | Starts the Qualcomm ADSP remoteproc after firmware is available |
 | `qup-i2c-pinctrl-fix.service` | Restores GPIO2/3 mux to I2C mode after PM autosuspend resets them (required for TAS5782M I2C) |
 | `alsa-restore.service` | Restores ALSA mixer state (volume) at boot |
