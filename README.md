@@ -67,7 +67,7 @@ Short version:
 4. Flash the personalized bootstrap image with `python edl.py w system rootfs/bootstrap-pmos-ssh-personalized-qcom-msm8953.img`.
 5. Wait for it to join WiFi, then SSH in as `pmos` / `thinksmart` and run `sudo /usr/local/sbin/apply-ubuntu-gpt.sh`.
 6. Re-enter EDL.
-7. Flash the Ubuntu image with `python edl.py w system ubuntu-qcom-msm8953.img`.
+7. Run `python edl.py w system ubuntu-qcom-msm8953.img`.
 8. Boot the device and connect to WiFi from the touchscreen before attempting SSH.
 
 Current publication caveats:

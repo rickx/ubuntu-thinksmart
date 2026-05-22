@@ -180,11 +180,11 @@ Ubuntu SSH bootstrap image ready.
 
 Expected flow:
 
-    1. Flash this image to the system partition over EDL.
+    1. Run: python edl.py w system <your-bootstrap-image>.img
     2. Boot it and wait for WiFi association.
     3. SSH to $LOGIN_USER@$HOSTNAME (or the DHCP address).
     4. Run sudo /usr/local/sbin/apply-ubuntu-gpt.sh
-    5. Re-enter EDL and flash ubuntu-qcom-msm8953.img.
+    5. Re-enter EDL and run: python edl.py w system ubuntu-qcom-msm8953.img
 EOF
 
 sudo install -d -m 700 "$MOUNT_DIR/etc/NetworkManager/system-connections"

@@ -21,7 +21,7 @@ log "[bootstrap] Using /usr/local/share/bootstrap/ubuntu_layout.sfdisk on /dev/m
 
 if /usr/local/sbin/apply-ubuntu-gpt.sh /usr/local/share/bootstrap/ubuntu_layout.sfdisk /dev/mmcblk0 >> "$RESULT_FILE" 2>&1; then
     log "[bootstrap] GPT rewrite completed successfully"
-    log "[bootstrap] Powering off in 10 seconds. Re-enter EDL and flash the full Ubuntu image."
+    log "[bootstrap] Powering off in 10 seconds. Re-enter EDL, then run: python edl.py w system ubuntu-qcom-msm8953.img"
     sleep 10
     power_off
 else

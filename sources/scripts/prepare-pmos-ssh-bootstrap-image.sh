@@ -243,11 +243,11 @@ pmOS SSH bootstrap image ready.
 
 Expected flow:
 
-    1. Flash this image to the system partition over EDL.
+    1. Run: python edl.py w system <your-bootstrap-image>.img
     2. If a WiFi profile was injected, wait for association and SSH to $LOGIN_USER@$HOSTNAME.
     3. If no WiFi profile was injected, prepare one before flashing or configure networking locally on first boot.
     4. Run sudo /usr/local/sbin/apply-ubuntu-gpt.sh
-    5. Re-enter EDL and flash ubuntu-qcom-msm8953.img.
+    5. Re-enter EDL and run: python edl.py w system ubuntu-qcom-msm8953.img
 
 Default build safety:
 

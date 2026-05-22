@@ -53,7 +53,7 @@ python edl.py w system rootfs/bootstrap-pmos-ssh-personalized-qcom-msm8953.img
 # Stage 2: let the bootstrap image join WiFi, SSH in, and run:
 #   sudo /usr/local/sbin/apply-ubuntu-gpt.sh
 
-# Stage 3: flash the full Ubuntu image after GPT rewrite
+# Stage 3: after GPT rewrite, run this command
 python edl.py w system ubuntu-qcom-msm8953.img
 ```
 
@@ -69,7 +69,7 @@ That uses the staged `/usr/local/share/bootstrap/ubuntu_layout.sfdisk` to rewrit
 
 1. power the device off or reboot it
 2. re-enter EDL
-3. flash the Ubuntu image with `python edl.py w system ubuntu-qcom-msm8953.img`
+3. run `python edl.py w system ubuntu-qcom-msm8953.img`
 
 ## Experimental Auto Step
 
@@ -80,7 +80,7 @@ The repo still contains an experimental unattended bootstrap path. If you intent
 2. rewrites the outer eMMC GPT using `/usr/local/share/bootstrap/ubuntu_layout.sfdisk`
 3. powers the device off
 
-No keyboard, SSH session, or other user intervention is required for the repartition step. Once the device powers off, re-enter EDL and flash the full Ubuntu image.
+No keyboard, SSH session, or other user intervention is required for the repartition step. Once the device powers off, re-enter EDL and run `python edl.py w system ubuntu-qcom-msm8953.img`.
 
 Do not ship or recommend this as the default first-time flashing path until it has been validated once on hardware.
 
@@ -93,7 +93,7 @@ The alternative future path is:
 3. flash that image with EDL
 4. let it join WiFi automatically
 5. SSH in and run `sudo /usr/local/sbin/apply-ubuntu-gpt.sh`
-6. re-enter EDL and flash the full Ubuntu image
+6. re-enter EDL and run `python edl.py w system ubuntu-qcom-msm8953.img`
 
 ## First Boot
 

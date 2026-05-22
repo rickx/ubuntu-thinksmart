@@ -97,7 +97,7 @@ What to expect:
     1. Boot the image.
     2. Only proceed with unattended mode after one real-device validation.
     3. Re-enter EDL after the GPT rewrite step completes.
-    4. Flash ubuntu-qcom-msm8953.img to the system partition.
+    4. Run: python edl.py w system ubuntu-qcom-msm8953.img
 
 Do not publish the unattended mode as the default flow until it has been tested once on hardware.
 EOF
