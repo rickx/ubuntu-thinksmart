@@ -116,6 +116,29 @@ Current live-device state check:
 - direct reads of `0x0000` and `0x300a` both failed with `No such device or address`
 - this is consistent with earlier findings that the sensor only answers during a powered probe window; the current system state leaves it unpowered
 
+## Downstream DTS Power-Enable Evidence
+
+Lenovo's downstream `apq8053-lite-dragon-v2.0.dtsi` adds two extra GPIO entries to both `&eeprom0` and `&camera0`:
+
+- GPIO `118` labeled `CAM_VDIG`
+- GPIO `119` labeled `CAM_VANA`
+
+That matters because it is direct board-level evidence that the camera rails are not purely passive PMIC supplies in the shipping downstream design. At least one Lenovo board DTS variant explicitly gates the camera digital and analog rails with GPIO-controlled enables.
+
+This is the cleanest explanation so far for the current Ubuntu-side behavior where bus `3` does not ACK `0x37` during a passive read: the sensor can remain fully unpowered until those rail enables are asserted as part of the downstream camera power sequence.
+
+Current working interpretation:
+
+- candidate digital-rail enable GPIO: `118`
+- candidate analog-rail enable GPIO: `119`
+- these are strong bring-up candidates for first mainline probe attempts
+
+Important boundary:
+
+- the downstream instance naming is messy; the useful override is attached to `&eeprom0` and `&camera0`, not to a cleanly named `front` sensor node
+- treat this as strong rail-enable evidence, not yet as proof that every downstream camera index maps 1:1 to the active S5KC505A instance
+- the GPIO evidence is stronger than the exact downstream regulator-wrapper naming or any `regulator-always-on` policy
+
 ## Active Exposure Register Writes
 
 The Thumb disassembly of `s5kc505a_fill_exposure_array` shows that the active path writes these register groups:

@@ -61,9 +61,12 @@ Current working assumptions for a first implementation:
 - clock: 19.2 MHz external clock
 - reset GPIO: 40, active-low at board level
 - power-down GPIO: 39, active-high at board level
+- candidate rail-enable GPIOs: `118` for VDIG and `119` for VANA from Lenovo's downstream `apq8053-lite-dragon-v2.0.dtsi`
 - CSI: `CSIDCore=0`, `LaneMask=0x7`, `LaneAssign=0x4320` from `camera_config.xml`
 
 The `16-bit address + 8-bit value` assumption is supported by both the live chip-ID reads and the vendor exposure writer, which emits high and low bytes to consecutive addresses.
+
+The current board-power working assumption is that first bring-up will likely need both the ordinary camera supplies and explicit board GPIO enables for the digital and analog rails.
 
 ## Minimum Viable Driver
 
@@ -79,6 +82,21 @@ The first useful version should do only this:
 6. exposure and gain register writes using the vendor-derived register targets
 
 If Phase 1 probes and can stream a raw test frame, the driver is already materially useful.
+
+## Conservative First Probe Order
+
+For the first Linux driver draft, use a conservative detect sequence instead of assuming the sensor is already powered:
+
+1. request clock, regulators, reset GPIO, power-down GPIO, and candidate rail-enable GPIOs
+2. drive reset asserted and keep power-down in its inactive-for-probe blocking state
+3. enable the camera supplies, then assert candidate VDIG/VANA enables on GPIO `118` and GPIO `119`
+4. start the `19.2 MHz` external clock
+5. release power-down, then release reset
+6. wait a short settle delay and try `0x300a/0x300b`
+7. wait once more, then read the canonical ID at `0x0000/0x0001`, retrying once before giving up
+8. treat `0x300a/0x300b = 0x5203` only as corroboration; require `0x0000/0x0001 = 0x5034` for a successful detect
+
+This sequence is still a board-level working hypothesis, not yet a proven hardware trace. The important point is that a passive I2C detect is no longer a credible probe model for this sensor on this board.
 
 ## Known Register Targets
 
@@ -105,8 +123,8 @@ These are the first control hooks that should exist in the driver, even if they 
 
 Still missing in explicit form:
 
-- a readable standalone mode table
-- a readable standalone init sequence
+- a fully decoded standalone mode table
+- a fully decoded standalone init sequence
 - a dedicated EEPROM module for S5KC505A
 - a confirmed Bayer order
 
@@ -142,7 +160,8 @@ Before or during the first code draft, keep digging on these points:
 1. decode the `sensor_open_lib` descriptor enough to recover mode-table pointers
 2. mine `camera.msm8953.so` or related blobs for how the HAL selects mode index `0` versus `1` for the duplicated snapshot/ZSL family
 3. confirm Bayer order from vendor metadata or from a first captured raw frame
-4. locate any stream-on or stream-off registers in the vendor blob or by differential tracing on hardware
+4. validate the candidate GPIO `118` / GPIO `119` rail-enable path on hardware and pin it into the board DT cleanly
+5. validate the current stream-on or stream-off helper candidates on hardware or by broader blob cross-check
 
 ## Practical Conclusion
 
