@@ -47,7 +47,7 @@
 - A Windows or Linux host with [edl](https://github.com/bkerler/edl) installed
 - USB-A to USB-C cable (device side is USB-C)
 - The generic bootstrap image `bootstrap-pmos-ssh-generic-qcom-msm8953.img` ([GitHub Release](https://github.com/rickx/ubuntu-thinksmart/releases/tag/bootstrap-2026-05-22); includes matching `.sha256`)
-- The Ubuntu image `ubuntu-qcom-msm8953.img` ([MEGA download](https://mega.nz/file/UnsAjSyK#HmUBaxrxxT-Uej4K7eL1vsyYq0l6NygX_w3D5G6hnDo); sanitized local publish copy is under `rootfs/`)
+- The Ubuntu image `ubuntu-qcom-msm8953.img` ([MEGA download](https://mega.nz/file/UnsAjSyK#HmUBaxrxxT-Uej4K7eL1vsyYq0l6NygX_w3D5G6hnDo))
 - `prebuilt/lk2nd.img`
 - The GPT layout file in `partitions/ubuntu_layout.sfdisk`
 
@@ -64,20 +64,21 @@ Short version:
 1. Enter Qualcomm EDL mode.
 2. Flash `lk2nd` with `python edl.py w boot prebuilt/lk2nd.img`.
 3. Build a personalized bootstrap image with `sources/scripts/prepare-pmos-ssh-bootstrap-image.sh` using your WiFi SSID and password.
-4. Flash the personalized bootstrap image with `python edl.py w system rootfs/bootstrap-pmos-ssh-personalized-qcom-msm8953.img`.
+4. Flash the personalized bootstrap image with `python edl.py w system <your-personalized-bootstrap>.img`.
 5. Wait for it to join WiFi, then SSH in as `pmos` / `thinksmart` and run `sudo /usr/local/sbin/apply-ubuntu-gpt.sh`.
 6. Re-enter EDL.
 7. Run `python edl.py w system ubuntu-qcom-msm8953.img`.
 8. Boot the device and connect to WiFi from the touchscreen before attempting SSH.
 
-Current publication caveats:
+First-time installation uses a temporary SSH-capable bootstrap image so the GPT can be rewritten from the device before flashing the final Ubuntu image.
 
-- the first-time flashing flow still requires a smaller bootstrap image plus on-device `sfdisk` GPT rewrite
-- the current public-safe bootstrap base is `rootfs/bootstrap-pmos-ssh-generic-qcom-msm8953.img`, validated with no saved WiFi profiles, no SSH host keys, and the GPT helper payload staged
-- the unattended self-executing bootstrap path exists, but it should not be the default published flow until it is tested once on hardware
-- `sources/scripts/prepare-pmos-ssh-bootstrap-image.sh` can take the generic release asset or another suitable pmOS base, strip private state, optionally inject WiFi credentials, and keep boot-time GPT auto-run disabled by default
-- the bootstrap image is published as a GitHub Release asset at [bootstrap-2026-05-22](https://github.com/rickx/ubuntu-thinksmart/releases/tag/bootstrap-2026-05-22); the sanitized Ubuntu release image is available at [MEGA](https://mega.nz/file/UnsAjSyK#HmUBaxrxxT-Uej4K7eL1vsyYq0l6NygX_w3D5G6hnDo)
-- the bootstrap login should be `pmos` / `thinksmart`, hostname `thinksmarter`; the final Ubuntu image target access remains `ubuntu` / `thinksmart`
+Useful links and defaults:
+
+- bootstrap image release asset: [bootstrap-2026-05-22](https://github.com/rickx/ubuntu-thinksmart/releases/tag/bootstrap-2026-05-22)
+- final Ubuntu image: [MEGA download](https://mega.nz/file/UnsAjSyK#HmUBaxrxxT-Uej4K7eL1vsyYq0l6NygX_w3D5G6hnDo)
+- create a personalized bootstrap image with `sources/scripts/prepare-pmos-ssh-bootstrap-image.sh`
+- bootstrap login: `pmos` / `thinksmart`, hostname `thinksmarter`
+- final Ubuntu login: `ubuntu` / `thinksmart`
 
 ## License
 
@@ -283,7 +284,6 @@ FINAL/
 │       ├── analysis/
 │       ├── inventories/
 │       └── kernel_references/
-├── rootfs/                     ← local staging images, not intended for git publication
 └── sources/
     ├── driver/                 ← TAS5782M driver source + debug wrappers
     ├── scripts/                ← build and deploy helper scripts

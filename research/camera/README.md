@@ -16,7 +16,7 @@ This directory is the public-safe camera subset for the `ubuntu-thinksmart` repo
 - reverse-engineering notes in `analysis/s5kc505a-reverse-notes.md`
 - supporting public-safe inventories in `inventories/`
 
-The underlying analysis files here are in sync with the current local research tree. The public repo is not missing newer reverse-engineering notes; it only omits proprietary inputs and local-only staging material.
+The analysis published here reflects the current reverse-engineering results. The repo omits only proprietary inputs and bulk artifact dumps that are not suitable for publication.
 
 ## Key Findings So Far
 
@@ -32,6 +32,6 @@ See `analysis/s5kc505a-reverse-notes.md` for the function-level reasoning behind
 
 The proprietary Android vendor camera blobs used during reverse engineering are not copied into this repo by default.
 
-Those binaries remain local research inputs outside the publication tree unless there is an explicit compliance decision to publish them.
+Those binaries are not included in this repo.
 
-The full extracted vendor payload inventory also stays local for the same reason. The public repo keeps only the narrower public-safe inventories that help driver work directly.
+The repo keeps only the narrower public-safe inventories that help driver work directly.
