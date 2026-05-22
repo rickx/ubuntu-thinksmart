@@ -47,7 +47,7 @@
 - A Windows or Linux host with [edl](https://github.com/bkerler/edl) installed
 - USB-A to USB-C cable (device side is USB-C)
 - The generic bootstrap image `bootstrap-pmos-ssh-generic-qcom-msm8953.img` ([GitHub Release](https://github.com/rickx/ubuntu-thinksmart/releases/tag/bootstrap-2026-05-22); includes matching `.sha256`)
-- The Ubuntu image `ubuntu-qcom-msm8953.img` (sanitized local publish copy is under `rootfs/`; refreshed external download URL pending re-upload)
+- The Ubuntu image `ubuntu-qcom-msm8953.img` ([MEGA download](https://mega.nz/file/UnsAjSyK#HmUBaxrxxT-Uej4K7eL1vsyYq0l6NygX_w3D5G6hnDo); sanitized local publish copy is under `rootfs/`)
 - `prebuilt/lk2nd.img`
 - The GPT layout file in `partitions/ubuntu_layout.sfdisk`
 
@@ -77,7 +77,7 @@ Current publication caveats:
 - the older `rootfs/bootstrap-pmos-ssh-qcom-msm8953.img` remains a private local staging image only; it preserves a saved WiFi profile from the Felix base and must not be published
 - the unattended self-executing bootstrap path exists, but it should not be the default published flow until it is tested once on hardware
 - `sources/scripts/prepare-pmos-ssh-bootstrap-image.sh` can take the Felix base or the generic release asset, strip private state, optionally inject WiFi credentials, and keep boot-time GPT auto-run disabled by default
-- the bootstrap image is published as a GitHub Release asset at [bootstrap-2026-05-22](https://github.com/rickx/ubuntu-thinksmart/releases/tag/bootstrap-2026-05-22); the Ubuntu release image was sanitized locally and needs a refreshed external upload URL before this doc can point at it again
+- the bootstrap image is published as a GitHub Release asset at [bootstrap-2026-05-22](https://github.com/rickx/ubuntu-thinksmart/releases/tag/bootstrap-2026-05-22); the sanitized Ubuntu release image is available at [MEGA](https://mega.nz/file/UnsAjSyK#HmUBaxrxxT-Uej4K7eL1vsyYq0l6NygX_w3D5G6hnDo)
 - the bootstrap login should be `pmos` / `thinksmart`, hostname `thinksmarter`; the final Ubuntu image target access remains `ubuntu` / `thinksmart`
 
 ## License
