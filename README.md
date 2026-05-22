@@ -267,6 +267,7 @@ eMMC
 ```
 FINAL/
 ├── README.md                   ← repository overview
+├── REPO_LOG.md                 ← short publication history and non-obvious repo notes
 ├── AUDIO.md                    ← detailed audio setup and driver documentation
 ├── BUILDING.md                 ← module build workflow
 ├── FLASHING.md                 ← EDL + GPT + image flashing guide
