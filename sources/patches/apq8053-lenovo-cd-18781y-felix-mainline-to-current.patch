@@ -1,0 +1,412 @@
+--- a/apq8053-lenovo-cd-18781y-felix-mainline.dts
++++ b/apq8053-lenovo-cd-18781y-current.dts
+@@ -10,7 +10,7 @@
+ #include "pmi8950.dtsi"
+ 
+ /delete-node/ &cont_splash_mem;
+-/* Remove modem related nodes, device doesn't have a modem
++/* Remove modem related nodes as the device doesn't have a modem
+  * This frees up about 116MB of memory
+  */
+ /delete-node/ &mpss_mem;
+@@ -57,6 +57,11 @@
+ 			label = "Volume Up";
+ 			gpios = <&tlmm 85 GPIO_ACTIVE_LOW>;
+ 			linux,code = <KEY_VOLUMEUP>;
++			/* The device only has a Volume Up and a Volume Down key.
++			 * We define them as a wakeup-source, so the user can
++			 * use them to wake the device.
++			 */
++			wakeup-source;
+ 		};
+ 	};
+ 
+@@ -90,7 +95,6 @@
+ 			pinctrl-names = "default";
+ 		};
+ 
+-		/* Do not enable! Will burn the sensor's IR LED */
+ 		light-sensor@51 {
+ 			compatible = "vishay,vcnl4200";
+ 			reg = <0x51>;
+@@ -102,6 +106,12 @@
+ 			pinctrl-0 = <&alsp_int_default>;
+ 			pinctrl-names = "default";
+ 
++			/*
++			 * WARNING: Do not enable for now!
++			 * There's a chance that this can burn out the sensor's IR LED.
++			 * The sensor turns on the IR LED at high power (so that it
++			 * gets noticeably warm) and never turns it off.
++			 */
+ 			status = "disabled";
+ 		};
+ 	};
+@@ -137,20 +147,6 @@
+ 		enable-active-high;
+ 	};
+ 
+-	/* USB-OTG hack
+-	 * Pull B8 to GND on the USB-C connector for USB ID
+-	 * Default when used with regular (non-shorted) cable:
+-	 * - GPIO_ACTIVE_LOW  = USB host mode
+-	 * - GPIO_ACTIVE_HIGH = USB device mode
+-	 * Conflicts with use of pins as UART.
+-	 */
+-	usb_id: usb-id {
+-		compatible = "linux,extcon-usb-gpio";
+-		id-gpios = <&tlmm 5 GPIO_ACTIVE_HIGH>;
+-		pinctrl-0 = <&usb_id_default>;
+-		pinctrl-names = "default";
+-	};
+-
+ 	vph_pwr: vph-pwr-regulator {
+ 		compatible = "regulator-fixed";
+ 		regulator-name = "vph_pwr";
+@@ -166,28 +162,6 @@
+ 		enable-active-high;
+ 		vin-supply = <&vph_pwr>;
+ 	};
+-/*
+-	vreg_cam_front_vana: vreg-cam-front-vana {
+-		compatible = "regulator-fixed";
+-		regulator-name = "vreg_cam_front_vana";
+-		regulator-max-microvolt = <2800000>;
+-		regulator-min-microvolt = <2800000>;
+-		enable-active-high;
+-		vin-supply = <&pm8953_l22>;
+-		gpio = <&tlmm 119 GPIO_ACTIVE_HIGH>;
+-		regulator-always-on;
+-	};
+-
+-	vreg_cam_front_vdig: vreg-cam-front-vdig {
+-		compatible = "regulator-fixed";
+-		regulator-name = "vreg_cam_front_vdig";
+-		regulator-max-microvolt = <1050000>;
+-		regulator-min-microvolt = <1050000>;
+-		enable-active-high;
+-		gpio = <&tlmm 118 GPIO_ACTIVE_HIGH>;
+-		regulator-always-on;
+-	};
+-	*/
+ 
+ 	/*
+ 	 * This ensures the WLAN SDIO card is reset before probing
+@@ -200,60 +174,12 @@
+ 		post-power-on-delay-ms = <100>;
+ 	};
+ };
+-/*
+-&camss {
+-	status = "okay";
+-	vdda-supply = <&pm8953_s3>;
+-
+-	ports {
+-		port@2 {
+-			reg = <2>;
+-			csiphy2_ep: endpoint {
+-				clock-lanes = <7>;
+-				data-lanes = <0 1 2 3>;
+-				remote-endpoint = <&front_cam_ep>;
+-			};
+-		};
+-	};
+-
+-};
+-	*/
+-
+-&cci {
+-	pinctrl-names = "default";
+-	pinctrl-0 = <&cci0_default>,
+-		    <&cci1_default>,
+-		    <&camss_mclk0_default>,
+-		    <&camss_mclk1_default>;
+-
+-	status = "okay";
+-};
+-
+-&cci_i2c0 {
+-	/*
+-	camera-sensor@2d {
+-		compatible = "mipi-ccs-1.0", "mipi-ccs";
+-		reg = <0x2d>;
+-		clocks = <&gcc GCC_CAMSS_MCLK0_CLK>;
+-		clock-frequency = <24000000>;
+-		reset-gpios = <&tlmm 40 GPIO_ACTIVE_LOW>;
+-		dvdd-supply = <&pm8953_l2>;
+-		avdd-supply = <&pm8953_l17>;
+-		vio-supply = <&pm8953_l6>;
+-		rotation = <270>;
+-		orientation = <1>;
+ 
+-		port {
+-			front_cam_ep: endpoint {
+-				data-lanes = <0 1 2 3>;
+-				remote-endpoint = <&csiphy2_ep>;
+-			};
+-		};
+-	};
+-	*/
++&gpu_zap_shader {
++	firmware-name = "qcom/msm8953/lenovo/cd-18781y/a506_zap.mdt";
+ };
+ 
+-&blsp2_uart0 {
++&uart_5 {
+ 	status = "okay";
+ 
+ 	qca9379_bt: bluetooth {
+@@ -274,6 +200,9 @@
+ 		reg = <0>;
+ 
+ 		pinctrl-names = "default", "sleep";
++
++	widgets = "Speaker", "Speaker";
++	aux-devices = <&speaker_amp>;
+ 		pinctrl-0 = <&pmx_mdss_default &mdss_te_default>;
+ 		pinctrl-1 = <&pmx_mdss_sleep &mdss_te_default>;
+ 
+@@ -283,8 +212,8 @@
+ 		backlight-gpios = <&tlmm 95 GPIO_ACTIVE_HIGH>;
+ 
+ 		avdd-supply = <&panel_avdd>;
+-		vsp-supply = <&lab_vreg>;
+-		vsn-supply = <&ibb_vreg>;
++		vsp-supply = <&lab>;
++		vsn-supply = <&ibb>;
+ 
+ 		status = "okay";
+ 
+@@ -297,7 +226,7 @@
+ };
+ 
+ &mdss_dsi0_out {
+-	data-lanes = <0 1 2 3>;
++	data-lanes = <0 1>;
+ 	remote-endpoint = <&panel_in>;
+ };
+ 
+@@ -316,6 +245,10 @@
+ 	status = "okay";
+ };
+ 
++&ibb {
++	qcom,discharge-resistor-kohms = <32>;
++};
++
+ &i2c_1 {
+ 	status = "okay";
+ 
+@@ -349,6 +282,9 @@
+ 		pinctrl-1 = <&ts_reset_sleep &ts_int_sleep>;
+ 		pinctrl-names = "default", "sleep";
+ 
++	widgets = "Speaker", "Speaker";
++	aux-devices = <&speaker_amp>;
++
+ 		reset-gpios = <&tlmm 64 GPIO_ACTIVE_LOW>;
+ 
+ 		iovcc-supply = <&pm8953_l6>;
+@@ -371,6 +307,9 @@
+ 		pinctrl-1 = <&ts_reset_sleep &ts_int_sleep>;
+ 		pinctrl-names = "default", "sleep";
+ 
++	widgets = "Speaker", "Speaker";
++	aux-devices = <&speaker_amp>;
++
+ 		reset-gpios = <&tlmm 64 GPIO_ACTIVE_LOW>;
+ 
+ 		avdd-supply = <&pm8953_l5>;
+@@ -383,6 +322,10 @@
+ 	};
+ };
+ 
++&lab {
++	qcom,soft-start-us = <800>;
++};
++
+ &mdss {
+ 	status = "okay";
+ };
+@@ -392,13 +335,26 @@
+ 	/delete-node/ mpss;
+ };
+ 
++&pm8953_pon {
++	/* Device doesn't have a power key */
++	pwrkey {
++		status = "disabled";
++	};
++};
++
+ &pm8953_resin {
+ 	linux,code = <KEY_VOLUMEDOWN>;
++	wakeup-source;
+ 
+ 	status = "okay";
+ };
+ 
+ &pmi8950_fg {
++	/*
++	 * Due to the absence of an actual battery, the device's PMI uses
++	 * an onboard resistor to fake a reading.
++	 * This is of no value to the user, so we just disable it.
++	 */
+ 	status = "disabled";
+ };
+ 
+@@ -418,18 +374,18 @@
+ 		     &tlmm_sec_sus &tlmm_pri_sus &tlmm_pri_ws_sus>;
+ 	pinctrl-names = "default", "sleep";
+ 
+-	/* Device has no headphone jack */
+ 	widgets = "Speaker", "Speaker";
++	aux-devices = <&speaker_amp>;
+ 
+-	audio-routing =
+-		"Speaker", "Speaker Amp OUT",
+-		"Speaker Amp DAC IN", "HPH_R",
+-		"DMIC1", "MIC BIAS Internal1",
+-		"DMIC1", "Digital Mic1",
+-		"DMIC2", "MIC BIAS Internal1",
+-		"DMIC2", "Digital Mic2";
+ 
+-	aux-devices = <&speaker_amp>;
++        audio-routing =
++                "Speaker", "Speaker Amp OUT",
++                "Speaker Amp DAC IN", "HPH_R",
++                "DMIC1", "MIC BIAS Internal1",
++                "DMIC1", "Digital Mic1",
++                "DMIC2", "MIC BIAS Internal1",
++                "DMIC2", "Digital Mic2";
++
+ 
+ 	status = "okay";
+ 
+@@ -508,7 +464,7 @@
+ 		};
+ 
+ 		pm8953_l2: l2 {
+-			regulator-min-microvolt = <975000>;
++			regulator-min-microvolt = <1200000>;
+ 			regulator-max-microvolt = <1225000>;
+ 			regulator-always-on;
+ 		};
+@@ -532,7 +488,6 @@
+ 		pm8953_l6: l6 {
+ 			regulator-min-microvolt = <1800000>;
+ 			regulator-max-microvolt = <1800000>;
+-			regulator-always-on;
+ 		};
+ 
+ 		pm8953_l7: l7 {
+@@ -578,7 +533,6 @@
+ 		pm8953_l17: l17 {
+ 			regulator-min-microvolt = <2850000>;
+ 			regulator-max-microvolt = <2850000>;
+-			regulator-always-on;
+ 		};
+ 
+ 		pm8953_l19: l19 {
+@@ -777,32 +731,86 @@
+ 		drive-strength = <2>;
+ 		bias-pull-down;
+ 	};
+-
+-	/* Conflicts with UART usage of USB-C connector */
+-	usb_id_default: usb-id-active-state {
+-		pins = "gpio5";
+-		function = "gpio";
+-		drive-strength = <2>;
+-		bias-pull-up;
+-	};
+ };
+ 
+-/* UART broken out on USB-C on A5/B5 and A8/B8
+- * Conflicts with USB-OTG hack
++/*
++ * UART is broken out via the USB-C connector
++ * RX (GPIO4) is pins A5/B5
++ * TX (GPIO5) is pins A8/B8
+  */
+-
+ &uart_0 {
+ 	pinctrl-names = "default";
+ 	pinctrl-0 = <&uart_console_active>;
+ 
+-	status = "disabled";
++	status = "enabled";
+ };
+ 
+ &usb3 {
+ 	status = "okay";
+ };
+ 
+-&usb3_dwc3 {
+-	extcon = <&usb_id>;
+-	dr_mode = "otg";
++/*
++ * Camera additions for Lenovo CD-18781Y
++ * 2026-04-28: Initial OV5693 enablement (single front-facing camera).
++ *
++ * Hardware (from Lenovo downstream apq8053-camera-sensor-dragon.dtsi):
++ *   Sensor:    OmniVision OV5693, 5MP, CSI-2 4-lane
++ *   I2C:       cci_i2c0 (CCI bus 0), slave 0x36 (OV5693 default)
++ *   MCLK:      TLMM 26, GCC_CAMSS_MCLK0_CLK @ 24 MHz
++ *   Reset:     TLMM 40, active low
++ *   Powerdown: TLMM 39, active low
++ *   Supplies:  avdd=pm8953_l17 (2.85V), dovdd=pm8953_l6 (1.8V), dvdd=pm8953_l2 (1.2V)
++ *   Lanes:     CSIPHY0, 4 data lanes (vendor lane mask 0x1F)
++ */
++
++&camss {
++	status = "okay";
++	vdda-supply = <&pm8953_s3>;
++
++	ports {
++		port@0 {
++			reg = <0>;
++			csiphy0_ep: endpoint {
++				clock-lanes = <7>;
++				data-lanes = <0 1>;
++				remote-endpoint = <&ov5693_ep>;
++			};
++		};
++	};
++};
++
++&cci {
++	pinctrl-names = "default";
++	pinctrl-0 = <&cci0_default>, <&camss_mclk0_default>;
++	status = "okay";
++};
++
++&cci_i2c0 {
++	ov5693: camera-sensor@36 {
++		compatible = "ovti,ov5693";
++		reg = <0x36>;
++
++		clocks = <&gcc GCC_CAMSS_MCLK0_CLK>;
++		clock-names = "xvclk";
++		assigned-clocks = <&gcc GCC_CAMSS_MCLK0_CLK>;
++		assigned-clock-rates = <19200000>;
++
++		reset-gpios = <&tlmm 40 GPIO_ACTIVE_LOW>;
++		powerdown-gpios = <&tlmm 39 GPIO_ACTIVE_LOW>;
++
++		avdd-supply = <&pm8953_l17>;
++		dovdd-supply = <&pm8953_l6>;
++		dvdd-supply = <&pm8953_l2>;
++
++		rotation = <0>;
++		orientation = <0>;
++
++		port {
++			ov5693_ep: endpoint {
++				data-lanes = <0 1>;
++				link-frequencies = /bits/ 64 <419200000>;
++				remote-endpoint = <&csiphy0_ep>;
++			};
++		};
++	};
+ };

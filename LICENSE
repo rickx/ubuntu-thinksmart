@@ -1,11 +1,20 @@
-Repository licensing is still being finalized before publication.
+This repository uses a per-directory license split.
 
-Current intended split:
+License mapping:
 
-- `sources/driver/` and `sources/patches/`: GPL-2.0-only
-- userspace helper scripts and daemons under `sources/`: pending final confirmation
-- documentation: pending final confirmation
+- `sources/driver/` and `sources/patches/`: `GPL-2.0-only`
+- userspace helper scripts and daemons under `sources/`: `MIT`
+- documentation (`*.md` and similar repository docs): `CC-BY-4.0`
 
-Third-party reference material remains under its original license terms.
+Third-party material:
 
-Do not treat this file as final publication metadata yet.
+- `prebuilt/` artifacts remain under their original upstream licenses
+- reference source material and archived research notes remain under their original upstream licenses unless a file states otherwise
+
+Canonical license texts:
+
+- GPL-2.0-only: https://spdx.org/licenses/GPL-2.0-only.html
+- MIT: https://spdx.org/licenses/MIT.html
+- CC-BY-4.0: https://creativecommons.org/licenses/by/4.0/
+
+When a file carries its own SPDX identifier or license notice, that file-level notice controls.

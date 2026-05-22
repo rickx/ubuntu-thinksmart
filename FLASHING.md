@@ -11,7 +11,7 @@ Only Qualcomm EDL should be used for flashing on this device. fastboot may appea
 - USB cable
 - [prebuilt/lk2nd.img](prebuilt/lk2nd.img)
 - generic bootstrap image `bootstrap-pmos-ssh-generic-qcom-msm8953.img` ([GitHub Release](https://github.com/rickx/ubuntu-thinksmart/releases/tag/bootstrap-2026-05-22), includes `.sha256`)
-- Ubuntu image `ubuntu-qcom-msm8953.img` ([MEGA download](https://mega.nz/file/Qn1SBS4Y#A449WO9ZHH9Pw2JtBwHXAW008tw4uUX2POrSnNHAs_A))
+- Ubuntu image `ubuntu-qcom-msm8953.img` (sanitized local publish copy present; refreshed external download URL pending re-upload)
 - GPT layout artifacts from `partitions/`:
 	- `partitions/ubuntu_layout.sfdisk`
 	- `partitions/gpt_ubuntu_main.bin`
@@ -105,7 +105,7 @@ The alternative future path is:
 ## Notes
 
 - the bootstrap image is published as a GitHub Release asset at [bootstrap-2026-05-22](https://github.com/rickx/ubuntu-thinksmart/releases/tag/bootstrap-2026-05-22)
-- the Ubuntu image is too large for a normal GitHub release asset and is currently hosted on [MEGA](https://mega.nz/file/Qn1SBS4Y#A449WO9ZHH9Pw2JtBwHXAW008tw4uUX2POrSnNHAs_A)
+- the Ubuntu image is too large for a normal GitHub release asset; the sanitized image now needs a refreshed external download URL after re-upload
 - the working copies under `rootfs/` are local staging artifacts; use the GitHub Release asset and its matching `.sha256` for downloads
 - GPT background notes belong in [partitions/LAYOUT.md](partitions/LAYOUT.md)
 - the current public-safe bootstrap base is `rootfs/bootstrap-pmos-ssh-generic-qcom-msm8953.img`; the personalized bootstrap image should be generated locally with `sources/scripts/prepare-pmos-ssh-bootstrap-image.sh` before flashing

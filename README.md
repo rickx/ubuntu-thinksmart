@@ -47,7 +47,7 @@
 - A Windows or Linux host with [edl](https://github.com/bkerler/edl) installed
 - USB-A to USB-C cable (device side is USB-C)
 - The generic bootstrap image `bootstrap-pmos-ssh-generic-qcom-msm8953.img` ([GitHub Release](https://github.com/rickx/ubuntu-thinksmart/releases/tag/bootstrap-2026-05-22); includes matching `.sha256`)
-- The Ubuntu image `ubuntu-qcom-msm8953.img` ([MEGA download](https://mega.nz/file/Qn1SBS4Y#A449WO9ZHH9Pw2JtBwHXAW008tw4uUX2POrSnNHAs_A); local working copies are under `rootfs/`)
+- The Ubuntu image `ubuntu-qcom-msm8953.img` (sanitized local publish copy is under `rootfs/`; refreshed external download URL pending re-upload)
 - `prebuilt/lk2nd.img`
 - The GPT layout file in `partitions/ubuntu_layout.sfdisk`
 
@@ -77,8 +77,15 @@ Current publication caveats:
 - the older `rootfs/bootstrap-pmos-ssh-qcom-msm8953.img` remains a private local staging image only; it preserves a saved WiFi profile from the Felix base and must not be published
 - the unattended self-executing bootstrap path exists, but it should not be the default published flow until it is tested once on hardware
 - `sources/scripts/prepare-pmos-ssh-bootstrap-image.sh` can take the Felix base or the generic release asset, strip private state, optionally inject WiFi credentials, and keep boot-time GPT auto-run disabled by default
-- the bootstrap image is published as a GitHub Release asset at [bootstrap-2026-05-22](https://github.com/rickx/ubuntu-thinksmart/releases/tag/bootstrap-2026-05-22); the Ubuntu release image is still hosted on [MEGA](https://mega.nz/file/Qn1SBS4Y#A449WO9ZHH9Pw2JtBwHXAW008tw4uUX2POrSnNHAs_A) because it is too large for a normal GitHub release asset
+- the bootstrap image is published as a GitHub Release asset at [bootstrap-2026-05-22](https://github.com/rickx/ubuntu-thinksmart/releases/tag/bootstrap-2026-05-22); the Ubuntu release image was sanitized locally and needs a refreshed external upload URL before this doc can point at it again
 - the bootstrap login should be `pmos` / `thinksmart`, hostname `thinksmarter`; the final Ubuntu image target access remains `ubuntu` / `thinksmart`
+
+## License
+
+- `sources/driver/` and `sources/patches/`: `GPL-2.0-only`
+- userspace helper scripts and daemons under `sources/`: `MIT`
+- documentation: `CC-BY-4.0`
+- third-party reference material and prebuilt artifacts remain under their original upstream licenses
 
 ---
 
@@ -265,7 +272,7 @@ FINAL/
 ├── AUDIO.md                    ← detailed audio setup and driver documentation
 ├── BUILDING.md                 ← module build workflow
 ├── FLASHING.md                 ← EDL + GPT + image flashing guide
-├── LICENSE                     ← draft licensing summary pending final publication choice
+├── LICENSE                     ← repository license split and upstream-license notes
 ├── prebuilt/
 │   ├── lk2nd.img
 │   └── snd-soc-tas5782m-dbg.ko
