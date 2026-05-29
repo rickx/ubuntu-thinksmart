@@ -448,7 +448,7 @@ Boot
   │               I2C responds: regmap 0x00 = 0x00 ✓
   │
   ├── PipeWire + WirePlumber (user session)
-  │     ├── WirePlumber loads 51-cd18781y-alsa.lua rule
+  │     ├── WirePlumber loads 99-cd18781y-alsa.lua rule
   │     ├── ACP enumerates card with UCM HiFi profile
   │     ├── default-profile → HiFi profile activated
   │     │     └── UCM EnableSequence: QUAT_MI2S_RX = 1

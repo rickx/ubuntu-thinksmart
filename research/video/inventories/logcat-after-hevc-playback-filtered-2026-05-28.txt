@@ -1,0 +1,112 @@
+
+05-28 11:51:52.153  1160  1781 I ActivityManager: START u0 
+{act=android.intent.action.VIEW dat=file:///sdcard/Download/sample-5s-hevc.mp4 
+typ=video/mp4 flg=0x10000000 cmp=com.android.gallery3d/.app.MovieActivity} 
+from uid 2000
+05-28 11:51:52.161  1160  1781 D ActivityTrigger: activityStartTrigger: 
+Activity is Triggerred in full screen ApplicationInfo{dd167fe 
+com.android.gallery3d}
+05-28 11:51:52.161  1160  1781 E ActivityTrigger: activityStartTrigger: not 
+whiteListedcom.android.gallery3d/com.android.gallery3d.app.MovieActivity/40030
+05-28 11:51:52.162  1160  1781 D ActivityTrigger: activityResumeTrigger: The 
+activity in ApplicationInfo{dd167fe com.android.gallery3d} is now in focus and 
+seems to be in full-screen mode
+05-28 11:51:52.162  1160  1781 E ActivityTrigger: activityResumeTrigger: not 
+whiteListedcom.android.gallery3d/com.android.gallery3d.app.MovieActivity/40030
+05-28 11:51:52.166  1160  6364 D ActivityTrigger: activityResumeTrigger: The 
+activity in ApplicationInfo{dd167fe com.android.gallery3d} is now in focus and 
+seems to be in full-screen mode
+05-28 11:51:52.166  1160  6364 E ActivityTrigger: activityResumeTrigger: not 
+whiteListedcom.android.gallery3d/com.android.gallery3d.app.MovieActivity/40030
+05-28 11:51:52.205  1160  6364 I MediaFocusControl: requestAudioFocus() from 
+uid/pid 10045/4464 clientId=android.media.AudioManager@bc8673c 
+callingPack=com.android.gallery3d req=2 flags=0x0 sdk=24
+05-28 11:51:52.206  1160  6364 D AppOps  : noteOperation: allowing code 32 uid 
+10045 package com.android.gallery3d
+05-28 11:51:52.259  1160  1181 I ActivityManager: Displayed 
+com.android.gallery3d/.app.MovieActivity: +88ms
+05-28 11:51:52.727   758   758 W generic : type=1400 audit(0.0:396437): avc: 
+denied { read } for path="/storage/emulated/0/Download/sample-5s-hevc.mp4" 
+dev="sdcardfs" ino=1213 scontext=u:r:mediaextractor:s0 
+tcontext=u:object_r:sdcardfs:s0 tclass=file permissive=0
+05-28 11:51:52.728  1160  1781 I MediaFocusControl: requestAudioFocus() from 
+uid/pid 10045/4464 clientId=android.media.AudioManager@bc8673c 
+callingPack=com.android.gallery3d req=1 flags=0x0 sdk=24
+05-28 11:51:52.728  1160  1781 D AppOps  : noteOperation: allowing code 32 uid 
+10045 package com.android.gallery3d
+05-28 11:51:52.731   758  6450 D NuPlayerDriver: NuPlayerDriver(0xb09a8230) 
+created, clientPid(4464)
+05-28 11:51:52.734   758  6450 I ExtendedNuUtils: printFileName fd(7) -> 
+/storage/emulated/0/Download/sample-5s-hevc.mp4
+05-28 11:51:52.735   758  7416 D NuPlayer: onSetVideoSurface(0xb23fc800, no 
+video decoder)
+05-28 11:51:52.737   758  7417 W GenericSource: extractor service cannot make 
+data source
+05-28 11:51:52.759   756   926 I ExtendedExtractor: QTIParser is prefered .. 
+flags 2
+05-28 11:51:52.760   756   926 D MMParserExtractor: setExtraFlags called with 
+flags 2 for paser instance acf2d230
+05-28 11:51:52.760   756   926 D MMParserExtractor: using bigger parser buffers
+05-28 11:51:52.760   756   926 I ExtendedExtractor: ExtendedExtractor::create 
+0xacf2d230
+05-28 11:51:52.766   758  7417 E MediaExtractor: Trace connect 0xb0998220 
+0xb099a080
+05-28 11:51:52.767   758  7416 D NuPlayerDriver: notifyListener_l(0xb09a8230), 
+(5, 1920, 1080, -1), loop setting(0, 0)
+05-28 11:51:52.768   758  7416 D NuPlayerDriver: notifyListener_l(0xb09a8230), 
+(1, 0, 0, -1), loop setting(0, 0)
+05-28 11:51:52.796   758  5339 D NuPlayerDriver: start(0xb09a8230), state is 
+4, eos is 0
+05-28 11:51:52.805   758  7421 I OMXClient: Treble IOmx obtained
+05-28 11:51:52.806   762  1620 I OMXMaster: 
+makeComponentInstance(OMX.qcom.video.decoder.hevc) in omx@1.0-service process
+05-28 11:51:52.811   762  1620 I OMX-VDEC-1080P: Video slvp perflock acquired
+05-28 11:51:52.876   762  1620 I OMX-VDEC-1080P: component_init: 
+OMX.qcom.video.decoder.hevc : fd=7
+05-28 11:51:52.883   762  1620 I OMX-VDEC-1080P: omx_vdec::component_init() 
+success : fd=7
+05-28 11:51:52.885   758  7420 I MediaCodec: [OMX.qcom.video.decoder.hevc] 
+setting surface generation to 776195
+05-28 11:51:52.886   762  1343 E OMX-VDEC-1080P: Enable/Disable 
+allocate-native-handle allowed only on input port!
+05-28 11:51:52.886   762  1343 E OMX-VDEC-1080P: set_parameter: Error: 
+0x80001019, setting param 0x7f00005d
+05-28 11:51:52.886   762  1343 E OMXNodeInstance: 
+setParameter(0xb2c3ac44:qcom.decoder.hevc, 
+OMX.google.android.index.allocateNativeHandle(0x7f00005d): Output:1 en=0) 
+ERROR: UnsupportedSetting(0x80001019)
+05-28 11:51:52.886   758  7421 I ExtendedACodec: setupVideoDecoder()
+05-28 11:51:52.891   758  7421 I ExtendedACodec: Decoder will be in frame by 
+frame mode
+05-28 11:51:52.893   762   953 E OMXNodeInstance: 
+getConfig(0xb2c3ac44:qcom.decoder.hevc, ??(0x7f000062)) ERROR: 
+UnsupportedSetting(0x80001019)
+05-28 11:51:52.895   758  7420 I MediaCodec: MediaCodec will operate in async 
+mode
+05-28 11:51:52.922   762  1620 E OMXNodeInstance: 
+getConfig(0xb2c3ac44:qcom.decoder.hevc, ??(0x7f000062)) ERROR: 
+UnsupportedSetting(0x80001019)
+05-28 11:51:52.955   762   953 E OMXNodeInstance: 
+getConfig(0xb2c3ac44:qcom.decoder.hevc, ??(0x7f000062)) ERROR: 
+UnsupportedSetting(0x80001019)
+05-28 11:51:52.957   758  7416 D NuPlayerDriver: notifyListener_l(0xb09a8230), 
+(5, 1920, 1080, -1), loop setting(0, 0)
+05-28 11:51:52.957   758  7416 D NuPlayerDriver: notifyListener_l(0xb09a8230), 
+(200, 3, 0, -1), loop setting(0, 0)
+05-28 11:51:52.957   758  7416 D NuPlayerDriver: notifyListener_l(0xb09a8230), 
+(6, 0, 0, -1), loop setting(0, 0)
+05-28 11:51:57.696   758  7419 I NuPlayerDecoder: [video] saw output EOS
+05-28 11:51:57.884   758  7416 D NuPlayerDriver: notifyListener_l(0xb09a8230), 
+(2, 0, 0, -1), loop setting(0, 0)
+05-28 11:51:57.903   758  6450 D NuPlayerDriver: reset(0xb09a8230) at state 6
+05-28 11:51:57.906   758  6450 D NuPlayerDriver: notifyListener_l(0xb09a8230), 
+(8, 0, 0, -1), loop setting(0, 0)
+05-28 11:51:57.954   762  1620 I OMX-VDEC-1080P: omx_vdec::component_deinit() 
+complete
+05-28 11:51:57.958   762  1620 I OMX-VDEC-1080P: Exit OMX vdec Destructor: fd=7
+05-28 11:51:57.958   762  1620 I OMX-VDEC-1080P: Video slvp perflock released
+05-28 11:51:57.971   758  7416 D NuPlayerDriver: 
+notifyResetComplete(0xb09a8230)
+05-28 11:51:57.971   758  6450 D NuPlayerDriver: reset(0xb09a8230) at state 0
+
+

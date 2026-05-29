@@ -1,0 +1,597 @@
+W/BroadcastQueue( 1160): Permission Denial: receiving Intent { act=android.intent.action.BOOT_COMPLETED flg=0x9000010 (has extras) } to org.codeaurora.snapcam/com.android.camera.DisableCameraReceiver requires android.permission.RECEIVE_BOOT_COMPLETED due to sender null (uid 1000)
+I/ActivityManager( 1160): START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=org.codeaurora.snapcam/com.android.camera.CameraLauncher bnds=[273,295][400,512]} from uid 10015
+I/ActivityManager( 1160): Start proc 4829:org.codeaurora.snapcam/u0a23 for activity org.codeaurora.snapcam/com.android.camera.CameraLauncher
+I/ActivityManager( 1160): START u0 {cmp=org.codeaurora.snapcam/com.android.camera.PermissionsActivity} from uid 10023
+I/ActivityManager( 1160): START u0 {flg=0x2000000 cmp=org.codeaurora.snapcam/com.android.camera.CameraActivity} from uid 10023
+W/BackupManagerService( 1160): dataChanged but no participant pkg='org.codeaurora.snapcam' uid=10023
+W/BackupManagerService( 1160): dataChanged but no participant pkg='org.codeaurora.snapcam' uid=10023
+W/BackupManagerService( 1160): dataChanged but no participant pkg='org.codeaurora.snapcam' uid=10023
+W/BackupManagerService( 1160): dataChanged but no participant pkg='org.codeaurora.snapcam' uid=10023
+W/BackupManagerService( 1160): dataChanged but no participant pkg='org.codeaurora.snapcam' uid=10023
+W/BackupManagerService( 1160): dataChanged but no participant pkg='org.codeaurora.snapcam' uid=10023
+W/BackupManagerService( 1160): dataChanged but no participant pkg='org.codeaurora.snapcam' uid=10023
+W/CAM_iface_poll(  772): type=1400 audit(0.0:351776): avc: denied { read } for name="u:object_r:camera_prop:s0" dev="tmpfs" ino=13458 scontext=u:r:mm-qcamerad:s0 tcontext=u:object_r:camera_prop:s0 tclass=file permissive=0
+W/CAM_cpp (  772): type=1400 audit(0.0:351777): avc: denied { read } for name="u:object_r:camera_prop:s0" dev="tmpfs" ino=13458 scontext=u:r:mm-qcamerad:s0 tcontext=u:object_r:camera_prop:s0 tclass=file permissive=0
+W/CAM_MctBus(  772): type=1400 audit(0.0:351778): avc: denied { read } for name="u:object_r:camera_prop:s0" dev="tmpfs" ino=13458 scontext=u:r:mm-qcamerad:s0 tcontext=u:object_r:camera_prop:s0 tclass=file permissive=0
+W/CAM_cpp (  772): type=1400 audit(0.0:351779): avc: denied { read } for name="u:object_r:camera_prop:s0" dev="tmpfs" ino=13458 scontext=u:r:mm-qcamerad:s0 tcontext=u:object_r:camera_prop:s0 tclass=file permissive=0
+W/CAM_MctBus(  772): type=1400 audit(0.0:351780): avc: denied { read } for name="u:object_r:camera_prop:s0" dev="tmpfs" ino=13458 scontext=u:r:mm-qcamerad:s0 tcontext=u:object_r:camera_prop:s0 tclass=file permissive=0
+W/CAM_cpp (  772): type=1400 audit(0.0:352077): avc: denied { read } for name="u:object_r:camera_prop:s0" dev="tmpfs" ino=13458 scontext=u:r:mm-qcamerad:s0 tcontext=u:object_r:camera_prop:s0 tclass=file permissive=0
+W/CAM_cpp (  772): type=1400 audit(0.0:352078): avc: denied { read } for name="u:object_r:camera_prop:s0" dev="tmpfs" ino=13458 scontext=u:r:mm-qcamerad:s0 tcontext=u:object_r:camera_prop:s0 tclass=file permissive=0
+W/CAM_MctBus(  772): type=1400 audit(0.0:352079): avc: denied { read } for name="u:object_r:camera_prop:s0" dev="tmpfs" ino=13458 scontext=u:r:mm-qcamerad:s0 tcontext=u:object_r:camera_prop:s0 tclass=file permissive=0
+W/CAM_isp_trigger(  772): type=1400 audit(0.0:352080): avc: denied { read } for name="u:object_r:camera_prop:s0" dev="tmpfs" ino=13458 scontext=u:r:mm-qcamerad:s0 tcontext=u:object_r:camera_prop:s0 tclass=file permissive=0
+W/CAM_isp_trigger(  772): type=1400 audit(0.0:352082): avc: denied { read } for name="u:object_r:camera_prop:s0" dev="tmpfs" ino=13458 scontext=u:r:mm-qcamerad:s0 tcontext=u:object_r:camera_prop:s0 tclass=file permissive=0
+W/CAM_MctBus(  772): type=1400 audit(0.0:352083): avc: denied { read } for name="u:object_r:camera_prop:s0" dev="tmpfs" ino=13458 scontext=u:r:mm-qcamerad:s0 tcontext=u:object_r:camera_prop:s0 tclass=file permissive=0
+W/CAM_MctBus(  772): type=1400 audit(0.0:352085): avc: denied { read } for name="u:object_r:camera_prop:s0" dev="tmpfs" ino=13458 scontext=u:r:mm-qcamerad:s0 tcontext=u:object_r:camera_prop:s0 tclass=file permissive=0
+W/CAM_iface_poll(  772): type=1400 audit(0.0:352086): avc: denied { read } for name="u:object_r:camera_prop:s0" dev="tmpfs" ino=13458 scontext=u:r:mm-qcamerad:s0 tcontext=u:object_r:camera_prop:s0 tclass=file permissive=0
+W/CAM_cpp (  772): type=1400 audit(0.0:352087): avc: denied { read } for name="u:object_r:camera_prop:s0" dev="tmpfs" ino=13458 scontext=u:r:mm-qcamerad:s0 tcontext=u:object_r:camera_prop:s0 tclass=file permissive=0
+W/CAM_cpp (  772): type=1400 audit(0.0:352088): avc: denied { read } for name="u:object_r:camera_prop:s0" dev="tmpfs" ino=13458 scontext=u:r:mm-qcamerad:s0 tcontext=u:object_r:camera_prop:s0 tclass=file permissive=0
+W/CAM_MctBus(  772): type=1400 audit(0.0:352089): avc: denied { read } for name="u:object_r:camera_prop:s0" dev="tmpfs" ino=13458 scontext=u:r:mm-qcamerad:s0 tcontext=u:object_r:camera_prop:s0 tclass=file permissive=0
+W/CAM_isp_trigger(  772): type=1400 audit(0.0:352090): avc: denied { read } for name="u:object_r:camera_prop:s0" dev="tmpfs" ino=13458 scontext=u:r:mm-qcamerad:s0 tcontext=u:object_r:camera_prop:s0 tclass=file permissive=0
+W/CAM_MctBus(  772): type=1400 audit(0.0:352091): avc: denied { read } for name="u:object_r:camera_prop:s0" dev="tmpfs" ino=13458 scontext=u:r:mm-qcamerad:s0 tcontext=u:object_r:camera_prop:s0 tclass=file permissive=0
+W/CAM_isp_trigger(  772): type=1400 audit(0.0:352092): avc: denied { read } for name="u:object_r:camera_prop:s0" dev="tmpfs" ino=13458 scontext=u:r:mm-qcamerad:s0 tcontext=u:object_r:camera_prop:s0 tclass=file permissive=0
+W/CAM_MctBus(  772): type=1400 audit(0.0:352093): avc: denied { read } for name="u:object_r:camera_prop:s0" dev="tmpfs" ino=13458 scontext=u:r:mm-qcamerad:s0 tcontext=u:object_r:camera_prop:s0 tclass=file permissive=0
+W/CAM_isp_trigger(  772): type=1400 audit(0.0:352094): avc: denied { read } for name="u:object_r:camera_prop:s0" dev="tmpfs" ino=13458 scontext=u:r:mm-qcamerad:s0 tcontext=u:object_r:camera_prop:s0 tclass=file permissive=0
+W/CAM_MctBus(  772): type=1400 audit(0.0:352095): avc: denied { read } for name="u:object_r:camera_prop:s0" dev="tmpfs" ino=13458 scontext=u:r:mm-qcamerad:s0 tcontext=u:object_r:camera_prop:s0 tclass=file permissive=0
+W/CAM_iface_poll(  772): type=1400 audit(0.0:352386): avc: denied { read } for name="u:object_r:camera_prop:s0" dev="tmpfs" ino=13458 scontext=u:r:mm-qcamerad:s0 tcontext=u:object_r:camera_prop:s0 tclass=file permissive=0
+W/CAM_cpp (  772): type=1400 audit(0.0:352387): avc: denied { read } for name="u:object_r:camera_prop:s0" dev="tmpfs" ino=13458 scontext=u:r:mm-qcamerad:s0 tcontext=u:object_r:camera_prop:s0 tclass=file permissive=0
+W/CAM_MctBus(  772): type=1400 audit(0.0:352388): avc: denied { read } for name="u:object_r:camera_prop:s0" dev="tmpfs" ino=13458 scontext=u:r:mm-qcamerad:s0 tcontext=u:object_r:camera_prop:s0 tclass=file permissive=0
+W/CAM_cpp (  772): type=1400 audit(0.0:352389): avc: denied { read } for name="u:object_r:camera_prop:s0" dev="tmpfs" ino=13458 scontext=u:r:mm-qcamerad:s0 tcontext=u:object_r:camera_prop:s0 tclass=file permissive=0
+W/CAM_MctBus(  772): type=1400 audit(0.0:352390): avc: denied { read } for name="u:object_r:camera_prop:s0" dev="tmpfs" ino=13458 scontext=u:r:mm-qcamerad:s0 tcontext=u:object_r:camera_prop:s0 tclass=file permissive=0
+W/CAM_isp_trigger(  772): type=1400 audit(0.0:352391): avc: denied { read } for name="u:object_r:camera_prop:s0" dev="tmpfs" ino=13458 scontext=u:r:mm-qcamerad:s0 tcontext=u:object_r:camera_prop:s0 tclass=file permissive=0
+W/CAM_MctBus(  772): type=1400 audit(0.0:352392): avc: denied { read } for name="u:object_r:camera_prop:s0" dev="tmpfs" ino=13458 scontext=u:r:mm-qcamerad:s0 tcontext=u:object_r:camera_prop:s0 tclass=file permissive=0
+W/CAM_isp_trigger(  772): type=1400 audit(0.0:352393): avc: denied { read } for name="u:object_r:camera_prop:s0" dev="tmpfs" ino=13458 scontext=u:r:mm-qcamerad:s0 tcontext=u:object_r:camera_prop:s0 tclass=file permissive=0
+W/CAM_isp_trigger(  772): type=1400 audit(0.0:352394): avc: denied { read } for name="u:object_r:camera_prop:s0" dev="tmpfs" ino=13458 scontext=u:r:mm-qcamerad:s0 tcontext=u:object_r:camera_prop:s0 tclass=file permissive=0
+W/CAM_MctBus(  772): type=1400 audit(0.0:352395): avc: denied { read } for name="u:object_r:camera_prop:s0" dev="tmpfs" ino=13458 scontext=u:r:mm-qcamerad:s0 tcontext=u:object_r:camera_prop:s0 tclass=file permissive=0
+W/CAM_iface_poll(  772): type=1400 audit(0.0:352396): avc: denied { read } for name="u:object_r:camera_prop:s0" dev="tmpfs" ino=13458 scontext=u:r:mm-qcamerad:s0 tcontext=u:object_r:camera_prop:s0 tclass=file permissive=0
+W/CAM_cpp (  772): type=1400 audit(0.0:352397): avc: denied { read } for name="u:object_r:camera_prop:s0" dev="tmpfs" ino=13458 scontext=u:r:mm-qcamerad:s0 tcontext=u:object_r:camera_prop:s0 tclass=file permissive=0
+W/CAM_cpp (  772): type=1400 audit(0.0:352398): avc: denied { read } for name="u:object_r:camera_prop:s0" dev="tmpfs" ino=13458 scontext=u:r:mm-qcamerad:s0 tcontext=u:object_r:camera_prop:s0 tclass=file permissive=0
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem identical 7 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 5 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 11 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 15 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 25 lines
+I/QCamera (  557): <HAL><INFO> stop_preview: 411: [KPI Perf]: E PROFILE_STOP_PREVIEW camera id 0
+I/QCamera (  557): <HAL><INFO> stopPreview: 3624: E
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 48 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 15 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 1 line
+I/QCamera (  557): <HAL><INFO> stopPreview: 3649: X
+I/QCamera (  557): <HAL><INFO> stop_preview: 424: [KPI Perf]: X ret = 0
+E/SurfaceFlinger(  587): Failed to find layer (SurfaceView - org.codeaurora.snapcam/com.android.camera.CameraActivity#0) in layer parent (no-parent).
+E/SurfaceFlinger(  587): Failed to find layer (Background for - SurfaceView - org.codeaurora.snapcam/com.android.camera.CameraActivity#0) in layer parent (no-parent).
+I/QCamera (  557): <HAL><INFO> stop_preview: 411: [KPI Perf]: E PROFILE_STOP_PREVIEW camera id 0
+I/QCamera (  557): <HAL><INFO> stop_preview: 424: [KPI Perf]: X ret = 0
+I/QCamera (  557): <HAL><INFO> cancel_picture: 1027: [KPI Perf]: E PROFILE_CANCEL_PICTURE camera id 0
+I/QCamera (  557): <HAL><INFO> cancel_picture: 1036: [KPI Perf]: X camera id 0 ret = 0
+I/QCamera (  557): <HAL><INFO> close_camera_device: 1495: [KPI Perf]: E camera id 0
+I/QCamera (  557): <HAL><INFO> closeCamera: 2226: E
+I/QCamera (  557): <HAL><INFO> closeCamera: 2231: [KPI Perf]: E PROFILE_CLOSE_CAMERA camera id 0
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 20 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 4 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 5 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/QCamera (  557): <HAL><INFO> closeCamera: 2302: [KPI Perf]: X PROFILE_CLOSE_CAMERA camera id 0, rc: 0
+I/QCamera (  557): <HAL><INFO> close_camera_device: 1497: [KPI Perf]: X
+W/ls      ( 5564): type=1400 audit(0.0:388824): avc: denied { getattr } for path="/vendor/lib/hw/camera.msm8953.so" dev="mmcblk0p25" ino=723 scontext=u:r:shell:s0 tcontext=u:object_r:vendor_file:s0 tclass=file permissive=0
+I/ActivityManager( 1160): START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=org.codeaurora.snapcam/com.android.camera.CameraLauncher} from uid 2000
+D/ActivityTrigger( 1160): activityResumeTrigger: The activity in ApplicationInfo{80df72e org.codeaurora.snapcam} is now in focus and seems to be in full-screen mode
+E/ActivityTrigger( 1160): activityResumeTrigger: not whiteListedorg.codeaurora.snapcam/com.android.camera.CameraActivity/20002030
+D/ActivityTrigger( 1160): activityResumeTrigger: The activity in ApplicationInfo{80df72e org.codeaurora.snapcam} is now in focus and seems to be in full-screen mode
+E/ActivityTrigger( 1160): activityResumeTrigger: not whiteListedorg.codeaurora.snapcam/com.android.camera.CameraActivity/20002030
+W/org.codeaurora.snapcam( 4829): type=1400 audit(0.0:392427): avc: denied { read } for comm=43616D6572612048616E646C657220 name="u:object_r:camera_prop:s0" dev="tmpfs" ino=13458 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:camera_prop:s0 tclass=file permissive=0
+I/CameraService(  750): CameraService::connect call (PID -1 "org.codeaurora.snapcam", camera ID 0) for HAL version 256 and Camera API version 1
+D/AppOps  ( 1160): noteOperation: allowing code 59 uid 10023 package org.codeaurora.snapcam
+D/AppOps  ( 1160): noteOperation: allowing code 60 uid 10023 package org.codeaurora.snapcam
+D/AppOps  ( 1160): noteOperation: allowing code 59 uid 10023 package org.codeaurora.snapcam
+D/AppOps  ( 1160): noteOperation: allowing code 60 uid 10023 package org.codeaurora.snapcam
+D/AppOps  ( 1160): noteOperation: allowing code 59 uid 10023 package org.codeaurora.snapcam
+D/AppOps  ( 1160): noteOperation: allowing code 60 uid 10023 package org.codeaurora.snapcam
+D/AppOps  ( 1160): noteOperation: allowing code 59 uid 10023 package org.codeaurora.snapcam
+D/AppOps  ( 1160): noteOperation: allowing code 60 uid 10023 package org.codeaurora.snapcam
+D/AppOps  ( 1160): noteOperation: allowing code 59 uid 10023 package org.codeaurora.snapcam
+D/AppOps  ( 1160): noteOperation: allowing code 60 uid 10023 package org.codeaurora.snapcam
+D/AppOps  ( 1160): noteOperation: allowing code 59 uid 10023 package org.codeaurora.snapcam
+D/AppOps  ( 1160): noteOperation: allowing code 60 uid 10023 package org.codeaurora.snapcam
+D/AppOps  ( 1160): startOperation: allowing code 26 uid 10023 package org.codeaurora.snapcam
+I/QCamera (  557): <HAL><INFO> openLegacy: 500: openLegacy halVersion: 256
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 47 lines
+I/QCamera (  557): <HAL><INFO> openCamera: 1827: [KPI Perf]: E PROFILE_OPEN_CAMERA camera id 0
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 6 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 6 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 7 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 5 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 5 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 5 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 7 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 1 line
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 8 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 3 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 3 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 42 lines
+I/QCamera (  557): <HAL><INFO> openCamera: 1840: [KPI Perf]: X PROFILE_OPEN_CAMERA camera id 0, rc: 0
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 111 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/QCamera (  557): <HAL><INFO> setDualCameraMode: 14862: Dual camera mode set 0
+I/QCamera (  557): <HAL><INFO> setPreviewSize: 1510: Requested preview size 640 x 480
+I/QCamera (  557): <HAL><INFO> setDualCameraMode: 14862: Dual camera mode set 0
+I/QCamera (  557): <HAL><INFO> setZslMode: 4510: ZSL Mode  -> Disabled
+I/QCamera (  557): <HAL><INFO> start_preview: 368: [KPI Perf]: E PROFILE_START_PREVIEW camera id 0
+I/QCamera (  557): <HAL><INFO> preparePreview: 8332: E
+I/QCamera (  557): <HAL><INFO> setStreamConfigure: 13441: STREAM INFO : type 1, wxh: 640 x 480, pp_mask: 0x101000882                 Format = 2, dt =0 cid =0 subformat =0, is_type 0
+I/QCamera (  557): <HAL><INFO> setStreamConfigure: 13441: STREAM INFO : type 11, wxh: 640 x 480, pp_mask: 0x882                 Format = 2, dt =0 cid =0 subformat =0, is_type 0
+I/QCamera (  557): <HAL><INFO> setStreamConfigure: 13441: STREAM INFO : type 3, wxh: 2592 x 1944, pp_mask: 0x0                 Format = 2, dt =0 cid =0 subformat =0, is_type 0
+I/QCamera (  557): <HAL><INFO> preparePreview: 8427: X rc = 0
+I/QCamera (  557): <HAL><INFO> startPreview: 3511: E ZSL = 1 Recording Hint = 0
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 9 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 24 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 1 line
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 5 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 1 line
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 3 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 1 line
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 7 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 1 line
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 71 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 18 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 1 line
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 4 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 30 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 7 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 5 lines
+I/QCamera (  557): <HAL><INFO> startPreview: 3599: X rc = 0
+I/QCamera (  557): <HAL><INFO> start_preview: 387: [KPI Perf]: X ret = 0
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 8 lines
+I/QCamera (  557): <HAL><INFO> synchronous_stream_cb_routine: 792: [KPI Perf] : PROFILE_FIRST_PREVIEW_FRAME
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 4 lines
+I/QCamera (  557): <HAL><INFO> close_camera_device: 1495: [KPI Perf]: E camera id 0
+E/AndroidRuntime( 4829): Process: org.codeaurora.snapcam, PID: 4829
+I/QCamera (  557): <HAL><INFO> closeCamera: 2226: E
+I/QCamera (  557): <HAL><INFO> closeCamera: 2231: [KPI Perf]: E PROFILE_CLOSE_CAMERA camera id 0
+W/ActivityManager( 1160):   Force finishing activity org.codeaurora.snapcam/com.android.camera.CameraActivity
+I/ActivityManager( 1160): Showing crash dialog for package org.codeaurora.snapcam u0
+W/ActivityManager( 1160): Duplicate finish request for ActivityRecord{bed4d3e u0 org.codeaurora.snapcam/com.android.camera.CameraActivity t23 f}
+F/DEBUG   ( 5766):     #06 pc 00088aa7  /vendor/lib/hw/camera.msm8953.so (qcamera::QCameraStreamMemory::allocateMore(unsigned char, unsigned int)+166)
+F/DEBUG   ( 5766):     #07 pc 00078f0d  /vendor/lib/hw/camera.msm8953.so (qcamera::QCamera2HardwareInterface::allocateMoreStreamBuf(qcamera::QCameraMemory*, unsigned int, unsigned char&)+16)
+F/DEBUG   ( 5766):     #08 pc 00092e5d  /vendor/lib/hw/camera.msm8953.so (qcamera::QCameraStream::BufAllocRoutine(void*)+104)
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 1 line
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 48 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 4 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 5 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+D/vndksupport( 5773): Loading /vendor/lib/hw/camera.msm8953.so from current namespace instead of sphal namespace.
+E/QCamera ( 5773): <MCI><ERROR> get_num_of_cameras: 1934: dev_info[id=0,name='video1']
+I/QCamera ( 5773): <MCI><INFO> sort_camera_info: 1691: YUV Aux camera exposed 0
+I/QCamera ( 5773): <MCI><INFO> sort_camera_info: 1768: Camera id: 0 facing: 1, type: 0 is_yuv: 0
+I/QCamera ( 5773): <MCI><INFO> sort_camera_info: 1771: Number of cameras 1 sorted 1
+E/QCamera ( 5773): <MCI><ERROR> get_num_of_cameras: 1952: num_cameras=1
+I/CamProvider@2.4-impl( 5773): Loaded "QCamera Module" camera module
+I/QCamera ( 5773): <HAL><INFO> getCameraInfo: 340: Camera id 0 API version 768
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 6 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 12 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 14 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 9 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 8 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 1 line
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 4 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 151 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 11 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 3 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/QCamera ( 5773): <HAL><INFO> getCamInfo: 8811: camera 0 resource cost is 100
+I/QCamera ( 5773): <HAL><INFO> openLegacy: 500: openLegacy halVersion: 256
+I/QCamera ( 5773): <HAL><INFO> openCamera: 1827: [KPI Perf]: E PROFILE_OPEN_CAMERA camera id 0
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 6 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 6 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 12 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 15 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 9 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 8 lines
+W/ActivityManager( 1160): Activity pause timeout for ActivityRecord{bed4d3e u0 org.codeaurora.snapcam/com.android.camera.CameraActivity t23 f}
+I/QCamera ( 5773): <HAL><INFO> openCamera: 1840: [KPI Perf]: X PROFILE_OPEN_CAMERA camera id 0, rc: 0
+I/QCamera ( 5773): <HAL><INFO> close_camera_device: 1495: [KPI Perf]: E camera id 0
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 10 lines
+I/QCamera ( 5773): <HAL><INFO> closeCamera: 2226: E
+I/QCamera ( 5773): <HAL><INFO> closeCamera: 2231: [KPI Perf]: E PROFILE_CLOSE_CAMERA camera id 0
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 4 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 1 line
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 1 line
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 68 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 1 line
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 1 line
+I/QCamera ( 5773): <HAL><INFO> closeCamera: 2302: [KPI Perf]: X PROFILE_CLOSE_CAMERA camera id 0, rc: 0
+I/QCamera ( 5773): <HAL><INFO> close_camera_device: 1497: [KPI Perf]: X
+I/QCamera ( 5773): <HAL><INFO> openLegacy: 500: openLegacy halVersion: 256
+I/QCamera ( 5773): <HAL><INFO> openCamera: 1827: [KPI Perf]: E PROFILE_OPEN_CAMERA camera id 0
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 6 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 6 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 12 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 15 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 9 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 8 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 23 lines
+I/QCamera ( 5773): <HAL><INFO> openCamera: 1840: [KPI Perf]: X PROFILE_OPEN_CAMERA camera id 0, rc: 0
+I/CamDev@1.0-impl( 5773): could not cast ICameraDeviceCallback to IQCameraDeviceCallback
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 10 lines
+I/QCamera ( 5773): <HAL><INFO> close_camera_device: 1495: [KPI Perf]: E camera id 0
+I/QCamera ( 5773): <HAL><INFO> closeCamera: 2226: E
+I/QCamera ( 5773): <HAL><INFO> closeCamera: 2231: [KPI Perf]: E PROFILE_CLOSE_CAMERA camera id 0
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 7 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 1 line
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 4 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 1 line
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 3 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 1 line
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 1 line
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 95 lines
+I/QCamera ( 5773): <HAL><INFO> closeCamera: 2302: [KPI Perf]: X PROFILE_CLOSE_CAMERA camera id 0, rc: 0
+I/QCamera ( 5773): <HAL><INFO> close_camera_device: 1497: [KPI Perf]: X
+I/ActivityManager( 1160): Killing 4829:org.codeaurora.snapcam/u0a23 (adj 900): crash
+I/ActivityManager( 1160): START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10300000 cmp=org.codeaurora.snapcam/com.android.camera.CameraActivity} from uid 10023
+D/ActivityTrigger( 1160): activityStartTrigger: Activity is Triggerred in full screen ApplicationInfo{80df72e org.codeaurora.snapcam}
+E/ActivityTrigger( 1160): activityStartTrigger: not whiteListedorg.codeaurora.snapcam/com.android.camera.CameraActivity/20002030
+D/ActivityTrigger( 1160): activityResumeTrigger: The activity in ApplicationInfo{80df72e org.codeaurora.snapcam} is now in focus and seems to be in full-screen mode
+E/ActivityTrigger( 1160): activityResumeTrigger: not whiteListedorg.codeaurora.snapcam/com.android.camera.CameraActivity/20002030
+D/ActivityTrigger( 1160): activityResumeTrigger: The activity in ApplicationInfo{80df72e org.codeaurora.snapcam} is now in focus and seems to be in full-screen mode
+E/ActivityTrigger( 1160): activityResumeTrigger: not whiteListedorg.codeaurora.snapcam/com.android.camera.CameraActivity/20002030
+D/AppOps  ( 1160): noteOperation: allowing code 72 uid 10023 package org.codeaurora.snapcam
+D/AppOps  ( 1160): noteOperation: allowing code 59 uid 10023 package org.codeaurora.snapcam
+D/AppOps  ( 1160): noteOperation: allowing code 60 uid 10023 package org.codeaurora.snapcam
+I/ActivityManager( 1160): Start proc 5890:org.codeaurora.snapcam/u0a23 for activity org.codeaurora.snapcam/com.android.camera.CameraActivity
+D/AppOps  ( 1160): noteOperation: allowing code 59 uid 10023 package org.codeaurora.snapcam
+D/AppOps  ( 1160): noteOperation: allowing code 60 uid 10023 package org.codeaurora.snapcam
+D/AppOps  ( 1160): noteOperation: allowing code 59 uid 10023 package org.codeaurora.snapcam
+D/AppOps  ( 1160): noteOperation: allowing code 60 uid 10023 package org.codeaurora.snapcam
+W/org.codeaurora.snapcam( 5890): type=1400 audit(0.0:392815): avc: denied { read } for comm=43616D6572612048616E646C657220 name="u:object_r:camera_prop:s0" dev="tmpfs" ino=13458 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:camera_prop:s0 tclass=file permissive=0
+I/CameraService( 5763): CameraService::connect call (PID -1 "org.codeaurora.snapcam", camera ID 0) for HAL version 256 and Camera API version 1
+D/AppOps  ( 1160): noteOperation: allowing code 59 uid 10023 package org.codeaurora.snapcam
+D/AppOps  ( 1160): noteOperation: allowing code 59 uid 10023 package org.codeaurora.snapcam
+D/AppOps  ( 1160): startOperation: allowing code 26 uid 10023 package org.codeaurora.snapcam
+I/QCamera ( 5773): <HAL><INFO> openLegacy: 500: openLegacy halVersion: 256
+I/QCamera ( 5773): <HAL><INFO> openCamera: 1827: [KPI Perf]: E PROFILE_OPEN_CAMERA camera id 0
+D/AppOps  ( 1160): noteOperation: allowing code 59 uid 10023 package org.codeaurora.snapcam
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 6 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 6 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 12 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 15 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 9 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 8 lines
+I/QCamera ( 5773): <HAL><INFO> openCamera: 1840: [KPI Perf]: X PROFILE_OPEN_CAMERA camera id 0, rc: 0
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 103 lines
+D/AppOps  ( 1160): noteOperation: allowing code 59 uid 10023 package org.codeaurora.snapcam
+D/AppOps  ( 1160): noteOperation: allowing code 60 uid 10023 package org.codeaurora.snapcam
+D/AppOps  ( 1160): noteOperation: allowing code 59 uid 10023 package org.codeaurora.snapcam
+D/AppOps  ( 1160): noteOperation: allowing code 60 uid 10023 package org.codeaurora.snapcam
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+D/AppOps  ( 1160): noteOperation: allowing code 59 uid 10023 package org.codeaurora.snapcam
+D/AppOps  ( 1160): noteOperation: allowing code 59 uid 10023 package org.codeaurora.snapcam
+D/AppOps  ( 1160): noteOperation: allowing code 60 uid 10023 package org.codeaurora.snapcam
+D/AppOps  ( 1160): noteOperation: allowing code 59 uid 10023 package org.codeaurora.snapcam
+D/AppOps  ( 1160): noteOperation: allowing code 60 uid 10023 package org.codeaurora.snapcam
+D/AppOps  ( 1160): noteOperation: allowing code 59 uid 10023 package org.codeaurora.snapcam
+D/AppOps  ( 1160): noteOperation: allowing code 60 uid 10023 package org.codeaurora.snapcam
+D/AppOps  ( 1160): noteOperation: allowing code 59 uid 10023 package org.codeaurora.snapcam
+D/AppOps  ( 1160): noteOperation: allowing code 60 uid 10023 package org.codeaurora.snapcam
+I/QCamera ( 5773): <HAL><INFO> setDualCameraMode: 14862: Dual camera mode set 0
+I/QCamera ( 5773): <HAL><INFO> setPreviewSize: 1510: Requested preview size 640 x 480
+I/QCamera ( 5773): <HAL><INFO> setDualCameraMode: 14862: Dual camera mode set 0
+I/QCamera ( 5773): <HAL><INFO> setZslMode: 4510: ZSL Mode  -> Disabled
+I/QCamera ( 5773): <HAL><INFO> start_preview: 368: [KPI Perf]: E PROFILE_START_PREVIEW camera id 0
+I/QCamera ( 5773): <HAL><INFO> preparePreview: 8332: E
+I/QCamera ( 5773): <HAL><INFO> setStreamConfigure: 13441: STREAM INFO : type 1, wxh: 640 x 480, pp_mask: 0x101000882                 Format = 2, dt =0 cid =0 subformat =0, is_type 0
+I/QCamera ( 5773): <HAL><INFO> setStreamConfigure: 13441: STREAM INFO : type 11, wxh: 640 x 480, pp_mask: 0x882                 Format = 2, dt =0 cid =0 subformat =0, is_type 0
+I/QCamera ( 5773): <HAL><INFO> setStreamConfigure: 13441: STREAM INFO : type 3, wxh: 2592 x 1944, pp_mask: 0x0                 Format = 2, dt =0 cid =0 subformat =0, is_type 0
+D/SurfaceFlinger(  587): duplicate layer name: changing SurfaceView - org.codeaurora.snapcam/com.android.camera.CameraActivity to SurfaceView - org.codeaurora.snapcam/com.android.camera.CameraActivity#1
+D/SurfaceFlinger(  587): duplicate layer name: changing Background for - SurfaceView - org.codeaurora.snapcam/com.android.camera.CameraActivity to Background for - SurfaceView - org.codeaurora.snapcam/com.android.camera.CameraActivity#1
+I/QCamera ( 5773): <HAL><INFO> preparePreview: 8427: X rc = 0
+I/QCamera ( 5773): <HAL><INFO> start_preview: 387: [KPI Perf]: X ret = 0
+I/QCamera ( 5773): <HAL><INFO> startPreview: 3511: E ZSL = 1 Recording Hint = 0
+D/AppOps  ( 1160): noteOperation: allowing code 59 uid 10023 package org.codeaurora.snapcam
+D/AppOps  ( 1160): noteOperation: allowing code 60 uid 10023 package org.codeaurora.snapcam
+D/AppOps  ( 1160): noteOperation: allowing code 59 uid 10023 package org.codeaurora.snapcam
+D/AppOps  ( 1160): noteOperation: allowing code 60 uid 10023 package org.codeaurora.snapcam
+I/ActivityManager( 1160): Displayed org.codeaurora.snapcam/com.android.camera.CameraActivity: +597ms
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 9 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 8 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 24 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 40 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 7 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 3 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 32 lines
+I/QCamera ( 5773): <HAL><INFO> startPreview: 3599: X rc = 0
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 16 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 90 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 43 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 5 lines
+I/QCamera ( 5773): <HAL><INFO> setDualCameraMode: 14862: Dual camera mode set 0
+I/QCamera ( 5773): <HAL><INFO> synchronous_stream_cb_routine: 792: [KPI Perf] : PROFILE_FIRST_PREVIEW_FRAME
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 4 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 108 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 22 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 43 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 65 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 40 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 43 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 64 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 108 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 43 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 44 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 109 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 65 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 20 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 70 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 115 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 23 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 72 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 70 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 12 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 9 lines
+I/QCamera ( 5773): <HAL><INFO> close_camera_device: 1495: [KPI Perf]: E camera id 0
+I/QCamera ( 5773): <HAL><INFO> closeCamera: 2226: E
+I/QCamera ( 5773): <HAL><INFO> closeCamera: 2231: [KPI Perf]: E PROFILE_CLOSE_CAMERA camera id 0
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 24 lines
+E/SurfaceFlinger(  587): Failed to find layer (SurfaceView - org.codeaurora.snapcam/com.android.camera.CameraActivity#0) in layer parent (no-parent).
+E/SurfaceFlinger(  587): Failed to find layer (Background for - SurfaceView - org.codeaurora.snapcam/com.android.camera.CameraActivity#0) in layer parent (no-parent).
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 28 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 20 lines
+F/DEBUG   ( 6016):     #06 pc 00089bbb  /vendor/lib/hw/camera.msm8953.so (qcamera::QCameraGrallocMemory::dequeueBuffer()+38)
+F/DEBUG   ( 6016):     #07 pc 0009b9d3  /vendor/lib/hw/camera.msm8953.so (qcamera::QCamera2HardwareInterface::preview_stream_cb_routine(mm_camera_super_buf_t*, qcamera::QCameraStream*, void*)+782)
+F/DEBUG   ( 6016):     #08 pc 00092739  /vendor/lib/hw/camera.msm8953.so (qcamera::QCameraStream::dataProcRoutine(void*)+148)
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 8 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 6 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 7 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 16 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 1 line
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 138 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 4 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 5 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+D/vndksupport( 6039): Loading /vendor/lib/hw/camera.msm8953.so from current namespace instead of sphal namespace.
+E/QCamera ( 6039): <MCI><ERROR> get_num_of_cameras: 1934: dev_info[id=0,name='video1']
+I/QCamera ( 6039): <MCI><INFO> sort_camera_info: 1691: YUV Aux camera exposed 0
+I/QCamera ( 6039): <MCI><INFO> sort_camera_info: 1768: Camera id: 0 facing: 1, type: 0 is_yuv: 0
+I/QCamera ( 6039): <MCI><INFO> sort_camera_info: 1771: Number of cameras 1 sorted 1
+E/QCamera ( 6039): <MCI><ERROR> get_num_of_cameras: 1952: num_cameras=1
+I/CamProvider@2.4-impl( 6039): Loaded "QCamera Module" camera module
+I/QCamera ( 6039): <HAL><INFO> getCameraInfo: 340: Camera id 0 API version 768
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 6 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 6 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 12 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 15 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 9 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 8 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 11 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 3 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/QCamera ( 6039): <HAL><INFO> getCamInfo: 8811: camera 0 resource cost is 100
+I/QCamera ( 6039): <HAL><INFO> openLegacy: 500: openLegacy halVersion: 256
+I/QCamera ( 6039): <HAL><INFO> openCamera: 1827: [KPI Perf]: E PROFILE_OPEN_CAMERA camera id 0
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 1 line
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 12 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 5 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 15 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 9 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 8 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 4 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 118 lines
+I/QCamera ( 6039): <HAL><INFO> openCamera: 1840: [KPI Perf]: X PROFILE_OPEN_CAMERA camera id 0, rc: 0
+I/QCamera ( 6039): <HAL><INFO> close_camera_device: 1495: [KPI Perf]: E camera id 0
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 10 lines
+I/QCamera ( 6039): <HAL><INFO> closeCamera: 2226: E
+I/QCamera ( 6039): <HAL><INFO> closeCamera: 2231: [KPI Perf]: E PROFILE_CLOSE_CAMERA camera id 0
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 4 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/QCamera ( 6039): <HAL><INFO> closeCamera: 2302: [KPI Perf]: X PROFILE_CLOSE_CAMERA camera id 0, rc: 0
+I/QCamera ( 6039): <HAL><INFO> close_camera_device: 1497: [KPI Perf]: X
+I/QCamera ( 6039): <HAL><INFO> openLegacy: 500: openLegacy halVersion: 256
+I/QCamera ( 6039): <HAL><INFO> openCamera: 1827: [KPI Perf]: E PROFILE_OPEN_CAMERA camera id 0
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 6 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 6 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 12 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 15 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 9 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 8 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 34 lines
+I/QCamera ( 6039): <HAL><INFO> openCamera: 1840: [KPI Perf]: X PROFILE_OPEN_CAMERA camera id 0, rc: 0
+I/CamDev@1.0-impl( 6039): could not cast ICameraDeviceCallback to IQCameraDeviceCallback
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 10 lines
+I/QCamera ( 6039): <HAL><INFO> close_camera_device: 1495: [KPI Perf]: E camera id 0
+I/QCamera ( 6039): <HAL><INFO> closeCamera: 2226: E
+I/QCamera ( 6039): <HAL><INFO> closeCamera: 2231: [KPI Perf]: E PROFILE_CLOSE_CAMERA camera id 0
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 4 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/QCamera ( 6039): <HAL><INFO> closeCamera: 2302: [KPI Perf]: X PROFILE_CLOSE_CAMERA camera id 0, rc: 0
+I/QCamera ( 6039): <HAL><INFO> close_camera_device: 1497: [KPI Perf]: X
+I/ActivityManager( 1160): START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=org.codeaurora.snapcam/com.android.camera.CameraLauncher} from uid 2000
+D/ActivityTrigger( 1160): activityStartTrigger: Activity is Triggerred in full screen ApplicationInfo{80df72e org.codeaurora.snapcam}
+E/ActivityTrigger( 1160): activityStartTrigger: not whiteListedorg.codeaurora.snapcam/com.android.camera.CameraLauncher/20002030
+D/ActivityTrigger( 1160): activityResumeTrigger: The activity in ApplicationInfo{80df72e org.codeaurora.snapcam} is now in focus and seems to be in full-screen mode
+E/ActivityTrigger( 1160): activityResumeTrigger: not whiteListedorg.codeaurora.snapcam/com.android.camera.CameraLauncher/20002030
+D/ActivityTrigger( 1160): activityResumeTrigger: The activity in ApplicationInfo{80df72e org.codeaurora.snapcam} is now in focus and seems to be in full-screen mode
+E/ActivityTrigger( 1160): activityResumeTrigger: not whiteListedorg.codeaurora.snapcam/com.android.camera.CameraLauncher/20002030
+W/org.codeaurora.snapcam( 5890): type=1400 audit(0.0:394287): avc: denied { read } for comm=43616D6572612048616E646C657220 name="u:object_r:camera_prop:s0" dev="tmpfs" ino=13458 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:camera_prop:s0 tclass=file permissive=0
+I/CameraService( 6014): CameraService::connect call (PID -1 "org.codeaurora.snapcam", camera ID 0) for HAL version 256 and Camera API version 1
+D/AppOps  ( 1160): noteOperation: allowing code 59 uid 10023 package org.codeaurora.snapcam
+D/AppOps  ( 1160): noteOperation: allowing code 59 uid 10023 package org.codeaurora.snapcam
+D/AppOps  ( 1160): noteOperation: allowing code 59 uid 10023 package org.codeaurora.snapcam
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 47 lines
+D/AppOps  ( 1160): startOperation: allowing code 26 uid 10023 package org.codeaurora.snapcam
+I/QCamera ( 6039): <HAL><INFO> openLegacy: 500: openLegacy halVersion: 256
+I/QCamera ( 6039): <HAL><INFO> openCamera: 1827: [KPI Perf]: E PROFILE_OPEN_CAMERA camera id 0
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 6 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 4 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 4 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 3 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 11 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 6 lines
+D/AppOps  ( 1160): noteOperation: allowing code 59 uid 10023 package org.codeaurora.snapcam
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 4 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 8 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 8 lines
+D/AppOps  ( 1160): noteOperation: allowing code 59 uid 10023 package org.codeaurora.snapcam
+D/AppOps  ( 1160): noteOperation: allowing code 60 uid 10023 package org.codeaurora.snapcam
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 42 lines
+D/AppOps  ( 1160): noteOperation: allowing code 59 uid 10023 package org.codeaurora.snapcam
+D/AppOps  ( 1160): noteOperation: allowing code 60 uid 10023 package org.codeaurora.snapcam
+D/AppOps  ( 1160): noteOperation: allowing code 59 uid 10023 package org.codeaurora.snapcam
+D/AppOps  ( 1160): noteOperation: allowing code 60 uid 10023 package org.codeaurora.snapcam
+D/AppOps  ( 1160): noteOperation: allowing code 59 uid 10023 package org.codeaurora.snapcam
+D/AppOps  ( 1160): noteOperation: allowing code 60 uid 10023 package org.codeaurora.snapcam
+D/AppOps  ( 1160): noteOperation: allowing code 59 uid 10023 package org.codeaurora.snapcam
+D/AppOps  ( 1160): noteOperation: allowing code 60 uid 10023 package org.codeaurora.snapcam
+D/AppOps  ( 1160): noteOperation: allowing code 59 uid 10023 package org.codeaurora.snapcam
+D/AppOps  ( 1160): noteOperation: allowing code 60 uid 10023 package org.codeaurora.snapcam
+I/QCamera ( 6039): <HAL><INFO> openCamera: 1840: [KPI Perf]: X PROFILE_OPEN_CAMERA camera id 0, rc: 0
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 26 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/QCamera ( 6039): <HAL><INFO> setDualCameraMode: 14862: Dual camera mode set 0
+I/QCamera ( 6039): <HAL><INFO> setPreviewSize: 1510: Requested preview size 640 x 480
+I/QCamera ( 6039): <HAL><INFO> setDualCameraMode: 14862: Dual camera mode set 0
+I/QCamera ( 6039): <HAL><INFO> setZslMode: 4510: ZSL Mode  -> Disabled
+D/SurfaceFlinger(  587): duplicate layer name: changing SurfaceView - org.codeaurora.snapcam/com.android.camera.CameraLauncher to SurfaceView - org.codeaurora.snapcam/com.android.camera.CameraLauncher#1
+D/SurfaceFlinger(  587): duplicate layer name: changing Background for - SurfaceView - org.codeaurora.snapcam/com.android.camera.CameraLauncher to Background for - SurfaceView - org.codeaurora.snapcam/com.android.camera.CameraLauncher#1
+I/QCamera ( 6039): <HAL><INFO> start_preview: 368: [KPI Perf]: E PROFILE_START_PREVIEW camera id 0
+I/QCamera ( 6039): <HAL><INFO> preparePreview: 8332: E
+I/QCamera ( 6039): <HAL><INFO> setStreamConfigure: 13441: STREAM INFO : type 1, wxh: 640 x 480, pp_mask: 0x101000882                 Format = 2, dt =0 cid =0 subformat =0, is_type 0
+I/QCamera ( 6039): <HAL><INFO> setStreamConfigure: 13441: STREAM INFO : type 11, wxh: 640 x 480, pp_mask: 0x882                 Format = 2, dt =0 cid =0 subformat =0, is_type 0
+I/QCamera ( 6039): <HAL><INFO> setStreamConfigure: 13441: STREAM INFO : type 3, wxh: 2592 x 1944, pp_mask: 0x0                 Format = 2, dt =0 cid =0 subformat =0, is_type 0
+D/AppOps  ( 1160): noteOperation: allowing code 59 uid 10023 package org.codeaurora.snapcam
+D/AppOps  ( 1160): noteOperation: allowing code 60 uid 10023 package org.codeaurora.snapcam
+D/AppOps  ( 1160): noteOperation: allowing code 59 uid 10023 package org.codeaurora.snapcam
+D/AppOps  ( 1160): noteOperation: allowing code 60 uid 10023 package org.codeaurora.snapcam
+I/ActivityManager( 1160): Displayed org.codeaurora.snapcam/com.android.camera.CameraLauncher: +218ms
+E/AndroidRuntime( 5890): Process: org.codeaurora.snapcam, PID: 5890
+W/ActivityManager( 1160):   Force finishing activity org.codeaurora.snapcam/com.android.camera.CameraLauncher
+I/ActivityManager( 1160): Showing crash dialog for package org.codeaurora.snapcam u0
+W/ActivityManager( 1160): Duplicate finish request for ActivityRecord{e4bba20 u0 org.codeaurora.snapcam/com.android.camera.CameraLauncher t24 f}
+F/DEBUG   ( 6233):     #06 pc 0007859f  /vendor/lib/hw/camera.msm8953.so (qcamera::QCamera2HardwareInterface::getBufNumRequired(cam_stream_type_t)+118)
+F/DEBUG   ( 6233):     #07 pc 00079047  /vendor/lib/hw/camera.msm8953.so (qcamera::QCamera2HardwareInterface::allocateStreamInfoBuf(cam_stream_type_t)+150)
+F/DEBUG   ( 6233):     #08 pc 0007f385  /vendor/lib/hw/camera.msm8953.so (qcamera::QCamera2HardwareInterface::addStreamToChannel(qcamera::QCameraChannel*, cam_stream_type_t, void (*)(mm_camera_super_buf_t*, qcamera::QCameraStream*, void*), void*)+44)
+F/DEBUG   ( 6233):     #09 pc 0007fdfd  /vendor/lib/hw/camera.msm8953.so (qcamera::QCamera2HardwareInterface::addZSLChannel()+284)
+F/DEBUG   ( 6233):     #10 pc 0007a235  /vendor/lib/hw/camera.msm8953.so (qcamera::QCamera2HardwareInterface::preparePreview()+476)
+F/DEBUG   ( 6233):     #11 pc 0008b581  /vendor/lib/hw/camera.msm8953.so (qcamera::QCameraStateMachine::procEvtPreviewStoppedState(qcamera::qcamera_sm_evt_enum_t, void*)+1604)
+F/DEBUG   ( 6233):     #12 pc 0008aab7  /vendor/lib/hw/camera.msm8953.so (qcamera::QCameraStateMachine::smEvtProcRoutine(void*)+158)
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 48 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 4 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+D/vndksupport( 6247): Loading /vendor/lib/hw/camera.msm8953.so from current namespace instead of sphal namespace.
+E/QCamera ( 6247): <MCI><ERROR> get_num_of_cameras: 1934: dev_info[id=0,name='video1']
+I/QCamera ( 6247): <MCI><INFO> sort_camera_info: 1691: YUV Aux camera exposed 0
+I/QCamera ( 6247): <MCI><INFO> sort_camera_info: 1768: Camera id: 0 facing: 1, type: 0 is_yuv: 0
+I/QCamera ( 6247): <MCI><INFO> sort_camera_info: 1771: Number of cameras 1 sorted 1
+E/QCamera ( 6247): <MCI><ERROR> get_num_of_cameras: 1952: num_cameras=1
+I/CamProvider@2.4-impl( 6247): Loaded "QCamera Module" camera module
+I/QCamera ( 6247): <HAL><INFO> getCameraInfo: 340: Camera id 0 API version 768
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 6 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 12 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 12 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 9 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 8 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 4 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 3 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 42 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 11 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 9 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 1 line
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 1 line
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 1 line
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 3 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 1 line
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 1 line
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 140 lines
+I/QCamera ( 6247): <HAL><INFO> getCamInfo: 8811: camera 0 resource cost is 100
+I/QCamera ( 6247): <HAL><INFO> openLegacy: 500: openLegacy halVersion: 256
+I/QCamera ( 6247): <HAL><INFO> openCamera: 1827: [KPI Perf]: E PROFILE_OPEN_CAMERA camera id 0
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 6 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 6 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 12 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 15 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 9 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 8 lines
+I/QCamera ( 6247): <HAL><INFO> openCamera: 1840: [KPI Perf]: X PROFILE_OPEN_CAMERA camera id 0, rc: 0
+I/QCamera ( 6247): <HAL><INFO> close_camera_device: 1495: [KPI Perf]: E camera id 0
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 10 lines
+I/QCamera ( 6247): <HAL><INFO> closeCamera: 2226: E
+I/QCamera ( 6247): <HAL><INFO> closeCamera: 2231: [KPI Perf]: E PROFILE_CLOSE_CAMERA camera id 0
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 4 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 2 lines
+I/QCamera ( 6247): <HAL><INFO> closeCamera: 2302: [KPI Perf]: X PROFILE_CLOSE_CAMERA camera id 0, rc: 0
+I/QCamera ( 6247): <HAL><INFO> close_camera_device: 1497: [KPI Perf]: X
+I/QCamera ( 6247): <HAL><INFO> openLegacy: 500: openLegacy halVersion: 256
+I/QCamera ( 6247): <HAL><INFO> openCamera: 1827: [KPI Perf]: E PROFILE_OPEN_CAMERA camera id 0
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 6 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 6 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 12 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 15 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 9 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem expire 8 lines
+I/chatty  (  772): uid=1006(camera) mm-qcamera-daem identical 3 lines
+I/QCamera ( 6247): <HAL><INFO> openCamera: 1840: [KPI Perf]: X PROFILE_OPEN_CAMERA camera id 0, rc: 0
+I/CamDev@1.0-impl( 6247): could not cast ICameraDeviceCallback to IQCameraDeviceCallback
+I/QCamera ( 6247): <HAL><INFO> close_camera_device: 1495: [KPI Perf]: E camera id 0
+I/QCamera ( 6247): <HAL><INFO> closeCamera: 2226: E
+I/QCamera ( 6247): <HAL><INFO> closeCamera: 2231: [KPI Perf]: E PROFILE_CLOSE_CAMERA camera id 0
+W/ActivityManager( 1160): Activity pause timeout for ActivityRecord{e4bba20 u0 org.codeaurora.snapcam/com.android.camera.CameraLauncher t24 f}
+I/QCamera ( 6247): <HAL><INFO> closeCamera: 2302: [KPI Perf]: X PROFILE_CLOSE_CAMERA camera id 0, rc: 0
+I/QCamera ( 6247): <HAL><INFO> close_camera_device: 1497: [KPI Perf]: X
+W/ActivityManager( 1160):   Force finishing activity org.codeaurora.snapcam/com.android.camera.CameraLauncher
+I/ActivityManager( 1160): Killing 5890:org.codeaurora.snapcam/u0a23 (adj 0): crash

@@ -1,0 +1,82 @@
+<!--
+  Source: /vendor/etc/camera/camera_config.xml pulled from stock Android 8.1.0
+  Device: Lenovo ThinkSmart View CD-18781Y (HUA0AEFD)
+  Date:   2026-05-28
+-->
+<!--
+  Copyright (c) 2015-2018 Qualcomm Technologies, Inc.
+  All Rights Reserved.
+  Confidential and Proprietary - Qualcomm Technologies, Inc.
+-->
+
+<CameraConfigurationRoot>
+  <CameraModuleConfig>
+    <CameraId>0</CameraId>
+    <SensorName>ov5693</SensorName>
+    <ChromatixName>ov5693_chromatix</ChromatixName>
+    <EepromName>qtech_ov5693</EepromName>
+    <ModesSupported>2</ModesSupported>
+    <Position>BACK</Position>
+    <MountAngle>360</MountAngle>
+    <CSIInfo>
+      <CSIDCore>0</CSIDCore>
+      <LaneMask>0x1F</LaneMask>
+      <LaneAssign>0x4320</LaneAssign>
+      <ComboMode>0</ComboMode>
+    </CSIInfo>
+    <LensInfo>
+      <FocalLength>4.73</FocalLength>
+      <FNumber>2.2</FNumber>
+      <TotalFocusDistance>1.9</TotalFocusDistance>
+      <HorizontalViewAngle>64.1</HorizontalViewAngle>
+      <VerticalViewAngle>51.6</VerticalViewAngle>
+      <MinFocusDistance>0.1</MinFocusDistance>
+    </LensInfo>
+  </CameraModuleConfig>
+  <CameraModuleConfig>
+    <CameraId>0</CameraId>
+    <SensorName>s5k4e8</SensorName>
+    <ChromatixName>s5k4e8_chromatix</ChromatixName>
+    <EepromName>qtech_s5k4e8</EepromName>
+    <ModesSupported>1</ModesSupported>
+    <Position>FRONT</Position>
+    <MountAngle>360</MountAngle>
+    <CSIInfo>
+      <CSIDCore>0</CSIDCore>
+      <LaneMask>0x7</LaneMask>
+      <LaneAssign>0x4320</LaneAssign>
+      <ComboMode>0</ComboMode>
+    </CSIInfo>
+    <LensInfo>
+      <FocalLength>4.04</FocalLength>
+      <FNumber>2.2</FNumber>
+      <TotalFocusDistance>2.0</TotalFocusDistance>
+      <HorizontalViewAngle>64.8</HorizontalViewAngle>
+      <VerticalViewAngle>51.2</VerticalViewAngle>
+      <MinFocusDistance>0.1</MinFocusDistance>
+    </LensInfo>
+  </CameraModuleConfig>
+  <CameraModuleConfig>
+    <CameraId>0</CameraId>
+    <SensorName>s5kc505a</SensorName>
+    <ChromatixName>s5kc505a_chromatix</ChromatixName>
+    <EepromName>qtech_s5kc505a</EepromName>
+    <ModesSupported>1</ModesSupported>
+    <Position>FRONT</Position>
+    <MountAngle>360</MountAngle>
+    <CSIInfo>
+      <CSIDCore>0</CSIDCore>
+      <LaneMask>0x7</LaneMask>
+      <LaneAssign>0x4320</LaneAssign>
+      <ComboMode>0</ComboMode>
+    </CSIInfo>
+    <LensInfo>
+      <FocalLength>4.04</FocalLength>
+      <FNumber>2.2</FNumber>
+      <TotalFocusDistance>2.0</TotalFocusDistance>
+      <HorizontalViewAngle>64.8</HorizontalViewAngle>
+      <VerticalViewAngle>51.2</VerticalViewAngle>
+      <MinFocusDistance>0.1</MinFocusDistance>
+    </LensInfo>
+  </CameraModuleConfig>
+</CameraConfigurationRoot>

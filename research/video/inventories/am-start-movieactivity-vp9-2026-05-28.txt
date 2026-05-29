@@ -1,0 +1,7 @@
+Starting: Intent { act=android.intent.action.VIEW dat=file:///sdcard/Download/sample-5s-vp9.webm typ=video/webm cmp=com.android.gallery3d/.app.MovieActivity }
+Status: ok
+Activity: com.android.gallery3d/.app.MovieActivity
+ThisTime: 86
+TotalTime: 86
+WaitTime: 105
+Complete

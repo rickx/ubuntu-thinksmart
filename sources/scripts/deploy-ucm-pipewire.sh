@@ -107,7 +107,7 @@ EOF_QCOM_CARD
 
 cp -f "$UCM_BASE/Lenovo/cd-18781y/HiFi.conf" "$UCM_BASE/Qualcomm/cd-18781y/HiFi.conf"
 
-cat > "$WP_DIR/51-cd18781y-alsa.lua" << 'EOF_WP'
+cat > "$WP_DIR/99-cd18781y-alsa.lua" << 'EOF_WP'
 alsa_monitor.rules = alsa_monitor.rules or {}
 
 -- Prefer ACP routing and disable mmap probes that fail on this card.
@@ -124,6 +124,21 @@ table.insert(alsa_monitor.rules, {
     ["api.acp.auto-port"] = true,
     ["api.alsa.disable-mmap"] = true,
   },
+})
+
+-- Keep the speaker node active and force stable S16 playback format.
+table.insert(alsa_monitor.rules, {
+	matches = {
+		{ { "node.name", "equals", "alsa_output.platform-c051000.sound-card.HiFi__hw_cd18781y_0__sink" } },
+		{ { "node.name", "equals", "alsa_output.platform-c051000.sound-card.playback.0.0" } },
+	},
+	apply_properties = {
+		["node.pause-on-idle"] = false,
+		["session.suspend-timeout-seconds"] = 0,
+		["audio.format"] = "S16LE",
+		["audio.rate"] = 48000,
+		["audio.channels"] = 2,
+	},
 })
 
 -- Hide non-speaker endpoints to reduce wrong default route selection.
@@ -143,7 +158,7 @@ echo "=== UCM summary ==="
 ls -la "$UCM_BASE/conf.d/cd-18781y" "$UCM_BASE/conf.d/cd18781y" "$UCM_BASE/Lenovo/cd-18781y" "$UCM_BASE/Qualcomm/cd-18781y"
 
 echo "=== WirePlumber summary ==="
-ls -la "$WP_DIR/51-cd18781y-alsa.lua"
+ls -la "$WP_DIR/99-cd18781y-alsa.lua"
 
 echo "=== Restarting user audio services ==="
 sudo -u user XDG_RUNTIME_DIR=/run/user/1000 systemctl --user restart wireplumber pipewire pipewire-pulse || true

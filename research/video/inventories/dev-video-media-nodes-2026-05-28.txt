@@ -1,0 +1,26 @@
+crw-rw---- 1 system camera 251,   0 1969-12-31 16:00 /dev/media0
+crw-rw---- 1 system camera 251,   1 1969-12-31 16:00 /dev/media1
+crw-rw---- 1 system camera  81,   3 1969-12-31 16:00 /dev/v4l-subdev0
+crw-rw---- 1 system camera  81,   4 1969-12-31 16:00 /dev/v4l-subdev1
+crw-rw---- 1 system camera  81,  13 1969-12-31 16:00 /dev/v4l-subdev10
+crw-rw---- 1 system camera  81,  14 1969-12-31 16:00 /dev/v4l-subdev11
+crw-rw---- 1 system camera  81,  15 1969-12-31 16:00 /dev/v4l-subdev12
+crw-rw---- 1 system camera  81,  16 1969-12-31 16:00 /dev/v4l-subdev13
+crw-rw---- 1 system camera  81,  17 1969-12-31 16:00 /dev/v4l-subdev14
+crw-rw---- 1 system camera  81,  18 1969-12-31 16:00 /dev/v4l-subdev15
+crw-rw---- 1 system camera  81,  19 1969-12-31 16:00 /dev/v4l-subdev16
+crw-rw---- 1 system camera  81,  20 1969-12-31 16:00 /dev/v4l-subdev17
+crw-rw---- 1 system camera  81,  23 1969-12-31 16:00 /dev/v4l-subdev18
+crw-rw---- 1 system camera  81,   5 1969-12-31 16:00 /dev/v4l-subdev2
+crw-rw---- 1 system camera  81,   6 1969-12-31 16:00 /dev/v4l-subdev3
+crw-rw---- 1 system camera  81,   7 1969-12-31 16:00 /dev/v4l-subdev4
+crw-rw---- 1 system camera  81,   8 1969-12-31 16:00 /dev/v4l-subdev5
+crw-rw---- 1 system camera  81,   9 1969-12-31 16:00 /dev/v4l-subdev6
+crw-rw---- 1 system camera  81,  10 1969-12-31 16:00 /dev/v4l-subdev7
+crw-rw---- 1 system camera  81,  11 1969-12-31 16:00 /dev/v4l-subdev8
+crw-rw---- 1 system camera  81,  12 1969-12-31 16:00 /dev/v4l-subdev9
+crw-rw---- 1 system camera  81,   2 1969-12-31 16:00 /dev/video0
+crw-rw---- 1 system camera  81,  22 1969-12-31 16:00 /dev/video1
+crw-rw---- 1 system camera  81,   0 1969-12-31 16:00 /dev/video32
+crw-rw---- 1 system camera  81,   1 1969-12-31 16:00 /dev/video33
+

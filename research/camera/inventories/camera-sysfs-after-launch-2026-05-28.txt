@@ -1,0 +1,5 @@
+[camera@0]
+video1
+[camera@2]
+d
+d

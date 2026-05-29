@@ -31,6 +31,25 @@ That personalized bootstrap image keeps `sshd` enabled, can inject your WiFi pro
 
 The prep script strips saved WiFi profiles, SSH host keys, and `machine-id` from the base image before you flash it.
 
+## Installing edl on Windows
+
+```
+curl.exe -O https://raw.githubusercontent.com/bkerler/edl/master/install_edl_win10_win11.ps1
+.\install_edl_win10_win11.ps1
+```
+
+If the script is blocked by execution policy, run it with:
+
+```
+powershell -ExecutionPolicy Bypass -File install_edl_win10_win11.ps1
+```
+
+This installs edl under Program Files and adds it to PATH, so you can use it directly:
+
+```
+edl r boot boot.img
+```
+
 ## Enter EDL
 
 1. Power the device off.

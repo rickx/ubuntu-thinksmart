@@ -1,0 +1,113 @@
+--------- beginning of system
+05-28 12:00:04.776  1160  2941 I ActivityManager: START u0 {act=android.intent.action.VIEW dat=https://storage.googleapis.com/... flg=0x10000000 cmp=org.chromium.webview_shell/.WebViewBrowserActivity} from uid 2000
+--------- beginning of main
+05-28 12:00:04.785   575   620 E ANDR-PERF-MPCTL: Invalid profile no. 0, total profiles 0 only
+05-28 12:00:04.787   440   440 W /system/bin/hwservicemanager: getTransport: Cannot find entry vendor.qti.hardware.iop@1.0::IIop/default in either framework or device manifest.
+05-28 12:00:04.787  1160  2941 E ANDR-PERF-JNI: Iop tryGetService failed
+05-28 12:00:04.791  1160  2941 D ActivityTrigger: activityStartTrigger: Activity is Triggerred in full screen ApplicationInfo{af7c99f org.chromium.webview_shell}
+05-28 12:00:04.791  1160  2941 E ActivityTrigger: activityStartTrigger: not whiteListedorg.chromium.webview_shell/org.chromium.webview_shell.WebViewBrowserActivity/1
+05-28 12:00:04.792  1160  2941 D CompatibilityInfo: mCompatibilityFlags - 14
+05-28 12:00:04.792  1160  2941 D CompatibilityInfo: applicationDensity - 240
+05-28 12:00:04.792  1160  2941 D CompatibilityInfo: applicationScale - 1.0
+05-28 12:00:04.792  1160  2941 D ActivityTrigger: activityResumeTrigger: The activity in ApplicationInfo{af7c99f org.chromium.webview_shell} is now in focus and seems to be in full-screen mode
+05-28 12:00:04.792  1160  2941 E ActivityTrigger: activityResumeTrigger: not whiteListedorg.chromium.webview_shell/org.chromium.webview_shell.WebViewBrowserActivity/1
+05-28 12:00:04.792  1160  2941 D ActivityTrigger: ActivityTrigger activityPauseTrigger 
+05-28 12:00:04.796  1160  6364 D ActivityTrigger: activityResumeTrigger: The activity in ApplicationInfo{af7c99f org.chromium.webview_shell} is now in focus and seems to be in full-screen mode
+05-28 12:00:04.796  1160  6364 E ActivityTrigger: activityResumeTrigger: not whiteListedorg.chromium.webview_shell/org.chromium.webview_shell.WebViewBrowserActivity/1
+05-28 12:00:04.797  1160  6364 D AppOps  : noteOperation: allowing code 72 uid 10033 package org.chromium.webview_shell
+05-28 12:00:04.797  1160  6364 D AppOps  : noteOperation: allowing code 59 uid 10033 package org.chromium.webview_shell
+05-28 12:00:04.797  1160  6364 D AppOps  : noteOperation: allowing code 60 uid 10033 package org.chromium.webview_shell
+05-28 12:00:04.808  1160  6364 I ActivityManager: Start proc 7849:org.chromium.webview_shell/u0a33 for activity org.chromium.webview_shell/.WebViewBrowserActivity
+05-28 12:00:04.822  1160  6364 D CompatibilityInfo: mCompatibilityFlags - 14
+05-28 12:00:04.822  1160  6364 D CompatibilityInfo: applicationDensity - 240
+05-28 12:00:04.822  1160  6364 D CompatibilityInfo: applicationScale - 1.0
+05-28 12:00:04.826  1160  6364 D CompatibilityInfo: mCompatibilityFlags - 14
+05-28 12:00:04.826  1160  6364 D CompatibilityInfo: applicationDensity - 240
+05-28 12:00:04.826  1160  6364 D CompatibilityInfo: applicationScale - 1.0
+05-28 12:00:04.848  7849  7849 I zygote  : The ClassLoaderContext is a special shared library.
+05-28 12:00:04.851  7849  7849 I chatty  : uid=10033(org.chromium.webview_shell) identical 1 line
+05-28 12:00:04.853  7849  7849 I zygote  : The ClassLoaderContext is a special shared library.
+05-28 12:00:04.889  7849  7849 I WebViewFactory: Loading com.android.webview version 61.0.3163.98 (code 316409800)
+05-28 12:00:04.892  7849  7849 I zygote  : The ClassLoaderContext is a special shared library.
+05-28 12:00:05.012  7849  7849 I cr_LibraryLoader: Time to load native libraries: 3 ms (timestamps 3964-3967)
+05-28 12:00:05.063  7849  7849 I chromium: [INFO:library_loader_hooks.cc(136)] Chromium logging enabled: level = 0, default verbosity = 0
+05-28 12:00:05.064  7849  7849 I cr_LibraryLoader: Expected native library version number "61.0.3163.98", actual native library version number "61.0.3163.98"
+05-28 12:00:05.093  7849  7868 W cr_ChildProcLH: Create a new ChildConnectionAllocator with package name = com.android.webview, sandboxed = true
+05-28 12:00:05.096  7849  7849 I cr_BrowserStartup: Initializing chromium process, singleProcess=false
+05-28 12:00:05.109  1160  6364 I Zygote  : Process: zygote socket webview_zygote opened, supported ABIS: armeabi-v7a,armeabi
+05-28 12:00:05.109  1160  6364 D WebViewZygote: Preloading package /system/app/webview/webview.apk /system/app/webview/lib/arm:/system/app/webview/webview.apk!/lib/armeabi-v7a
+05-28 12:00:05.120  1160  6364 I Zygote  : Process: zygote socket webview_zygote opened, supported ABIS: armeabi-v7a,armeabi
+05-28 12:00:05.120  1326  1326 I WebViewZygoteInit: Beginning package preload
+05-28 12:00:05.123  1326  1326 I /system/bin/webview_zygote32: The ClassLoaderContext is a special shared library.
+05-28 12:00:05.146  1326  1326 I WebViewZygoteInit: Package preload done
+05-28 12:00:05.177  7869  7869 E /system/bin/webview_zygote32: Failed to make and chown /acct/uid_99000: Permission denied
+05-28 12:00:05.177  7869  7869 E Zygote  : createProcessGroup(99000, 0) failed: Permission denied
+05-28 12:00:05.180  1160  6364 W ActivityManager: Slow operation: 82ms so far, now at startProcess: returned from zygote!
+05-28 12:00:05.180  1160  6364 W ActivityManager: Slow operation: 82ms so far, now at startProcess: done updating battery stats
+05-28 12:00:05.180  1160  6364 W ActivityManager: Slow operation: 82ms so far, now at startProcess: building log message
+05-28 12:00:05.180  1160  6364 I ActivityManager: Start proc 7869:com.android.webview:sandboxed_process0/u0i0 for webview_service org.chromium.webview_shell/org.chromium.content.app.SandboxedProcessService0
+05-28 12:00:05.181  1160  6364 W ActivityManager: Slow operation: 83ms so far, now at startProcess: starting to update pids map
+05-28 12:00:05.181  1160  6364 W ActivityManager: Slow operation: 83ms so far, now at startProcess: done updating pids map
+05-28 12:00:05.181  1160  6364 W ActivityManager: Slow operation: 83ms so far, now at startProcess: done starting proc!
+05-28 12:00:05.187  7849  7849 W m.webview_shell: type=1400 audit(0.0:396442): avc: denied { read } for name="vmstat" dev="proc" ino=4026532358 scontext=u:r:untrusted_app_25:s0:c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+05-28 12:00:05.202  7849  7849 I Adreno  : QUALCOMM build                   : fa7d293, I89dac622c4
+05-28 12:00:05.202  7849  7849 I Adreno  : Build Date                       : 01/20/20
+05-28 12:00:05.202  7849  7849 I Adreno  : OpenGL ES Shader Compiler Version: EV031.22.00.01_06_07
+05-28 12:00:05.202  7849  7849 I Adreno  : Local Branch                     : 
+05-28 12:00:05.202  7849  7849 I Adreno  : Remote Branch                    : refs/tags/AU_LINUX_ANDROID_LA.UM.6.6.3.R1.08.01.00.481.013
+05-28 12:00:05.202  7849  7849 I Adreno  : Remote Branch                    : NONE
+05-28 12:00:05.202  7849  7849 I Adreno  : Reconstruct Branch               : NOTHING
+05-28 12:00:05.203  1160  6364 D CompatibilityInfo: mCompatibilityFlags - 4
+05-28 12:00:05.203  1160  6364 D CompatibilityInfo: applicationDensity - 240
+05-28 12:00:05.203  1160  6364 D CompatibilityInfo: applicationScale - 1.0
+05-28 12:00:05.205  1160  6364 D CompatibilityInfo: mCompatibilityFlags - 4
+05-28 12:00:05.205  1160  6364 D CompatibilityInfo: applicationDensity - 240
+05-28 12:00:05.205  1160  6364 D CompatibilityInfo: applicationScale - 1.0
+05-28 12:00:05.207  7869  7869 W dboxed_process0: type=1400 audit(0.0:396443): avc: denied { search } for name="/" dev="mmcblk0p27" ino=2 scontext=u:r:isolated_app:s0:c512,c768 tcontext=u:object_r:persist_file:s0 tclass=dir permissive=0
+05-28 12:00:05.208  7849  7849 I Adreno  : PFP: 0x005ff087, ME: 0x005ff063
+05-28 12:00:05.213  7869  7869 D         : Regionalization Environment load packages for Carrier error!
+05-28 12:00:05.215  7849  7849 I zygote  : android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasWideColorDisplay retrieved: 0
+05-28 12:00:05.217  7883  7883 E asset   : setgid: Operation not permitted
+05-28 12:00:05.245  7869  7869 I LoadedApk: No resource references to update in package com.android.webview
+05-28 12:00:05.248  7869  7869 I cr_ChildProcessService: Creating new ChildProcessService pid=7869
+05-28 12:00:05.278  7849  7898 W cr_CrashFileManager: /data/user/0/org.chromium.webview_shell/cache/WebView/Crash Reports does not exist or is not a directory
+05-28 12:00:05.339  1160  2783 D AppOps  : noteOperation: reject #3 for code 23 (23) uid 10033 package org.chromium.webview_shell
+05-28 12:00:05.382  7849  7868 I cr_LibraryLoader: Using linker: org.chromium.base.library_loader.ModernLinker
+05-28 12:00:05.383  7849  7897 W cr_media: Requires BLUETOOTH permission
+05-28 12:00:05.394  7849  7902 D OpenGLRenderer: HWUI GL Pipeline
+05-28 12:00:05.404  1160  2783 D AppOps  : noteOperation: reject #3 for code 23 (23) uid 10033 package org.chromium.webview_shell
+05-28 12:00:05.442  7849  7902 I OpenGLRenderer: Initialized EGL, version 1.4
+05-28 12:00:05.442  7849  7902 D OpenGLRenderer: Swap behavior 2
+05-28 12:00:05.452  7869  7895 I cr_LibraryLoader: Time to load native libraries: 0 ms (timestamps 4375-4375)
+05-28 12:00:05.452  7869  7895 I cr_LibraryLoader: Using linker: org.chromium.base.library_loader.ModernLinker
+05-28 12:00:05.454  7869  7895 I chromium: [INFO:library_loader_hooks.cc(136)] Chromium logging enabled: level = 0, default verbosity = 0
+05-28 12:00:05.454  7869  7895 I cr_LibraryLoader: Expected native library version number "61.0.3163.98", actual native library version number "61.0.3163.98"
+05-28 12:00:05.647  7849  7912 W VideoCapabilities: Unrecognized profile 2130706433 for video/avc
+05-28 12:00:05.647  7849  7912 W VideoCapabilities: Unrecognized profile 2130706434 for video/avc
+05-28 12:00:05.649  7849  7912 W VideoCapabilities: Unrecognized profile 2130706433 for video/avc
+05-28 12:00:05.649  7849  7912 W VideoCapabilities: Unrecognized profile 2130706434 for video/avc
+05-28 12:00:05.653  7849  7912 W VideoCapabilities: Unsupported mime video/divx
+05-28 12:00:05.655  7849  7912 W VideoCapabilities: Unsupported mime video/divx311
+05-28 12:00:05.658  7849  7912 W VideoCapabilities: Unsupported mime video/divx4
+05-28 12:00:05.670  7849  7912 W VideoCapabilities: Unrecognized profile/level 0/3 for video/mpeg2
+05-28 12:00:05.672  7849  7912 W VideoCapabilities: Unrecognized profile/level 0/3 for video/mpeg2
+05-28 12:00:05.677  7849  7912 W VideoCapabilities: Unsupported mime video/x-ms-wmv
+05-28 12:00:05.679  7849  7912 I chatty  : uid=10033(org.chromium.webview_shell) Chrome_InProcGp identical 1 line
+05-28 12:00:05.681  7849  7912 W VideoCapabilities: Unsupported mime video/x-ms-wmv
+05-28 12:00:05.693  7849  7912 W VideoCapabilities: Unrecognized profile 2130706433 for video/avc
+05-28 12:00:05.693  7849  7912 W VideoCapabilities: Unrecognized profile 2130706434 for video/avc
+05-28 12:00:05.705  7849  7912 I VideoCapabilities: Unsupported profile 4 for video/mp4v-es
+05-28 12:00:05.708  7849  7912 W Utils   : could not parse long range '175-174'
+05-28 12:00:05.759  1160  1181 I ActivityManager: Displayed org.chromium.webview_shell/.WebViewBrowserActivity: +957ms
+05-28 12:00:05.760   440   440 W /system/bin/hwservicemanager: getTransport: Cannot find entry vendor.qti.hardware.iop@1.0::IIop/default in either framework or device manifest.
+05-28 12:00:05.760  1160  1181 E ANDR-PERF-JNI: Iop tryGetService failed
+05-28 12:00:05.801  1160  2941 D ActivityTrigger: ActivityTrigger activityStopTrigger 
+05-28 12:00:05.916  7849  7927 D NetworkSecurityConfig: No Network Security Config specified, using platform default
+05-28 12:00:09.282  1160  1169 I zygote  : Background concurrent copying GC freed 373571(15MB) AllocSpace objects, 98(2MB) LOS objects, 66% free, 9MB/27MB, paused 388us total 138.767ms
+05-28 12:00:11.150  1288  1288 D KeyguardUpdateMonitor: received broadcast android.intent.action.BATTERY_CHANGED
+05-28 12:00:11.152  1424  1424 D QtiCarrierConfigHelper: WARNING, no carrier configs on phone Id: 0
+05-28 12:00:11.153  1260  1680 D HeadsetStateMachine: Disconnected process message: 10, size: 0
+05-28 12:00:11.153  1260  1680 D HeadsetStateMachine: Enter processIntentBatteryChanged()
+05-28 12:00:11.154  1260  1680 D HeadsetStateMachine: Exit processIntentBatteryChanged()
+05-28 12:00:11.154  1260  1680 D HeadsetStateMachine: Exit Disconnected processMessage() 
+05-28 12:00:11.156  1288  1288 D KeyguardUpdateMonitor: handleBatteryUpdate

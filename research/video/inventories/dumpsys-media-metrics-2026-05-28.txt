@@ -1,0 +1,42 @@
+Dump of the media.metrics process:
+Protocol Version: 0
+Metrics gathering: enabled
+Since Boot: Submissions:       49 Finalizations:       49
+Records Discarded:       19 (by Count: 0 by Expiration: 19)
+Summary Sets Discarded: 0
+
+Finalized Metrics (oldest first):
+    0: (codec:24:10023:48291:1779988192000000000:6:android.media.mediacodec.mime=audio/vorbis:android.media.mediacodec.mode=audio:android.media.mediacodec.encoder=0:android.media.mediacodec.codec=OMX.google.vorbis.decoder:android.media.mediacodec.secure=0:android.media.mediacodec.bytesin=6590:)
+    1: (extractor:23:1040:7561:1779988192000000000:3:android.media.mediaextractor.fmt=<unspecified>:android.media.mediaextractor.ntrk=1:android.media.mediaextractor.mime=application/ogg:)
+    2: (codec:29:10023:48291:1779988193000000000:6:android.media.mediacodec.mime=audio/vorbis:android.media.mediacodec.mode=audio:android.media.mediacodec.encoder=0:android.media.mediacodec.codec=OMX.google.vorbis.decoder:android.media.mediacodec.secure=0:android.media.mediacodec.bytesin=6925:)
+    3: (codec:34:10023:48291:1779988193000000000:6:android.media.mediacodec.mime=audio/vorbis:android.media.mediacodec.mode=audio:android.media.mediacodec.encoder=0:android.media.mediacodec.codec=OMX.google.vorbis.decoder:android.media.mediacodec.secure=0:android.media.mediacodec.bytesin=21488:)
+    4: (extractor:33:1040:7561:1779989242000000000:3:android.media.mediaextractor.fmt=<unspecified>:android.media.mediaextractor.ntrk=1:android.media.mediaextractor.mime=application/ogg:)
+    5: (nuplayer:25:1047:7581:1779989242000000000:5:android.media.mediaplayer.audio.mime=audio/vorbis:android.media.mediaplayer.audio.codec=OMX.google.vorbis.decoder:android.media.mediaplayer.durationMs=418:android.media.mediaplayer.playingMs=458:android.media.mediaplayer.dataSource=None:)
+    6: (codec:35:1013:7581:1779989242000000000:6:android.media.mediacodec.mime=audio/vorbis:android.media.mediacodec.mode=audio:android.media.mediacodec.encoder=0:android.media.mediacodec.codec=OMX.google.vorbis.decoder:android.media.mediacodec.secure=0:android.media.mediacodec.bytesin=5843:)
+    7: (extractor:26:1040:7561:1779989242000000000:3:android.media.mediaextractor.fmt=<unspecified>:android.media.mediaextractor.ntrk=1:android.media.mediaextractor.mime=application/ogg:)
+    8: (extractor:30:1040:7561:1779989242000000000:3:android.media.mediaextractor.fmt=<unspecified>:android.media.mediaextractor.ntrk=1:android.media.mediaextractor.mime=application/ogg:)
+    9: (extractor:32:1040:7561:1779989242000000000:3:android.media.mediaextractor.fmt=<unspecified>:android.media.mediaextractor.ntrk=1:android.media.mediaextractor.mime=application/ogg:)
+   10: (codec:39:10023:48291:1779990116000000000:6:android.media.mediacodec.mime=audio/vorbis:android.media.mediacodec.mode=audio:android.media.mediacodec.encoder=0:android.media.mediacodec.codec=OMX.google.vorbis.decoder:android.media.mediacodec.secure=0:android.media.mediacodec.bytesin=21488:)
+   11: (extractor:42:1040:7561:1779990117000000000:3:android.media.mediaextractor.fmt=<unspecified>:android.media.mediaextractor.ntrk=1:android.media.mediaextractor.mime=application/ogg:)
+   12: (extractor:44:1040:7561:1779990117000000000:3:android.media.mediaextractor.fmt=<unspecified>:android.media.mediaextractor.ntrk=1:android.media.mediaextractor.mime=application/ogg:)
+   13: (extractor:40:1040:7561:1779990117000000000:3:android.media.mediaextractor.fmt=<unspecified>:android.media.mediaextractor.ntrk=1:android.media.mediaextractor.mime=application/ogg:)
+   14: (extractor:28:1040:7561:1779990122000000000:3:android.media.mediaextractor.fmt=<unspecified>:android.media.mediaextractor.ntrk=1:android.media.mediaextractor.mime=application/ogg:)
+   15: (extractor:38:1040:7561:1779990122000000000:3:android.media.mediaextractor.fmt=<unspecified>:android.media.mediaextractor.ntrk=1:android.media.mediaextractor.mime=application/ogg:)
+   16: (codec:46:10023:58901:1779990123000000000:6:android.media.mediacodec.mime=audio/vorbis:android.media.mediacodec.mode=audio:android.media.mediacodec.encoder=0:android.media.mediacodec.codec=OMX.google.vorbis.decoder:android.media.mediacodec.secure=0:android.media.mediacodec.bytesin=6590:)
+   17: (extractor:45:1040:7561:1779990123000000000:3:android.media.mediaextractor.fmt=<unspecified>:android.media.mediaextractor.ntrk=1:android.media.mediaextractor.mime=application/ogg:)
+   18: (codec:53:10023:58901:1779990123000000000:6:android.media.mediacodec.mime=audio/vorbis:android.media.mediacodec.mode=audio:android.media.mediacodec.encoder=0:android.media.mediacodec.codec=OMX.google.vorbis.decoder:android.media.mediacodec.secure=0:android.media.mediacodec.bytesin=6925:)
+   19: (codec:56:10023:58901:1779990123000000000:6:android.media.mediacodec.mime=audio/vorbis:android.media.mediacodec.mode=audio:android.media.mediacodec.encoder=0:android.media.mediacodec.codec=OMX.google.vorbis.decoder:android.media.mediacodec.secure=0:android.media.mediacodec.bytesin=21488:)
+   20: (extractor:48:1040:7561:1779990127000000000:3:android.media.mediaextractor.fmt=<unspecified>:android.media.mediaextractor.ntrk=1:android.media.mediaextractor.mime=application/ogg:)
+   21: (extractor:50:1040:7561:1779990127000000000:3:android.media.mediaextractor.fmt=<unspecified>:android.media.mediaextractor.ntrk=1:android.media.mediaextractor.mime=application/ogg:)
+   22: (extractor:54:1040:7561:1779990127000000000:3:android.media.mediaextractor.fmt=<unspecified>:android.media.mediaextractor.ntrk=1:android.media.mediaextractor.mime=application/ogg:)
+   23: (extractor:55:1040:7561:1779990127000000000:3:android.media.mediaextractor.fmt=<unspecified>:android.media.mediaextractor.ntrk=1:android.media.mediaextractor.mime=application/ogg:)
+   24: (codec:64:10023:58901:1779990153000000000:6:android.media.mediacodec.mime=audio/vorbis:android.media.mediacodec.mode=audio:android.media.mediacodec.encoder=0:android.media.mediacodec.codec=OMX.google.vorbis.decoder:android.media.mediacodec.secure=0:android.media.mediacodec.bytesin=21488:)
+   25: (extractor:58:1040:7561:1779990153000000000:3:android.media.mediaextractor.fmt=<unspecified>:android.media.mediaextractor.ntrk=1:android.media.mediaextractor.mime=application/ogg:)
+   26: (extractor:60:1040:7561:1779990153000000000:3:android.media.mediaextractor.fmt=<unspecified>:android.media.mediaextractor.ntrk=1:android.media.mediaextractor.mime=application/ogg:)
+   27: (extractor:62:1040:7561:1779990153000000000:3:android.media.mediaextractor.fmt=<unspecified>:android.media.mediaextractor.ntrk=1:android.media.mediaextractor.mime=application/ogg:)
+   28: (extractor:52:1040:7561:1779990162000000000:3:android.media.mediaextractor.fmt=<unspecified>:android.media.mediaextractor.ntrk=1:android.media.mediaextractor.mime=application/ogg:)
+   29: (extractor:63:1040:7561:1779990162000000000:3:android.media.mediaextractor.fmt=<unspecified>:android.media.mediaextractor.ntrk=1:android.media.mediaextractor.mime=application/ogg:)
+
+In-Progress Metrics (newest first):
+empty
+

@@ -1,0 +1,9 @@
+ 5 registered handlers:
+  35: <stale>
+  39: <stale>
+  40: <stale>
+  42: <stale>
+  43: <stale>
+ No media recorder client
+
+ Files opened and/or mapped:

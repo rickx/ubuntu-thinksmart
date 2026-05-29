@@ -1,0 +1,7 @@
+Starting: Intent { act=android.intent.action.VIEW dat=https://storage.googleapis.com/... }
+Status: ok
+Activity: org.chromium.webview_shell/.WebViewBrowserActivity
+ThisTime: 957
+TotalTime: 957
+WaitTime: 985
+Complete

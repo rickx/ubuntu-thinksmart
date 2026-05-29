@@ -1,0 +1,8 @@
+# Source command
+# adb shell "ls /proc/device-tree/soc/i2c@78b7000/"
+# Device: Lenovo ThinkSmart View CD-18781Y (HUA0AEFD)
+# Date: 2026-05-28
+
+focaltech@38
+gt9xx-i2c@14
+himax_ts@48

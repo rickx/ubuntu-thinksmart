@@ -1,0 +1,11 @@
+
+05-28 12:00:04.787  1160  2941 E ANDR-PERF-JNI: Iop tryGetService failed
+05-28 12:00:05.177  7869  7869 E /system/bin/webview_zygote32: Failed to make 
+and chown /acct/uid_99000: Permission denied
+05-28 12:00:05.177  7869  7869 E Zygote  : createProcessGroup(99000, 0) 
+failed: Permission denied
+05-28 12:00:05.213  7869  7869 D         : Regionalization Environment load 
+packages for Carrier error!
+05-28 12:00:05.760  1160  1181 E ANDR-PERF-JNI: Iop tryGetService failed
+
+

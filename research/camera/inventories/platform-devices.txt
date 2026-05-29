@@ -1,0 +1,34 @@
+# Camera Platform Devices
+# Source: adb shell "ls /sys/bus/platform/devices/ | grep -iE 'cam|csi|cci|eeprom|actuator|flash'"
+# Device: Lenovo ThinkSmart View CD-18781Y (HUA0AEFD)
+# Date:   2026-05-28
+
+1b00000.qcom,msm-cam
+1b0c000.qcom,cci
+1b0c000.qcom,cci:qcom,actuator@0
+1b0c000.qcom,cci:qcom,actuator@1
+1b0c000.qcom,cci:qcom,camera@0
+1b0c000.qcom,cci:qcom,camera@2
+1b0c000.qcom,cci:qcom,eeprom@0
+1b0c000.qcom,cci:qcom,eeprom@1
+1b0c000.qcom,cci:qcom,eeprom@2
+1b30000.qcom,csid
+1b30400.qcom,csid
+1b30800.qcom,csid
+1b34000.qcom,csiphy
+1b35000.qcom,csiphy
+1b36000.qcom,csiphy
+soc:eldo_cam0_vreg
+soc:eldo_cam1_vcm_vreg
+soc:eldo_cam1_vreg
+soc:eldo_cam2_vreg
+soc:qcom,cam_smmu
+soc:qcom,cam_smmu:msm_cam_smmu_cb1
+soc:qcom,cam_smmu:msm_cam_smmu_cb3
+soc:qcom,cam_smmu:msm_cam_smmu_cb4
+soc:qcom,camera-flash
+
+# V4L2 node mappings (confirmed via sysfs video4linux child):
+# 1b00000.qcom,msm-cam  -> video0, media0, v4l-subdev0 .. v4l-subdev18
+# 1b0c000.qcom,cci:qcom,camera@0  -> video1, media1
+# 1b0c000.qcom,cci:qcom,camera@2  -> no V4L2 child observed at probe time

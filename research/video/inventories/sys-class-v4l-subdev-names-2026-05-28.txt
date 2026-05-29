@@ -1,0 +1,20 @@
+=== /sys/class/video4linux/v4l-subdev0 ===
+=== /sys/class/video4linux/v4l-subdev1 ===
+=== /sys/class/video4linux/v4l-subdev10 ===
+=== /sys/class/video4linux/v4l-subdev11 ===
+=== /sys/class/video4linux/v4l-subdev12 ===
+=== /sys/class/video4linux/v4l-subdev13 ===
+=== /sys/class/video4linux/v4l-subdev14 ===
+=== /sys/class/video4linux/v4l-subdev15 ===
+=== /sys/class/video4linux/v4l-subdev16 ===
+=== /sys/class/video4linux/v4l-subdev17 ===
+=== /sys/class/video4linux/v4l-subdev18 ===
+=== /sys/class/video4linux/v4l-subdev2 ===
+=== /sys/class/video4linux/v4l-subdev3 ===
+=== /sys/class/video4linux/v4l-subdev4 ===
+=== /sys/class/video4linux/v4l-subdev5 ===
+=== /sys/class/video4linux/v4l-subdev6 ===
+=== /sys/class/video4linux/v4l-subdev7 ===
+=== /sys/class/video4linux/v4l-subdev8 ===
+=== /sys/class/video4linux/v4l-subdev9 ===
+

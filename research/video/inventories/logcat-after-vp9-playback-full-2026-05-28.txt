@@ -1,0 +1,176 @@
+--------- beginning of system
+05-28 11:51:57.885  1160  6364 V MediaRouterService: restoreBluetoothA2dp(false)
+05-28 11:52:13.395  1160  2783 I ActivityManager: START u0 {act=android.intent.action.VIEW dat=file:///sdcard/Download/sample-5s-vp9.webm typ=video/webm flg=0x10000000 cmp=com.android.gallery3d/.app.MovieActivity} from uid 2000
+--------- beginning of main
+05-28 11:52:13.397   575   620 E ANDR-PERF-MPCTL: Invalid profile no. 0, total profiles 0 only
+05-28 11:52:13.398   440   440 W /system/bin/hwservicemanager: getTransport: Cannot find entry vendor.qti.hardware.iop@1.0::IIop/default in either framework or device manifest.
+05-28 11:52:13.398  1160  2783 E ANDR-PERF-JNI: Iop tryGetService failed
+05-28 11:52:13.402  1160  2783 D ActivityTrigger: activityStartTrigger: Activity is Triggerred in full screen ApplicationInfo{dd167fe com.android.gallery3d}
+05-28 11:52:13.402  1160  2783 E ActivityTrigger: activityStartTrigger: not whiteListedcom.android.gallery3d/com.android.gallery3d.app.MovieActivity/40030
+05-28 11:52:13.403  1160  2783 D CompatibilityInfo: mCompatibilityFlags - 14
+05-28 11:52:13.403  1160  2783 D CompatibilityInfo: applicationDensity - 240
+05-28 11:52:13.403  1160  2783 D CompatibilityInfo: applicationScale - 1.0
+05-28 11:52:13.403  1160  2783 D ActivityTrigger: activityResumeTrigger: The activity in ApplicationInfo{dd167fe com.android.gallery3d} is now in focus and seems to be in full-screen mode
+05-28 11:52:13.403  1160  2783 E ActivityTrigger: activityResumeTrigger: not whiteListedcom.android.gallery3d/com.android.gallery3d.app.MovieActivity/40030
+05-28 11:52:13.403  1160  2783 D ActivityTrigger: ActivityTrigger activityPauseTrigger 
+05-28 11:52:13.407  1160  3052 D ActivityTrigger: activityResumeTrigger: The activity in ApplicationInfo{dd167fe com.android.gallery3d} is now in focus and seems to be in full-screen mode
+05-28 11:52:13.407  1160  3052 E ActivityTrigger: activityResumeTrigger: not whiteListedcom.android.gallery3d/com.android.gallery3d.app.MovieActivity/40030
+05-28 11:52:13.410  1160  3052 D CompatibilityInfo: mCompatibilityFlags - 14
+05-28 11:52:13.411  1160  3052 D CompatibilityInfo: applicationDensity - 240
+05-28 11:52:13.411  1160  3052 D CompatibilityInfo: applicationScale - 1.0
+05-28 11:52:13.452  4464  4464 W AudioManager: Use of stream types is deprecated for operations other than volume control
+05-28 11:52:13.452  4464  4464 W AudioManager: See the documentation of requestAudioFocus() for what to use instead with android.media.AudioAttributes to qualify your playback use case
+05-28 11:52:13.453  1160  6364 I MediaFocusControl: requestAudioFocus() from uid/pid 10045/4464 clientId=android.media.AudioManager@a9ff6d0 callingPack=com.android.gallery3d req=2 flags=0x0 sdk=24
+05-28 11:52:13.453  1160  6364 D AppOps  : noteOperation: allowing code 32 uid 10045 package com.android.gallery3d
+05-28 11:52:13.498  1160  1181 I ActivityManager: Displayed com.android.gallery3d/.app.MovieActivity: +86ms
+05-28 11:52:13.499   440   440 W /system/bin/hwservicemanager: getTransport: Cannot find entry vendor.qti.hardware.iop@1.0::IIop/default in either framework or device manifest.
+05-28 11:52:13.499  1160  1181 E ANDR-PERF-JNI: Iop tryGetService failed
+05-28 11:52:13.966  1160  2783 I MediaFocusControl: requestAudioFocus() from uid/pid 10045/4464 clientId=android.media.AudioManager@a9ff6d0 callingPack=com.android.gallery3d req=1 flags=0x0 sdk=24
+05-28 11:52:13.966  1160  2783 D AppOps  : noteOperation: allowing code 32 uid 10045 package com.android.gallery3d
+05-28 11:52:13.967   758   758 W generic : type=1400 audit(0.0:396438): avc: denied { read } for path="/storage/emulated/0/Download/sample-5s-vp9.webm" dev="sdcardfs" ino=1264 scontext=u:r:mediaextractor:s0 tcontext=u:object_r:sdcardfs:s0 tclass=file permissive=0
+05-28 11:52:13.969   758   873 D NuPlayerDriver: NuPlayerDriver(0xb09a8150) created, clientPid(4464)
+05-28 11:52:13.971   758   873 I ExtendedNuUtils: printFileName fd(7) -> /storage/emulated/0/Download/sample-5s-vp9.webm
+05-28 11:52:13.972   758   873 D SurfaceUtils: connecting to surface 0xb09ed808, reason setVideoSurfaceTexture
+05-28 11:52:13.972   758  7457 D NuPlayer: onSetVideoSurface(0xb09ed000, no video decoder)
+05-28 11:52:13.973  1260  1684 D Avrcp   : AudioManager Player: ID:39 -- type:android.media.MediaPlayer -- u/pid:10045/4464 -- state:idle -- attr:AudioAttributes: usage=USAGE_MEDIA content=CONTENT_TYPE_MOVIE flags=0x0 tags= bundle=null
+05-28 11:52:13.973  1260  1684 D Avrcp   : AudioManager isPlaying: false
+05-28 11:52:13.974   758  7458 D GenericSource: FileSource remote
+05-28 11:52:13.975   758  7458 W GenericSource: extractor service cannot make data source
+05-28 11:52:13.975   758  7458 D GenericSource: FileSource local
+05-28 11:52:13.999   756   926 I ExtendedExtractor: QTIParser is prefered .. flags 2
+05-28 11:52:14.000   756   926 D MMParserExtractor: setExtraFlags called with flags 2 for paser instance acf2d230
+05-28 11:52:14.000   756   926 D MMParserExtractor: using bigger parser buffers
+05-28 11:52:14.000   756   926 I ExtendedExtractor: ExtendedExtractor::create 0xacf2d230
+05-28 11:52:14.002   758  7458 E MediaExtractor: Trace connect 0xb0998220 0xb099a100
+05-28 11:52:14.003   758  7457 D NuPlayerDriver: notifyListener_l(0xb09a8150), (5, 1920, 1080, -1), loop setting(0, 0)
+05-28 11:52:14.004   758  7457 D NuPlayerDriver: notifyListener_l(0xb09a8150), (1, 0, 0, -1), loop setting(0, 0)
+05-28 11:52:14.032  4464  4464 D MediaPlayerNative: getMetadata
+05-28 11:52:14.033  1160  2783 V MediaRouterService: restoreBluetoothA2dp(false)
+05-28 11:52:14.033   758  5339 D NuPlayerDriver: start(0xb09a8150), state is 4, eos is 0
+05-28 11:52:14.033   758  7457 I GenericSource: start
+05-28 11:52:14.033  6451  7384 D AudioPolicyManagerCustom: setForceUse() usage 1, config 10, mPhoneState 0
+05-28 11:52:14.034  1260  1684 D Avrcp   : AudioManager Player: ID:39 -- type:android.media.MediaPlayer -- u/pid:10045/4464 -- state:started -- attr:AudioAttributes: usage=USAGE_MEDIA content=CONTENT_TYPE_MOVIE flags=0x0 tags= bundle=null
+05-28 11:52:14.034  1260  1684 D Avrcp   : AudioManager isPlaying: true
+05-28 11:52:14.034  1260  1684 V Avrcp   : updateCurrentMediaState: mMediaController: null
+05-28 11:52:14.034  1260  1684 V Avrcp   : isMusicActive: false getBluetoothPlayState: 2
+05-28 11:52:14.034  1260  1684 V Avrcp   : updateCurrentMediaState: isPlaying = false
+05-28 11:52:14.034  1260  1684 V Avrcp   : updateCurrentMediaState: mMediaController or getPlaybackState() null
+05-28 11:52:14.034  1260  1684 V Avrcp   : Media update: id -1???-1? [MediaAttributes: none] : [MediaAttributes: none]
+05-28 11:52:14.034  1260  1684 V Avrcp   : newPlayStatus:2mReportedPlayStatus:-1
+05-28 11:52:14.034  1260  1684 V Avrcp   : updatePlaybackState, state: PlaybackState {state=2, position=-1, buffered position=0, speed=0.0, updated=10253003, actions=0, custom actions=[], active item id=-1, error=null} device: null
+05-28 11:52:14.034  1260  1684 V Avrcp   : Device: no name: 
+05-28 11:52:14.034  1260  1684 V Avrcp   : updatePlayerStateAndPosition, old=PlaybackState {state=2, position=-1, buffered position=0, speed=0.0, updated=10236857, actions=0, custom actions=[], active item id=-1, error=null}, state=PlaybackState {state=2, position=-1, buffered position=0, speed=0.0, updated=10253003, actions=0, custom actions=[], active item id=-1, error=null}
+05-28 11:52:14.034  1260  1684 V Avrcp   : old state = PlaybackState {state=2, position=-1, buffered position=0, speed=0.0, updated=10236857, actions=0, custom actions=[], active item id=-1, error=null}, new state= PlaybackState {state=2, position=-1, buffered position=0, speed=0.0, updated=10253003, actions=0, custom actions=[], active item id=-1, error=null}
+05-28 11:52:14.035  1260  1684 D HeadsetStateMachine: isScoOrCallActive(): Check for SCO as well as call status.
+05-28 11:52:14.035  1260  1684 D HeadsetStateMachine: isInCall()
+05-28 11:52:14.035  1260  1684 I Avrcp   : updatePlayStatusForDevice: device: null
+05-28 11:52:14.035  1260  1684 V Avrcp   : updatePlaybackState (1): old=PlaybackState {state=2, position=-1, buffered position=0, speed=0.0, updated=10236857, actions=0, custom actions=[], active item id=-1, error=null}(2), new=PlaybackState {state=2, position=-1, buffered position=0, speed=0.0, updated=10253003, actions=0, custom actions=[], active item id=-1, error=null}(2)
+05-28 11:52:14.035  1260  1684 I Avrcp   : Exit updatePlayStatusForDevice
+05-28 11:52:14.035  1260  1684 D Avrcp   : Enter sendPlayPosNotificationRsp
+05-28 11:52:14.035  1260  1684 D Avrcp   : sendPlayPosNotificationRsp: Not registered or requesting.
+05-28 11:52:14.035  1260  1684 V Avrcp   : Exit updatePlayerStateAndPosition
+05-28 11:52:14.041  4464  4469 I zygote  : Do partial code cache collection, code=61KB, data=44KB
+05-28 11:52:14.042   758  7462 I OMXClient: Treble IOmx obtained
+05-28 11:52:14.043  4464  4469 I zygote  : After code cache collection, code=58KB, data=43KB
+05-28 11:52:14.043  4464  4469 I zygote  : Increasing code cache capacity to 256KB
+05-28 11:52:14.043   762  1620 I OMXMaster: makeComponentInstance(OMX.qcom.video.decoder.vp9) in omx@1.0-service process
+05-28 11:52:14.048   762  1620 I OMX-VDEC-1080P: Video slvp perflock acquired
+05-28 11:52:14.113   762  1620 I OMX-VDEC-1080P: component_init: OMX.qcom.video.decoder.vp9 : fd=7
+05-28 11:52:14.116   762  1620 I OMX-VDEC-1080P: omx_vdec::component_init() success : fd=7
+05-28 11:52:14.117   758  7460 D SurfaceUtils: disconnecting from surface 0xb09ed008, reason onConfigure
+05-28 11:52:14.118   758  7461 D SurfaceUtils: connecting to surface 0xb09ed008, reason connectToSurface
+05-28 11:52:14.118   758  7461 I MediaCodec: [OMX.qcom.video.decoder.vp9] setting surface generation to 776196
+05-28 11:52:14.118   758  7461 D SurfaceUtils: disconnecting from surface 0xb09ed008, reason connectToSurface(reconnect)
+05-28 11:52:14.119   758  7461 D SurfaceUtils: connecting to surface 0xb09ed008, reason connectToSurface(reconnect)
+05-28 11:52:14.119   762   953 E OMX-VDEC-1080P: Enable/Disable allocate-native-handle allowed only on input port!
+05-28 11:52:14.119   762   953 E OMX-VDEC-1080P: set_parameter: Error: 0x80001019, setting param 0x7f00005d
+05-28 11:52:14.119   762   953 E OMXNodeInstance: setParameter(0xb2c3ac44:qcom.decoder.vp9, OMX.google.android.index.allocateNativeHandle(0x7f00005d): Output:1 en=0) ERROR: UnsupportedSetting(0x80001019)
+05-28 11:52:14.120   758  7462 I ExtendedACodec: setupVideoDecoder()
+05-28 11:52:14.122   758  7462 I ExtendedACodec: Decoder will be in frame by frame mode
+05-28 11:52:14.123   762   953 E OMX-VDEC-1080P: get_parameter: unknown param 6f600007
+05-28 11:52:14.123   762   953 E OMXNodeInstance: getParameter(0xb2c3ac44:qcom.decoder.vp9, ParamVideoAndroidVp8Encoder(0x6f600007)) ERROR: UnsupportedIndex(0x8000101a)
+05-28 11:52:14.124   762   953 E OMXNodeInstance: getConfig(0xb2c3ac44:qcom.decoder.vp9, ??(0x7f000062)) ERROR: UnsupportedSetting(0x80001019)
+05-28 11:52:14.125   758  7461 I MediaCodec: MediaCodec will operate in async mode
+05-28 11:52:14.127   554   554 W /system/bin/hw/android.hidl.allocator@1.0-service: ashmem_create_region(6078464) returning hidl_memory(0xb3617dd0, 6078464)
+05-28 11:52:14.132   554   554 I chatty  : uid=1000(system) allocator@1.0-s identical 4 lines
+05-28 11:52:14.133   554   554 W /system/bin/hw/android.hidl.allocator@1.0-service: ashmem_create_region(6078464) returning hidl_memory(0xb3617dd0, 6078464)
+05-28 11:52:14.135   758  7462 D SurfaceUtils: set up nativeWindow 0xb09ed008 for 1920x1080, color 0x7fa30c06, rotation 0, usage 0x20002900
+05-28 11:52:14.141   587  1704 W GrallocMapperPassthrough: buffer descriptor with invalid usage bits 0x2000
+05-28 11:52:14.143   587  1704 W GrallocMapperPassthrough: buffer descriptor with invalid usage bits 0x2000
+05-28 11:52:14.144   587   723 W GrallocMapperPassthrough: buffer descriptor with invalid usage bits 0x2000
+05-28 11:52:14.146   587   723 I chatty  : uid=1000(system) Binder:587_3 identical 1 line
+05-28 11:52:14.147   587   723 W GrallocMapperPassthrough: buffer descriptor with invalid usage bits 0x2000
+05-28 11:52:14.149   587  1703 W GrallocMapperPassthrough: buffer descriptor with invalid usage bits 0x2000
+05-28 11:52:14.155   762   953 E OMXNodeInstance: getConfig(0xb2c3ac44:qcom.decoder.vp9, ??(0x7f000062)) ERROR: UnsupportedSetting(0x80001019)
+05-28 11:52:14.160   758  7462 D SurfaceUtils: set up nativeWindow 0xb09ed008 for 1920x1080, color 0x7fa30c06, rotation 0, usage 0x20002900
+05-28 11:52:14.169  1160  1174 D ActivityTrigger: ActivityTrigger activityStopTrigger 
+05-28 11:52:14.176   587  1703 W GrallocMapperPassthrough: buffer descriptor with invalid usage bits 0x2000
+05-28 11:52:14.181   762  1620 E OMXNodeInstance: getConfig(0xb2c3ac44:qcom.decoder.vp9, ??(0x7f000062)) ERROR: UnsupportedSetting(0x80001019)
+05-28 11:52:14.182   758  7457 D NuPlayerDriver: notifyListener_l(0xb09a8150), (5, 1920, 1080, -1), loop setting(0, 0)
+05-28 11:52:14.183   758  7457 D NuPlayerDriver: notifyListener_l(0xb09a8150), (200, 3, 0, -1), loop setting(0, 0)
+05-28 11:52:14.183   758  7457 D NuPlayerDriver: notifyListener_l(0xb09a8150), (6, 0, 0, -1), loop setting(0, 0)
+05-28 11:52:14.183  4464  5343 W MediaPlayerNative: info/warning (3, 0)
+05-28 11:52:14.183   587   723 W GrallocMapperPassthrough: buffer descriptor with invalid usage bits 0x2000
+05-28 11:52:14.191   587   723 W GrallocMapperPassthrough: buffer descriptor with invalid usage bits 0x2000
+05-28 11:52:14.193   587   634 W GrallocMapperPassthrough: buffer descriptor with invalid usage bits 0x2000
+05-28 11:52:14.207   587   634 W GrallocMapperPassthrough: buffer descriptor with invalid usage bits 0x2000
+05-28 11:52:14.210   587   723 W GrallocMapperPassthrough: buffer descriptor with invalid usage bits 0x2000
+05-28 11:52:14.237   587   634 W GrallocMapperPassthrough: buffer descriptor with invalid usage bits 0x2000
+05-28 11:52:14.240   587   723 W GrallocMapperPassthrough: buffer descriptor with invalid usage bits 0x2000
+05-28 11:52:18.811   758  7460 I NuPlayerDecoder: [video] saw output EOS
+05-28 11:52:19.105   758  7457 D NuPlayerDriver: notifyListener_l(0xb09a8150), (2, 0, 0, -1), loop setting(0, 0)
+05-28 11:52:19.107  1160  3052 V MediaRouterService: restoreBluetoothA2dp(false)
+05-28 11:52:19.108  1260  1684 D Avrcp   : AudioManager Player: ID:39 -- type:android.media.MediaPlayer -- u/pid:10045/4464 -- state:stopped -- attr:AudioAttributes: usage=USAGE_MEDIA content=CONTENT_TYPE_MOVIE flags=0x0 tags= bundle=null
+05-28 11:52:19.108  1260  1684 D Avrcp   : AudioManager isPlaying: false
+05-28 11:52:19.108  1260  1684 V Avrcp   : updateCurrentMediaState: mMediaController: null
+05-28 11:52:19.109  1260  1684 V Avrcp   : isMusicActive: false getBluetoothPlayState: 2
+05-28 11:52:19.109  1260  1684 V Avrcp   : updateCurrentMediaState: isPlaying = false
+05-28 11:52:19.109  1260  1684 V Avrcp   : updateCurrentMediaState: mMediaController or getPlaybackState() null
+05-28 11:52:19.109  1260  1684 V Avrcp   : Media update: id -1???-1? [MediaAttributes: none] : [MediaAttributes: none]
+05-28 11:52:19.110  1260  1684 V Avrcp   : newPlayStatus:2mReportedPlayStatus:-1
+05-28 11:52:19.110  1260  1684 V Avrcp   : updatePlaybackState, state: PlaybackState {state=2, position=-1, buffered position=0, speed=0.0, updated=10258078, actions=0, custom actions=[], active item id=-1, error=null} device: null
+05-28 11:52:19.110  1260  1684 V Avrcp   : Device: no name: 
+05-28 11:52:19.110  1260  1684 V Avrcp   : updatePlayerStateAndPosition, old=PlaybackState {state=2, position=-1, buffered position=0, speed=0.0, updated=10253003, actions=0, custom actions=[], active item id=-1, error=null}, state=PlaybackState {state=2, position=-1, buffered position=0, speed=0.0, updated=10258078, actions=0, custom actions=[], active item id=-1, error=null}
+05-28 11:52:19.110  1260  1684 V Avrcp   : old state = PlaybackState {state=2, position=-1, buffered position=0, speed=0.0, updated=10253003, actions=0, custom actions=[], active item id=-1, error=null}, new state= PlaybackState {state=2, position=-1, buffered position=0, speed=0.0, updated=10258078, actions=0, custom actions=[], active item id=-1, error=null}
+05-28 11:52:19.111  1160  2783 D ActivityTrigger: ActivityTrigger activityPauseTrigger 
+05-28 11:52:19.112  6451  7384 D AudioPolicyManagerCustom: setForceUse() usage 1, config 10, mPhoneState 0
+05-28 11:52:19.112  1260  1684 D HeadsetStateMachine: isScoOrCallActive(): Check for SCO as well as call status.
+05-28 11:52:19.112  1260  1684 D HeadsetStateMachine: isInCall()
+05-28 11:52:19.113  1260  1684 I Avrcp   : updatePlayStatusForDevice: device: null
+05-28 11:52:19.113  1260  1684 V Avrcp   : updatePlaybackState (1): old=PlaybackState {state=2, position=-1, buffered position=0, speed=0.0, updated=10253003, actions=0, custom actions=[], active item id=-1, error=null}(2), new=PlaybackState {state=2, position=-1, buffered position=0, speed=0.0, updated=10258078, actions=0, custom actions=[], active item id=-1, error=null}(2)
+05-28 11:52:19.113  1260  1684 I Avrcp   : Exit updatePlayStatusForDevice
+05-28 11:52:19.113  1260  1684 D Avrcp   : Enter sendPlayPosNotificationRsp
+05-28 11:52:19.113  1260  1684 D Avrcp   : sendPlayPosNotificationRsp: Not registered or requesting.
+05-28 11:52:19.113  1260  1684 V Avrcp   : Exit updatePlayerStateAndPosition
+05-28 11:52:19.118  1160  3052 I MediaFocusControl: abandonAudioFocus() from uid/pid 10045/4464 clientId=android.media.AudioManager@a9ff6d0
+05-28 11:52:19.121   758  5339 D NuPlayerDriver: reset(0xb09a8150) at state 6
+05-28 11:52:19.122   758  5339 D NuPlayerDriver: notifyListener_l(0xb09a8150), (8, 0, 0, -1), loop setting(0, 0)
+05-28 11:52:19.161   762   953 I OMX-VDEC-1080P: omx_vdec::component_deinit() complete
+05-28 11:52:19.165   762   953 I OMX-VDEC-1080P: Exit OMX vdec Destructor: fd=7
+05-28 11:52:19.165   762   953 I OMX-VDEC-1080P: Video slvp perflock released
+05-28 11:52:19.168   758  7461 D SurfaceUtils: disconnecting from surface 0xb09ed008, reason disconnectFromSurface
+05-28 11:52:19.171   758  7460 D SurfaceUtils: connecting to surface 0xb09ed008, reason onShutdown
+05-28 11:52:19.174   758  7457 D NuPlayerDriver: notifyResetComplete(0xb09a8150)
+05-28 11:52:19.175   758  5339 D NuPlayerDriver: reset(0xb09a8150) at state 0
+05-28 11:52:19.175   758  5339 D SurfaceUtils: disconnecting from surface 0xb09ed808, reason disconnectNativeWindow
+05-28 11:52:19.176  4464  4464 V MediaPlayer: resetDrmState:  mDrmInfo=null mDrmProvisioningThread=null mPrepareDrmInProgress=false mActiveDrmScheme=false
+05-28 11:52:19.177  4464  4464 V MediaPlayer: cleanDrmObj: mDrmObj=null mDrmSessionId=null
+05-28 11:52:19.178  4464  4464 V MediaPlayer: resetDrmState:  mDrmInfo=null mDrmProvisioningThread=null mPrepareDrmInProgress=false mActiveDrmScheme=false
+05-28 11:52:19.178  4464  4464 V MediaPlayer: cleanDrmObj: mDrmObj=null mDrmSessionId=null
+05-28 11:52:19.179  1160  2783 I MediaFocusControl: abandonAudioFocus() from uid/pid 10045/4464 clientId=android.media.AudioManager@a9ff6d0
+05-28 11:52:19.180  1160  2783 D ActivityTrigger: activityResumeTrigger: The activity in ApplicationInfo{f83d5c6 com.android.launcher3} is now in focus and seems to be in full-screen mode
+05-28 11:52:19.180  1160  2783 E ActivityTrigger: activityResumeTrigger: not whiteListedcom.android.launcher3/com.android.launcher3.Launcher/27
+05-28 11:52:19.507  1160  2783 I MediaFocusControl: abandonAudioFocus() from uid/pid 10045/4464 clientId=android.media.AudioManager@a9ff6d0
+05-28 11:52:19.717  1160  2799 I Adreno  : QUALCOMM build                   : fa7d293, I89dac622c4
+05-28 11:52:19.717  1160  2799 I Adreno  : Build Date                       : 01/20/20
+05-28 11:52:19.717  1160  2799 I Adreno  : OpenGL ES Shader Compiler Version: EV031.22.00.01_06_07
+05-28 11:52:19.717  1160  2799 I Adreno  : Local Branch                     : 
+05-28 11:52:19.717  1160  2799 I Adreno  : Remote Branch                    : refs/tags/AU_LINUX_ANDROID_LA.UM.6.6.3.R1.08.01.00.481.013
+05-28 11:52:19.717  1160  2799 I Adreno  : Remote Branch                    : NONE
+05-28 11:52:19.717  1160  2799 I Adreno  : Reconstruct Branch               : NOTHING
+05-28 11:52:19.723  1160  2799 I Adreno  : PFP: 0x005ff087, ME: 0x005ff063
+05-28 11:52:19.727  1160  2799 I zygote  : android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasWideColorDisplay retrieved: 0
+05-28 11:52:19.728  1160  2799 I OpenGLRenderer: Initialized EGL, version 1.4
+05-28 11:52:19.728  1160  2799 D OpenGLRenderer: Swap behavior 2
+05-28 11:52:19.749  1834  4740 W OpenGLRenderer: Incorrectly called buildLayer on View: ShortcutAndWidgetContainer, destroying layer...
+05-28 11:52:19.867  1160  1169 I zygote  : NativeAlloc concurrent copying GC freed 79106(3MB) AllocSpace objects, 47(1772KB) LOS objects, 65% free, 9MB/27MB, paused 185us total 109.486ms

@@ -1,0 +1,5 @@
+=== /sys/class/video4linux/video0 ===
+=== /sys/class/video4linux/video1 ===
+=== /sys/class/video4linux/video32 ===
+=== /sys/class/video4linux/video33 ===
+

@@ -1,0 +1,47 @@
+=== /sys/class/video4linux/video0 ===
+/sys/devices/soc/1b00000.qcom,msm-cam
+=== /sys/class/video4linux/video1 ===
+/sys/devices/soc/1b0c000.qcom,cci/1b0c000.qcom,cci:qcom,camera@0
+=== /sys/class/video4linux/video32 ===
+/sys/devices/soc/1d00000.qcom,vidc
+=== /sys/class/video4linux/video33 ===
+/sys/devices/soc/1d00000.qcom,vidc
+=== /sys/class/video4linux/v4l-subdev0 ===
+/sys/devices/soc/1b00000.qcom,msm-cam
+=== /sys/class/video4linux/v4l-subdev1 ===
+/sys/devices/soc/1b00000.qcom,msm-cam
+=== /sys/class/video4linux/v4l-subdev10 ===
+/sys/devices/soc/1b00000.qcom,msm-cam
+=== /sys/class/video4linux/v4l-subdev11 ===
+/sys/devices/soc/1b00000.qcom,msm-cam
+=== /sys/class/video4linux/v4l-subdev12 ===
+/sys/devices/soc/1b00000.qcom,msm-cam
+=== /sys/class/video4linux/v4l-subdev13 ===
+/sys/devices/soc/1b00000.qcom,msm-cam
+=== /sys/class/video4linux/v4l-subdev14 ===
+/sys/devices/soc/1b00000.qcom,msm-cam
+=== /sys/class/video4linux/v4l-subdev15 ===
+/sys/devices/soc/1b00000.qcom,msm-cam
+=== /sys/class/video4linux/v4l-subdev16 ===
+/sys/devices/soc/1b00000.qcom,msm-cam
+=== /sys/class/video4linux/v4l-subdev17 ===
+/sys/devices/soc/1b00000.qcom,msm-cam
+=== /sys/class/video4linux/v4l-subdev18 ===
+/sys/devices/soc/1b00000.qcom,msm-cam
+=== /sys/class/video4linux/v4l-subdev2 ===
+/sys/devices/soc/1b00000.qcom,msm-cam
+=== /sys/class/video4linux/v4l-subdev3 ===
+/sys/devices/soc/1b00000.qcom,msm-cam
+=== /sys/class/video4linux/v4l-subdev4 ===
+/sys/devices/soc/1b00000.qcom,msm-cam
+=== /sys/class/video4linux/v4l-subdev5 ===
+/sys/devices/soc/1b00000.qcom,msm-cam
+=== /sys/class/video4linux/v4l-subdev6 ===
+/sys/devices/soc/1b00000.qcom,msm-cam
+=== /sys/class/video4linux/v4l-subdev7 ===
+/sys/devices/soc/1b00000.qcom,msm-cam
+=== /sys/class/video4linux/v4l-subdev8 ===
+/sys/devices/soc/1b00000.qcom,msm-cam
+=== /sys/class/video4linux/v4l-subdev9 ===
+/sys/devices/soc/1b00000.qcom,msm-cam
+

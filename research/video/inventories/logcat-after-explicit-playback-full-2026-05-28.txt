@@ -1,0 +1,26 @@
+--------- beginning of system
+05-28 11:49:35.933  1160  2783 I ActivityManager: START u0 {act=android.intent.action.VIEW dat=file:///sdcard/Download/sample-5s.mp4 typ=video/mp4 flg=0x10000000 cmp=com.android.gallery3d/.app.MovieActivity} from uid 2000
+--------- beginning of main
+05-28 11:49:35.934   575   620 E ANDR-PERF-MPCTL: Invalid profile no. 0, total profiles 0 only
+05-28 11:49:35.936   440   440 W /system/bin/hwservicemanager: getTransport: Cannot find entry vendor.qti.hardware.iop@1.0::IIop/default in either framework or device manifest.
+05-28 11:49:35.937  1160  2783 E ANDR-PERF-JNI: Iop tryGetService failed
+05-28 11:49:35.941  1160  2783 D ActivityTrigger: activityStartTrigger: Activity is Triggerred in full screen ApplicationInfo{dd167fe com.android.gallery3d}
+05-28 11:49:35.941  1160  2783 E ActivityTrigger: activityStartTrigger: not whiteListedcom.android.gallery3d/com.android.gallery3d.app.MovieActivity/40030
+05-28 11:49:35.941  1160  2783 D CompatibilityInfo: mCompatibilityFlags - 14
+05-28 11:49:35.941  1160  2783 D CompatibilityInfo: applicationDensity - 240
+05-28 11:49:35.941  1160  2783 D CompatibilityInfo: applicationScale - 1.0
+05-28 11:49:35.941  1160  2783 D ActivityTrigger: activityResumeTrigger: The activity in ApplicationInfo{dd167fe com.android.gallery3d} is now in focus and seems to be in full-screen mode
+05-28 11:49:35.942  1160  2783 E ActivityTrigger: activityResumeTrigger: not whiteListedcom.android.gallery3d/com.android.gallery3d.app.MovieActivity/40030
+05-28 11:49:35.942  1160  2783 D ActivityTrigger: ActivityTrigger activityPauseTrigger 
+05-28 11:49:35.945  1160  1170 D ActivityTrigger: activityResumeTrigger: The activity in ApplicationInfo{dd167fe com.android.gallery3d} is now in focus and seems to be in full-screen mode
+05-28 11:49:35.946  1160  1170 E ActivityTrigger: activityResumeTrigger: not whiteListedcom.android.gallery3d/com.android.gallery3d.app.MovieActivity/40030
+05-28 11:49:35.949  1160  1170 D CompatibilityInfo: mCompatibilityFlags - 14
+05-28 11:49:35.949  1160  1170 D CompatibilityInfo: applicationDensity - 240
+05-28 11:49:35.949  1160  1170 D CompatibilityInfo: applicationScale - 1.0
+05-28 11:49:35.982  4464  4464 W AudioManager: Use of stream types is deprecated for operations other than volume control
+05-28 11:49:35.982  4464  4464 W AudioManager: See the documentation of requestAudioFocus() for what to use instead with android.media.AudioAttributes to qualify your playback use case
+05-28 11:49:35.983  1160  1781 I MediaFocusControl: requestAudioFocus() from uid/pid 10045/4464 clientId=android.media.AudioManager@5bb7a81 callingPack=com.android.gallery3d req=2 flags=0x0 sdk=24
+05-28 11:49:35.983  1160  1781 D AppOps  : noteOperation: allowing code 32 uid 10045 package com.android.gallery3d
+05-28 11:49:36.033  1160  1181 I ActivityManager: Displayed com.android.gallery3d/.app.MovieActivity: +82ms
+05-28 11:49:36.034   440   440 W /system/bin/hwservicemanager: getTransport: Cannot find entry vendor.qti.hardware.iop@1.0::IIop/default in either framework or device manifest.
+05-28 11:49:36.035  1160  1181 E ANDR-PERF-JNI: Iop tryGetService failed
