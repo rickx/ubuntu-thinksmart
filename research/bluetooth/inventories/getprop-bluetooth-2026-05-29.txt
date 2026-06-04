@@ -1,0 +1,5 @@
+=== COMMAND ===
+adb_cmd shell sh -c getprop | grep -i bluetooth 
+=== OUTPUT ===
+[init.svc.bluetooth-1-0]: [running]
+[qcom.bluetooth.soc]: [naples_uart]

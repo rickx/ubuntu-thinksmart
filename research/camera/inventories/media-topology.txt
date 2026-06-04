@@ -1,0 +1,236 @@
+=== SHELL ===
+media-ctl -p 2>/dev/null 
+=== OUTPUT ===
+Media controller API version 6.19.5
+
+Media device information
+------------------------
+driver          qcom-camss
+model           Qualcomm Camera Subsystem
+serial          
+bus info        platform:1b00020.camss
+hw revision     0x0
+driver version  6.19.5
+
+Device topology
+- entity 1: msm_csiphy0 (2 pads, 3 links, 0 routes)
+            type V4L2 subdev subtype Unknown flags 0
+	pad0: Sink
+	pad1: Source
+		-> "msm_csid0":0 []
+		-> "msm_csid1":0 []
+		-> "msm_csid2":0 []
+
+- entity 4: msm_csiphy1 (2 pads, 3 links, 0 routes)
+            type V4L2 subdev subtype Unknown flags 0
+	pad0: Sink
+	pad1: Source
+		-> "msm_csid0":0 []
+		-> "msm_csid1":0 []
+		-> "msm_csid2":0 []
+
+- entity 7: msm_csiphy2 (2 pads, 3 links, 0 routes)
+            type V4L2 subdev subtype Unknown flags 0
+	pad0: Sink
+	pad1: Source
+		-> "msm_csid0":0 []
+		-> "msm_csid1":0 []
+		-> "msm_csid2":0 []
+
+- entity 10: msm_csid0 (5 pads, 7 links, 0 routes)
+             type V4L2 subdev subtype Unknown flags 0
+	pad0: Sink
+		<- "msm_csiphy0":1 []
+		<- "msm_csiphy1":1 []
+		<- "msm_csiphy2":1 []
+	pad1: Source
+		-> "msm_ispif0":0 []
+		-> "msm_ispif1":0 []
+		-> "msm_ispif2":0 []
+		-> "msm_ispif3":0 []
+	pad2: Source
+	pad3: Source
+	pad4: Source
+
+- entity 16: msm_csid1 (5 pads, 7 links, 0 routes)
+             type V4L2 subdev subtype Unknown flags 0
+	pad0: Sink
+		<- "msm_csiphy0":1 []
+		<- "msm_csiphy1":1 []
+		<- "msm_csiphy2":1 []
+	pad1: Source
+		-> "msm_ispif0":0 []
+		-> "msm_ispif1":0 []
+		-> "msm_ispif2":0 []
+		-> "msm_ispif3":0 []
+	pad2: Source
+	pad3: Source
+	pad4: Source
+
+- entity 22: msm_csid2 (5 pads, 7 links, 0 routes)
+             type V4L2 subdev subtype Unknown flags 0
+	pad0: Sink
+		<- "msm_csiphy0":1 []
+		<- "msm_csiphy1":1 []
+		<- "msm_csiphy2":1 []
+	pad1: Source
+		-> "msm_ispif0":0 []
+		-> "msm_ispif1":0 []
+		-> "msm_ispif2":0 []
+		-> "msm_ispif3":0 []
+	pad2: Source
+	pad3: Source
+	pad4: Source
+
+- entity 28: msm_ispif0 (2 pads, 9 links, 0 routes)
+             type V4L2 subdev subtype Unknown flags 0
+	pad0: Sink
+		<- "msm_csid0":1 []
+		<- "msm_csid1":1 []
+		<- "msm_csid2":1 []
+	pad1: Source
+		-> "msm_vfe0_rdi0":0 []
+		-> "msm_vfe0_rdi1":0 []
+		-> "msm_vfe0_rdi2":0 []
+		-> "msm_vfe1_rdi0":0 []
+		-> "msm_vfe1_rdi1":0 []
+		-> "msm_vfe1_rdi2":0 []
+
+- entity 31: msm_ispif1 (2 pads, 9 links, 0 routes)
+             type V4L2 subdev subtype Unknown flags 0
+	pad0: Sink
+		<- "msm_csid0":1 []
+		<- "msm_csid1":1 []
+		<- "msm_csid2":1 []
+	pad1: Source
+		-> "msm_vfe0_rdi0":0 []
+		-> "msm_vfe0_rdi1":0 []
+		-> "msm_vfe0_rdi2":0 []
+		-> "msm_vfe1_rdi0":0 []
+		-> "msm_vfe1_rdi1":0 []
+		-> "msm_vfe1_rdi2":0 []
+
+- entity 34: msm_ispif2 (2 pads, 9 links, 0 routes)
+             type V4L2 subdev subtype Unknown flags 0
+	pad0: Sink
+		<- "msm_csid0":1 []
+		<- "msm_csid1":1 []
+		<- "msm_csid2":1 []
+	pad1: Source
+		-> "msm_vfe0_rdi0":0 []
+		-> "msm_vfe0_rdi1":0 []
+		-> "msm_vfe0_rdi2":0 []
+		-> "msm_vfe1_rdi0":0 []
+		-> "msm_vfe1_rdi1":0 []
+		-> "msm_vfe1_rdi2":0 []
+
+- entity 37: msm_ispif3 (2 pads, 9 links, 0 routes)
+             type V4L2 subdev subtype Unknown flags 0
+	pad0: Sink
+		<- "msm_csid0":1 []
+		<- "msm_csid1":1 []
+		<- "msm_csid2":1 []
+	pad1: Source
+		-> "msm_vfe0_rdi0":0 []
+		-> "msm_vfe0_rdi1":0 []
+		-> "msm_vfe0_rdi2":0 []
+		-> "msm_vfe1_rdi0":0 []
+		-> "msm_vfe1_rdi1":0 []
+		-> "msm_vfe1_rdi2":0 []
+
+- entity 40: msm_vfe0_rdi0 (2 pads, 5 links, 0 routes)
+             type V4L2 subdev subtype Unknown flags 0
+	pad0: Sink
+		<- "msm_ispif0":1 []
+		<- "msm_ispif1":1 []
+		<- "msm_ispif2":1 []
+		<- "msm_ispif3":1 []
+	pad1: Source
+		-> "msm_vfe0_video0":0 [ENABLED,IMMUTABLE]
+
+- entity 43: msm_vfe0_video0 (1 pad, 1 link)
+             type Node subtype V4L flags 0
+             device node name /dev/video0
+	pad0: Sink
+		<- "msm_vfe0_rdi0":1 [ENABLED,IMMUTABLE]
+
+- entity 49: msm_vfe0_rdi1 (2 pads, 5 links, 0 routes)
+             type V4L2 subdev subtype Unknown flags 0
+	pad0: Sink
+		<- "msm_ispif0":1 []
+		<- "msm_ispif1":1 []
+		<- "msm_ispif2":1 []
+		<- "msm_ispif3":1 []
+	pad1: Source
+		-> "msm_vfe0_video1":0 [ENABLED,IMMUTABLE]
+
+- entity 52: msm_vfe0_video1 (1 pad, 1 link)
+             type Node subtype V4L flags 0
+             device node name /dev/video1
+	pad0: Sink
+		<- "msm_vfe0_rdi1":1 [ENABLED,IMMUTABLE]
+
+- entity 58: msm_vfe0_rdi2 (2 pads, 5 links, 0 routes)
+             type V4L2 subdev subtype Unknown flags 0
+	pad0: Sink
+		<- "msm_ispif0":1 []
+		<- "msm_ispif1":1 []
+		<- "msm_ispif2":1 []
+		<- "msm_ispif3":1 []
+	pad1: Source
+		-> "msm_vfe0_video2":0 [ENABLED,IMMUTABLE]
+
+- entity 61: msm_vfe0_video2 (1 pad, 1 link)
+             type Node subtype V4L flags 0
+             device node name /dev/video2
+	pad0: Sink
+		<- "msm_vfe0_rdi2":1 [ENABLED,IMMUTABLE]
+
+- entity 67: msm_vfe1_rdi0 (2 pads, 5 links, 0 routes)
+             type V4L2 subdev subtype Unknown flags 0
+	pad0: Sink
+		<- "msm_ispif0":1 []
+		<- "msm_ispif1":1 []
+		<- "msm_ispif2":1 []
+		<- "msm_ispif3":1 []
+	pad1: Source
+		-> "msm_vfe1_video0":0 [ENABLED,IMMUTABLE]
+
+- entity 70: msm_vfe1_video0 (1 pad, 1 link)
+             type Node subtype V4L flags 0
+             device node name /dev/video3
+	pad0: Sink
+		<- "msm_vfe1_rdi0":1 [ENABLED,IMMUTABLE]
+
+- entity 76: msm_vfe1_rdi1 (2 pads, 5 links, 0 routes)
+             type V4L2 subdev subtype Unknown flags 0
+	pad0: Sink
+		<- "msm_ispif0":1 []
+		<- "msm_ispif1":1 []
+		<- "msm_ispif2":1 []
+		<- "msm_ispif3":1 []
+	pad1: Source
+		-> "msm_vfe1_video1":0 [ENABLED,IMMUTABLE]
+
+- entity 79: msm_vfe1_video1 (1 pad, 1 link)
+             type Node subtype V4L flags 0
+             device node name /dev/video4
+	pad0: Sink
+		<- "msm_vfe1_rdi1":1 [ENABLED,IMMUTABLE]
+
+- entity 85: msm_vfe1_rdi2 (2 pads, 5 links, 0 routes)
+             type V4L2 subdev subtype Unknown flags 0
+	pad0: Sink
+		<- "msm_ispif0":1 []
+		<- "msm_ispif1":1 []
+		<- "msm_ispif2":1 []
+		<- "msm_ispif3":1 []
+	pad1: Source
+		-> "msm_vfe1_video2":0 [ENABLED,IMMUTABLE]
+
+- entity 88: msm_vfe1_video2 (1 pad, 1 link)
+             type Node subtype V4L flags 0
+             device node name /dev/video5
+	pad0: Sink
+		<- "msm_vfe1_rdi2":1 [ENABLED,IMMUTABLE]
+

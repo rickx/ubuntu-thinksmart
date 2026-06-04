@@ -1,0 +1,13 @@
+[Unit]
+Description=Input-idle screen blanker
+After=graphical-session.target
+Wants=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /usr/local/bin/idle-blanker.py
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=default.target

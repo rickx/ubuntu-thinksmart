@@ -1,0 +1,23 @@
+=== SHELL ===
+sudo -u user XDG_RUNTIME_DIR=/run/user/1000 systemctl --user status vcnl4200-proximity-daemon.service --no-pager 2>/dev/null 
+=== OUTPUT ===
+● vcnl4200-proximity-daemon.service - VCNL4200 Proximity Sensor Daemon (standalone)
+     Loaded: loaded (/etc/xdg/systemd/user/vcnl4200-proximity-daemon.service; enabled; preset: enabled)
+     Active: active (running) since Fri 2026-05-22 19:00:21 CEST; 6 days ago
+   Main PID: 1211 (python3)
+      Tasks: 1 (limit: 2368)
+     Memory: 8.7M (peak: 11.1M)
+        CPU: 25min 19.568s
+     CGroup: /user.slice/user-1000.slice/user@1000.service/app.slice/vcnl4200-proximity-daemon.service
+             └─1211 /usr/bin/python3 /usr/local/bin/vcnl4200-proximity-daemon.py
+
+May 29 08:19:45 lemalo python3[1211]: 2026-05-29 08:19:45,778 [INFO] Sensor shut down
+May 29 08:24:46 lemalo python3[1211]: 2026-05-29 08:24:46,455 [INFO] Brightness changed: 4095 -> 0
+May 29 08:24:46 lemalo python3[1211]: 2026-05-29 08:24:46,456 [INFO] Enabling proximity sensor
+May 29 08:24:46 lemalo python3[1211]: 2026-05-29 08:24:46,459 [INFO] PS_CONF1 enabled (0xCA), LED=200mA
+May 29 09:59:13 lemalo python3[1211]: 2026-05-29 09:59:13,807 [INFO] Brightness changed: 0 -> 4095
+May 29 09:59:13 lemalo python3[1211]: 2026-05-29 09:59:13,808 [INFO] Disabling proximity sensor (PS_SD=1)
+May 29 09:59:13 lemalo python3[1211]: 2026-05-29 09:59:13,811 [INFO] Sensor shut down
+May 29 10:04:15 lemalo python3[1211]: 2026-05-29 10:04:15,525 [INFO] Brightness changed: 4095 -> 0
+May 29 10:04:15 lemalo python3[1211]: 2026-05-29 10:04:15,527 [INFO] Enabling proximity sensor
+May 29 10:04:15 lemalo python3[1211]: 2026-05-29 10:04:15,531 [INFO] PS_CONF1 enabled (0xCA), LED=200mA

@@ -1,0 +1,15 @@
+=== COMMAND ===
+adb_cmd shell dumpsys media.metrics 
+=== OUTPUT ===
+Dump of the media.metrics process:
+Protocol Version: 0
+Metrics gathering: enabled
+Since Boot: Submissions:       16 Finalizations:       16
+Records Discarded:       16 (by Count: 0 by Expiration: 16)
+Summary Sets Discarded: 0
+
+Finalized Metrics (oldest first):
+empty
+
+In-Progress Metrics (newest first):
+empty

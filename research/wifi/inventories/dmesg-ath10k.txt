@@ -1,0 +1,1728 @@
+=== SHELL ===
+dmesg | grep -iE 'ath10k|qca9379|wlan|firmware' 
+=== OUTPUT ===
+[222817.621985] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[222817.622076] wlan0: failed to set key (2, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[222817.624414] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[222818.099610] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[222818.099696] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[222818.104264] wlan0: authenticated
+[222818.109625] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[222818.114726] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=5)
+[222818.130007] wlan0: associated
+[222818.153294] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[222928.982018] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[222928.982106] wlan0: failed to remove key (1, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[222928.991626] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[222932.054043] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[222932.054130] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[222932.136985] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[222932.137066] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[222932.144583] wlan0: authenticated
+[222932.153610] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[222932.158152] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=7)
+[222932.170244] wlan0: associated
+[222932.170449] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[223417.941589] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[223417.941696] wlan0: failed to set key (1, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[223417.944249] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[223418.483698] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[223418.483781] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[223418.493821] wlan0: authenticated
+[223418.501239] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[223418.507682] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=5)
+[223418.527301] wlan0: associated
+[223418.527505] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[223493.717755] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[223493.717852] wlan0: failed to remove key (2, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[223493.726746] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[223496.789675] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[223496.789770] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[223496.871371] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[223496.871451] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[223496.879312] wlan0: authenticated
+[223496.885481] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[223496.891428] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=7)
+[223496.902963] wlan0: associated
+[223496.909631] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[224018.004070] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[224018.004163] wlan0: failed to set key (2, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[224018.006533] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[224018.029776] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[224018.029825] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[224018.029843] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[224018.428427] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[224018.428513] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[224018.435695] wlan0: authenticated
+[224018.440671] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[224018.447365] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=5)
+[224018.464183] wlan0: associated
+[224018.488360] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[224057.683793] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[224057.683889] wlan0: failed to remove key (1, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[224057.701615] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[224060.756686] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[224060.756779] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[224060.840255] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[224060.840338] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[224060.844205] wlan0: authenticated
+[224060.856283] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[224060.861045] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=7)
+[224060.887211] wlan0: associated
+[224061.037274] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[224618.071264] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[224618.071359] wlan0: failed to set key (1, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[224618.073280] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[224618.517807] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[224618.517890] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[224618.528326] wlan0: authenticated
+[224618.534913] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[224618.541181] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=5)
+[224618.558793] wlan0: associated
+[224618.559896] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[224837.465814] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[224837.465904] wlan0: failed to remove key (2, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[224837.491587] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[224840.537758] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[224840.537849] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[224840.612702] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[224840.612785] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[224840.625327] wlan0: authenticated
+[224840.629358] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[224840.634337] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=7)
+[224840.646391] wlan0: associated
+[224840.715029] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[225218.139880] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[225218.139957] wlan0: failed to set key (2, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[225218.141564] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[225221.211735] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[225221.211862] wlan0: failed to remove key (0, 7c:ff:4d:e7:1a:61) from hardware (-110)
+[225221.633241] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[225221.633328] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[225221.641879] wlan0: authenticated
+[225221.652417] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[225221.658640] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=5)
+[225221.675394] wlan0: associated
+[225221.692000] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[225260.892172] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[225260.892280] wlan0: failed to remove key (1, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[225260.905741] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[225263.964132] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[225263.964204] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[225264.043001] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[225264.043080] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[225264.054344] wlan0: authenticated
+[225264.071789] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[225264.075518] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=7)
+[225264.099985] wlan0: associated
+[225264.244669] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[225818.204953] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[225818.205063] wlan0: failed to set key (1, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[225818.206973] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[225821.277789] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[225821.277879] wlan0: failed to remove key (0, 7c:ff:4d:e7:1a:61) from hardware (-110)
+[225821.693778] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[225821.693872] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[225821.698554] wlan0: authenticated
+[225821.701169] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[225821.706395] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=5)
+[225821.721637] wlan0: associated
+[225821.758521] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[225860.957147] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[225860.957242] wlan0: failed to remove key (2, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[225860.966889] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[225864.029272] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[225864.029434] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[225864.113660] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[225864.113749] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[225864.122021] wlan0: authenticated
+[225864.130708] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[225864.137302] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=7)
+[225864.147113] wlan0: associated
+[225864.312559] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[226418.269392] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[226418.269479] wlan0: failed to set key (2, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[226418.278408] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[226421.345010] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[226421.345097] wlan0: failed to remove key (0, 7c:ff:4d:e7:1a:61) from hardware (-110)
+[226421.760487] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[226421.760570] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[226421.769849] wlan0: authenticated
+[226421.773375] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[226421.778133] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=5)
+[226421.807019] wlan0: associated
+[226421.825013] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[226461.020057] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[226461.020148] wlan0: failed to remove key (1, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[226461.030020] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[226464.092176] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[226464.092271] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[226464.177198] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[226464.177279] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[226464.184568] wlan0: authenticated
+[226464.199734] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[226464.203543] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=7)
+[226464.215816] wlan0: associated
+[226464.378970] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[227018.581696] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[227018.581789] wlan0: failed to set key (1, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[227018.591291] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[227018.676092] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[227018.676179] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[227018.676197] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[227018.676215] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[227019.088957] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[227019.089014] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[227019.094530] wlan0: authenticated
+[227019.097515] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[227019.101924] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=5)
+[227019.117361] wlan0: associated
+[227019.125709] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[227130.192447] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[227130.192538] wlan0: failed to remove key (2, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[227130.210128] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[227133.264471] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[227133.264564] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[227133.343122] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[227133.343201] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[227133.351139] wlan0: authenticated
+[227133.364109] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[227133.373313] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=7)
+[227133.382481] wlan0: associated
+[227133.467376] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[227618.636331] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[227618.636426] wlan0: failed to set key (2, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[227618.653784] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[227618.745938] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[227618.746021] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[227618.746040] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[227618.746057] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[227619.172655] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[227619.172733] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[227619.181070] wlan0: authenticated
+[227619.186440] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[227619.199637] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=5)
+[227619.209352] wlan0: associated
+[227619.294255] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[227658.316383] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[227658.316479] wlan0: failed to remove key (1, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[227658.337771] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[227661.388509] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[227661.388602] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[227661.469537] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[227661.469620] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[227661.474232] wlan0: authenticated
+[227661.483936] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[227661.490164] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=7)
+[227661.505185] wlan0: associated
+[227661.554328] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[228218.697439] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[228218.697533] wlan0: failed to set key (1, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[228218.711567] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[228219.223431] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[228219.223573] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[228219.233296] wlan0: authenticated
+[228219.237362] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[228219.242650] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=5)
+[228219.260791] wlan0: associated
+[228219.261497] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[228294.473604] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[228294.473695] wlan0: failed to remove key (2, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[228294.486244] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[228297.545334] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[228297.545426] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[228297.626119] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[228297.626200] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[228297.633338] wlan0: authenticated
+[228297.644471] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[228297.649744] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=7)
+[228297.667354] wlan0: associated
+[228297.667620] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[228818.757897] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[228818.757989] wlan0: failed to set key (2, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[228818.767021] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[228819.298588] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[228819.298670] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[228819.304605] wlan0: authenticated
+[228819.314068] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[228819.320179] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=5)
+[228819.341727] wlan0: associated
+[228819.342202] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[228894.533825] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[228894.533919] wlan0: failed to remove key (1, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[228894.552024] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[228897.605766] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[228897.605868] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[228897.682900] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[228897.682981] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[228897.689355] wlan0: authenticated
+[228897.697348] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[228897.701561] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=7)
+[228897.717754] wlan0: associated
+[228897.728302] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[229418.818641] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[229418.818695] wlan0: failed to set key (1, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[229418.828608] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[229419.365167] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[229419.365251] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[229419.370691] wlan0: authenticated
+[229419.375327] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[229419.387852] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=5)
+[229419.400724] wlan0: associated
+[229419.401353] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[229458.499063] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[229458.499116] wlan0: failed to remove key (2, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[229458.512383] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[229461.570759] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[229461.570862] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[229461.653317] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[229461.653398] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[229461.658835] wlan0: authenticated
+[229461.682645] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[229461.686725] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=7)
+[229461.698231] wlan0: associated
+[229461.755307] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[230018.880621] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[230018.880723] wlan0: failed to set key (2, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[230018.889534] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[230021.952477] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[230021.952619] wlan0: failed to remove key (0, 7c:ff:4d:e7:1a:61) from hardware (-110)
+[230022.386018] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[230022.386058] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[230022.391100] wlan0: authenticated
+[230022.400310] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[230022.405096] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=5)
+[230022.412362] wlan0: associated
+[230022.425259] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[230058.505836] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[230061.632448] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[230061.632530] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[230061.710086] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[230061.710166] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[230061.714053] wlan0: authenticated
+[230061.728879] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[230061.733986] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=7)
+[230061.748498] wlan0: associated
+[230061.825819] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[230619.197567] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[230619.197664] wlan0: failed to set key (1, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[230619.215577] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[230622.526099] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[230622.526186] wlan0: failed to remove key (0, 7c:ff:4d:e7:1a:61) from hardware (-110)
+[230622.946513] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[230622.946596] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[230622.952799] wlan0: authenticated
+[230622.957646] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[230622.961894] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=5)
+[230622.984728] wlan0: associated
+[230623.005046] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[230659.074891] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[230662.205351] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[230662.205455] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[230662.287845] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[230662.287927] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[230662.292160] wlan0: authenticated
+[230662.301549] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[230662.309668] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=7)
+[230662.327051] wlan0: associated
+[230662.404016] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[231219.258235] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[231219.258322] wlan0: failed to set key (2, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[231219.274776] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[231219.783256] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[231219.783337] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[231219.788518] wlan0: authenticated
+[231219.793575] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[231219.806641] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=5)
+[231219.831503] wlan0: associated
+[231219.903365] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[231295.034165] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[231295.034318] wlan0: failed to remove key (1, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[231295.051494] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[231298.105683] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[231298.105766] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[231298.184299] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[231298.184380] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[231298.188990] wlan0: authenticated
+[231298.197845] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[231298.202814] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=7)
+[231298.211909] wlan0: associated
+[231298.212882] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[231819.319376] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[231819.319476] wlan0: failed to set key (1, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[231819.335449] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[231819.849228] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[231819.849314] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[231819.854374] wlan0: authenticated
+[231819.858427] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[231819.863811] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=5)
+[231819.884102] wlan0: associated
+[231819.885130] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[231855.932205] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[231858.998991] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[231858.999082] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[231859.071965] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[231859.072050] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[231859.075724] wlan0: authenticated
+[231859.095805] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[231859.100897] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=7)
+[231859.116081] wlan0: associated
+[231859.266153] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[232419.380023] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[232419.380120] wlan0: failed to set key (2, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[232419.392670] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[232419.501445] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[232419.501476] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[232419.501484] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[232419.918530] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[232419.918617] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[232419.923258] wlan0: authenticated
+[232419.927504] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[232419.940367] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=5)
+[232419.957437] wlan0: associated
+[232420.033679] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[232459.060270] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[232459.060357] wlan0: failed to remove key (1, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[232459.073506] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[232462.135527] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[232462.135620] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[232462.216201] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[232462.216281] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[232462.221687] wlan0: authenticated
+[232462.232167] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[232462.236820] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=7)
+[232462.268474] wlan0: associated
+[232462.309227] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[233019.443075] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[233019.443162] wlan0: failed to set key (1, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[233019.451232] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[233019.924742] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[233019.924827] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[233019.928353] wlan0: authenticated
+[233019.930786] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[233019.937442] wlan0: RX AssocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=7)
+[233019.960428] wlan0: associated
+[233019.978189] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[233619.506363] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[233619.506504] wlan0: failed to set key (2, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[233619.513403] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[233619.639384] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[233619.639470] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[233623.650287] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[233623.650368] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[233623.653530] wlan0: authenticated
+[233623.664854] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[233623.677819] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=5)
+[233623.693394] wlan0: associated
+[233623.858157] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[233698.864716] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[233698.864806] wlan0: failed to remove key (1, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[233698.882009] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[233702.192086] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[233702.192185] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[233702.194477] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 0
+[233702.265746] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[233702.265823] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[233702.270590] wlan0: authenticated
+[233702.288002] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[233702.291902] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=7)
+[233702.307247] wlan0: associated
+[233702.583532] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[234219.566267] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[234219.566318] wlan0: failed to set key (1, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[234219.583015] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[234222.893867] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[234222.893903] wlan0: failed to remove key (0, 7c:ff:4d:e7:1a:61) from hardware (-110)
+[234223.335697] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[234223.335776] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[234223.342044] wlan0: authenticated
+[234223.346624] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[234223.352421] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=5)
+[234223.377231] wlan0: associated
+[234223.414025] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[234262.574242] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[234262.574292] wlan0: failed to remove key (2, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[234262.583635] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[234265.646080] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[234265.646130] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[234265.726882] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[234265.726956] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[234265.734661] wlan0: authenticated
+[234265.741898] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[234265.748001] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=9)
+[234265.757467] wlan0: associated
+[234265.800337] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[234819.627995] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[234819.628083] wlan0: failed to set key (2, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[234819.644764] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[234822.956873] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[234822.956970] wlan0: failed to remove key (0, 7c:ff:4d:e7:1a:61) from hardware (-110)
+[234823.372804] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[234823.372852] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[234823.380074] wlan0: authenticated
+[234823.383895] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[234823.388320] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=3)
+[234823.400633] wlan0: associated
+[234823.479731] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[234862.636140] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[234862.636227] wlan0: failed to remove key (1, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[234862.652968] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[234865.707897] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[234865.707981] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[234865.787729] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[234865.787813] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[234865.791728] wlan0: authenticated
+[234865.804529] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[234865.810003] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=9)
+[234865.827747] wlan0: associated
+[234865.872801] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[235419.689518] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[235419.689622] wlan0: failed to set key (1, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[235419.698915] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[235419.849691] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[235420.260783] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[235420.260863] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[235420.264451] wlan0: authenticated
+[235420.269813] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[235420.274583] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=3)
+[235420.291723] wlan0: associated
+[235420.375015] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[235459.369707] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[235459.369807] wlan0: failed to remove key (2, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[235459.379143] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[235462.441481] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[235462.441571] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[235462.517005] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[235462.517084] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[235462.527078] wlan0: authenticated
+[235462.533246] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[235462.537365] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=9)
+[235462.546967] wlan0: associated
+[235462.548625] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[236020.007081] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[236020.007183] wlan0: failed to set key (2, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[236020.020906] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[236020.539438] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[236020.539520] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[236020.547442] wlan0: authenticated
+[236020.551241] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[236020.556094] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=3)
+[236020.580313] wlan0: associated
+[236020.645134] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[236167.462846] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[236167.462937] wlan0: failed to remove key (1, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[236167.480898] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[236170.534797] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[236170.534900] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[236170.614683] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[236170.614762] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[236170.618925] wlan0: authenticated
+[236170.638739] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[236170.643927] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=9)
+[236170.658760] wlan0: associated
+[236170.659319] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[236620.069045] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[236620.069137] wlan0: failed to set key (1, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[236620.089132] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[236620.612449] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[236620.612543] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[236620.616630] wlan0: authenticated
+[236620.620706] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[236620.624899] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=3)
+[236620.639688] wlan0: associated
+[236620.713888] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[236731.683914] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[236731.684067] wlan0: failed to remove key (2, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[236731.705483] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[236735.012403] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[236735.012497] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[236735.093801] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[236735.093884] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[236735.097817] wlan0: authenticated
+[236735.104068] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[236735.107962] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=9)
+[236735.120545] wlan0: associated
+[236735.186359] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[237220.129590] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[237220.129679] wlan0: failed to set key (2, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[237220.138773] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[237223.201893] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[237223.201978] wlan0: failed to remove key (0, 7c:ff:4d:e7:1a:61) from hardware (-110)
+[237223.608249] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[237223.608333] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[237223.613091] wlan0: authenticated
+[237223.617453] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[237223.622114] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=3)
+[237223.631017] wlan0: associated
+[237223.652173] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[237370.657222] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[237370.657304] wlan0: failed to remove key (1, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[237370.666351] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[237373.728873] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[237373.728963] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[237373.809640] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[237373.809720] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[237373.815111] wlan0: authenticated
+[237373.824567] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[237373.829397] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=9)
+[237373.844836] wlan0: associated
+[237373.857132] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[237820.191343] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[237820.191436] wlan0: failed to set key (1, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[237820.207601] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[237823.262562] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[237823.262649] wlan0: failed to remove key (0, 7c:ff:4d:e7:1a:61) from hardware (-110)
+[237823.685491] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[237823.685572] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[237823.692676] wlan0: authenticated
+[237823.698558] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[237823.703655] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=3)
+[237823.722405] wlan0: associated
+[237823.725934] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[237862.943108] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[237862.943208] wlan0: failed to remove key (2, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[237862.959943] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[237866.018355] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[237866.018452] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[237866.097083] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[237866.097169] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[237866.109100] wlan0: authenticated
+[237866.114150] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[237866.121354] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=9)
+[237866.135788] wlan0: associated
+[237866.202345] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[238420.251841] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[238420.251893] wlan0: failed to set key (2, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[238420.269092] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[238423.579900] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[238423.579946] wlan0: failed to remove key (0, 7c:ff:4d:e7:1a:61) from hardware (-110)
+[238423.583341] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[238423.583383] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[238423.583403] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[238423.583421] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[238423.989673] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[238423.989751] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[238423.995972] wlan0: authenticated
+[238424.003578] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[238424.014096] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=3)
+[238424.028740] wlan0: associated
+[238424.103644] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[238463.259489] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[238463.259523] wlan0: failed to remove key (1, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[238463.269649] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[238466.331611] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[238466.331644] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[238466.409286] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[238466.409371] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[238466.416872] wlan0: authenticated
+[238466.423936] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[238466.428172] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=9)
+[238466.444251] wlan0: associated
+[238466.489171] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[239020.569862] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[239020.569913] wlan0: failed to set key (1, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[239020.578891] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[239021.090761] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[239021.090843] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[239021.098552] wlan0: authenticated
+[239021.101361] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[239021.113615] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=3)
+[239021.125222] wlan0: associated
+[239021.206701] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[239060.249339] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[239060.249391] wlan0: failed to remove key (2, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[239060.258992] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[239063.321233] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[239063.321264] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[239063.398826] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[239063.398908] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[239063.405694] wlan0: authenticated
+[239063.415641] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[239063.419974] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=9)
+[239063.432291] wlan0: associated
+[239063.585287] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[239620.632024] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[239620.632113] wlan0: failed to set key (2, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[239620.648188] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[239621.168015] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[239621.168098] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[239621.171972] wlan0: authenticated
+[239621.175918] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[239621.182482] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=3)
+[239621.202923] wlan0: associated
+[239621.279026] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[239660.311685] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[239660.311776] wlan0: failed to remove key (1, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[239660.329103] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[239663.383866] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[239663.383961] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[239663.462855] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[239663.462941] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[239663.467483] wlan0: authenticated
+[239663.474953] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[239663.481071] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=9)
+[239663.496561] wlan0: associated
+[239663.649485] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[240220.693414] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[240220.693549] wlan0: failed to set key (1, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[240220.701599] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[240221.234538] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[240221.234617] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[240221.244185] wlan0: authenticated
+[240221.250934] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[240221.256978] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=3)
+[240221.277513] wlan0: associated
+[240221.351671] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[240260.373245] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[240260.373372] wlan0: failed to remove key (2, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[240260.382481] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[240263.444490] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[240263.444595] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[240263.449642] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 0
+[240263.449709] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 0
+[240263.522923] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[240263.523002] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[240263.527122] wlan0: authenticated
+[240263.542843] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[240263.548676] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=9)
+[240263.567425] wlan0: associated
+[240263.622550] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[240820.758658] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[240820.758751] wlan0: failed to set key (2, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[240820.775205] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[240820.887971] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[240820.888068] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[240821.314906] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[240821.314985] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[240821.319093] wlan0: authenticated
+[240821.322868] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[240821.335482] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=3)
+[240821.357356] wlan0: associated
+[240821.423792] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[240968.210609] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[240968.210705] wlan0: failed to remove key (1, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[240968.227455] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[240971.281998] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[240971.282093] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[240971.356610] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[240971.356690] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[240971.361062] wlan0: authenticated
+[240971.373782] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[240971.381561] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=9)
+[240971.402862] wlan0: associated
+[240971.412994] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[241420.816181] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[241420.816270] wlan0: failed to set key (1, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[241420.829614] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[241420.952158] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[241420.952245] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[241420.952265] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[241420.952284] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[241420.952302] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[241421.379445] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[241421.379592] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[241421.388921] wlan0: authenticated
+[241421.391698] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[241421.400901] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=3)
+[241421.422667] wlan0: associated
+[241421.494041] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[241460.496114] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[241460.496203] wlan0: failed to remove key (2, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[241460.517988] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[241463.568364] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[241463.568454] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[241463.643118] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[241463.643199] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[241463.649051] wlan0: authenticated
+[241463.663535] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[241463.668141] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=9)
+[241463.690969] wlan0: associated
+[241463.856398] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[242020.878174] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[242020.878280] wlan0: failed to set key (2, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[242020.894646] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[242024.206131] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[242024.206219] wlan0: failed to remove key (0, 7c:ff:4d:e7:1a:61) from hardware (-110)
+[242024.608808] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[242024.608888] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[242024.613209] wlan0: authenticated
+[242024.617896] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[242024.622731] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=3)
+[242024.644679] wlan0: associated
+[242024.647602] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[242060.694993] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[242063.885849] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[242063.885944] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[242063.962421] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[242063.962503] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[242063.966387] wlan0: authenticated
+[242063.977725] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[242063.982189] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=11)
+[242064.004408] wlan0: associated
+[242064.053087] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[242621.195719] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[242621.195811] wlan0: failed to set key (1, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[242621.197875] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[242621.700162] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[242621.700237] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[242621.705044] wlan0: authenticated
+[242621.710665] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[242621.716155] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=3)
+[242621.736214] wlan0: associated
+[242621.742566] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[242660.874895] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[242660.874988] wlan0: failed to remove key (2, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[242660.888381] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[242663.947130] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[242663.947220] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[242664.026718] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[242664.026809] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[242664.030652] wlan0: authenticated
+[242664.038620] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[242664.043466] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=9)
+[242664.060540] wlan0: associated
+[242664.117852] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[243221.255995] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[243221.256091] wlan0: failed to set key (2, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[243221.258116] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[243221.266112] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[243221.671807] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[243221.671891] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[243221.675832] wlan0: authenticated
+[243221.680251] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[243221.684908] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=3)
+[243221.697916] wlan0: associated
+[243221.706805] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[243260.935999] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[243260.936105] wlan0: failed to remove key (1, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[243260.953136] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[243264.007993] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[243264.008078] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[243264.087944] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[243264.088029] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[243264.093784] wlan0: authenticated
+[243264.104295] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[243264.109448] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=9)
+[243264.126327] wlan0: associated
+[243264.170027] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[243821.317227] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[243821.317262] wlan0: failed to set key (1, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[243821.318921] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[243821.330879] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[243821.330956] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[243821.330974] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[243821.330991] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[243821.743929] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[243821.744016] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[243821.749393] wlan0: authenticated
+[243821.753474] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[243821.757433] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=3)
+[243821.775728] wlan0: associated
+[243821.776101] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[243893.886762] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[243897.092923] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[243897.092973] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[243897.170101] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[243897.170183] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[243897.173176] wlan0: authenticated
+[243897.185139] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[243897.191115] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=9)
+[243897.210912] wlan0: associated
+[243897.212427] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[244421.378588] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[244421.378685] wlan0: failed to set key (2, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[244421.380570] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[244421.914400] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[244421.914486] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[244421.918539] wlan0: authenticated
+[244421.923255] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[244421.931284] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=3)
+[244421.948369] wlan0: associated
+[244421.948789] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[244529.899808] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[244532.994197] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[244532.994315] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[244533.069564] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[244533.069644] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[244533.079174] wlan0: authenticated
+[244533.086712] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[244533.091007] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=9)
+[244533.100661] wlan0: associated
+[244533.115618] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[245021.441252] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[245021.441358] wlan0: failed to set key (1, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[245021.443612] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[245021.569908] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[245021.569992] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[245021.994362] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[245021.994447] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[245022.001881] wlan0: authenticated
+[245022.005160] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[245022.010962] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=3)
+[245022.022806] wlan0: associated
+[245022.023283] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[245097.217458] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[245097.217566] wlan0: failed to remove key (2, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[245097.227449] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[245100.289446] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[245100.289547] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[245100.369739] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[245100.369819] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[245100.374760] wlan0: authenticated
+[245100.381606] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[245100.389835] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=9)
+[245100.399653] wlan0: associated
+[245100.413652] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[245621.762324] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[245621.762455] wlan0: failed to set key (2, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[245621.764090] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[245622.237380] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[245622.237460] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[245622.244503] wlan0: authenticated
+[245622.249334] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[245622.253949] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=3)
+[245622.263604] wlan0: associated
+[245622.294750] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[245661.442256] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[245661.442358] wlan0: failed to remove key (1, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[245661.459184] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[245664.514822] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[245664.514917] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[245664.593264] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[245664.593342] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[245664.598212] wlan0: authenticated
+[245664.609421] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[245664.614076] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=9)
+[245664.632241] wlan0: associated
+[245664.641150] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[246221.824492] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[246221.824592] wlan0: failed to set key (1, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[246221.826323] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[246222.301987] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[246222.302065] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[246222.306235] wlan0: authenticated
+[246222.316166] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[246222.323800] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=3)
+[246222.344120] wlan0: associated
+[246222.367505] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[246261.504164] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[246261.504254] wlan0: failed to remove key (2, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[246261.522012] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[246264.575876] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[246264.575964] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[246264.652500] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[246264.652582] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[246264.660271] wlan0: authenticated
+[246264.675960] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[246264.680864] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=9)
+[246264.700974] wlan0: associated
+[246264.709134] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[246821.890423] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[246821.890520] wlan0: failed to set key (2, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[246821.892072] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[246821.978632] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[246821.978707] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[246821.978725] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[246822.384008] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[246822.384106] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[246822.388354] wlan0: authenticated
+[246822.394926] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[246822.400213] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=3)
+[246822.416627] wlan0: associated
+[246822.437988] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[246858.508112] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[246861.566395] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[246861.566488] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[246861.645335] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[246861.645417] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[246861.649544] wlan0: authenticated
+[246861.658296] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[246861.662428] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=9)
+[246861.679211] wlan0: associated
+[246861.705367] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[247421.946997] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[247421.947098] wlan0: failed to set key (1, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[247421.949251] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[247422.048671] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[247422.048764] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[247422.048782] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[247426.037091] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[247426.037175] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[247426.046795] wlan0: authenticated
+[247426.051051] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[247426.057988] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=3)
+[247426.066642] wlan0: associated
+[247426.108314] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[247465.211037] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[247465.211128] wlan0: failed to remove key (2, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[247465.228274] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[247468.539626] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[247468.539719] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[247468.621451] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[247468.621531] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[247468.625269] wlan0: authenticated
+[247468.638197] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[247468.648292] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=9)
+[247468.669317] wlan0: associated
+[247468.843897] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[248022.007681] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[248022.007791] wlan0: failed to set key (2, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[248022.010434] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[248022.114644] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[248022.114726] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[248022.114745] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[248022.114763] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[248022.114781] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[248022.114798] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[248022.511478] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[248022.511564] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[248022.517704] wlan0: authenticated
+[248022.520395] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[248022.525316] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=3)
+[248022.547717] wlan0: associated
+[248022.581775] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[248061.688081] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[248061.688168] wlan0: failed to remove key (1, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[248061.700806] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[248064.760049] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[248064.760138] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[248064.841539] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[248064.841619] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[248064.845638] wlan0: authenticated
+[248064.855992] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[248064.860803] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=9)
+[248064.883252] wlan0: associated
+[248064.919415] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[248622.325375] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[248622.325471] wlan0: failed to set key (1, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[248622.327422] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[248622.790090] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[248622.790118] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[248622.793818] wlan0: authenticated
+[248622.797119] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[248622.801196] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=3)
+[248622.812995] wlan0: associated
+[248622.857962] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[248662.005985] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[248662.006090] wlan0: failed to remove key (2, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[248662.015124] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[248665.077519] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[248665.077607] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[248665.159410] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[248665.159491] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[248665.169070] wlan0: authenticated
+[248665.176932] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[248665.180838] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=9)
+[248665.196346] wlan0: associated
+[248665.196681] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[249222.385941] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[249222.386037] wlan0: failed to set key (2, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[249222.387936] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[249222.871522] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[249222.871601] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[249222.878561] wlan0: authenticated
+[249222.882266] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[249222.888053] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=3)
+[249222.900206] wlan0: associated
+[249222.935756] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[249334.001400] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[249334.001494] wlan0: failed to remove key (1, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[249334.003513] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[249337.073197] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[249337.073250] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[249337.152754] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[249337.152838] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[249337.165389] wlan0: authenticated
+[249337.168758] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[249337.173767] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=9)
+[249337.185129] wlan0: associated
+[249337.248643] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[249822.445876] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[249822.445929] wlan0: failed to set key (1, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[249822.447302] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[249822.939657] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[249822.939736] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[249822.944174] wlan0: authenticated
+[249822.950732] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[249822.957464] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=3)
+[249822.978484] wlan0: associated
+[249823.003290] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[249862.125987] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[249862.126038] wlan0: failed to remove key (2, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[249862.143612] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[249865.197999] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[249865.198050] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[249865.267664] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[249865.267745] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[249865.277518] wlan0: authenticated
+[249865.286005] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[249865.290721] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=9)
+[249865.304003] wlan0: associated
+[249865.344062] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[250422.506878] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[250422.506968] wlan0: failed to set key (2, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[250422.509118] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[250423.019067] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[250423.019154] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[250423.022246] wlan0: authenticated
+[250423.026801] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[250423.031798] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=3)
+[250423.049925] wlan0: associated
+[250423.073800] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[250462.186533] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[250462.186621] wlan0: failed to remove key (1, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[250462.200742] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[250465.259060] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[250465.259153] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[250465.340251] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[250465.340329] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[250465.344823] wlan0: authenticated
+[250465.354629] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[250465.360692] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=9)
+[250465.373567] wlan0: associated
+[250465.395623] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[251022.568884] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[251022.568973] wlan0: failed to set key (1, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[251022.570878] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[251023.079332] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[251023.079416] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[251023.085140] wlan0: authenticated
+[251023.088489] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[251023.096127] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=3)
+[251023.112492] wlan0: associated
+[251023.146040] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[251059.102570] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[251062.249983] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[251062.250095] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[251062.331162] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[251062.331244] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[251062.335857] wlan0: authenticated
+[251062.344885] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[251062.349975] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=9)
+[251062.368808] wlan0: associated
+[251062.386007] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[251622.637531] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[251622.637655] wlan0: failed to set key (2, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[251622.639332] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[251622.723213] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[251622.723297] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[251622.723314] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[251626.728373] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[251626.728455] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[251626.736815] wlan0: authenticated
+[251626.741607] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[251626.746435] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=3)
+[251626.760401] wlan0: associated
+[251626.803658] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[251737.841608] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[251737.841699] wlan0: failed to remove key (1, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[251737.859316] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[251740.909589] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[251740.909642] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[251740.993186] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[251740.993332] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[251741.002070] wlan0: authenticated
+[251741.005853] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[251741.010445] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=9)
+[251741.022227] wlan0: associated
+[251741.101052] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[252222.958247] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[252222.958299] wlan0: failed to set key (1, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[252222.960508] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[252226.029928] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[252226.029980] wlan0: failed to remove key (0, 7c:ff:4d:e7:1a:61) from hardware (-110)
+[252226.452054] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[252226.452140] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[252226.460268] wlan0: authenticated
+[252226.465633] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[252226.473453] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=3)
+[252226.480904] wlan0: associated
+[252226.565787] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[252265.709975] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[252265.710027] wlan0: failed to remove key (2, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[252265.719856] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[252268.781712] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[252268.781765] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[252268.858899] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[252268.858979] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[252268.868958] wlan0: authenticated
+[252268.874284] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[252268.878880] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=9)
+[252268.892268] wlan0: associated
+[252268.971312] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[252823.021273] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[252823.021363] wlan0: failed to set key (2, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[252823.023230] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[252826.093265] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[252826.093362] wlan0: failed to remove key (0, 7c:ff:4d:e7:1a:61) from hardware (-110)
+[252826.517287] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[252826.517368] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[252826.521276] wlan0: authenticated
+[252826.525082] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[252826.529875] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=5)
+[252826.555663] wlan0: associated
+[252826.556172] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[252865.773437] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[252865.773537] wlan0: failed to remove key (1, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[252865.790778] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[252868.845292] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[252868.845398] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[252868.927244] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[252868.927327] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[252868.934871] wlan0: authenticated
+[252868.949288] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[252868.954983] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=7)
+[252868.973008] wlan0: associated
+[252869.041154] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[253423.082093] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[253423.082186] wlan0: failed to set key (1, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[253423.084842] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[253426.153781] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[253426.153884] wlan0: failed to remove key (0, 7c:ff:4d:e7:1a:61) from hardware (-110)
+[253426.562893] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[253426.562923] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[253426.568068] wlan0: authenticated
+[253426.574317] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[253426.579451] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=5)
+[253426.603117] wlan0: associated
+[253426.605821] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[253465.833476] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[253465.833610] wlan0: failed to remove key (2, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[253465.843161] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[253468.905917] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[253468.906007] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[253468.984542] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[253468.984622] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[253468.988702] wlan0: authenticated
+[253469.001868] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[253469.019962] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=7)
+[253469.043231] wlan0: associated
+[253469.112254] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[254023.142843] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[254023.142931] wlan0: failed to set key (2, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[254023.145665] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[254026.470329] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[254026.470429] wlan0: failed to remove key (0, 7c:ff:4d:e7:1a:61) from hardware (-110)
+[254026.898694] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[254026.898777] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[254026.906988] wlan0: authenticated
+[254026.914168] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[254026.919481] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=5)
+[254026.930022] wlan0: associated
+[254027.085564] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[254066.151140] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[254066.151273] wlan0: failed to remove key (1, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[254066.168319] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[254069.222924] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[254069.223017] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[254069.302037] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[254069.302118] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[254069.307355] wlan0: authenticated
+[254069.318787] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[254069.323052] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=7)
+[254069.337908] wlan0: associated
+[254069.383119] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[254623.204057] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[254623.204192] wlan0: failed to set key (1, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[254623.206935] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[254623.270161] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[254623.270242] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[254623.270262] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[254623.270279] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[254623.270297] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[254623.687654] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[254623.687742] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[254623.696381] wlan0: authenticated
+[254623.700144] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[254623.705567] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=5)
+[254623.715910] wlan0: associated
+[254623.777008] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[254659.729247] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[254662.884238] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[254662.884332] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[254662.964929] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[254662.965012] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[254662.975478] wlan0: authenticated
+[254662.983496] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[254662.989220] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=7)
+[254662.999719] wlan0: associated
+[254662.999948] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[255223.520630] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[255223.520720] wlan0: failed to set key (2, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[255223.523308] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[255226.592614] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[255226.592708] wlan0: failed to remove key (0, 7c:ff:4d:e7:1a:61) from hardware (-110)
+[255227.019808] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[255227.019865] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[255227.028651] wlan0: authenticated
+[255227.032364] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[255227.038360] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=5)
+[255227.049262] wlan0: associated
+[255227.126675] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[255266.271454] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[255266.271548] wlan0: failed to remove key (1, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[255266.288424] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[255269.344337] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[255269.344433] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[255269.426711] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[255269.426820] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[255269.430641] wlan0: authenticated
+[255269.446870] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[255269.451814] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=7)
+[255269.476318] wlan0: associated
+[255269.520765] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[255823.575549] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[255823.575640] wlan0: failed to set key (1, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[255823.577965] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[255826.647529] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[255826.647622] wlan0: failed to remove key (0, 7c:ff:4d:e7:1a:61) from hardware (-110)
+[255827.060158] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[255827.060240] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[255827.063987] wlan0: authenticated
+[255827.067579] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[255827.072346] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=5)
+[255827.086447] wlan0: associated
+[255827.096694] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[255902.167739] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[255902.167829] wlan0: failed to remove key (2, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[255902.176818] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[255905.239779] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[255905.239871] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[255905.319899] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[255905.319986] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[255905.330950] wlan0: authenticated
+[255905.335030] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[255905.338644] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=7)
+[255905.347339] wlan0: associated
+[255905.530123] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[256423.634981] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[256423.635080] wlan0: failed to set key (2, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[256423.638005] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[256426.706863] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[256426.706957] wlan0: failed to remove key (0, 7c:ff:4d:e7:1a:61) from hardware (-110)
+[256427.139101] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[256427.139148] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[256427.147135] wlan0: authenticated
+[256427.155188] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[256427.161301] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=5)
+[256427.185902] wlan0: associated
+[256427.186449] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[256466.386962] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[256466.387053] wlan0: failed to remove key (1, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[256466.396209] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[256469.458885] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[256469.458974] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[256469.536487] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[256469.536569] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[256469.540672] wlan0: authenticated
+[256469.550223] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[256469.556070] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=7)
+[256469.565526] wlan0: associated
+[256469.650401] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[257023.694565] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[257023.694655] wlan0: failed to set key (1, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[257023.697419] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[257026.766817] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[257026.766911] wlan0: failed to remove key (0, 7c:ff:4d:e7:1a:61) from hardware (-110)
+[257027.178713] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[257027.178799] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[257027.187478] wlan0: authenticated
+[257027.191039] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[257027.196719] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=5)
+[257027.208543] wlan0: associated
+[257027.253466] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[257066.446602] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[257066.446723] wlan0: failed to remove key (2, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[257066.459854] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[257069.519071] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[257069.519163] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[257069.601629] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[257069.601712] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[257069.606505] wlan0: authenticated
+[257069.622436] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[257069.628463] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=7)
+[257069.642919] wlan0: associated
+[257069.729678] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[257623.757302] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[257623.757406] wlan0: failed to set key (2, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[257623.760274] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[257626.829709] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[257626.829804] wlan0: failed to remove key (0, 7c:ff:4d:e7:1a:61) from hardware (-110)
+[257627.249840] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[257627.249925] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[257627.253902] wlan0: authenticated
+[257627.257168] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[257627.263690] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=7)
+[257627.285163] wlan0: associated
+[257627.306772] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[257702.349351] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[257702.349455] wlan0: failed to remove key (1, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[257702.370727] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[257705.422412] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[257705.422509] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[257705.507502] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[257705.507588] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[257705.514076] wlan0: authenticated
+[257705.521299] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[257705.531569] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=7)
+[257705.543440] wlan0: associated
+[257705.626518] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[258224.075806] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[258224.075902] wlan0: failed to set key (1, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[258224.083080] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[258224.799573] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[258225.218072] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[258225.218160] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[258225.227225] wlan0: authenticated
+[258225.231178] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[258225.236330] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=8)
+[258225.248668] wlan0: associated
+[258225.430314] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[258336.202853] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[258336.202904] wlan0: failed to remove key (2, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[258336.212415] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[258339.274287] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[258339.274381] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[258339.347062] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[258339.347144] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[258339.355154] wlan0: authenticated
+[258339.358393] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[258339.364793] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=14)
+[258339.377525] wlan0: associated
+[258339.383805] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[258824.137488] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[258824.137579] wlan0: failed to set key (2, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[258824.139134] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[258824.968226] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[258825.389070] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[258825.389155] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[258825.393712] wlan0: authenticated
+[258825.399034] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[258825.410600] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=7)
+[258825.424065] wlan0: associated
+[258825.502058] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[258936.520020] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[258936.520110] wlan0: failed to remove key (1, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[258936.529695] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[258939.591963] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[258939.592058] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[258939.671271] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[258939.671427] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[258939.682189] wlan0: authenticated
+[258939.692308] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[258939.698296] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=9)
+[258939.708933] wlan0: associated
+[258939.763593] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[259424.196902] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[259424.196939] wlan0: failed to set key (1, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[259424.209993] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[259424.320782] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[259424.320871] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[259424.741303] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[259424.741382] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[259424.749122] wlan0: authenticated
+[259424.753535] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[259424.771705] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=8)
+[259424.792025] wlan0: associated
+[259424.853979] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[259568.641479] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[259571.908696] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[259571.908790] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[259571.993197] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[259571.993246] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[259571.998169] wlan0: authenticated
+[259572.007931] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[259572.012229] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=7)
+[259572.027537] wlan0: associated
+[259572.184665] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[260024.257982] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[260024.258074] wlan0: failed to set key (2, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[260024.265700] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[260027.329703] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[260027.329798] wlan0: failed to remove key (0, 7c:ff:4d:e7:1a:61) from hardware (-110)
+[260027.753274] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[260027.753353] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[260027.758427] wlan0: authenticated
+[260027.766062] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[260027.772141] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=7)
+[260027.795770] wlan0: associated
+[260027.796180] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[260138.944882] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[260138.944985] wlan0: failed to remove key (1, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[260138.962235] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[260142.017349] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[260142.017460] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[260142.094309] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[260142.094394] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[260142.103856] wlan0: authenticated
+[260142.109199] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[260142.113449] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=9)
+[260142.139586] wlan0: associated
+[260142.145748] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[260624.574569] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[260624.574675] wlan0: failed to set key (1, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[260624.583198] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[260625.084484] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[260625.084567] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[260625.088471] wlan0: authenticated
+[260625.094237] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[260625.110436] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=7)
+[260625.122930] wlan0: associated
+[260625.299236] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[260664.254288] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[260664.254377] wlan0: failed to remove key (2, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[260664.271554] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[260667.326519] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[260667.326611] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[260667.405058] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[260667.405133] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[260667.417574] wlan0: authenticated
+[260667.421874] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[260667.426759] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=9)
+[260667.438202] wlan0: associated
+[260667.457166] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[261224.635158] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[261224.635253] wlan0: failed to set key (2, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[261224.668148] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[261225.871264] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[261225.871346] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[261225.876492] wlan0: authenticated
+[261225.882899] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[261225.889964] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=16)
+[261225.906783] wlan0: associated
+[261225.980391] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[261261.936305] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[261265.082744] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[261265.082841] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[261265.162281] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[261265.162368] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[261265.167949] wlan0: authenticated
+[261265.179594] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[261265.184361] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=4)
+[261265.214866] wlan0: associated
+[261265.276871] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[261824.691346] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[261824.691440] wlan0: failed to set key (1, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[261824.708898] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[261825.236600] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[261825.236680] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[261825.245843] wlan0: authenticated
+[261825.252009] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[261825.260165] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=6)
+[261825.277985] wlan0: associated
+[261825.334715] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[261900.466194] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[261900.466287] wlan0: failed to remove key (2, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[261900.483919] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[261903.538157] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[261903.538252] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[261903.611764] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[261903.611843] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[261903.616135] wlan0: authenticated
+[261903.626396] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[261903.634681] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=4)
+[261903.657288] wlan0: associated
+[261903.658882] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[262424.749340] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[262424.749432] wlan0: failed to set key (2, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[262424.766245] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[262424.862997] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[262424.863078] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[262424.863098] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[262424.863116] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[262425.288880] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[262425.288962] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[262425.294234] wlan0: authenticated
+[262425.297573] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[262425.310995] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=15)
+[262425.329949] wlan0: associated
+[262425.398529] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[262464.429595] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[262464.429685] wlan0: failed to remove key (1, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[262464.446528] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[262467.501252] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[262467.501310] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[262467.504002] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 0
+[262467.504042] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 0
+[262467.504061] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 0
+[262467.504080] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 0
+[262467.504097] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 0
+[262467.580754] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[262467.580841] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[262467.585150] wlan0: authenticated
+[262467.596649] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[262467.601366] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=4)
+[262467.612939] wlan0: associated
+[262467.771671] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[263024.808563] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[263024.808665] wlan0: failed to set key (1, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[263024.817853] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[263025.361263] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[263025.361351] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[263025.382768] wlan0: authenticated
+[263025.389604] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[263025.395488] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=16)
+[263025.414162] wlan0: associated
+[263025.464177] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[263061.425924] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[263064.488771] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[263064.488863] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[263064.572281] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[263064.572360] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[263064.576150] wlan0: authenticated
+[263064.595997] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[263064.600948] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=4)
+[263064.616120] wlan0: associated
+[263064.670193] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[263625.133191] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[263625.133287] wlan0: failed to set key (2, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[263625.141966] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[263625.203804] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[263625.203888] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[263625.203907] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[263625.203924] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[263625.203942] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[263625.203959] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[263625.498346] wlan0: authenticate with 7c:ff:4d:e7:1a:60 (local address=3c:91:80:bd:af:4b)
+[263625.498423] wlan0: send auth to 7c:ff:4d:e7:1a:60 (try 1/3)
+[263625.508279] wlan0: authenticated
+[263625.512891] wlan0: associate with 7c:ff:4d:e7:1a:60 (try 1/3)
+[263625.554125] wlan0: RX AssocResp from 7c:ff:4d:e7:1a:60 (capab=0x1431 status=0 aid=1)
+[263625.574821] wlan0: associated
+[263625.664296] wlan0: Limiting TX power to 20 (20 - 0) dBm as advertised by 7c:ff:4d:e7:1a:60
+[263711.918341] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:60: -110
+[263711.918509] wlan0: failed to remove key (2, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[263712.203459] wlan0: disconnect from AP 7c:ff:4d:e7:1a:60 for new auth to 7c:ff:4d:e7:1a:61
+[263715.246301] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:60: -110
+[263715.246353] wlan0: failed to remove key (0, 7c:ff:4d:e7:1a:60) from hardware (-110)
+[263715.324558] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[263715.324639] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[263715.328145] wlan0: authenticated
+[263715.334314] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[263715.338919] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=4)
+[263715.352019] wlan0: associated
+[263715.417584] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[264225.202261] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[264225.202354] wlan0: failed to set key (1, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[264225.215264] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[264225.270766] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[264225.270852] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[264225.270871] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[264225.270890] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[264225.270908] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[264225.270926] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[264225.700933] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[264225.701013] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[264225.708643] wlan0: authenticated
+[264225.713485] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[264225.719034] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=6)
+[264225.735756] wlan0: associated
+[264225.908763] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[264264.885725] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[264264.885816] wlan0: failed to remove key (2, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[264264.899491] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[264267.953833] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[264267.953937] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[264268.029514] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[264268.029601] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[264268.038401] wlan0: authenticated
+[264268.042398] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[264268.047003] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=4)
+[264268.059144] wlan0: associated
+[264268.072577] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[264825.522774] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[264825.522871] wlan0: failed to set key (2, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[264825.543237] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[264825.645644] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[264825.645735] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[264825.645755] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[264826.068739] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[264826.068821] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[264826.074547] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 2/3)
+[264826.077727] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 3/3)
+[264826.098898] wlan0: authenticated
+[264826.101659] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[264826.108656] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=9)
+[264826.129560] wlan0: associated
+[264826.184595] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[264937.137889] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[264937.137920] wlan0: failed to remove key (1, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[264937.147560] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[264940.209538] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[264940.209571] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[264940.290021] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[264940.290108] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[264940.301501] wlan0: authenticated
+[264940.306389] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[264940.311197] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=4)
+[264940.324463] wlan0: associated
+[264940.331472] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[265425.584633] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[265425.584724] wlan0: failed to set key (1, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[265425.597790] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[265428.656584] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[265428.656625] wlan0: failed to remove key (0, 7c:ff:4d:e7:1a:61) from hardware (-110)
+[265429.063561] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[265429.063697] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[265429.069171] wlan0: authenticated
+[265429.072566] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[265429.077368] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 2/3)
+[265429.088027] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=9)
+[265429.104577] wlan0: associated
+[265429.118690] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[265611.952156] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[265611.952242] wlan0: failed to remove key (2, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[265611.973557] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[265615.024455] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[265615.024536] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[265615.102652] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[265615.102734] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[265615.112921] wlan0: authenticated
+[265615.115897] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[265615.120219] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=4)
+[265615.129043] wlan0: associated
+[265615.151037] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[266025.646868] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[266025.646901] wlan0: failed to set key (2, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[266025.660061] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[266026.867386] wlan0: authenticate with 7c:ff:4d:e7:1a:60 (local address=3c:91:80:bd:af:4b)
+[266026.867470] wlan0: send auth to 7c:ff:4d:e7:1a:60 (try 1/3)
+[266026.873649] wlan0: authenticated
+[266026.879704] wlan0: associate with 7c:ff:4d:e7:1a:60 (try 1/3)
+[266026.919950] wlan0: RX AssocResp from 7c:ff:4d:e7:1a:60 (capab=0x1431 status=0 aid=1)
+[266026.939502] wlan0: associated
+[266026.948099] wlan0: Limiting TX power to 20 (20 - 0) dBm as advertised by 7c:ff:4d:e7:1a:60
+[266336.178156] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:60: -110
+[266336.178243] wlan0: failed to remove key (2, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[266336.196231] wlan0: disconnect from AP 7c:ff:4d:e7:1a:60 for new auth to 7c:ff:4d:e7:1a:61
+[266339.246330] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:60: -110
+[266339.246382] wlan0: failed to remove key (0, 7c:ff:4d:e7:1a:60) from hardware (-110)
+[266339.331469] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[266339.331512] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[266339.338233] wlan0: authenticated
+[266339.354227] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[266339.359874] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=9)
+[266339.379559] wlan0: associated
+[266339.437382] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61
+[266625.709840] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[266625.709921] wlan0: failed to set key (1, ff:ff:ff:ff:ff:ff) to hardware (-110)
+[266625.731135] wlan0: deauthenticating from 7c:ff:4d:e7:1a:61 by local choice (Reason: 1=UNSPECIFIED)
+[266629.853571] wlan0: authenticate with 7c:ff:4d:e7:1c:1c (local address=3c:91:80:bd:af:4b)
+[266629.853656] wlan0: send auth to 7c:ff:4d:e7:1c:1c (try 1/3)
+[266629.857853] wlan0: authenticated
+[266629.869133] wlan0: associate with 7c:ff:4d:e7:1c:1c (try 1/3)
+[266629.876944] wlan0: RX AssocResp from 7c:ff:4d:e7:1c:1c (capab=0x1511 status=0 aid=7)
+[266629.886340] wlan0: associated
+[266629.974648] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1c:1c
+[266740.909379] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[266740.909480] wlan0: failed to remove key (2, ff:ff:ff:ff:ff:ff) from hardware (-110)
+[266740.922551] wlan0: disconnect from AP 7c:ff:4d:e7:1c:1c for new auth to 7c:ff:4d:e7:1a:61
+[266743.980926] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[266743.981013] wlan0: failed to remove key (0, 7c:ff:4d:e7:1c:1c) from hardware (-110)
+[266744.054726] wlan0: authenticate with 7c:ff:4d:e7:1a:61 (local address=3c:91:80:bd:af:4b)
+[266744.054810] wlan0: send auth to 7c:ff:4d:e7:1a:61 (try 1/3)
+[266744.060116] wlan0: authenticated
+[266744.069084] wlan0: associate with 7c:ff:4d:e7:1a:61 (try 1/3)
+[266744.075986] wlan0: RX ReassocResp from 7c:ff:4d:e7:1a:61 (capab=0x1511 status=0 aid=7)
+[266744.089113] wlan0: associated
+[266744.115709] wlan0: Limiting TX power to 27 (30 - 3) dBm as advertised by 7c:ff:4d:e7:1a:61

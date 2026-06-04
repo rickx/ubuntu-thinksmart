@@ -1,0 +1,4 @@
+=== COMMAND ===
+date 
+=== OUTPUT ===
+Fri May 29 10:08:24 CEST 2026

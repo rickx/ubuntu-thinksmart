@@ -1,0 +1,13 @@
+=== SHELL ===
+aplay -l 2>/dev/null 
+=== OUTPUT ===
+**** List of PLAYBACK Hardware Devices ****
+card 0: cd18781y [cd-18781y], device 0: MultiMedia1 (*) []
+  Subdevices: 0/1
+  Subdevice #0: subdevice #0
+card 0: cd18781y [cd-18781y], device 2: MultiMedia3 (*) []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 0: cd18781y [cd-18781y], device 4: VoiceMMode1 (*) []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0

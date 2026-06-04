@@ -1,0 +1,891 @@
+=== COMMAND ===
+adb_cmd shell dumpsys wifi 
+=== OUTPUT ===
+Wi-Fi is enabled
+Stay-awake conditions: 0
+mInIdleMode false
+mScanPending false
+WifiController:
+ total records=62
+ rec[0]: time=12-31 16:00:18.441 processed=StaDisabledWithScanState org=StaDisabledWithScanState dest=<null> what=155656(0x26008)
+ rec[1]: time=12-31 16:00:18.947 processed=StaDisabledWithScanState org=StaDisabledWithScanState dest=<null> what=155659(0x2600b)
+ rec[2]: time=12-31 16:00:18.947 processed=StaDisabledWithScanState org=StaDisabledWithScanState dest=DeviceActiveState what=155656(0x26008)
+ rec[3]: time=09-17 09:00:00.246 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[4]: time=09-17 09:00:00.264 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[5]: time=09-17 09:00:00.915 processed=DeviceActiveState org=DeviceActiveState dest=<null> what=155660(0x2600c)
+ rec[6]: time=09-17 09:00:01.452 processed=DefaultState org=DeviceActiveState dest=<null> what=155668(0x26014)
+ rec[7]: time=09-17 09:00:01.456 processed=DefaultState org=DeviceActiveState dest=<null> what=155667(0x26013)
+ rec[8]: time=09-17 09:00:02.878 processed=DeviceActiveState org=DeviceActiveState dest=<null> what=155660(0x2600c)
+ rec[9]: time=05-28 15:34:23.612 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[10]: time=05-28 15:34:29.997 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[11]: time=05-28 15:35:29.993 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[12]: time=05-28 15:37:29.992 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[13]: time=05-28 15:38:29.992 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[14]: time=05-28 15:40:29.991 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[15]: time=05-28 15:41:29.993 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[16]: time=05-28 15:42:29.993 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[17]: time=05-28 15:45:29.995 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[18]: time=05-28 15:46:29.993 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[19]: time=05-28 15:56:29.994 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[20]: time=05-28 15:57:29.992 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[21]: time=05-28 16:09:29.993 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[22]: time=05-28 16:10:29.992 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[23]: time=05-28 16:16:29.992 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[24]: time=05-28 16:17:29.992 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[25]: time=05-28 16:18:29.993 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[26]: time=05-28 16:21:29.991 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[27]: time=05-28 16:24:29.992 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[28]: time=05-28 16:27:29.993 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[29]: time=05-28 16:28:29.991 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[30]: time=05-28 16:29:29.992 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[31]: time=05-28 16:30:29.991 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[32]: time=05-28 16:32:29.992 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[33]: time=05-28 16:33:29.992 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[34]: time=05-28 16:36:29.994 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[35]: time=05-28 16:38:29.992 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[36]: time=05-28 16:39:29.995 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[37]: time=05-28 16:41:29.993 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[38]: time=05-28 16:43:29.993 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[39]: time=05-28 16:44:29.993 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[40]: time=05-28 16:47:29.992 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[41]: time=05-28 16:49:29.992 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[42]: time=05-28 16:54:29.993 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[43]: time=05-28 16:55:29.993 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[44]: time=05-28 16:57:29.994 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[45]: time=05-28 16:58:29.992 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[46]: time=05-28 16:59:29.992 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[47]: time=05-28 17:00:29.993 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[48]: time=05-28 17:01:29.992 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[49]: time=05-28 17:02:29.992 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[50]: time=05-28 17:03:29.991 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[51]: time=05-28 17:04:29.993 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[52]: time=05-28 17:05:29.993 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[53]: time=05-28 17:07:29.993 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[54]: time=05-28 17:08:29.992 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[55]: time=05-28 17:09:29.994 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[56]: time=05-28 17:12:29.992 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[57]: time=05-28 17:13:29.990 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[58]: time=05-28 17:18:29.993 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[59]: time=05-28 17:19:29.992 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[60]: time=05-28 17:20:29.993 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+ rec[61]: time=05-28 17:21:29.992 processed=DefaultState org=DeviceActiveState dest=<null> what=155652(0x26004)
+curState=DeviceActiveState
+mScreenOff false
+mDeviceIdle false
+mPluggedType 2
+mIdleMillis 900000
+mSleepPolicy 2
+mPersistWifiState 1
+mAirplaneModeOn false
+mEnableTrafficStatsPoll false
+mTrafficStatsPollToken 1
+mTxPkts 0
+mRxPkts 0
+mDataActivity 0
+
+Locks held:
+Locks acquired: 0 full, 0 full high perf, 0 scan
+Locks released: 0 full, 0 full high perf, 0 scan
+
+Locks held:
+
+mMulticastEnabled 0
+mMulticastDisabled 0
+Multicast Locks held:
+
+WifiStateMachine:
+ total records=71
+ rec[0]: time=12-31 16:00:18.440 processed=DefaultState org=InitialState dest=<null> what=131207(0x20087) !CMD_INITIALIZE uid=1000 rt=15033/15033 0 0
+ rec[1]: time=12-31 16:00:18.440 processed=InitialState org=InitialState dest=<null> what=131144(0x20048) !CMD_SET_OPERATIONAL_MODE rt=15033/15033 3 0
+ rec[2]: time=09-17 09:00:01.419 processed=InitialState org=InitialState dest=SupplicantStartingState what=131083(0x2000b) !CMD_START_SUPPLICANT rt=17051/17051 0 0
+ rec[3]: time=09-17 09:00:01.419 processed=SupplicantStartingState org=SupplicantStartingState dest=<null> what=131083(0x2000b) !(-4)CMD_START_SUPPLICANT rt=17051/17051 0 0
+ rec[4]: time=09-17 09:00:01.427 processed=DefaultState org=SupplicantStartingState dest=<null> what=131133(0x2003d) !CMD_GET_SUPPORTED_FEATURES uid=1000 rt=17059/17059 0 0
+ rec[5]: time=09-17 09:00:01.427 processed=SupplicantStartingState org=SupplicantStartingState dest=<null> what=131083(0x2000b) !(-4)CMD_START_SUPPLICANT rt=17059/17059 0 0
+ rec[6]: time=09-17 09:00:01.427 processed=SupplicantStartingState org=SupplicantStartingState dest=<null> what=131144(0x20048) !(-4)CMD_SET_OPERATIONAL_MODE rt=17059/17059 1 0
+ rec[7]: time=09-17 09:00:01.427 processed=DefaultState org=SupplicantStartingState dest=<null> what=131149(0x2004d) !CMD_SET_HIGH_PERF_MODE rt=17059/17059 0 0
+ rec[8]: time=09-17 09:00:01.427 processed=DefaultState org=SupplicantStartingState dest=<null> what=131214(0x2008e) !(-5)CMD_RELOAD_TLS_AND_RECONNECT rt=17059/17059 0 0
+ rec[9]: time=09-17 09:00:01.433 processed=SupplicantStartingState org=SupplicantStartingState dest=SupplicantStartedState what=147457(0x24001) !SUP_CONNECTION_EVENT rt=17065/17065 0 0
+ rec[10]: time=09-17 09:00:01.454 processed=DefaultState org=ScanModeState dest=<null> what=131083(0x2000b) !(-5)CMD_START_SUPPLICANT rt=17086/17086 0 0
+ rec[11]: time=09-17 09:00:01.454 processed=DefaultState org=ScanModeState dest=<null> what=131083(0x2000b) !(-5)CMD_START_SUPPLICANT rt=17086/17086 0 0
+ rec[12]: time=09-17 09:00:01.454 processed=ScanModeState org=ScanModeState dest=DisconnectedState what=131144(0x20048) !CMD_SET_OPERATIONAL_MODE rt=17086/17086 1 0
+ rec[13]: time=09-17 09:00:01.469 processed=SupplicantStartedState org=DisconnectedState dest=<null> what=131135(0x2003f) !CMD_GET_LINK_LAYER_STATS uid=1000 rt=17101/17101 0 0
+ rec[14]: time=09-17 09:00:01.478 processed=DefaultState org=DisconnectedState dest=<null> what=131133(0x2003d) !CMD_GET_SUPPORTED_FEATURES uid=1000 rt=17109/17110 0 0
+ rec[15]: time=09-17 09:00:01.480 processed=SupplicantStartedState org=DisconnectedState dest=<null> what=131135(0x2003f) !CMD_GET_LINK_LAYER_STATS uid=1000 rt=17112/17112 0 0
+ rec[16]: time=09-17 09:00:01.911 processed=DefaultState org=DisconnectedState dest=<null> what=131206(0x20086) !CMD_BOOT_COMPLETED rt=17543/17543 0 0
+ rec[17]: time=09-17 09:00:01.911 processed=DefaultState org=DisconnectedState dest=<null> what=69632(0x11000) !CMD_CHANNEL_HALF_CONNECTED rt=17543/17543 0 0
+ rec[18]: time=09-17 09:00:01.945 processed=DefaultState org=DisconnectedState dest=<null> what=131278(0x200ce) !CMD_USER_UNLOCK rt=17577/17577 0 0
+ rec[19]: time=09-17 09:00:01.978 processed=ConnectModeState org=DisconnectedState dest=<null> what=131203(0x20083) !CMD_ENABLE_P2P rt=17610/17610 0 0
+ rec[20]: time=09-17 09:00:02.101 processed=DefaultState org=DisconnectedState dest=<null> what=131131(0x2003b) !CMD_GET_CONFIGURED_NETWORKS uid=1000 rt=17733/17733 1000 0 num=1
+ rec[21]: time=09-17 09:00:02.119 processed=DisconnectedState org=DisconnectedState dest=<null> what=143371(0x2300b) !P2P_CONNECTION_CHANGED uid=1000 rt=17751/17751 0 0 st=UNKNOWN/IDLE
+ rec[22]: time=05-28 15:34:05.271 processed=SupplicantStartedState org=DisconnectedState dest=<null> what=147461(0x24005) !SCAN_RESULTS_EVENT rt=21125/21125 0 0 found=9 known=0 got=9 bcn=0 con=4 untrustedcn=0 last=
+ rec[23]: time=05-28 15:34:25.519 processed=SupplicantStartedState org=DisconnectedState dest=<null> what=147461(0x24005) !SCAN_RESULTS_EVENT rt=41375/41375 0 0 found=10 known=0 got=10 bcn=0 con=4 untrustedcn=0 last=
+ rec[24]: time=05-28 15:34:29.999 processed=DefaultState org=DisconnectedState dest=<null> what=131133(0x2003d) !CMD_GET_SUPPORTED_FEATURES uid=1000 rt=45855/45855 0 0
+ rec[25]: time=05-28 15:34:30.013 processed=SupplicantStartedState org=DisconnectedState dest=<null> what=131135(0x2003f) !CMD_GET_LINK_LAYER_STATS uid=1000 rt=45869/45869 0 0
+ rec[26]: time=05-28 15:35:05.525 processed=SupplicantStartedState org=DisconnectedState dest=<null> what=147461(0x24005) !SCAN_RESULTS_EVENT rt=81380/81380 0 0 found=12 known=0 got=12 bcn=0 con=4 untrustedcn=0 last=
+ rec[27]: time=05-28 15:36:25.527 processed=SupplicantStartedState org=DisconnectedState dest=<null> what=147461(0x24005) !SCAN_RESULTS_EVENT rt=161382/161382 0 0 found=11 known=0 got=11 bcn=0 con=4 untrustedcn=0 last=
+ rec[28]: time=05-28 15:39:01.337 processed=DisconnectedState org=DisconnectedState dest=<null> what=131160(0x20058) !CMD_NO_NETWORKS_PERIODIC_SCAN rt=317193/317193 1 0
+ rec[29]: time=05-28 15:39:05.536 processed=SupplicantStartedState org=DisconnectedState dest=<null> what=147461(0x24005) !SCAN_RESULTS_EVENT rt=321391/321391 0 0 found=11 known=0 got=11 bcn=0 con=4 untrustedcn=0 last=
+ rec[30]: time=05-28 15:41:45.538 processed=SupplicantStartedState org=DisconnectedState dest=<null> what=147461(0x24005) !SCAN_RESULTS_EVENT rt=481394/481394 0 0 found=12 known=0 got=12 bcn=0 con=4 untrustedcn=0 last=
+ rec[31]: time=05-28 15:44:25.547 processed=SupplicantStartedState org=DisconnectedState dest=<null> what=147461(0x24005) !SCAN_RESULTS_EVENT rt=641403/641403 0 0 found=11 known=0 got=11 bcn=0 con=4 untrustedcn=0 last=
+ rec[32]: time=05-28 15:47:05.808 processed=SupplicantStartedState org=DisconnectedState dest=<null> what=147461(0x24005) !SCAN_RESULTS_EVENT rt=801664/801664 0 0 found=12 known=0 got=12 bcn=0 con=4 untrustedcn=0 last=
+ rec[33]: time=05-28 15:49:45.806 processed=SupplicantStartedState org=DisconnectedState dest=<null> what=147461(0x24005) !SCAN_RESULTS_EVENT rt=961661/961661 0 0 found=12 known=0 got=12 bcn=0 con=4 untrustedcn=0 last=
+ rec[34]: time=05-28 15:54:05.795 processed=SupplicantStartedState org=DisconnectedState dest=<null> what=147461(0x24005) !SCAN_RESULTS_EVENT rt=1221651/1221651 0 0 found=12 known=0 got=12 bcn=0 con=4 untrustedcn=0 last=
+ rec[35]: time=05-28 15:56:45.806 processed=SupplicantStartedState org=DisconnectedState dest=<null> what=147461(0x24005) !SCAN_RESULTS_EVENT rt=1381662/1381662 0 0 found=12 known=0 got=12 bcn=0 con=4 untrustedcn=0 last=
+ rec[36]: time=05-28 15:59:25.808 processed=SupplicantStartedState org=DisconnectedState dest=<null> what=147461(0x24005) !SCAN_RESULTS_EVENT rt=1541663/1541663 0 0 found=11 known=0 got=11 bcn=0 con=4 untrustedcn=0 last=
+ rec[37]: time=05-28 16:03:44.189 processed=DefaultState org=DisconnectedState dest=<null> what=131133(0x2003d) !CMD_GET_SUPPORTED_FEATURES uid=1000 rt=1800045/1800045 0 0
+ rec[38]: time=05-28 16:03:44.203 processed=SupplicantStartedState org=DisconnectedState dest=<null> what=131135(0x2003f) !CMD_GET_LINK_LAYER_STATS uid=1000 rt=1800059/1800059 0 0
+ rec[39]: time=05-28 16:04:03.218 processed=SupplicantStartedState org=DisconnectedState dest=<null> what=147461(0x24005) !SCAN_RESULTS_EVENT rt=1819073/1819073 0 0 found=10 known=0 got=10 bcn=0 con=4 untrustedcn=0 last=
+ rec[40]: time=05-28 16:06:43.218 processed=SupplicantStartedState org=DisconnectedState dest=<null> what=147461(0x24005) !SCAN_RESULTS_EVENT rt=1979073/1979073 0 0 found=11 known=0 got=11 bcn=0 con=4 untrustedcn=0 last=
+ rec[41]: time=05-28 16:09:23.227 processed=SupplicantStartedState org=DisconnectedState dest=<null> what=147461(0x24005) !SCAN_RESULTS_EVENT rt=2139083/2139083 0 0 found=11 known=0 got=11 bcn=0 con=4 untrustedcn=0 last=
+ rec[42]: time=05-28 16:12:03.227 processed=SupplicantStartedState org=DisconnectedState dest=<null> what=147461(0x24005) !SCAN_RESULTS_EVENT rt=2299082/2299082 0 0 found=11 known=0 got=11 bcn=0 con=4 untrustedcn=0 last=
+ rec[43]: time=05-28 16:14:44.235 processed=SupplicantStartedState org=DisconnectedState dest=<null> what=147461(0x24005) !SCAN_RESULTS_EVENT rt=2460091/2460091 0 0 found=11 known=0 got=11 bcn=0 con=4 untrustedcn=0 last=
+ rec[44]: time=05-28 16:17:24.238 processed=SupplicantStartedState org=DisconnectedState dest=<null> what=147461(0x24005) !SCAN_RESULTS_EVENT rt=2620094/2620094 0 0 found=11 known=0 got=11 bcn=0 con=4 untrustedcn=0 last=
+ rec[45]: time=05-28 16:20:04.776 processed=SupplicantStartedState org=DisconnectedState dest=<null> what=147461(0x24005) !SCAN_RESULTS_EVENT rt=2780632/2780632 0 0 found=11 known=0 got=11 bcn=0 con=4 untrustedcn=0 last=
+ rec[46]: time=05-28 16:22:44.779 processed=SupplicantStartedState org=DisconnectedState dest=<null> what=147461(0x24005) !SCAN_RESULTS_EVENT rt=2940634/2940634 0 0 found=11 known=0 got=11 bcn=0 con=4 untrustedcn=0 last=
+ rec[47]: time=05-28 16:25:24.790 processed=SupplicantStartedState org=DisconnectedState dest=<null> what=147461(0x24005) !SCAN_RESULTS_EVENT rt=3100646/3100646 0 0 found=12 known=0 got=12 bcn=0 con=4 untrustedcn=0 last=
+ rec[48]: time=05-28 16:28:04.788 processed=SupplicantStartedState org=DisconnectedState dest=<null> what=147461(0x24005) !SCAN_RESULTS_EVENT rt=3260643/3260643 0 0 found=12 known=0 got=12 bcn=0 con=4 untrustedcn=0 last=
+ rec[49]: time=05-28 16:30:44.789 processed=SupplicantStartedState org=DisconnectedState dest=<null> what=147461(0x24005) !SCAN_RESULTS_EVENT rt=3420644/3420644 0 0 found=13 known=0 got=13 bcn=0 con=4 untrustedcn=0 last=
+ rec[50]: time=05-28 16:33:44.196 processed=DefaultState org=DisconnectedState dest=<null> what=131133(0x2003d) !CMD_GET_SUPPORTED_FEATURES uid=1000 rt=3600051/3600051 0 0
+ rec[51]: time=05-28 16:33:44.210 processed=SupplicantStartedState org=DisconnectedState dest=<null> what=131135(0x2003f) !CMD_GET_LINK_LAYER_STATS uid=1000 rt=3600066/3600066 0 0
+ rec[52]: time=05-28 16:34:43.224 processed=SupplicantStartedState org=DisconnectedState dest=<null> what=147461(0x24005) !SCAN_RESULTS_EVENT rt=3659079/3659079 0 0 found=12 known=0 got=12 bcn=0 con=4 untrustedcn=0 last=
+ rec[53]: time=05-28 16:37:23.237 processed=SupplicantStartedState org=DisconnectedState dest=<null> what=147461(0x24005) !SCAN_RESULTS_EVENT rt=3819093/3819093 0 0 found=12 known=0 got=12 bcn=0 con=4 untrustedcn=0 last=
+ rec[54]: time=05-28 16:40:03.238 processed=SupplicantStartedState org=DisconnectedState dest=<null> what=147461(0x24005) !SCAN_RESULTS_EVENT rt=3979093/3979093 0 0 found=13 known=0 got=13 bcn=0 con=4 untrustedcn=0 last=
+ rec[55]: time=05-28 16:42:43.245 processed=SupplicantStartedState org=DisconnectedState dest=<null> what=147461(0x24005) !SCAN_RESULTS_EVENT rt=4139100/4139100 0 0 found=13 known=0 got=13 bcn=0 con=4 untrustedcn=0 last=
+ rec[56]: time=05-28 16:45:23.248 processed=SupplicantStartedState org=DisconnectedState dest=<null> what=147461(0x24005) !SCAN_RESULTS_EVENT rt=4299103/4299103 0 0 found=13 known=0 got=13 bcn=0 con=4 untrustedcn=0 last=
+ rec[57]: time=05-28 16:48:03.257 processed=SupplicantStartedState org=DisconnectedState dest=<null> what=147461(0x24005) !SCAN_RESULTS_EVENT rt=4459113/4459113 0 0 found=12 known=0 got=12 bcn=0 con=4 untrustedcn=0 last=
+ rec[58]: time=05-28 16:50:43.258 processed=SupplicantStartedState org=DisconnectedState dest=<null> what=147461(0x24005) !SCAN_RESULTS_EVENT rt=4619113/4619113 0 0 found=12 known=0 got=12 bcn=0 con=4 untrustedcn=0 last=
+ rec[59]: time=05-28 16:54:44.247 processed=SupplicantStartedState org=DisconnectedState dest=<null> what=147461(0x24005) !SCAN_RESULTS_EVENT rt=4860102/4860102 0 0 found=13 known=0 got=13 bcn=0 con=4 untrustedcn=0 last=
+ rec[60]: time=05-28 16:57:24.247 processed=SupplicantStartedState org=DisconnectedState dest=<null> what=147461(0x24005) !SCAN_RESULTS_EVENT rt=5020103/5020103 0 0 found=12 known=0 got=12 bcn=0 con=4 untrustedcn=0 last=
+ rec[61]: time=05-28 17:00:04.779 processed=SupplicantStartedState org=DisconnectedState dest=<null> what=147461(0x24005) !SCAN_RESULTS_EVENT rt=5180634/5180634 0 0 found=12 known=0 got=12 bcn=0 con=4 untrustedcn=0 last=
+ rec[62]: time=05-28 17:03:44.200 processed=DefaultState org=DisconnectedState dest=<null> what=131133(0x2003d) !CMD_GET_SUPPORTED_FEATURES uid=1000 rt=5400056/5400056 0 0
+ rec[63]: time=05-28 17:03:44.215 processed=SupplicantStartedState org=DisconnectedState dest=<null> what=131135(0x2003f) !CMD_GET_LINK_LAYER_STATS uid=1000 rt=5400071/5400071 0 0
+ rec[64]: time=05-28 17:04:03.215 processed=SupplicantStartedState org=DisconnectedState dest=<null> what=147461(0x24005) !SCAN_RESULTS_EVENT rt=5419070/5419070 0 0 found=11 known=0 got=11 bcn=0 con=4 untrustedcn=0 last=
+ rec[65]: time=05-28 17:06:43.216 processed=SupplicantStartedState org=DisconnectedState dest=<null> what=147461(0x24005) !SCAN_RESULTS_EVENT rt=5579072/5579072 0 0 found=12 known=0 got=12 bcn=0 con=4 untrustedcn=0 last=
+ rec[66]: time=05-28 17:09:23.220 processed=SupplicantStartedState org=DisconnectedState dest=<null> what=147461(0x24005) !SCAN_RESULTS_EVENT rt=5739076/5739076 0 0 found=12 known=0 got=12 bcn=0 con=4 untrustedcn=0 last=
+ rec[67]: time=05-28 17:12:03.227 processed=SupplicantStartedState org=DisconnectedState dest=<null> what=147461(0x24005) !SCAN_RESULTS_EVENT rt=5899082/5899082 0 0 found=10 known=0 got=10 bcn=0 con=4 untrustedcn=0 last=
+ rec[68]: time=05-28 17:14:45.258 processed=SupplicantStartedState org=DisconnectedState dest=<null> what=147461(0x24005) !SCAN_RESULTS_EVENT rt=6061114/6061114 0 0 found=11 known=0 got=11 bcn=0 con=4 untrustedcn=0 last=
+ rec[69]: time=05-28 17:17:25.253 processed=SupplicantStartedState org=DisconnectedState dest=<null> what=147461(0x24005) !SCAN_RESULTS_EVENT rt=6221109/6221109 0 0 found=11 known=0 got=11 bcn=0 con=4 untrustedcn=0 last=
+ rec[70]: time=05-28 17:20:05.807 processed=SupplicantStartedState org=DisconnectedState dest=<null> what=147461(0x24005) !SCAN_RESULTS_EVENT rt=6381662/6381662 0 0 found=11 known=0 got=11 bcn=0 con=4 untrustedcn=0 last=
+curState=DisconnectedState
+SupplicantStateTracker:
+ total records=1
+ rec[0]: time=09-17 09:00:01.459 processed=DefaultState org=UninitializedState dest=UninitializedState what=131183(0x2006f)
+curState=UninitializedState
+mAuthFailureInSupplicantBroadcast false
+mAuthFailureReason 0
+mNetworksDisabledDuringConnect false
+
+mLinkProperties {LinkAddresses: []  Routes: [] DnsAddresses: [] Domains: null MTU: 0}
+mWifiInfo SSID: <unknown ssid>, BSSID: <none>, MAC: 50:5b:c2:74:5a:9b, Supplicant state: DISCONNECTED, RSSI: -127, Link speed: -1Mbps, Frequency: -1MHz, Net ID: -1, Metered hint: false, score: 0
+mDhcpResults null
+mNetworkInfo [type: WIFI[], state: DISCONNECTED/DISCONNECTED, reason: (unspecified), extra: <unknown ssid>, failover: false, available: true, roaming: false]
+mLastSignalLevel -1
+mLastBssid null
+mLastNetworkId -1
+mOperationalMode 1
+mUserWantsSuspendOpt true
+mSuspendOptNeedsDisabled 4
+CountryCode: US was not sent to driver
+mConnectionReqCount 4
+mUntrustedReqCount 0
+Wlan Wake Reasons: totalCmdEventWake 0 totalDriverFwLocalWake 0 totalRxDataWake 0 rxUnicast 0 rxMulticast 0 rxBroadcast 0 icmp 0 icmp6 0 icmp6Ra 0 icmp6Na 0 icmp6Ns 0 ipv4RxMulticast 0 ipv6Multicast 0 otherRxMulticast 0
+
+Dump of WifiConfigManager
+WifiConfigManager - Log Begin ----
+2019-09-17T09:00:01.897 - clearInternalData: Clearing all internal data
+WifiConfigManager - Log End ----
+WifiConfigManager - Configured networks Begin ----
+ID: 0 SSID: "EFSociety" PROVIDER-NAME: null BSSID: null FQDN: null PRIO: 0 HIDDEN: false
+ NetworkSelectionStatus NETWORK_SELECTION_ENABLED
+ hasEverConnected: true
+ numAssociation 13
+ creation time=09-17 09:02:33.422
+ validatedInternetAccess
+ KeyMgmt: WPA_PSK Protocols: WPA RSN
+ AuthAlgorithms: OPEN
+ PairwiseCiphers: TKIP CCMP
+ GroupCiphers: WEP40 WEP104 TKIP CCMP
+ PSK: *
+ sim_num 
+Enterprise config:
+IP config:
+IP assignment: DHCP
+Proxy settings: NONE
+ cuid=1000 cname=android.uid.system:1000 luid=1000 lname=android.uid.system:1000 lcuid=1000 userApproved=USER_UNSPECIFIED noInternetAccessExpected=false roamingFailureBlackListTimeMilli: 1000
+recentFailure: Association Rejection code: 0
+ShareThisAp: false
+
+WifiConfigManager - Configured networks End ----
+WifiConfigManager - Next network ID to be allocated 1
+WifiConfigManager - Last selected network ID -1
+
+Dump of PasspointManager
+PasspointManager - Providers Begin ---
+PasspointManager - Providers End ---
+PasspointManager - Next provider ID to be assigned 0
+Last sweep 1:47:56.070 ago.
+
+Chipset information :-----------------------------------------------
+FW Version is: 2:0:0:163
+Driver Version is: 4.0.11.213W
+Supported Feature set: -1
+--------------------------------------------------------------------
+Bug dump 0
+system time = 05-28 17:21:54.900
+kernel time = 6490.756
+reason = 7
+kernel log: 
+
+
+system log: 
+--------- beginning of main
+05-28 17:18:29.994  1480  1480 D QtiCarrierConfigHelper: WARNING, no carrier configs on phone Id: 0
+05-28 17:18:29.995  1318  1739 D HeadsetStateMachine: Disconnected process message: 10, size: 0
+05-28 17:18:29.995  1318  1739 D HeadsetStateMachine: Enter processIntentBatteryChanged()
+05-28 17:18:29.996  1318  1739 D HeadsetStateMachine: Exit processIntentBatteryChanged()
+05-28 17:18:29.996  1318  1739 D HeadsetStateMachine: Exit Disconnected processMessage() 
+05-28 17:18:30.001  1347  1347 D KeyguardUpdateMonitor: handleBatteryUpdate
+--------- beginning of system
+05-28 17:19:00.003  1219  1278 I PowerManagerService: Going to sleep due to screen timeout (uid 1000)...
+05-28 17:19:00.999   560   560 I vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+05-28 17:19:01.008   560   560 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+05-28 17:19:01.008   560   560 I vendor.qti.bluetooth@1.0-ibs_handler: DeviceWakeUp: Writing IBS_WAKE_IND
+05-28 17:19:01.011  1347  1347 D KeyguardUpdateMonitor: received broadcast android.intent.action.TIME_TICK
+05-28 17:19:01.011   560  1717 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_ACK: 0xFC
+05-28 17:19:01.011  1347  1347 D KeyguardUpdateMonitor: handleTimeUpdate
+05-28 17:19:01.024   560  1717 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+05-28 17:19:01.025   560  1717 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+05-28 17:19:01.026   560  1717 D vendor.qti.bluetooth@1.0-bluetooth_hci: BluetoothHci::event call back-->
+05-28 17:19:01.026  1318  1569 D bt_hci  : hciEventReceived-->
+05-28 17:19:01.027  1318  1569 D bt_hci  : hciEventReceived<--
+05-28 17:19:01.027   560  1717 D vendor.qti.bluetooth@1.0-bluetooth_hci: BluetoothHci::event call back<--
+05-28 17:19:01.029   560  1717 D vendor.qti.bluetooth@1.0-bluetooth_hci: BluetoothHci::event call back-->
+05-28 17:19:01.029  1318  1569 D bt_hci  : hciEventReceived-->
+05-28 17:19:01.029  1318  1569 D bt_hci  : hciEventReceived<--
+05-28 17:19:01.030   560  1717 D vendor.qti.bluetooth@1.0-bluetooth_hci: BluetoothHci::event call back<--
+05-28 17:19:01.030  1219  1219 I PowerManagerService: Going to sleep due to screen timeout (uid 1000)...
+05-28 17:19:01.070   560  1717 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+05-28 17:19:02.029   560  1723 I vendor.qti.bluetooth@1.0-ibs_handler: DeviceSleep: TX Awake, Sending SLEEP_IND
+05-28 17:19:02.029   560  1723 I vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+05-28 17:19:02.182   560  1570 E vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+05-28 17:19:02.424   919   919 E MSM-irqbalance: __set_smp_affinity: Unable to open /proc/irq/21/smp_affinity
+05-28 17:19:02.425   919   919 E MSM-irqbalance: get_smp_affinity: Unable to open /proc/irq/21/smp_affinity
+05-28 17:19:02.425   919   919 E MSM-irqbalance: Unable to set SMP affinity
+05-28 17:19:29.992  1347  1347 D KeyguardUpdateMonitor: received broadcast android.intent.action.BATTERY_CHANGED
+05-28 17:19:29.993  1480  1480 D QtiCarrierConfigHelper: WARNING, no carrier configs on phone Id: 0
+05-28 17:19:29.994  1318  1739 D HeadsetStateMachine: Disconnected process message: 10, size: 0
+05-28 17:19:29.995  1318  1739 D HeadsetStateMachine: Enter processIntentBatteryChanged()
+05-28 17:19:29.995  1318  1739 D HeadsetStateMachine: Exit processIntentBatteryChanged()
+05-28 17:19:29.995  1318  1739 D HeadsetStateMachine: Exit Disconnected processMessage() 
+05-28 17:19:30.000  1347  1347 D KeyguardUpdateMonitor: handleBatteryUpdate
+05-28 17:20:00.002  1219  1278 I PowerManagerService: Going to sleep due to screen timeout (uid 1000)...
+05-28 17:20:01.011  1347  1347 D KeyguardUpdateMonitor: received broadcast android.intent.action.TIME_TICK
+05-28 17:20:01.011  1347  1347 D KeyguardUpdateMonitor: handleTimeUpdate
+05-28 17:20:01.035  1219  1219 I PowerManagerService: Going to sleep due to screen timeout (uid 1000)...
+05-28 17:20:02.041  1219  1278 I PowerManagerService: Going to sleep due to screen timeout (uid 1000)...
+05-28 17:20:02.044  1219  1296 I WifiService: isScanAlwaysAvailable uid=1000
+05-28 17:20:02.047   573  1711 E WifiHAL : Received UMAC message with insufficent length: 914
+05-28 17:20:02.047   573  1711 E WifiHAL : Received UMAC message with insufficent length: 48
+05-28 17:20:03.047  1219  1294 I PowerManagerService: Going to sleep due to screen timeout (uid 1000)...
+05-28 17:20:05.745   573  1711 I chatty  : uid=1010(wifi) android.hardwar identical 1 line
+05-28 17:20:05.745   573  1711 E WifiHAL : Received UMAC message with insufficent length: 48
+05-28 17:20:05.796   573  1711 E WifiHAL : Received UMAC message with insufficent length: 914
+05-28 17:20:05.798  1219  1431 D WificondControl: Scan result ready event
+05-28 17:20:05.799  1219  1296 I WifiService: isScanAlwaysAvailable uid=1000
+05-28 17:20:05.799   905  1712 I LOWI-8.5.0.3.c: [LOWI-Scan] lowi_close_record:Scan completed in 6365283ms and Recieved 11 APs scan results
+05-28 17:20:05.801   818   818 I wificond: Enters wifigbk_ageOutHistory
+05-28 17:20:05.805  1219  1296 D WificondScannerImpl: Filtering out 1 scan results.
+05-28 17:20:05.806  1219  1296 I WifiService: isScanAlwaysAvailable uid=1000
+05-28 17:20:05.809  1219  1294 W WifiConfigManager: Looking up network with invalid networkId -1
+05-28 17:20:29.993  1347  1347 D KeyguardUpdateMonitor: received broadcast android.intent.action.BATTERY_CHANGED
+05-28 17:20:29.993  1480  1480 D QtiCarrierConfigHelper: WARNING, no carrier configs on phone Id: 0
+05-28 17:20:29.994  1318  1739 D HeadsetStateMachine: Disconnected process message: 10, size: 0
+05-28 17:20:29.995  1318  1739 D HeadsetStateMachine: Enter processIntentBatteryChanged()
+05-28 17:20:29.995  1318  1739 D HeadsetStateMachine: Exit processIntentBatteryChanged()
+05-28 17:20:29.995  1318  1739 D HeadsetStateMachine: Exit Disconnected processMessage() 
+05-28 17:20:30.000  1347  1347 D KeyguardUpdateMonitor: handleBatteryUpdate
+05-28 17:20:05.802   818   818 I wificond: Enters wifigbk_ageOutHistory
+05-28 17:21:00.003  1219  1278 I PowerManagerService: Going to sleep due to screen timeout (uid 1000)...
+05-28 17:21:01.011  1347  1347 D KeyguardUpdateMonitor: received broadcast android.intent.action.TIME_TICK
+05-28 17:21:01.012  1347  1347 D KeyguardUpdateMonitor: handleTimeUpdate
+05-28 17:21:01.032  1219  1219 I PowerManagerService: Going to sleep due to screen timeout (uid 1000)...
+05-28 17:21:29.992  1347  1347 D KeyguardUpdateMonitor: received broadcast android.intent.action.BATTERY_CHANGED
+05-28 17:21:29.993  1480  1480 D QtiCarrierConfigHelper: WARNING, no carrier configs on phone Id: 0
+05-28 17:21:29.996  1318  1739 D HeadsetStateMachine: Disconnected process message: 10, size: 0
+05-28 17:21:29.996  1318  1739 D HeadsetStateMachine: Enter processIntentBatteryChanged()
+05-28 17:21:29.996  1318  1739 D HeadsetStateMachine: Exit processIntentBatteryChanged()
+05-28 17:21:29.996  1318  1739 D HeadsetStateMachine: Exit Disconnected processMessage() 
+05-28 17:21:30.000  1347  1347 D KeyguardUpdateMonitor: handleBatteryUpdate
+05-28 17:21:52.995   806  1022 D PermissionCache: checking android.permission.DUMP for uid=2000 => granted (522 us)
+05-28 17:21:53.253  3053  3053 W ADebug  : Failed to get property persist.sys.media.traces
+05-28 17:21:53.288  3053  3053 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+05-28 17:21:53.298  3053  3053 W /system/bin/app_process: Could not reserve sentinel fault page
+05-28 17:21:53.426  3064  3064 W cmd     : Can't find service media.codec
+05-28 17:21:53.464  3053  3053 I /system/bin/app_process: The ClassLoaderContext is a special shared library.
+05-28 17:21:53.529  3053  3053 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+05-28 17:21:53.534  1219  1431 D AppOps  : noteOperation: allowing code 72 uid 10066 package com.topjohnwu.magisk
+05-28 17:21:53.535  1219  1431 D AppOps  : noteOperation: allowing code 59 uid 10066 package com.topjohnwu.magisk
+05-28 17:21:53.535  1219  1431 D AppOps  : noteOperation: allowing code 60 uid 10066 package com.topjohnwu.magisk
+05-28 17:21:53.548  1219  1431 I ActivityManager: Start proc 3078:com.topjohnwu.magisk/u0a66 for content provider com.topjohnwu.magisk/.core.Provider
+05-28 17:21:53.564  1219  1867 D CompatibilityInfo: mCompatibilityFlags - 4
+05-28 17:21:53.564  1219  1867 D CompatibilityInfo: applicationDensity - 240
+05-28 17:21:53.564  1219  1867 D CompatibilityInfo: applicationScale - 1.0
+05-28 17:21:53.736  1219  1867 D AppOps  : noteOperation: reject #3 for code 23 (23) uid 10066 package com.topjohnwu.magisk
+05-28 17:21:53.750  3078  3101 D ProfileInstaller: Skipping profile installation for com.topjohnwu.magisk
+05-28 17:21:53.782  3078  3117 D OpenGLRenderer: HWUI GL Pipeline
+05-28 17:21:53.789  1219  1431 D AppOps  : startOperation: allowing code 45 uid 10066 package com.topjohnwu.magisk
+05-28 17:21:53.815  3078  3117 I Adreno  : QUALCOMM build                   : fa7d293, I89dac622c4
+05-28 17:21:53.815  3078  3117 I Adreno  : Build Date                       : 01/20/20
+05-28 17:21:53.815  3078  3117 I Adreno  : OpenGL ES Shader Compiler Version: EV031.22.00.01_06_07
+05-28 17:21:53.815  3078  3117 I Adreno  : Local Branch                     : 
+05-28 17:21:53.815  3078  3117 I Adreno  : Remote Branch                    : refs/tags/AU_LINUX_ANDROID_LA.UM.6.6.3.R1.08.01.00.481.013
+05-28 17:21:53.815  3078  3117 I Adreno  : Remote Branch                    : NONE
+05-28 17:21:53.815  3078  3117 I Adreno  : Reconstruct Branch               : NOTHING
+05-28 17:21:53.831  3078  3117 I Adreno  : PFP: 0x005ff087, ME: 0x005ff063
+05-28 17:21:53.842  3078  3117 I zygote  : android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasWideColorDisplay retrieved: 0
+05-28 17:21:53.844  3053  3053 D AndroidRuntime: Shutting down VM
+05-28 17:21:53.845  3078  3117 I OpenGLRenderer: Initialized EGL, version 1.4
+05-28 17:21:53.845  3078  3117 D OpenGLRenderer: Swap behavior 2
+05-28 17:21:53.886  1219  1431 D PermissionCache: checking android.permission.DUMP for uid=2000 => granted (799 us)
+05-28 17:21:54.242  3110  3110 W ADebug  : Failed to get property persist.sys.media.traces
+05-28 17:21:54.280  3110  3110 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+05-28 17:21:54.291  3110  3110 W /system/bin/app_process: Could not reserve sentinel fault page
+05-28 17:21:54.326  3118  3118 W ADebug  : Failed to get property persist.sys.media.traces
+05-28 17:21:54.368  3118  3118 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+05-28 17:21:54.378  3118  3118 W com.topjohnwu.magisk:root:0: Could not reserve sentinel fault page
+05-28 17:21:54.503  3110  3110 I /system/bin/app_process: The ClassLoaderContext is a special shared library.
+05-28 17:21:54.542  3151  3151 W ADebug  : Failed to get property persist.sys.media.traces
+05-28 17:21:54.570  3110  3110 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+05-28 17:21:54.581  3151  3151 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+05-28 17:21:54.591  3151  3151 W /system/bin/app_process: Could not reserve sentinel fault page
+05-28 17:21:54.643  3118  3118 D AndroidRuntime: Calling main entry com.topjohnwu.superuser.internal.RootServerMain
+05-28 17:21:54.649  3118  3118 D         : Environment::getOverlayDir() = /vendor/package/Default/system/vendor/overlay
+05-28 17:21:54.678  3165  3165 W ADebug  : Failed to get property persist.sys.media.traces
+05-28 17:21:54.715  3165  3165 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+05-28 17:21:54.725  3165  3165 W /system/bin/app_process: Could not reserve sentinel fault page
+05-28 17:21:54.781  3151  3151 I /system/bin/app_process: The ClassLoaderContext is a special shared library.
+05-28 17:21:54.781  3078  3078 D t       : onServiceConnected
+05-28 17:21:54.787  3118  3228 E Magisk  : android.system.ErrnoException: stat failed: ENOENT (No such file or directory)
+05-28 17:21:54.787  3118  3228 E Magisk  : 	at libcore.io.Linux.stat(Native Method)
+05-28 17:21:54.787  3118  3228 E Magisk  : 	at libcore.io.BlockGuardOs.stat(BlockGuardOs.java:325)
+05-28 17:21:54.787  3118  3228 E Magisk  : 	at android.system.Os.stat(Os.java:551)
+05-28 17:21:54.787  3118  3228 E Magisk  : 	at o4.v.y(r8-map-id-039fec256e86178dd670859e96df5324cc320cc73d91a5f1d033b360f16202ea:56)
+05-28 17:21:54.787  3118  3228 E Magisk  : 	at o4.v.q(r8-map-id-039fec256e86178dd670859e96df5324cc320cc73d91a5f1d033b360f16202ea:1)
+05-28 17:21:54.787  3118  3228 E Magisk  : 	at o4.u.k(r8-map-id-039fec256e86178dd670859e96df5324cc320cc73d91a5f1d033b360f16202ea:5)
+05-28 17:21:54.787  3118  3228 E Magisk  : 	at o4.u.onTransact(r8-map-id-039fec256e86178dd670859e96df5324cc320cc73d91a5f1d033b360f16202ea:62)
+05-28 17:21:54.787  3118  3228 E Magisk  : 	at android.os.Binder.execTransact(Binder.java:697)
+05-28 17:21:54.798  1219  1431 W WindowManager: Adding more than one toast window for UID at a time.
+05-28 17:21:54.814  3110  3110 D AndroidRuntime: Shutting down VM
+05-28 17:21:54.862  3151  3151 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+05-28 17:21:54.871  3118  3228 E Magisk  : android.system.ErrnoException: stat failed: ENOENT (No such file or directory)
+05-28 17:21:54.871  3118  3228 E Magisk  : 	at libcore.io.Linux.stat(Native Method)
+05-28 17:21:54.871  3118  3228 E Magisk  : 	at libcore.io.BlockGuardOs.stat(BlockGuardOs.java:325)
+05-28 17:21:54.871  3118  3228 E Magisk  : 	at android.system.Os.stat(Os.java:551)
+05-28 17:21:54.871  3118  3228 E Magisk  : 	at o4.v.y(r8-map-id-039fec256e86178dd670859e96df5324cc320cc73d91a5f1d033b360f16202ea:56)
+05-28 17:21:54.871  3118  3228 E Magisk  : 	at o4.v.q(r8-map-id-039fec256e86178dd670859e96df5324cc320cc73d91a5f1d033b360f16202ea:1)
+05-28 17:21:54.871  3118  3228 E Magisk  : 	at o4.u.k(r8-map-id-039fec256e86178dd670859e96df5324cc320cc73d91a5f1d033b360f16202ea:5)
+05-28 17:21:54.871  3118  3228 E Magisk  : 	at o4.u.onTransact(r8-map-id-039fec256e86178dd670859e96df5324cc320cc73d91a5f1d033b360f16202ea:62)
+05-28 17:21:54.871  3118  3228 E Magisk  : 	at android.os.Binder.execTransact(Binder.java:697)
+05-28 17:21:54.885  1219  1867 W WindowManager: Adding more than one toast window for UID at a time.
+05-28 17:21:54.890  3151  3151 D AndroidRuntime: Shutting down VM
+05-28 17:21:54.900  1219  1431 W WifiDiags: CaptureBugReport 7
+
+--------------------------------------------------------------------
+No fates fetched for "Last failed connection fates"
+HAL provided zero fates for "Latest fates"
+No last mile log for "Last failed last-mile log"
+-------------------------- Latest last-mile log ---------------------------
+# tracer: nop
+#
+# entries-in-buffer/entries-written: 0/0   #P:8
+#
+#                              _-----=> irqs-off
+#                             / _----=> need-resched
+#                            | / _---=> hardirq/softirq
+#                            || / _--=> preempt-depth
+#                            ||| /     delay
+#           TASK-PID   CPU#  ||||    TIMESTAMP  FUNCTION
+#              | |       |   ||||       |         |
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+IpManager.wlan0 APF dump:
+  No active ApfFilter; IpManager not yet started.
+
+IpManager.wlan0 current ProvisioningConfiguration:
+  N/A
+
+IpManager.wlan0 StateMachine dump:
+  1969-12-31T16:00:18.142 - ERROR Failed to disable IPv6: java.lang.IllegalStateException: command '1 interface ipv6 wlan0 disable' failed with '400 1 Failed to change IPv6 state (No such file or directory)'
+  1969-12-31T16:00:18.145 - CMD_SET_MULTICAST_FILTER wlan0/-1 0 0 true [rcvd_in=StoppedState, proc_in=StoppedState]
+  2019-09-17T09:00:00.673 - OBSERVED interfaceAdded(wlan0)
+
+IpManager.wlan0 connectivity packet log:
+
+Debug with python and scapy via:
+shell$ python
+>>> from scapy import all as scapy
+>>> scapy.Ether("<paste_hex_string>".decode("hex")).show2()
+
+Dump of WifiConnectivityManager
+WifiConnectivityManager - Log Begin ----
+1969-12-31T16:00:18.090 - ScoredNetworkEvaluator constructed. mNetworkRecommendationsEnabled: false
+2019-09-17T09:00:01.441 - PNO settings: min5GHzRssi -82 min24GHzRssi -85 currentConnectionBonus 16 sameNetworkBonus 24 secureNetworkBonus 80 initialScoreMax 100
+2019-09-17T09:00:01.441 - Passpoint is: disabled
+2019-09-17T09:00:01.442 - ConnectivityScanManager initialized and disabled
+2019-09-17T09:00:01.443 - setUntrustedConnectionAllowed: allowed=false
+2019-09-17T09:00:01.443 - handleScreenStateChanged: screenOn=true
+2019-09-17T09:00:01.444 - startConnectivityScan: screenOn=true wifiState=unknown scanImmediately=false wifiEnabled=false wifiConnectivityManagerEnabled=false
+2019-09-17T09:00:01.455 - Set WiFi enabled
+2019-09-17T09:00:01.456 - Stopping WifiConnectivityManager
+2019-09-17T09:00:01.457 - handleConnectionStateChanged: state=disconnected
+2019-09-17T09:00:01.457 - scheduleWatchdogTimer
+2019-09-17T09:00:01.458 - startConnectivityScan: screenOn=true wifiState=disconnected scanImmediately=true wifiEnabled=true wifiConnectivityManagerEnabled=false
+2019-09-17T09:00:01.946 - Set WiFiConnectivityManager enabled
+2019-09-17T09:00:01.946 - Starting up WifiConnectivityManager
+2019-09-17T09:00:01.974 - startConnectivityScan: screenOn=true wifiState=disconnected scanImmediately=true wifiEnabled=true wifiConnectivityManagerEnabled=true
+2026-05-28T15:34:05.275 - AllSingleScanListener onResults: start network selection
+2026-05-28T15:34:05.277 - Networks filtered out due to invalid SSID: 1c:b7:2c:c1:25:2c / 1c:b7:2c:c1:25:28 / 
+2026-05-28T15:34:05.277 - About to run SavedNetworkEvaluator :
+2026-05-28T15:34:05.278 - did not see any good candidates.
+2026-05-28T15:34:05.279 - About to run ScoredNetworkEvaluator :
+2026-05-28T15:34:05.279 - Skipping evaluateNetworks; Network recommendations disabled.
+2026-05-28T15:34:21.756 - periodicScanTimerHandler
+2026-05-28T15:34:25.521 - AllSingleScanListener onResults: start network selection
+2026-05-28T15:34:25.523 - Networks filtered out due to invalid SSID: 1c:b7:2c:c1:25:2c / 1c:b7:2c:c1:25:28 / 
+2026-05-28T15:34:25.525 - About to run SavedNetworkEvaluator :
+2026-05-28T15:34:25.525 - did not see any good candidates.
+2026-05-28T15:34:25.526 - About to run ScoredNetworkEvaluator :
+2026-05-28T15:34:25.526 - Skipping evaluateNetworks; Network recommendations disabled.
+2026-05-28T15:35:01.760 - periodicScanTimerHandler
+2026-05-28T15:35:05.530 - AllSingleScanListener onResults: start network selection
+2026-05-28T15:35:05.532 - Networks filtered out due to invalid SSID: 1c:b7:2c:c1:25:2c / 1c:b7:2c:c1:25:28 / 
+2026-05-28T15:35:05.532 - About to run SavedNetworkEvaluator :
+2026-05-28T15:35:05.533 - did not see any good candidates.
+2026-05-28T15:35:05.533 - About to run ScoredNetworkEvaluator :
+2026-05-28T15:35:05.534 - Skipping evaluateNetworks; Network recommendations disabled.
+2026-05-28T15:36:21.762 - periodicScanTimerHandler
+2026-05-28T15:36:25.530 - AllSingleScanListener onResults: start network selection
+2026-05-28T15:36:25.532 - Networks filtered out due to invalid SSID: 1c:b7:2c:c1:25:2c / 
+2026-05-28T15:36:25.533 - About to run SavedNetworkEvaluator :
+2026-05-28T15:36:25.533 - did not see any good candidates.
+2026-05-28T15:36:25.534 - About to run ScoredNetworkEvaluator :
+2026-05-28T15:36:25.535 - Skipping evaluateNetworks; Network recommendations disabled.
+2026-05-28T15:39:01.765 - periodicScanTimerHandler
+2026-05-28T15:39:05.540 - AllSingleScanListener onResults: start network selection
+2026-05-28T15:39:05.542 - Networks filtered out due to invalid SSID: 1c:b7:2c:c1:25:2c / 1c:b7:2c:c1:25:28 / 
+2026-05-28T15:39:05.543 - About to run SavedNetworkEvaluator :
+2026-05-28T15:39:05.544 - did not see any good candidates.
+2026-05-28T15:39:05.545 - About to run ScoredNetworkEvaluator :
+2026-05-28T15:39:05.545 - Skipping evaluateNetworks; Network recommendations disabled.
+2026-05-28T15:41:41.769 - periodicScanTimerHandler
+2026-05-28T15:41:45.543 - AllSingleScanListener onResults: start network selection
+2026-05-28T15:41:45.545 - Networks filtered out due to invalid SSID: 1c:b7:2c:c1:25:2c / 
+2026-05-28T15:41:45.546 - About to run SavedNetworkEvaluator :
+2026-05-28T15:41:45.547 - did not see any good candidates.
+2026-05-28T15:41:45.547 - About to run ScoredNetworkEvaluator :
+2026-05-28T15:41:45.548 - Skipping evaluateNetworks; Network recommendations disabled.
+2026-05-28T15:44:21.773 - periodicScanTimerHandler
+2026-05-28T15:44:25.552 - AllSingleScanListener onResults: start network selection
+2026-05-28T15:44:25.554 - Networks filtered out due to invalid SSID: 1c:b7:2c:c1:25:2c / 
+2026-05-28T15:44:25.555 - About to run SavedNetworkEvaluator :
+2026-05-28T15:44:25.556 - did not see any good candidates.
+2026-05-28T15:44:25.556 - About to run ScoredNetworkEvaluator :
+2026-05-28T15:44:25.557 - Skipping evaluateNetworks; Network recommendations disabled.
+2026-05-28T15:47:02.035 - periodicScanTimerHandler
+2026-05-28T15:47:05.810 - AllSingleScanListener onResults: start network selection
+2026-05-28T15:47:05.813 - Networks filtered out due to invalid SSID: 1c:b7:2c:c1:25:2c / 1c:b7:2c:c1:25:28 / 
+2026-05-28T15:47:05.813 - About to run SavedNetworkEvaluator :
+2026-05-28T15:47:05.814 - did not see any good candidates.
+2026-05-28T15:47:05.815 - About to run ScoredNetworkEvaluator :
+2026-05-28T15:47:05.815 - Skipping evaluateNetworks; Network recommendations disabled.
+2026-05-28T15:49:42.038 - periodicScanTimerHandler
+2026-05-28T15:49:45.810 - AllSingleScanListener onResults: start network selection
+2026-05-28T15:49:45.813 - Networks filtered out due to invalid SSID: 1c:b7:2c:c1:25:2c / 
+2026-05-28T15:49:45.814 - About to run SavedNetworkEvaluator :
+2026-05-28T15:49:45.815 - did not see any good candidates.
+2026-05-28T15:49:45.815 - About to run ScoredNetworkEvaluator :
+2026-05-28T15:49:45.816 - Skipping evaluateNetworks; Network recommendations disabled.
+2026-05-28T15:54:02.035 - periodicScanTimerHandler
+2026-05-28T15:54:03.040 - start a single scan from watchdogHandler
+2026-05-28T15:54:03.041 - scheduleWatchdogTimer
+2026-05-28T15:54:05.801 - AllSingleScanListener onResults: start network selection
+2026-05-28T15:54:05.803 - Networks filtered out due to invalid SSID: 1c:b7:2c:c1:25:2c / 1c:b7:2c:c1:25:28 / 
+2026-05-28T15:54:05.804 - About to run SavedNetworkEvaluator :
+2026-05-28T15:54:05.805 - did not see any good candidates.
+2026-05-28T15:54:05.806 - About to run ScoredNetworkEvaluator :
+2026-05-28T15:54:05.806 - Skipping evaluateNetworks; Network recommendations disabled.
+2026-05-28T15:56:42.039 - periodicScanTimerHandler
+2026-05-28T15:56:45.809 - AllSingleScanListener onResults: start network selection
+2026-05-28T15:56:45.811 - Networks filtered out due to invalid SSID: 1c:b7:2c:c1:25:2c / 
+2026-05-28T15:56:45.811 - About to run SavedNetworkEvaluator :
+2026-05-28T15:56:45.812 - did not see any good candidates.
+2026-05-28T15:56:45.813 - About to run ScoredNetworkEvaluator :
+2026-05-28T15:56:45.813 - Skipping evaluateNetworks; Network recommendations disabled.
+2026-05-28T15:59:22.043 - periodicScanTimerHandler
+2026-05-28T15:59:25.810 - AllSingleScanListener onResults: start network selection
+2026-05-28T15:59:25.812 - Networks filtered out due to invalid SSID: 1c:b7:2c:c1:25:2c / 
+2026-05-28T15:59:25.812 - About to run SavedNetworkEvaluator :
+2026-05-28T15:59:25.813 - did not see any good candidates.
+2026-05-28T15:59:25.814 - About to run ScoredNetworkEvaluator :
+2026-05-28T15:59:25.814 - Skipping evaluateNetworks; Network recommendations disabled.
+2026-05-28T16:03:59.445 - periodicScanTimerHandler
+2026-05-28T16:04:03.501 - AllSingleScanListener onResults: start network selection
+2026-05-28T16:04:03.503 - Networks filtered out due to invalid SSID: 1c:b7:2c:c1:25:2c / 
+2026-05-28T16:04:03.504 - About to run SavedNetworkEvaluator :
+2026-05-28T16:04:03.505 - did not see any good candidates.
+2026-05-28T16:04:03.511 - About to run ScoredNetworkEvaluator :
+2026-05-28T16:04:03.512 - Skipping evaluateNetworks; Network recommendations disabled.
+2026-05-28T16:06:39.450 - periodicScanTimerHandler
+2026-05-28T16:06:43.222 - AllSingleScanListener onResults: start network selection
+2026-05-28T16:06:43.225 - Networks filtered out due to invalid SSID: 1c:b7:2c:c1:25:28 / 
+2026-05-28T16:06:43.225 - About to run SavedNetworkEvaluator :
+2026-05-28T16:06:43.226 - did not see any good candidates.
+2026-05-28T16:06:43.227 - About to run ScoredNetworkEvaluator :
+2026-05-28T16:06:43.227 - Skipping evaluateNetworks; Network recommendations disabled.
+2026-05-28T16:09:19.454 - periodicScanTimerHandler
+2026-05-28T16:09:23.232 - AllSingleScanListener onResults: start network selection
+2026-05-28T16:09:23.234 - Networks filtered out due to invalid SSID: 1c:b7:2c:c1:25:2c / 1c:b7:2c:c1:25:28 / 
+2026-05-28T16:09:23.235 - About to run SavedNetworkEvaluator :
+2026-05-28T16:09:23.236 - did not see any good candidates.
+2026-05-28T16:09:23.236 - About to run ScoredNetworkEvaluator :
+2026-05-28T16:09:23.237 - Skipping evaluateNetworks; Network recommendations disabled.
+2026-05-28T16:11:59.458 - periodicScanTimerHandler
+2026-05-28T16:12:03.229 - AllSingleScanListener onResults: start network selection
+2026-05-28T16:12:03.231 - About to run SavedNetworkEvaluator :
+2026-05-28T16:12:03.232 - did not see any good candidates.
+2026-05-28T16:12:03.232 - About to run ScoredNetworkEvaluator :
+2026-05-28T16:12:03.233 - Skipping evaluateNetworks; Network recommendations disabled.
+2026-05-28T16:14:39.461 - start a single scan from watchdogHandler
+2026-05-28T16:14:39.462 - scheduleWatchdogTimer
+2026-05-28T16:14:40.468 - periodicScanTimerHandler
+2026-05-28T16:14:44.241 - AllSingleScanListener onResults: start network selection
+2026-05-28T16:14:44.243 - Networks filtered out due to invalid SSID: 1c:b7:2c:c1:25:2c / 1c:b7:2c:c1:25:28 / 
+2026-05-28T16:14:44.243 - About to run SavedNetworkEvaluator :
+2026-05-28T16:14:44.244 - did not see any good candidates.
+2026-05-28T16:14:44.245 - About to run ScoredNetworkEvaluator :
+2026-05-28T16:14:44.246 - Skipping evaluateNetworks; Network recommendations disabled.
+2026-05-28T16:17:20.473 - periodicScanTimerHandler
+2026-05-28T16:17:24.243 - AllSingleScanListener onResults: start network selection
+2026-05-28T16:17:24.245 - Networks filtered out due to invalid SSID: 1c:b7:2c:c1:25:28 / 
+2026-05-28T16:17:24.246 - About to run SavedNetworkEvaluator :
+2026-05-28T16:17:24.247 - did not see any good candidates.
+2026-05-28T16:17:24.247 - About to run ScoredNetworkEvaluator :
+2026-05-28T16:17:24.248 - Skipping evaluateNetworks; Network recommendations disabled.
+2026-05-28T16:20:01.010 - periodicScanTimerHandler
+2026-05-28T16:20:04.781 - AllSingleScanListener onResults: start network selection
+2026-05-28T16:20:04.783 - Networks filtered out due to invalid SSID: 1c:b7:2c:c1:25:2c / 1c:b7:2c:c1:25:28 / 
+2026-05-28T16:20:04.783 - About to run SavedNetworkEvaluator :
+2026-05-28T16:20:04.784 - did not see any good candidates.
+2026-05-28T16:20:04.785 - About to run ScoredNetworkEvaluator :
+2026-05-28T16:20:04.786 - Skipping evaluateNetworks; Network recommendations disabled.
+2026-05-28T16:22:41.014 - periodicScanTimerHandler
+2026-05-28T16:22:44.781 - AllSingleScanListener onResults: start network selection
+2026-05-28T16:22:44.783 - Networks filtered out due to invalid SSID: 1c:b7:2c:c1:25:2c / 1c:b7:2c:c1:25:28 / 
+2026-05-28T16:22:44.784 - About to run SavedNetworkEvaluator :
+2026-05-28T16:22:44.785 - did not see any good candidates.
+2026-05-28T16:22:44.785 - About to run ScoredNetworkEvaluator :
+2026-05-28T16:22:44.785 - Skipping evaluateNetworks; Network recommendations disabled.
+2026-05-28T16:25:21.019 - periodicScanTimerHandler
+2026-05-28T16:25:24.795 - AllSingleScanListener onResults: start network selection
+2026-05-28T16:25:24.797 - Networks filtered out due to invalid SSID: 1c:b7:2c:c1:25:2c / 
+2026-05-28T16:25:24.798 - About to run SavedNetworkEvaluator :
+2026-05-28T16:25:24.798 - did not see any good candidates.
+2026-05-28T16:25:24.799 - About to run ScoredNetworkEvaluator :
+2026-05-28T16:25:24.800 - Skipping evaluateNetworks; Network recommendations disabled.
+2026-05-28T16:28:01.021 - periodicScanTimerHandler
+2026-05-28T16:28:04.792 - AllSingleScanListener onResults: start network selection
+2026-05-28T16:28:04.794 - Networks filtered out due to invalid SSID: 1c:b7:2c:c1:25:2c / 1c:b7:2c:c1:25:28 / 
+2026-05-28T16:28:04.795 - About to run SavedNetworkEvaluator :
+2026-05-28T16:28:04.796 - did not see any good candidates.
+2026-05-28T16:28:04.796 - About to run ScoredNetworkEvaluator :
+2026-05-28T16:28:04.797 - Skipping evaluateNetworks; Network recommendations disabled.
+2026-05-28T16:30:41.025 - periodicScanTimerHandler
+2026-05-28T16:30:44.794 - AllSingleScanListener onResults: start network selection
+2026-05-28T16:30:44.796 - Networks filtered out due to invalid SSID: 1c:b7:2c:c1:25:2c / 
+2026-05-28T16:30:44.797 - About to run SavedNetworkEvaluator :
+2026-05-28T16:30:44.797 - did not see any good candidates.
+2026-05-28T16:30:44.798 - About to run ScoredNetworkEvaluator :
+2026-05-28T16:30:44.798 - Skipping evaluateNetworks; Network recommendations disabled.
+2026-05-28T16:34:39.465 - periodicScanTimerHandler
+2026-05-28T16:34:40.472 - start a single scan from watchdogHandler
+2026-05-28T16:34:40.474 - scheduleWatchdogTimer
+2026-05-28T16:34:43.521 - AllSingleScanListener onResults: start network selection
+2026-05-28T16:34:43.525 - Networks filtered out due to invalid SSID: 1c:b7:2c:c1:25:28 / 
+2026-05-28T16:34:43.525 - About to run SavedNetworkEvaluator :
+2026-05-28T16:34:43.526 - did not see any good candidates.
+2026-05-28T16:34:43.527 - About to run ScoredNetworkEvaluator :
+2026-05-28T16:34:43.528 - Skipping evaluateNetworks; Network recommendations disabled.
+2026-05-28T16:37:19.467 - periodicScanTimerHandler
+2026-05-28T16:37:23.242 - AllSingleScanListener onResults: start network selection
+2026-05-28T16:37:23.244 - Networks filtered out due to invalid SSID: 1c:b7:2c:c1:25:2c / 1c:b7:2c:c1:25:28 / 
+2026-05-28T16:37:23.245 - About to run SavedNetworkEvaluator :
+2026-05-28T16:37:23.246 - did not see any good candidates.
+2026-05-28T16:37:23.246 - About to run ScoredNetworkEvaluator :
+2026-05-28T16:37:23.247 - Skipping evaluateNetworks; Network recommendations disabled.
+2026-05-28T16:39:59.471 - periodicScanTimerHandler
+2026-05-28T16:40:03.242 - AllSingleScanListener onResults: start network selection
+2026-05-28T16:40:03.244 - Networks filtered out due to invalid SSID: 1c:b7:2c:c1:25:28 / 
+2026-05-28T16:40:03.245 - About to run SavedNetworkEvaluator :
+2026-05-28T16:40:03.246 - did not see any good candidates.
+2026-05-28T16:40:03.246 - About to run ScoredNetworkEvaluator :
+2026-05-28T16:40:03.247 - Skipping evaluateNetworks; Network recommendations disabled.
+2026-05-28T16:42:39.475 - periodicScanTimerHandler
+2026-05-28T16:42:43.250 - AllSingleScanListener onResults: start network selection
+2026-05-28T16:42:43.252 - Networks filtered out due to invalid SSID: 1c:b7:2c:c1:25:2c / 1c:b7:2c:c1:25:28 / 
+2026-05-28T16:42:43.252 - About to run SavedNetworkEvaluator :
+2026-05-28T16:42:43.253 - did not see any good candidates.
+2026-05-28T16:42:43.254 - About to run ScoredNetworkEvaluator :
+2026-05-28T16:42:43.254 - Skipping evaluateNetworks; Network recommendations disabled.
+2026-05-28T16:45:19.479 - periodicScanTimerHandler
+2026-05-28T16:45:23.250 - AllSingleScanListener onResults: start network selection
+2026-05-28T16:45:23.252 - About to run SavedNetworkEvaluator :
+2026-05-28T16:45:23.253 - did not see any good candidates.
+2026-05-28T16:45:23.254 - About to run ScoredNetworkEvaluator :
+2026-05-28T16:45:23.255 - Skipping evaluateNetworks; Network recommendations disabled.
+2026-05-28T16:47:59.484 - periodicScanTimerHandler
+2026-05-28T16:48:03.262 - AllSingleScanListener onResults: start network selection
+2026-05-28T16:48:03.264 - Networks filtered out due to invalid SSID: 1c:b7:2c:c1:25:2c / 
+2026-05-28T16:48:03.265 - About to run SavedNetworkEvaluator :
+2026-05-28T16:48:03.265 - did not see any good candidates.
+2026-05-28T16:48:03.266 - About to run ScoredNetworkEvaluator :
+2026-05-28T16:48:03.266 - Skipping evaluateNetworks; Network recommendations disabled.
+2026-05-28T16:50:39.486 - periodicScanTimerHandler
+2026-05-28T16:50:43.263 - AllSingleScanListener onResults: start network selection
+2026-05-28T16:50:43.265 - Networks filtered out due to invalid SSID: 1c:b7:2c:c1:25:28 / 
+2026-05-28T16:50:43.266 - About to run SavedNetworkEvaluator :
+2026-05-28T16:50:43.267 - did not see any good candidates.
+2026-05-28T16:50:43.267 - About to run ScoredNetworkEvaluator :
+2026-05-28T16:50:43.268 - Skipping evaluateNetworks; Network recommendations disabled.
+2026-05-28T16:54:40.478 - periodicScanTimerHandler
+2026-05-28T16:54:41.483 - start a single scan from watchdogHandler
+2026-05-28T16:54:41.484 - scheduleWatchdogTimer
+2026-05-28T16:54:44.252 - AllSingleScanListener onResults: start network selection
+2026-05-28T16:54:44.254 - Networks filtered out due to invalid SSID: 1c:b7:2c:c1:25:2c / 1c:b7:2c:c1:25:28 / 
+2026-05-28T16:54:44.255 - About to run SavedNetworkEvaluator :
+2026-05-28T16:54:44.256 - did not see any good candidates.
+2026-05-28T16:54:44.256 - About to run ScoredNetworkEvaluator :
+2026-05-28T16:54:44.257 - Skipping evaluateNetworks; Network recommendations disabled.
+2026-05-28T16:57:20.480 - periodicScanTimerHandler
+2026-05-28T16:57:24.250 - AllSingleScanListener onResults: start network selection
+2026-05-28T16:57:24.252 - Networks filtered out due to invalid SSID: 1c:b7:2c:c1:25:28 / 
+2026-05-28T16:57:24.252 - About to run SavedNetworkEvaluator :
+2026-05-28T16:57:24.253 - did not see any good candidates.
+2026-05-28T16:57:24.253 - About to run ScoredNetworkEvaluator :
+2026-05-28T16:57:24.254 - Skipping evaluateNetworks; Network recommendations disabled.
+2026-05-28T17:00:01.010 - periodicScanTimerHandler
+2026-05-28T17:00:04.781 - AllSingleScanListener onResults: start network selection
+2026-05-28T17:00:04.783 - Networks filtered out due to invalid SSID: 1c:b7:2c:c1:25:2c / 
+2026-05-28T17:00:04.783 - About to run SavedNetworkEvaluator :
+2026-05-28T17:00:04.784 - did not see any good candidates.
+2026-05-28T17:00:04.785 - About to run ScoredNetworkEvaluator :
+2026-05-28T17:00:04.785 - Skipping evaluateNetworks; Network recommendations disabled.
+2026-05-28T17:03:59.445 - periodicScanTimerHandler
+2026-05-28T17:04:03.502 - AllSingleScanListener onResults: start network selection
+2026-05-28T17:04:03.504 - About to run SavedNetworkEvaluator :
+2026-05-28T17:04:03.505 - did not see any good candidates.
+2026-05-28T17:04:03.506 - About to run ScoredNetworkEvaluator :
+2026-05-28T17:04:03.506 - Skipping evaluateNetworks; Network recommendations disabled.
+2026-05-28T17:06:39.448 - periodicScanTimerHandler
+2026-05-28T17:06:43.219 - AllSingleScanListener onResults: start network selection
+2026-05-28T17:06:43.221 - Networks filtered out due to invalid SSID: 1c:b7:2c:c1:25:2c / 1c:b7:2c:c1:25:28 / 
+2026-05-28T17:06:43.222 - About to run SavedNetworkEvaluator :
+2026-05-28T17:06:43.222 - did not see any good candidates.
+2026-05-28T17:06:43.223 - About to run ScoredNetworkEvaluator :
+2026-05-28T17:06:43.223 - Skipping evaluateNetworks; Network recommendations disabled.
+2026-05-28T17:09:19.451 - periodicScanTimerHandler
+2026-05-28T17:09:23.224 - AllSingleScanListener onResults: start network selection
+2026-05-28T17:09:23.226 - Networks filtered out due to invalid SSID: 1c:b7:2c:c1:25:28 / 
+2026-05-28T17:09:23.227 - About to run SavedNetworkEvaluator :
+2026-05-28T17:09:23.227 - did not see any good candidates.
+2026-05-28T17:09:23.228 - About to run ScoredNetworkEvaluator :
+2026-05-28T17:09:23.228 - Skipping evaluateNetworks; Network recommendations disabled.
+2026-05-28T17:11:59.455 - periodicScanTimerHandler
+2026-05-28T17:12:03.230 - AllSingleScanListener onResults: start network selection
+2026-05-28T17:12:03.232 - Networks filtered out due to invalid SSID: 1c:b7:2c:c1:25:2c / 1c:b7:2c:c1:25:28 / 
+2026-05-28T17:12:03.233 - About to run SavedNetworkEvaluator :
+2026-05-28T17:12:03.234 - did not see any good candidates.
+2026-05-28T17:12:03.234 - About to run ScoredNetworkEvaluator :
+2026-05-28T17:12:03.235 - Skipping evaluateNetworks; Network recommendations disabled.
+2026-05-28T17:14:41.486 - periodicScanTimerHandler
+2026-05-28T17:14:41.489 - start a single scan from watchdogHandler
+2026-05-28T17:14:41.489 - scheduleWatchdogTimer
+2026-05-28T17:14:45.262 - AllSingleScanListener onResults: start network selection
+2026-05-28T17:14:45.264 - Networks filtered out due to invalid SSID: 1c:b7:2c:c1:25:2c / 
+2026-05-28T17:14:45.265 - About to run SavedNetworkEvaluator :
+2026-05-28T17:14:45.266 - did not see any good candidates.
+2026-05-28T17:14:45.266 - About to run ScoredNetworkEvaluator :
+2026-05-28T17:14:45.267 - Skipping evaluateNetworks; Network recommendations disabled.
+2026-05-28T17:17:21.490 - periodicScanTimerHandler
+2026-05-28T17:17:25.258 - AllSingleScanListener onResults: start network selection
+2026-05-28T17:17:25.260 - Networks filtered out due to invalid SSID: 1c:b7:2c:c1:25:2c / 1c:b7:2c:c1:25:28 / 
+2026-05-28T17:17:25.261 - About to run SavedNetworkEvaluator :
+2026-05-28T17:17:25.261 - did not see any good candidates.
+2026-05-28T17:17:25.262 - About to run ScoredNetworkEvaluator :
+2026-05-28T17:17:25.262 - Skipping evaluateNetworks; Network recommendations disabled.
+2026-05-28T17:20:02.041 - periodicScanTimerHandler
+2026-05-28T17:20:05.809 - AllSingleScanListener onResults: start network selection
+2026-05-28T17:20:05.811 - Networks filtered out due to invalid SSID: 1c:b7:2c:c1:25:28 / 
+2026-05-28T17:20:05.811 - About to run SavedNetworkEvaluator :
+2026-05-28T17:20:05.812 - did not see any good candidates.
+2026-05-28T17:20:05.813 - About to run ScoredNetworkEvaluator :
+2026-05-28T17:20:05.813 - Skipping evaluateNetworks; Network recommendations disabled.
+WifiConnectivityManager - Log End ----
+OpenNetworkNotifier: 
+mSettingEnabled true
+currentTime: 1780014114977
+mNotificationRepeatTime: 0
+mState: 0
+mBlacklistedSsids: {}
+
+WifiMetrics:
+mConnectionEvents:
+mWifiLogProto.numSavedNetworks=1
+mWifiLogProto.numOpenNetworks=0
+mWifiLogProto.numPersonalNetworks=1
+mWifiLogProto.numEnterpriseNetworks=0
+mWifiLogProto.numHiddenNetworks=0
+mWifiLogProto.numPasspointNetworks=0
+mWifiLogProto.isLocationEnabled=false
+mWifiLogProto.isScanningAlwaysEnabled=false
+mWifiLogProto.numNetworksAddedByUser=0
+mWifiLogProto.numNetworksAddedByApps=1
+mWifiLogProto.numNonEmptyScanResults=40
+mWifiLogProto.numEmptyScanResults=0
+mWifiLogProto.numOneshotScans=45
+mWifiLogProto.numBackgroundScans=0
+mScanReturnEntries:
+  SCAN_UNKNOWN: 0
+  SCAN_SUCCESS: 45
+  SCAN_FAILURE_INTERRUPTED: 0
+  SCAN_FAILURE_INVALID_CONFIGURATION: 0
+  FAILURE_WIFI_DISABLED: 0
+mSystemStateEntries: <state><screenOn> : <scansInitiated>
+  WIFI_UNKNOWN       ON: 0
+  WIFI_DISABLED      ON: 0
+  WIFI_DISCONNECTED  ON: 45
+  WIFI_ASSOCIATED    ON: 0
+  WIFI_UNKNOWN      OFF: 0
+  WIFI_DISABLED     OFF: 0
+  WIFI_DISCONNECTED OFF: 0
+  WIFI_ASSOCIATED   OFF: 0
+mWifiLogProto.numConnectivityWatchdogPnoGood=0
+mWifiLogProto.numConnectivityWatchdogPnoBad=0
+mWifiLogProto.numConnectivityWatchdogBackgroundGood=0
+mWifiLogProto.numConnectivityWatchdogBackgroundBad=0
+mWifiLogProto.numLastResortWatchdogTriggers=0
+mWifiLogProto.numLastResortWatchdogBadAssociationNetworksTotal=0
+mWifiLogProto.numLastResortWatchdogBadAuthenticationNetworksTotal=0
+mWifiLogProto.numLastResortWatchdogBadDhcpNetworksTotal=0
+mWifiLogProto.numLastResortWatchdogBadOtherNetworksTotal=0
+mWifiLogProto.numLastResortWatchdogAvailableNetworksTotal=0
+mWifiLogProto.numLastResortWatchdogTriggersWithBadAssociation=0
+mWifiLogProto.numLastResortWatchdogTriggersWithBadAuthentication=0
+mWifiLogProto.numLastResortWatchdogTriggersWithBadDhcp=0
+mWifiLogProto.numLastResortWatchdogTriggersWithBadOther=0
+mWifiLogProto.numLastResortWatchdogSuccesses=0
+mWifiLogProto.recordDurationSec=6476
+mWifiLogProto.rssiPollRssiCount: Printing counts for [-127, 0]
+  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+mWifiLogProto.rssiPollDeltaCount: Printing counts for [-127, 127]
+  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+mWifiLogProto.alertReasonCounts=()
+mWifiLogProto.numTotalScanResults=417
+mWifiLogProto.numOpenNetworkScanResults=0
+mWifiLogProto.numPersonalNetworkScanResults=417
+mWifiLogProto.numEnterpriseNetworkScanResults=0
+mWifiLogProto.numHiddenNetworkScanResults=54
+mWifiLogProto.numHotspot2R1NetworkScanResults=0
+mWifiLogProto.numHotspot2R2NetworkScanResults=0
+mWifiLogProto.numScans=40
+mWifiLogProto.WifiScoreCount: [0, 60]
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+mWifiLogProto.SoftApManagerReturnCodeCounts:
+  SUCCESS: 0
+  FAILED_GENERAL_ERROR: 0
+  FAILED_NO_CHANNEL: 0
+
+mWifiLogProto.numHalCrashes=0
+mWifiLogProto.numWificondCrashes=0
+mWifiLogProto.numWifiOnFailureDueToHal=0
+mWifiLogProto.numWifiOnFailureDueToWificond=0
+StaEventList:
+mWifiLogProto.numPasspointProviders=0
+mWifiLogProto.numPasspointProviderInstallation=0
+mWifiLogProto.numPasspointProviderInstallSuccess=0
+mWifiLogProto.numPasspointProviderUninstallation=0
+mWifiLogProto.numPasspointProviderUninstallSuccess=0
+mWifiLogProto.numPasspointProvidersSuccessfullyConnected=0
+mTotalSsidsInScanHistogram:{5=5, 6=21, 7=14}
+mTotalBssidsInScanHistogram:{8=1, 9=6, 10=12, 11=17, 12=4}
+mAvailableOpenSsidsInScanHistogram:{0=40}
+mAvailableOpenBssidsInScanHistogram:{0=40}
+mAvailableSavedSsidsInScanHistogram:{0=40}
+mAvailableSavedBssidsInScanHistogram:{0=40}
+mAvailableOpenOrSavedSsidsInScanHistogram:{0=40}
+mAvailableOpenOrSavedBssidsInScanHistogram:{0=40}
+mAvailableSavedPasspointProviderProfilesInScanHistogram:{0=40}
+mAvailableSavedPasspointProviderBssidsInScanHistogram:{0=40}
+mWifiLogProto.partialAllSingleScanListenerResults=0
+mWifiLogProto.fullBandAllSingleScanListenerResults=40
+mWifiAwareMetrics:
+mLastEnableUsageMs:0
+mLastEnableUsageInThisSampleWindowMs:0
+mAvailableTimeMs:0
+mHistogramAwareAvailableDurationMs:
+mLastEnableAwareMs:0
+mLastEnableAwareInThisSampleWindowMs:0
+mEnabledTimeMs:0
+mHistogramAwareEnabledDurationMs:
+mAttachDataByUid:
+mAttachStatusData:
+mHistogramAttachDuration:
+mMaxPublishInApp:0
+mMaxSubscribeInApp:0
+mMaxDiscoveryInApp:0
+mMaxPublishInSystem:0
+mMaxSubscribeInSystem:0
+mMaxDiscoveryInSystem:0
+mPublishStatusData:
+mSubscribeStatusData:
+mHistogramPublishDuration:
+mHistogramSubscribeDuration:
+mAppsWithDiscoverySessionResourceFailure:
+mMaxNdiInApp:0
+mMaxNdpInApp:0
+mMaxSecureNdpInApp:0
+mMaxNdiInSystem:0
+mMaxNdpInSystem:0
+mMaxSecureNdpInSystem:0
+mMaxNdpPerNdi:0
+mInBandNdpStatusData:
+mOutOfBandNdpStatusData:
+mNdpCreationTimeDuration:
+mNdpCreationTimeMin:-1
+mNdpCreationTimeMax:0
+mNdpCreationTimeSum:0
+mNdpCreationTimeSumSq:0
+mNdpCreationTimeNumSamples:0
+mHistogramNdpDuration:
+mPnoScanMetrics.numPnoScanAttempts=0
+mPnoScanMetrics.numPnoScanFailed=0
+mPnoScanMetrics.numPnoScanStartedOverOffload=0
+mPnoScanMetrics.numPnoScanFailedOverOffload=0
+mPnoScanMetrics.numPnoFoundNetworkEvents=0
+mWifiLogProto.connectToNetworkNotificationCount={}
+mWifiLogProto.connectToNetworkNotificationActionCount={}
+mWifiLogProto.openNetworkRecommenderBlacklistSize=0
+mWifiLogProto.isWifiNetworksAvailableNotificationOn=true
+mWifiLogProto.numOpenNetworkRecommendationUpdates=0
+mWifiLogProto.numOpenNetworkConnectMessageFailedToSend=0
+mWifiLogProto.observedHotspotR1ApInScanHistogram={0=40}
+mWifiLogProto.observedHotspotR2ApInScanHistogram={0=40}
+mWifiLogProto.observedHotspotR1EssInScanHistogram={0=40}
+mWifiLogProto.observedHotspotR2EssInScanHistogram={0=40}
+mWifiLogProto.observedHotspotR1ApsPerEssInScanHistogram={}
+mWifiLogProto.observedHotspotR2ApsPerEssInScanHistogram={}
+
+Dump of WifiBackupRestore
+
+WifiScoreReport:
+time,session,rssi,freq,linkspeed,tx_good,tx_retry,tx_bad,rx,s0,s1
+

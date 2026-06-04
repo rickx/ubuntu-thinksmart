@@ -1,0 +1,207 @@
+=== COMMAND ===
+adb_cmd logcat -d -b all -s BluetoothManagerService BluetoothAdapterService bt_btif bt_stack 
+=== OUTPUT ===
+--------- beginning of kernel
+--------- beginning of events
+--------- beginning of system
+--------- beginning of radio
+12-31 16:00:17.805  1219  1219 D BluetoothManagerService: Loading stored name and address
+12-31 16:00:17.805  1219  1219 D BluetoothManagerService: Stored bluetooth Name=Lenovo CD-18781Y,Address=50:5B:C2:74:5A:9C
+12-31 16:00:17.805  1219  1219 D BluetoothManagerService: Bluetooth persisted state: 1
+12-31 16:00:17.805  1219  1219 D BluetoothManagerService: Startup: Bluetooth persisted state is ON.
+12-31 16:00:18.549  1219  1219 D BluetoothManagerService: Bluetooth boot completed
+12-31 16:00:18.549  1219  1219 D BluetoothManagerService: Auto-enabling Bluetooth.
+12-31 16:00:18.549  1219  1239 D BluetoothManagerService: MESSAGE_ENABLE(0): mBluetooth = null
+12-31 16:00:18.656  1219  1239 D BluetoothManagerService: MESSAGE_REGISTER_ADAPTER
+12-31 16:00:18.656  1219  1307 D BluetoothManagerService: Creating new ProfileServiceConnections object for profile: 1
+12-31 16:00:18.749  1219  1239 D BluetoothManagerService: MESSAGE_REGISTER_ADAPTER
+09-17 09:00:00.150  1219  1219 D BluetoothManagerService: Bluetooth Adapter name changed to Lenovo CD-18781Y
+09-17 09:00:00.150  1219  1219 D BluetoothManagerService: Stored Bluetooth name: Lenovo CD-18781Y
+09-17 09:00:00.151  1219  1219 D BluetoothManagerService: BluetoothServiceConnection: com.android.bluetooth.btservice.AdapterService
+09-17 09:00:00.151  1219  1239 D BluetoothManagerService: MESSAGE_BLUETOOTH_SERVICE_CONNECTED: 1
+09-17 09:00:00.154  1219  1239 D BluetoothManagerService: MESSAGE_INFORM_ADAPTER_SERVICE_UP
+09-17 09:00:00.154  1219  1239 D BluetoothManagerService: Broadcasting onBluetoothServiceUp() to 2 receivers.
+09-17 09:00:00.154  1219  1239 D BluetoothManagerService: MESSAGE_BLUETOOTH_STATE_CHANGE: OFF > BLE_TURNING_ON
+09-17 09:00:00.154  1219  1239 D BluetoothManagerService: Sending BLE State Change: OFF > BLE_TURNING_ON
+09-17 09:00:00.643  1219  1239 D BluetoothManagerService: MESSAGE_REGISTER_ADAPTER
+09-17 09:00:00.667  1219  1239 D BluetoothManagerService: MESSAGE_REGISTER_ADAPTER
+--------- beginning of main
+09-17 09:00:00.976  1318  1720 I bt_stack: [INFO:gatt_api.cc(1006)] GATT_Register
+09-17 09:00:00.976  1318  1720 I bt_stack: [INFO:gatt_api.cc(1029)] allocated gatt_if=3
+09-17 09:00:00.982  1318  1720 I bt_stack: [INFO:ble_advertiser_hci_interface.cc(713)] VSC advertising will be in use
+09-17 09:00:00.983  1318  1720 I bt_stack: [INFO:ble_advertiser_hci_interface.cc(264)] QuirkAdvertiserZeroHandle in use
+09-17 09:00:00.987  1219  1219 D BluetoothManagerService: Bluetooth Adapter address changed to 50:5B:C2:74:5A:9C
+09-17 09:00:00.987  1219  1219 D BluetoothManagerService: Stored Bluetoothaddress: 50:5B:C2:74:5A:9C
+09-17 09:00:00.988  1219  1219 D BluetoothManagerService: Bluetooth Adapter name changed to Lenovo CD-18781Y
+09-17 09:00:00.988  1219  1219 D BluetoothManagerService: Stored Bluetooth name: Lenovo CD-18781Y
+09-17 09:00:00.992  1318  1403 D BluetoothAdapterService: updateAdapterState() - Broadcasting state to 1 receivers.
+09-17 09:00:00.992  1219  1239 D BluetoothManagerService: MESSAGE_BLUETOOTH_STATE_CHANGE: BLE_TURNING_ON > BLE_ON
+09-17 09:00:00.992  1219  1239 D BluetoothManagerService: Bluetooth is in LE only mode
+09-17 09:00:00.992  1219  1239 D BluetoothManagerService: Binding Bluetooth GATT service
+09-17 09:00:00.993  1219  1239 D BluetoothManagerService: Sending BLE State Change: BLE_TURNING_ON > BLE_ON
+09-17 09:00:00.993  1219  1219 D BluetoothManagerService: BluetoothServiceConnection: com.android.bluetooth.gatt.GattService
+09-17 09:00:00.994  1219  1239 D BluetoothManagerService: MESSAGE_BLUETOOTH_SERVICE_CONNECTED: 2
+09-17 09:00:00.994  1219  1239 D BluetoothManagerService: BluetoothGatt Service is Up
+09-17 09:00:00.995  1219  1239 D BluetoothManagerService: Persisting Bluetooth Setting: 1
+09-17 09:00:00.995  1318  1403 D BluetoothAdapterService: updateAdapterState() - Broadcasting state to 1 receivers.
+09-17 09:00:00.996  1219  1239 D BluetoothManagerService: MESSAGE_BLUETOOTH_STATE_CHANGE: BLE_ON > TURNING_ON
+09-17 09:00:00.996  1219  1239 D BluetoothManagerService: Sending BLE State Change: BLE_ON > TURNING_ON
+09-17 09:00:00.996  1318  1403 D BluetoothAdapterService: startCoreServices()
+09-17 09:00:00.996  1318  1403 W BluetoothAdapterService: Total profiles =9
+09-17 09:00:00.996  1318  1403 W BluetoothAdapterService: setProfileServiceState() - Starting service com.android.bluetooth.hfp.HeadsetService
+09-17 09:00:00.998  1318  1403 W BluetoothAdapterService: setProfileServiceState() - Starting service com.android.bluetooth.a2dp.A2dpService
+09-17 09:00:01.000  1318  1403 W BluetoothAdapterService: setProfileServiceState() - Starting service com.android.bluetooth.hid.HidService
+09-17 09:00:01.001  1318  1403 W BluetoothAdapterService: setProfileServiceState() - Starting service com.android.bluetooth.hdp.HealthService
+09-17 09:00:01.001  1318  1318 D BluetoothAdapterService: getAdapterService() - returning com.android.bluetooth.btservice.AdapterService@2d66bd5
+09-17 09:00:01.003  1318  1403 W BluetoothAdapterService: setProfileServiceState() - Starting service com.android.bluetooth.pan.PanService
+09-17 09:00:01.004  1318  1403 W BluetoothAdapterService: setProfileServiceState() - Starting service com.android.bluetooth.map.BluetoothMapService
+09-17 09:00:01.006  1318  1403 W BluetoothAdapterService: setProfileServiceState() - Starting service com.android.bluetooth.opp.BluetoothOppService
+09-17 09:00:01.008  1318  1403 W BluetoothAdapterService: setProfileServiceState() - Starting service com.android.bluetooth.pbap.BluetoothPbapService
+09-17 09:00:01.012  1318  1318 I bt_btif : get_profile_interface: id = handsfree
+09-17 09:00:01.013  1318  1720 I bt_stack: [INFO:port_api.cc(123)] RFCOMM_CreateConnection BDA: ff:ff:ff:ff:ff:ff
+09-17 09:00:01.013  1318  1422 D bt_btif : btif_hf_upstreams_evt: event=BTA_AG_ENABLE_EVT
+09-17 09:00:01.013  1318  1720 I bt_stack: [INFO:port_api.cc(123)] RFCOMM_CreateConnection BDA: ff:ff:ff:ff:ff:ff
+09-17 09:00:01.013  1318  1422 D bt_btif : btif_hf_upstreams_evt: event=BTA_AG_REGISTER_EVT
+09-17 09:00:01.014  1318  1318 D BluetoothAdapterService: getAdapterService() - returning com.android.bluetooth.btservice.AdapterService@2d66bd5
+09-17 09:00:01.016  1318  1318 D BluetoothAdapterService: getAdapterService() - returning com.android.bluetooth.btservice.AdapterService@2d66bd5
+09-17 09:00:01.021  1318  1318 I bt_btif : get_profile_interface: id = a2dp
+09-17 09:00:01.022  1318  1318 E bt_btif : split_a2dp_status = false
+09-17 09:00:01.022  1318  1318 E bt_btif : split_a2dp_status = 0
+09-17 09:00:01.022  1318  1318 D bt_btif : btif_av_state_idle_handler event:BTIF_SM_ENTER_EVT flags 0 on index 0
+09-17 09:00:01.022  1318  1318 E bt_btif : btif_sm_get_state : Invalid handle
+09-17 09:00:01.031  1318  1318 D bt_btif : btif_dispatch_sm_event: event: 35, len: 6
+09-17 09:00:01.031  1318  1318 D bt_btif : btif_dispatch_sm_event: event 35 sent
+09-17 09:00:01.031  1318  1422 D bt_btif : ignore updating BTIF_AV_SOURCE_CONFIG_UPDATED_EVT
+09-17 09:00:01.031  1318  1741 E bt_btif : Invalid cmd pending for ack
+09-17 09:00:01.031  1318  1422 E bt_btif : btif_a2dp_source_startup: A2DP Source media task already running
+09-17 09:00:01.031  1318  1422 D bt_btif : btif_av_state_idle_handler event:UNKNOWN_EVENT flags 0 on index 0
+09-17 09:00:01.031  1318  1422 W bt_btif : btif_av_state_idle_handler: unhandled event=UNKNOWN_EVENT
+09-17 09:00:01.032  1318  1422 D bt_btif : btif_av_state_idle_handler event:BTA_AV_ENABLE_EVT flags 0 on index 0
+09-17 09:00:01.032  1318  1720 D bt_btif : AVRC_Open role: 1, control:67 status:0, handle:0
+09-17 09:00:01.032  1318  1720 D bt_btif : rc_acp_handle: 0 idx: 1
+09-17 09:00:01.032  1318  1720 D bt_btif : bta_av_rc_create create 0, role: 1, shdl:0, rc_handle:0, lidx:3, status:0x10
+09-17 09:00:01.032  1318  1422 D bt_btif : btif_av_state_idle_handler event:BTA_AV_REGISTER_EVT flags 0 on index 0
+09-17 09:00:01.035  1318  1318 I bt_btif : get_profile_interface: id = avrcp
+09-17 09:00:01.047  1318  1318 D BluetoothAdapterService: getAdapterService() - returning com.android.bluetooth.btservice.AdapterService@2d66bd5
+09-17 09:00:01.056  1318  1318 D BluetoothAdapterService: getAdapterService() - returning com.android.bluetooth.btservice.AdapterService@2d66bd5
+09-17 09:00:01.059  1318  1318 D BluetoothAdapterService: getAdapterService() - returning com.android.bluetooth.btservice.AdapterService@2d66bd5
+09-17 09:00:01.060  1318  1318 I bt_btif : get_profile_interface: id = hidhost
+09-17 09:00:01.060  1318  1318 D BluetoothAdapterService: getAdapterService() - returning com.android.bluetooth.btservice.AdapterService@2d66bd5
+09-17 09:00:01.061  1318  1720 I bt_stack: [INFO:gatt_api.cc(1006)] GATT_Register
+09-17 09:00:01.061  1318  1720 I bt_stack: [INFO:gatt_api.cc(1029)] allocated gatt_if=4
+09-17 09:00:01.062  1318  1318 D BluetoothAdapterService: getAdapterService() - returning com.android.bluetooth.btservice.AdapterService@2d66bd5
+09-17 09:00:01.064  1318  1318 I bt_btif : get_profile_interface: id = health
+09-17 09:00:01.065  1318  1318 D BluetoothAdapterService: getAdapterService() - returning com.android.bluetooth.btservice.AdapterService@2d66bd5
+09-17 09:00:01.067  1318  1318 D BluetoothAdapterService: getAdapterService() - returning com.android.bluetooth.btservice.AdapterService@2d66bd5
+09-17 09:00:01.068  1318  1318 I bt_btif : get_profile_interface: id = pan
+09-17 09:00:01.069  1318  1318 D BluetoothAdapterService: getAdapterService() - returning com.android.bluetooth.btservice.AdapterService@2d66bd5
+09-17 09:00:01.071  1318  1318 D BluetoothAdapterService: getAdapterService() - returning com.android.bluetooth.btservice.AdapterService@2d66bd5
+09-17 09:00:01.075  1318  1318 D BluetoothAdapterService: getAdapterService() - returning com.android.bluetooth.btservice.AdapterService@2d66bd5
+09-17 09:00:01.075  1318  1747 D BluetoothAdapterService: getAdapterService() - returning com.android.bluetooth.btservice.AdapterService@2d66bd5
+09-17 09:00:01.083  1318  1318 D BluetoothAdapterService: getAdapterService() - returning com.android.bluetooth.btservice.AdapterService@2d66bd5
+09-17 09:00:01.084  1318  1318 D BluetoothAdapterService: getAdapterService() - returning com.android.bluetooth.btservice.AdapterService@2d66bd5
+09-17 09:00:01.097  1318  1318 D BluetoothAdapterService: getAdapterService() - returning com.android.bluetooth.btservice.AdapterService@2d66bd5
+09-17 09:00:01.103  1318  1318 D BluetoothAdapterService: getAdapterService() - returning com.android.bluetooth.btservice.AdapterService@2d66bd5
+09-17 09:00:01.108  1318  1318 D BluetoothAdapterService: handleMessage() - Message: 1
+09-17 09:00:01.108  1318  1318 D BluetoothAdapterService: handleMessage() - MESSAGE_PROFILE_SERVICE_STATE_CHANGED
+09-17 09:00:01.108  1318  1318 W BluetoothAdapterService: onProfileServiceStateChange() serviceName=com.android.bluetooth.hfp.HeadsetService, state=12, doUpdate=true
+09-17 09:00:01.108  1318  1318 D BluetoothAdapterService: processProfileServiceStateChanged() - serviceName=com.android.bluetooth.hfp.HeadsetService isTurningOn=true isTurningOff=false isBleTurningOn=false isBleTurningOff=false
+09-17 09:00:01.109  1318  1318 D BluetoothAdapterService: Service: com.android.bluetooth.a2dp.A2dpService
+09-17 09:00:01.109  1318  1318 W BluetoothAdapterService: onProfileServiceStateChange() - Profile still not running:com.android.bluetooth.a2dp.A2dpService
+09-17 09:00:01.109  1318  1318 D BluetoothAdapterService: handleMessage() - Message: 1
+09-17 09:00:01.109  1318  1318 D BluetoothAdapterService: handleMessage() - MESSAGE_PROFILE_SERVICE_STATE_CHANGED
+09-17 09:00:01.109  1318  1318 W BluetoothAdapterService: onProfileServiceStateChange() serviceName=com.android.bluetooth.a2dp.A2dpService, state=12, doUpdate=true
+09-17 09:00:01.109  1318  1318 D BluetoothAdapterService: processProfileServiceStateChanged() - serviceName=com.android.bluetooth.a2dp.A2dpService isTurningOn=true isTurningOff=false isBleTurningOn=false isBleTurningOff=false
+09-17 09:00:01.109  1318  1318 D BluetoothAdapterService: Service: com.android.bluetooth.a2dp.A2dpService
+09-17 09:00:01.109  1318  1318 D BluetoothAdapterService: Service: com.android.bluetooth.gatt.GattService
+09-17 09:00:01.109  1318  1318 W BluetoothAdapterService: Skip GATT service - already started before
+09-17 09:00:01.109  1318  1318 D BluetoothAdapterService: Service: com.android.bluetooth.hfp.HeadsetService
+09-17 09:00:01.109  1318  1318 D BluetoothAdapterService: Service: com.android.bluetooth.map.BluetoothMapService
+09-17 09:00:01.109  1318  1318 W BluetoothAdapterService: onProfileServiceStateChange() - Profile still not running:com.android.bluetooth.map.BluetoothMapService
+09-17 09:00:01.109  1318  1318 D BluetoothAdapterService: handleMessage() - Message: 1
+09-17 09:00:01.109  1318  1318 D BluetoothAdapterService: handleMessage() - MESSAGE_PROFILE_SERVICE_STATE_CHANGED
+09-17 09:00:01.109  1318  1318 W BluetoothAdapterService: onProfileServiceStateChange() serviceName=com.android.bluetooth.hid.HidService, state=12, doUpdate=true
+09-17 09:00:01.109  1318  1318 D BluetoothAdapterService: processProfileServiceStateChanged() - serviceName=com.android.bluetooth.hid.HidService isTurningOn=true isTurningOff=false isBleTurningOn=false isBleTurningOff=false
+09-17 09:00:01.110  1318  1318 D BluetoothAdapterService: Service: com.android.bluetooth.a2dp.A2dpService
+09-17 09:00:01.110  1318  1318 D BluetoothAdapterService: Service: com.android.bluetooth.gatt.GattService
+09-17 09:00:01.110  1318  1318 W BluetoothAdapterService: Skip GATT service - already started before
+09-17 09:00:01.110  1318  1318 D BluetoothAdapterService: Service: com.android.bluetooth.hfp.HeadsetService
+09-17 09:00:01.110  1318  1318 D BluetoothAdapterService: Service: com.android.bluetooth.map.BluetoothMapService
+09-17 09:00:01.110  1318  1318 W BluetoothAdapterService: onProfileServiceStateChange() - Profile still not running:com.android.bluetooth.map.BluetoothMapService
+09-17 09:00:01.110  1318  1318 D BluetoothAdapterService: handleMessage() - Message: 1
+09-17 09:00:01.110  1318  1318 D BluetoothAdapterService: handleMessage() - MESSAGE_PROFILE_SERVICE_STATE_CHANGED
+09-17 09:00:01.110  1318  1318 W BluetoothAdapterService: onProfileServiceStateChange() serviceName=com.android.bluetooth.hdp.HealthService, state=12, doUpdate=true
+09-17 09:00:01.110  1318  1318 D BluetoothAdapterService: processProfileServiceStateChanged() - serviceName=com.android.bluetooth.hdp.HealthService isTurningOn=true isTurningOff=false isBleTurningOn=false isBleTurningOff=false
+09-17 09:00:01.110  1318  1318 D BluetoothAdapterService: Service: com.android.bluetooth.a2dp.A2dpService
+09-17 09:00:01.110  1318  1318 D BluetoothAdapterService: Service: com.android.bluetooth.gatt.GattService
+09-17 09:00:01.110  1318  1318 W BluetoothAdapterService: Skip GATT service - already started before
+09-17 09:00:01.110  1318  1318 D BluetoothAdapterService: Service: com.android.bluetooth.hfp.HeadsetService
+09-17 09:00:01.110  1318  1318 D BluetoothAdapterService: Service: com.android.bluetooth.map.BluetoothMapService
+09-17 09:00:01.110  1318  1318 W BluetoothAdapterService: onProfileServiceStateChange() - Profile still not running:com.android.bluetooth.map.BluetoothMapService
+09-17 09:00:01.110  1318  1318 D BluetoothAdapterService: handleMessage() - Message: 1
+09-17 09:00:01.110  1318  1318 D BluetoothAdapterService: handleMessage() - MESSAGE_PROFILE_SERVICE_STATE_CHANGED
+09-17 09:00:01.110  1318  1318 W BluetoothAdapterService: onProfileServiceStateChange() serviceName=com.android.bluetooth.pan.PanService, state=12, doUpdate=true
+09-17 09:00:01.110  1318  1318 D BluetoothAdapterService: processProfileServiceStateChanged() - serviceName=com.android.bluetooth.pan.PanService isTurningOn=true isTurningOff=false isBleTurningOn=false isBleTurningOff=false
+09-17 09:00:01.110  1318  1318 D BluetoothAdapterService: Service: com.android.bluetooth.a2dp.A2dpService
+09-17 09:00:01.111  1318  1318 D BluetoothAdapterService: Service: com.android.bluetooth.gatt.GattService
+09-17 09:00:01.111  1318  1318 W BluetoothAdapterService: Skip GATT service - already started before
+09-17 09:00:01.111  1318  1318 D BluetoothAdapterService: Service: com.android.bluetooth.hfp.HeadsetService
+09-17 09:00:01.111  1318  1318 D BluetoothAdapterService: Service: com.android.bluetooth.map.BluetoothMapService
+09-17 09:00:01.111  1318  1318 W BluetoothAdapterService: onProfileServiceStateChange() - Profile still not running:com.android.bluetooth.map.BluetoothMapService
+09-17 09:00:01.111  1318  1318 D BluetoothAdapterService: handleMessage() - Message: 1
+09-17 09:00:01.111  1318  1318 D BluetoothAdapterService: handleMessage() - MESSAGE_PROFILE_SERVICE_STATE_CHANGED
+09-17 09:00:01.111  1318  1318 W BluetoothAdapterService: onProfileServiceStateChange() serviceName=com.android.bluetooth.map.BluetoothMapService, state=12, doUpdate=true
+09-17 09:00:01.111  1318  1318 D BluetoothAdapterService: processProfileServiceStateChanged() - serviceName=com.android.bluetooth.map.BluetoothMapService isTurningOn=true isTurningOff=false isBleTurningOn=false isBleTurningOff=false
+09-17 09:00:01.111  1318  1318 D BluetoothAdapterService: Service: com.android.bluetooth.a2dp.A2dpService
+09-17 09:00:01.111  1318  1318 D BluetoothAdapterService: Service: com.android.bluetooth.gatt.GattService
+09-17 09:00:01.111  1318  1318 W BluetoothAdapterService: Skip GATT service - already started before
+09-17 09:00:01.111  1318  1318 D BluetoothAdapterService: Service: com.android.bluetooth.hfp.HeadsetService
+09-17 09:00:01.111  1318  1318 D BluetoothAdapterService: Service: com.android.bluetooth.map.BluetoothMapService
+09-17 09:00:01.111  1318  1318 D BluetoothAdapterService: Service: com.android.bluetooth.pan.PanService
+09-17 09:00:01.111  1318  1318 D BluetoothAdapterService: Service: com.android.bluetooth.hid.HidService
+09-17 09:00:01.111  1318  1318 D BluetoothAdapterService: Service: com.android.bluetooth.hdp.HealthService
+09-17 09:00:01.111  1318  1318 D BluetoothAdapterService: Service: com.android.bluetooth.pbap.BluetoothPbapService
+09-17 09:00:01.111  1318  1318 W BluetoothAdapterService: onProfileServiceStateChange() - Profile still not running:com.android.bluetooth.pbap.BluetoothPbapService
+09-17 09:00:01.112  1318  1318 D BluetoothAdapterService: handleMessage() - Message: 1
+09-17 09:00:01.112  1318  1318 D BluetoothAdapterService: handleMessage() - MESSAGE_PROFILE_SERVICE_STATE_CHANGED
+09-17 09:00:01.113  1318  1318 W BluetoothAdapterService: onProfileServiceStateChange() serviceName=com.android.bluetooth.opp.BluetoothOppService, state=12, doUpdate=true
+09-17 09:00:01.113  1318  1318 D BluetoothAdapterService: processProfileServiceStateChanged() - serviceName=com.android.bluetooth.opp.BluetoothOppService isTurningOn=true isTurningOff=false isBleTurningOn=false isBleTurningOff=false
+09-17 09:00:01.113  1318  1318 D BluetoothAdapterService: Service: com.android.bluetooth.a2dp.A2dpService
+09-17 09:00:01.113  1318  1318 D BluetoothAdapterService: Service: com.android.bluetooth.gatt.GattService
+09-17 09:00:01.113  1318  1318 W BluetoothAdapterService: Skip GATT service - already started before
+09-17 09:00:01.113  1318  1318 D BluetoothAdapterService: Service: com.android.bluetooth.hfp.HeadsetService
+09-17 09:00:01.113  1318  1318 D BluetoothAdapterService: Service: com.android.bluetooth.map.BluetoothMapService
+09-17 09:00:01.113  1318  1318 D BluetoothAdapterService: Service: com.android.bluetooth.pan.PanService
+09-17 09:00:01.113  1318  1318 D BluetoothAdapterService: Service: com.android.bluetooth.hid.HidService
+09-17 09:00:01.113  1318  1318 D BluetoothAdapterService: Service: com.android.bluetooth.hdp.HealthService
+09-17 09:00:01.113  1318  1318 D BluetoothAdapterService: Service: com.android.bluetooth.pbap.BluetoothPbapService
+09-17 09:00:01.113  1318  1318 W BluetoothAdapterService: onProfileServiceStateChange() - Profile still not running:com.android.bluetooth.pbap.BluetoothPbapService
+09-17 09:00:01.113  1318  1318 D BluetoothAdapterService: handleMessage() - Message: 1
+09-17 09:00:01.113  1318  1318 D BluetoothAdapterService: handleMessage() - MESSAGE_PROFILE_SERVICE_STATE_CHANGED
+09-17 09:00:01.113  1318  1318 W BluetoothAdapterService: onProfileServiceStateChange() serviceName=com.android.bluetooth.pbap.BluetoothPbapService, state=12, doUpdate=true
+09-17 09:00:01.113  1318  1318 D BluetoothAdapterService: processProfileServiceStateChanged() - serviceName=com.android.bluetooth.pbap.BluetoothPbapService isTurningOn=true isTurningOff=false isBleTurningOn=false isBleTurningOff=false
+09-17 09:00:01.113  1318  1318 D BluetoothAdapterService: Service: com.android.bluetooth.a2dp.A2dpService
+09-17 09:00:01.114  1318  1318 D BluetoothAdapterService: Service: com.android.bluetooth.gatt.GattService
+09-17 09:00:01.114  1318  1318 W BluetoothAdapterService: Skip GATT service - already started before
+09-17 09:00:01.114  1318  1318 D BluetoothAdapterService: Service: com.android.bluetooth.hfp.HeadsetService
+09-17 09:00:01.114  1318  1318 D BluetoothAdapterService: Service: com.android.bluetooth.map.BluetoothMapService
+09-17 09:00:01.114  1318  1318 D BluetoothAdapterService: Service: com.android.bluetooth.pan.PanService
+09-17 09:00:01.114  1318  1318 D BluetoothAdapterService: Service: com.android.bluetooth.hid.HidService
+09-17 09:00:01.114  1318  1318 D BluetoothAdapterService: Service: com.android.bluetooth.hdp.HealthService
+09-17 09:00:01.114  1318  1318 D BluetoothAdapterService: Service: com.android.bluetooth.pbap.BluetoothPbapService
+09-17 09:00:01.114  1318  1318 D BluetoothAdapterService: Service: com.android.bluetooth.opp.BluetoothOppService
+09-17 09:00:01.114  1318  1318 W BluetoothAdapterService: onProfileServiceStateChange() - All profile services started.
+09-17 09:00:01.115  1318  1403 D BluetoothAdapterService: updateAdapterState() - Broadcasting state to 1 receivers.
+09-17 09:00:01.116  1219  1239 D BluetoothManagerService: MESSAGE_BLUETOOTH_STATE_CHANGE: TURNING_ON > ON
+09-17 09:00:01.116  1318  1403 D BluetoothAdapterService: update uuids for bonded devices
+09-17 09:00:01.116  1219  1239 D BluetoothManagerService: Broadcasting onBluetoothStateChange(true) to 9 receivers.
+09-17 09:00:01.117  1219  1239 D BluetoothManagerService: Sending BLE State Change: TURNING_ON > ON
+09-17 09:00:01.120  1318  1318 D BluetoothAdapterService: isQuetModeEnabled() - Enabled = false
+09-17 09:00:01.129  1318  1720 I bt_stack: [INFO:port_api.cc(123)] RFCOMM_CreateConnection BDA: ff:ff:ff:ff:ff:ff
+09-17 09:00:01.129  1318  1720 I bt_stack: [INFO:port_api.cc(123)] RFCOMM_CreateConnection BDA: ff:ff:ff:ff:ff:ff
+09-17 09:00:01.134  1318  1749 D BluetoothAdapterService: getAdapterService() - returning com.android.bluetooth.btservice.AdapterService@2d66bd5
+09-17 09:00:01.621  1318  1318 D BluetoothAdapterService: isQuetModeEnabled() - Enabled = false
+09-17 09:00:01.891  1219  1233 D BluetoothManagerService: User 0 unlocked
+09-17 09:00:01.892  1219  1239 D BluetoothManagerService: MESSAGE_USER_UNLOCKED
+05-28 15:34:04.320  1318  1720 I bt_stack: [INFO:port_api.cc(123)] RFCOMM_CreateConnection BDA: ff:ff:ff:ff:ff:ff
+05-28 15:34:04.340  1318  1720 I bt_stack: [INFO:port_api.cc(123)] RFCOMM_CreateConnection BDA: ff:ff:ff:ff:ff:ff

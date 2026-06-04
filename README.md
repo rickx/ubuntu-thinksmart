@@ -32,7 +32,7 @@
 | Speaker audio (TAS5782M) | ✅ Working | Requires custom driver + WirePlumber policy |
 | Plasma Mobile (KDE) | ✅ Working | SDDM, touchscreen |
 | Microphone (DMIC) | ✅ Working | UCM2 HiFi profile |
-| Display backlight | ✅ Working | Controlled via display-guard service |
+| Display backlight | ✅ Working | WLED; Plasma Mobile brightness slider working (polkit fix required — see below) |
 | Proximity sensor (VCNL4200) | ✅ Working | Userspace daemon, no DTB change; triggers screen wake |
 | Camera | 🔲 Research in progress | Live hardware points to Samsung S5KC505A; see `research/camera/` |
 | Bluetooth | ✅ Working | QCA UART HCI, firmware loads at boot; A2DP tested with WH202A headset |
@@ -117,8 +117,9 @@ These systemd services are required for correct operation and are pre-installed 
 | `qup-i2c-pinctrl-fix.service` | Restores GPIO2/3 mux to I2C mode after PM autosuspend resets them (required for TAS5782M I2C) |
 | `alsa-restore.service` | Restores ALSA mixer state (volume) at boot |
 | `display-guard.service` | Ensures display backlight is set at boot |
-| `idle-blanker.service` *(user)* | Blanks screen after 5 min of no input — replaces broken KDE powerdevil idle detection on Wayland. KDE DPMS is disabled (`idleTime=0`) so this is the sole blanking path. |
-| `vcnl4200-proximity-daemon.service` *(user)* | Polls VCNL4200 when screen is off (via either `brightness=0` or `bl_power=4`); wakes display by clearing DPMS and restoring brightness. Uses `smbus2` directly (no sudo for I2C). Logs `VCNL4200 init OK` at startup. |
+| `idle-blanker.service` *(user)* | Blanks screen after 5 min of no input; ALS auto-brightness while active. See [sources/idle-blanker.py](sources/idle-blanker.py). |
+| `vcnl4200-proximity-daemon.service` *(user)* | Polls VCNL4200 proximity sensor when screen is off; wakes on approach. See [sources/vcnl4200-proximity-daemon.py](sources/vcnl4200-proximity-daemon.py). |
+| `rotation-daemon.service` *(user)* | BMA253 accelerometer → kscreen-doctor screen auto-rotation. See [sources/rotation-daemon.py](sources/rotation-daemon.py). |
 
 ---
 
@@ -144,6 +145,35 @@ speaker-test -D hw:0,0 -c 2 -t sine -f 1000 -l 1
 ```
 
 **Full audio documentation:** [AUDIO.md](AUDIO.md)
+
+---
+
+## Display Brightness Slider
+
+The Plasma Mobile brightness slider works via KDE powerdevil's `org.kde.powerdevil.backlighthelper` KAuth helper.
+
+**Required fix:** The stock Ubuntu polkit policy for `backlighthelper` is missing `allow_any=yes` on the `setbrightness` action and has `allow_inactive=no`. This causes polkit to deny the request when the Wayland session is not flagged "active" by logind, so the helper never dispatches the `setbrightness` Q_SLOT.
+
+**Fix — patch `/usr/share/polkit-1/actions/org.kde.powerdevil.backlighthelper.policy`:**  
+In the `org.kde.powerdevil.backlighthelper.setbrightness` action's `<defaults>` block, change:
+```xml
+<defaults>
+   <allow_inactive>no</allow_inactive>
+   <allow_active>yes</allow_active>
+</defaults>
+```
+to:
+```xml
+<defaults>
+   <allow_any>yes</allow_any>
+   <allow_inactive>yes</allow_inactive>
+   <allow_active>yes</allow_active>
+</defaults>
+```
+
+The fix is applied in the deployed image. The helper binary at `/usr/lib/kauth/libexec/backlighthelper` is rebuilt from powerdevil 5.27.11 upstream source (the Ubuntu-shipped binary uses `BACKLIGHT_RAW` type detection without the `rawAll` fallback, causing init to fail).
+
+WLED brightness range: 0–4095. Values below ~1200 cause the display to turn off (hardware minimum). The slider covers the visible range.
 
 ---
 

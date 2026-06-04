@@ -1,0 +1,28 @@
+=== COMMAND ===
+adb_cmd shell su -c ls -l /proc/device-tree/soc/i2c@78b7000 2>/dev/null 
+=== OUTPUT ===
+total 0
+-r--r--r-- 1 root root  4 2026-05-28 17:21 #address-cells
+-r--r--r-- 1 root root  4 2026-05-28 17:21 #size-cells
+-r--r--r-- 1 root root 19 2026-05-28 17:21 clock-names
+-r--r--r-- 1 root root 16 2026-05-28 17:21 clocks
+-r--r--r-- 1 root root 16 2026-05-28 17:21 compatible
+-r--r--r-- 1 root root  6 2026-05-28 17:21 dma-names
+-r--r--r-- 1 root root 40 2026-05-28 17:21 dmas
+drwxr-xr-x 2 root root  0 2026-05-28 17:21 focaltech@38
+drwxr-xr-x 2 root root  0 2026-05-28 17:21 gt9xx-i2c@14
+drwxr-xr-x 2 root root  0 2026-05-28 17:21 himax_ts@48
+-r--r--r-- 1 root root  8 2026-05-28 17:21 interrupt-names
+-r--r--r-- 1 root root 12 2026-05-28 17:21 interrupts
+-r--r--r-- 1 root root  4 2026-05-28 17:21 name
+-r--r--r-- 1 root root  4 2026-05-28 17:21 pinctrl-0
+-r--r--r-- 1 root root  4 2026-05-28 17:21 pinctrl-1
+-r--r--r-- 1 root root 21 2026-05-28 17:21 pinctrl-names
+-r--r--r-- 1 root root  4 2026-05-28 17:21 qcom,clk-freq-in
+-r--r--r-- 1 root root  4 2026-05-28 17:21 qcom,clk-freq-out
+-r--r--r-- 1 root root  4 2026-05-28 17:21 qcom,master-id
+-r--r--r-- 1 root root  4 2026-05-28 17:21 qcom,noise-rjct-scl
+-r--r--r-- 1 root root  4 2026-05-28 17:21 qcom,noise-rjct-sda
+-r--r--r-- 1 root root  8 2026-05-28 17:21 reg
+-r--r--r-- 1 root root 14 2026-05-28 17:21 reg-names
+-r--r--r-- 1 root root  5 2026-05-28 17:21 status

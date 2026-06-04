@@ -1,0 +1,7 @@
+=== COMMAND ===
+adb_cmd shell dumpsys media.player 
+=== OUTPUT ===
+ 0 registered handlers:
+ No media recorder client
+
+ Files opened and/or mapped:

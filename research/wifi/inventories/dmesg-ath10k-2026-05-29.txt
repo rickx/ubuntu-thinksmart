@@ -1,0 +1,161 @@
+=== COMMAND ===
+adb_cmd shell su -c dmesg | grep -iE 'ath10k|qca|wlan|firmware|wifi' 
+=== OUTPUT ===
+[    2.940801] init: Using Android DT directory /proc/device-tree/firmware/android/
+[    3.343495] init: Using Android DT directory /proc/device-tree/firmware/android/
+[    3.402869] init: Parsing file /system/etc/init/wifi-events.rc...
+[    3.403319] init: Parsing file /system/etc/init/wificond.rc...
+[    3.409636] init: Parsing file /vendor/etc/init/android.hardware.wifi@1.0-service.rc...
+[    3.409961] init: Parsing file /vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc...
+[    4.812251] init: [libfs_mgr]__mount(source=/dev/block/bootdevice/by-name/modem,target=/firmware,type=vfat)=0: Success
+[    4.934147] init: processing action (fs) from (/system/etc/init/wifi-events.rc:17)
+[    5.408025] init: processing action (firmware_mounts_complete) from (/init.rc:269)
+[    5.549015] ueventd: firmware: loading 'adsp.mdt' for '/devices/soc/c200000.qcom,lpass/firmware/adsp.mdt'
+[    5.551069] ueventd: loading /devices/soc/c200000.qcom,lpass/firmware/adsp.mdt took 2ms
+[    5.560331] ueventd: firmware: loading 'adsp.b02' for '/devices/soc/c200000.qcom,lpass/firmware/adsp.b02'
+[    5.561245] ueventd: loading /devices/soc/c200000.qcom,lpass/firmware/adsp.b02 took 1ms
+[    5.561859] ueventd: firmware: loading 'adsp.b03' for '/devices/soc/c200000.qcom,lpass/firmware/adsp.b03'
+[    5.571835] ueventd: loading /devices/soc/c200000.qcom,lpass/firmware/adsp.b03 took 10ms
+[    5.572437] ueventd: firmware: loading 'adsp.b04' for '/devices/soc/c200000.qcom,lpass/firmware/adsp.b04'
+[    5.701111] ueventd: loading /devices/soc/c200000.qcom,lpass/firmware/adsp.b04 took 128ms
+[    5.701735] ueventd: firmware: loading 'adsp.b05' for '/devices/soc/c200000.qcom,lpass/firmware/adsp.b05'
+[    5.706672] ueventd: loading /devices/soc/c200000.qcom,lpass/firmware/adsp.b05 took 5ms
+[    5.709850] ueventd: firmware: loading 'adsp.b06' for '/devices/soc/c200000.qcom,lpass/firmware/adsp.b06'
+[    5.711105] ueventd: loading /devices/soc/c200000.qcom,lpass/firmware/adsp.b06 took 1ms
+[    5.711718] ueventd: firmware: loading 'adsp.b07' for '/devices/soc/c200000.qcom,lpass/firmware/adsp.b07'
+[    5.715684] ueventd: loading /devices/soc/c200000.qcom,lpass/firmware/adsp.b07 took 4ms
+[    5.716609] ueventd: firmware: loading 'adsp.b08' for '/devices/soc/c200000.qcom,lpass/firmware/adsp.b08'
+[    5.717956] ueventd: loading /devices/soc/c200000.qcom,lpass/firmware/adsp.b08 took 1ms
+[    5.718596] ueventd: firmware: loading 'adsp.b09' for '/devices/soc/c200000.qcom,lpass/firmware/adsp.b09'
+[    5.719915] ueventd: loading /devices/soc/c200000.qcom,lpass/firmware/adsp.b09 took 1ms
+[    5.720688] ueventd: firmware: loading 'adsp.b10' for '/devices/soc/c200000.qcom,lpass/firmware/adsp.b10'
+[    5.726344] ueventd: loading /devices/soc/c200000.qcom,lpass/firmware/adsp.b10 took 5ms
+[    5.726993] ueventd: firmware: loading 'adsp.b11' for '/devices/soc/c200000.qcom,lpass/firmware/adsp.b11'
+[    5.728862] ueventd: loading /devices/soc/c200000.qcom,lpass/firmware/adsp.b11 took 1ms
+[    5.729388] ueventd: firmware: loading 'adsp.b12' for '/devices/soc/c200000.qcom,lpass/firmware/adsp.b12'
+[    5.730807] ueventd: loading /devices/soc/c200000.qcom,lpass/firmware/adsp.b12 took 1ms
+[    5.731496] ueventd: firmware: loading 'adsp.b13' for '/devices/soc/c200000.qcom,lpass/firmware/adsp.b13'
+[    5.733302] ueventd: loading /devices/soc/c200000.qcom,lpass/firmware/adsp.b13 took 1ms
+[    5.733984] ueventd: firmware: loading 'adsp.b14' for '/devices/soc/c200000.qcom,lpass/firmware/adsp.b14'
+[    5.737419] ueventd: loading /devices/soc/c200000.qcom,lpass/firmware/adsp.b14 took 3ms
+[    6.387643] init: starting service 'wifi_hal_legacy'...
+[    6.753941] ueventd: firmware: loading 'a530_pm4.fw' for '/devices/soc/1c00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/a530_pm4.fw'
+[    6.761029] ueventd: firmware: loading 'a530_pfp.fw' for '/devices/soc/1c00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/a530_pfp.fw'
+[    6.770278] ueventd: firmware: loading 'a506_zap.mdt' for '/devices/soc/soc:qcom,kgsl-hyp/firmware/a506_zap.mdt'
+[    6.773047] ueventd: loading /devices/soc/soc:qcom,kgsl-hyp/firmware/a506_zap.mdt took 3ms
+[    6.792439] ueventd: firmware: loading 'a506_zap.b02' for '/devices/soc/soc:qcom,kgsl-hyp/firmware/a506_zap.b02'
+[    6.793757] ueventd: loading /devices/soc/soc:qcom,kgsl-hyp/firmware/a506_zap.b02 took 1ms
+[    7.307083] ueventd: firmware: loading 'HX_CRC_60.bin' for '/devices/soc/78b7000.i2c/i2c-3/3-0048/firmware/HX_CRC_60.bin'
+[    7.307495] ueventd: firmware: could not find firmware for HX_CRC_60.bin
+[    7.307584] ueventd: loading /devices/soc/78b7000.i2c/i2c-3/3-0048/firmware/HX_CRC_60.bin took 0ms
+[    7.671185] ueventd: firmware: loading 'modem.mdt' for '/devices/soc/4080000.qcom,mss/firmware/modem.mdt'
+[    7.672565] ueventd: loading /devices/soc/4080000.qcom,mss/firmware/modem.mdt took 1ms
+[    7.675806] ueventd: firmware: loading 'mba.mbn' for '/devices/soc/4080000.qcom,mss/firmware/mba.mbn'
+[    7.676205] ueventd: firmware: could not find firmware for mba.mbn
+[    7.676304] ueventd: loading /devices/soc/4080000.qcom,mss/firmware/mba.mbn took 0ms
+[    7.676402] pil-q6v5-mss 4080000.qcom,mss: modem: Invalid firmware metadata
+[    9.531979] init: starting service 'wificond'...
+[    9.545484] init: starting service 'qcamerasvr'...
+[    9.813895] type=1400 audit(13.206:29): avc: denied { read } for pid=827 comm="mm-qcamera-daem" name="u:object_r:camera_prop:s0" dev="tmpfs" ino=1709 scontext=u:r:mm-qcamerad:s0 tcontext=u:object_r:camera_prop:s0 tclass=file permissive=0
+[   10.461951] ueventd: firmware: loading 'cpp_firmware_v1_5_0.fw' for '/devices/soc/1b04000.qcom,cpp/firmware/cpp_firmware_v1_5_0.fw'
+[   10.465337] ueventd: loading /devices/soc/1b04000.qcom,cpp/firmware/cpp_firmware_v1_5_0.fw took 3ms
+[   10.664955] type=1400 audit(13.206:46): avc: denied { read } for pid=827 comm="mm-qcamera-daem" name="u:object_r:camera_prop:s0" dev="tmpfs" ino=1709 scontext=u:r:mm-qcamerad:s0 tcontext=u:object_r:camera_prop:s0 tclass=file permissive=0 duplicate messages suppressed
+[   10.664979] type=1400 audit(14.056:332): avc: denied { read } for pid=827 comm="CAM_sensor" name="u:object_r:camera_prop:s0" dev="tmpfs" ino=1709 scontext=u:r:mm-qcamerad:s0 tcontext=u:object_r:camera_prop:s0 tclass=file permissive=0
+[   10.665557] type=1400 audit(14.056:333): avc: denied { read } for pid=827 comm="CAM_sensor" name="u:object_r:camera_prop:s0" dev="tmpfs" ino=1709 scontext=u:r:mm-qcamerad:s0 tcontext=u:object_r:camera_prop:s0 tclass=file permissive=0
+[   10.665576] type=1400 audit(14.056:334): avc: denied { read } for pid=827 comm="CAM_MctServ" name="u:object_r:camera_prop:s0" dev="tmpfs" ino=1709 scontext=u:r:mm-qcamerad:s0 tcontext=u:object_r:camera_prop:s0 tclass=file permissive=0
+[   10.680146] type=1400 audit(14.056:337): avc: denied { read } for pid=827 comm="CAM_MctServ" name="u:object_r:camera_prop:s0" dev="tmpfs" ino=1709 scontext=u:r:mm-qcamerad:s0 tcontext=u:object_r:camera_prop:s0 tclass=file permissive=0 duplicate messages suppressed
+[   10.680166] type=1400 audit(14.066:338): avc: denied { read } for pid=827 comm="mm-qcamera-daem" name="u:object_r:camera_prop:s0" dev="tmpfs" ino=1709 scontext=u:r:mm-qcamerad:s0 tcontext=u:object_r:camera_prop:s0 tclass=file permissive=0
+[   10.698125] type=1400 audit(14.086:340): avc: denied { read } for pid=827 comm="mm-qcamera-daem" name="u:object_r:camera_prop:s0" dev="tmpfs" ino=1709 scontext=u:r:mm-qcamerad:s0 tcontext=u:object_r:camera_prop:s0 tclass=file permissive=0 duplicate messages suppressed
+[   10.698150] type=1400 audit(14.086:341): avc: denied { write } for pid=827 comm="mm-qcamera-daem" name="property_service" dev="tmpfs" ino=5196 scontext=u:r:mm-qcamerad:s0 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=0
+[   10.698268] type=1400 audit(14.086:341): avc: denied { write } for pid=827 comm="mm-qcamera-daem" name="property_service" dev="tmpfs" ino=5196 scontext=u:r:mm-qcamerad:s0 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=0
+[   10.698283] type=1400 audit(14.086:342): avc: denied { read } for pid=827 comm="mm-qcamera-daem" name="u:object_r:camera_prop:s0" dev="tmpfs" ino=1709 scontext=u:r:mm-qcamerad:s0 tcontext=u:object_r:camera_prop:s0 tclass=file permissive=0
+[   14.197506] type=1400 audit(14.086:351): avc: denied { read } for pid=827 comm="mm-qcamera-daem" name="u:object_r:camera_prop:s0" dev="tmpfs" ino=1709 scontext=u:r:mm-qcamerad:s0 tcontext=u:object_r:camera_prop:s0 tclass=file permissive=0 duplicate messages suppressed
+[   15.135686] wlan: loading driver v4.0.11.213W
+[   15.261700] ueventd: firmware: loading 'wlan/qca_cld/WCNSS_qcom_cfg.ini' for '/devices/soc/7864900.sdhci/mmc_host/mmc1/mmc1:0001/mmc1:0001:1/firmware/wlan!qca_cld!WCNSS_qcom_cfg.ini'
+[   15.267655] ueventd: loading /devices/soc/7864900.sdhci/mmc_host/mmc1/mmc1:0001/mmc1:0001:1/firmware/wlan!qca_cld!WCNSS_qcom_cfg.ini took 6ms
+[   15.269020] R0: wlan: [573:E :HDD] hdd_apply_cfg_ini: Reg Parameter gRrmOperChanMax > allowed Maximum [8 > 7]. Enforcing Default= 4
+[   15.269037] R0: wlan: [573:E :HDD] hdd_apply_cfg_ini: Reg Parameter gRrmNonOperChanMax > allowed Maximum [8 > 7]. Enforcing Default= 4
+[   15.270506] R0: wlan: [573:E :HDD] Name = [gEnableHostapdEdcaLocal] Value = [0]
+[   15.270521] R0: wlan: [573:E :HDD] Name = [g_sta_change_cc_via_beacon] Value = [0]
+[   15.271818] R0: [android.hardwar][22:28:34.678660]  wlan: [573:E :HDD] Name = [gEnableHostapdEdcaLocal] Value = [0]
+[   15.272134] R0: [android.hardwar][22:28:34.678979]  wlan: [573:E :HDD] Name = [g_sta_change_cc_via_beacon] Value = [0]
+[   15.391092] ol_download_firmware: Using 0x1234 for the remainder of init
+[   15.393530] ueventd: firmware: loading 'otp30.bin' for '/devices/soc/7864900.sdhci/mmc_host/mmc1/mmc1:0001/mmc1:0001:1/firmware/otp30.bin'
+[   15.395447] ueventd: loading /devices/soc/7864900.sdhci/mmc_host/mmc1/mmc1:0001/mmc1:0001:1/firmware/otp30.bin took 2ms
+[   15.439303] R0: [android.hardwar][22:28:34.846141]  wlan: [573:E :VOS] __ol_transfer_bin_file: transferring file: otp30.bin size 25057 bytes done!
+[   15.439695] ol_download_firmware: chip_id:0x5040000 board_id:0x0
+[   15.441051] ueventd: firmware: loading 'bdwlan30.b00' for '/devices/soc/7864900.sdhci/mmc_host/mmc1/mmc1:0001/mmc1:0001:1/firmware/bdwlan30.b00'
+[   15.441523] ueventd: firmware: could not find firmware for bdwlan30.b00
+[   15.441652] ueventd: loading /devices/soc/7864900.sdhci/mmc_host/mmc1/mmc1:0001/mmc1:0001:1/firmware/bdwlan30.b00 took 0ms
+[   15.441804] __ol_transfer_bin_file: Failed to get bdwlan30.b00:-11
+[   15.441812] __ol_transfer_bin_file: Trying to load default bdwlan30.bin
+[   15.442965] ueventd: firmware: loading 'bdwlan30.bin' for '/devices/soc/7864900.sdhci/mmc_host/mmc1/mmc1:0001/mmc1:0001:1/firmware/bdwlan30.bin'
+[   15.444218] ueventd: loading /devices/soc/7864900.sdhci/mmc_host/mmc1/mmc1:0001/mmc1:0001:1/firmware/bdwlan30.bin took 1ms
+[   15.459643] R0: [android.hardwar][22:28:34.866481]  wlan: [573:E :VOS] __ol_transfer_bin_file: transferring file: bdwlan30.bin size 8124 bytes done!
+[   15.461761] ueventd: firmware: loading 'qwlan30.bin' for '/devices/soc/7864900.sdhci/mmc_host/mmc1/mmc1:0001/mmc1:0001:1/firmware/qwlan30.bin'
+[   15.466523] ueventd: loading /devices/soc/7864900.sdhci/mmc_host/mmc1/mmc1:0001/mmc1:0001:1/firmware/qwlan30.bin took 4ms
+[   15.470506] ueventd: firmware: loading 'venus.mdt' for '/devices/soc/1de0000.qcom,venus/firmware/venus.mdt'
+[   15.471797] ueventd: loading /devices/soc/1de0000.qcom,venus/firmware/venus.mdt took 1ms
+[   15.503941] ueventd: firmware: loading 'venus.b02' for '/devices/soc/1de0000.qcom,venus/firmware/venus.b02'
+[   15.510511] ueventd: loading /devices/soc/1de0000.qcom,venus/firmware/venus.b02 took 6ms
+[   15.511420] ueventd: firmware: loading 'venus.b03' for '/devices/soc/1de0000.qcom,venus/firmware/venus.b03'
+[   15.512779] ueventd: loading /devices/soc/1de0000.qcom,venus/firmware/venus.b03 took 1ms
+[   15.515027] ueventd: firmware: loading 'venus.b04' for '/devices/soc/1de0000.qcom,venus/firmware/venus.b04'
+[   15.516381] ueventd: loading /devices/soc/1de0000.qcom,venus/firmware/venus.b04 took 1ms
+[   16.262420] R0: [android.hardwar][08:00:00.630346]  wlan: [573:E :VOS] __ol_transfer_bin_file: transferring file: qwlan30.bin size 576064 bytes done!
+[   16.265505] R0: [android.hardwar][08:00:00.633435]  wlan: [573:F :WDA] WMA --> wmi_unified_attach - success
+[   16.266354] R0: [android.hardwar][08:00:00.634279]  wlan: [573:E :SAP] dfs_init_radar_filters[217]: Unknown dfs domain 0 
+[   16.275402] R0: [android.hardwar][08:00:00.643329]  wlan: [573:E :PE ] cfg_get_str_index: 124: Entry not found for cfg id :312
+[   16.277289] HTCConnectService, firmware decide to disabled b2b bundle
+[   16.278611] HTCConnectService, firmware decide to disabled b2b bundle
+[   16.278643] R0: [android.hardwar][08:00:00.646573]  wlan: [573:F :WDA] WMA --> wmi_unified_connect_htc_service - success
+[   16.278694] R0: [VosMCThread][08:00:00.646626]  wlan: [1376:F :WDA] McThread: WNI_CFG_DNLD_REQ
+[   16.278726] R0: [VosMCThread][08:00:00.646659]  wlan: [1376:E :PE ] processCfgDownloadReq: 3051: str_cfg is NULL for ConfigID : 312
+[   16.280192] R0: [kworker/6:1][08:00:00.648125]  wlan: [204:F :WDA] WMA <-- WMI_SERVICE_READY_EVENTID
+[   16.280208] R0: [kworker/6:1][08:00:00.648141]  wlan: [204:E :WDA] wma_rx_service_ready_event: Firmware build version : 200b00a3
+[   16.280217] R0: [kworker/6:1][08:00:00.648150]  wlan: [204:E :WDA] wma_rx_service_ready_event: Board version: 0.1011104
+[   16.280255] R0: [kworker/6:1][08:00:00.648188]  wlan: [204:F :WDA] WMA --> WMI_INIT_CMDID
+[   16.294639] R0: [kworker/6:1][08:00:00.662571]  wlan: [204:F :WDA] WMA <-- WMI_READY_EVENTID
+[   16.295793] R0: [android.hardwar][08:00:00.663723]  wlan: [573:E :SME] csr_init_chan_list: 353: init time country code US
+[   16.295846] R0: [VosMCThread][08:00:00.663779]  wlan: [1376:E :WDA] Invalid wda_cli_set pdev command/Not yet implemented 0x4d
+[   16.295884] R0: [VosMCThread][08:00:00.663816]  wlan: [1376:E :WDA] Invalid wda_cli_set pdev command/Not yet implemented 0x88
+[   16.295916] R0: [VosMCThread][08:00:00.663849]  wlan: [1376:E :WDA] Invalid wda_cli_set pdev command/Not yet implemented 0x23
+[   16.296154] R0: [kworker/3:1][08:00:00.664086]  wlan: [401:F :HDD] pAdapter is null !!
+[   16.296239] R0: [kworker/3:1][08:00:00.664172]  wlan: [401:E :WDA] regdmn_set_dfs_region: dfs_region: 1
+[   16.296570] R0: [android.hardwar][08:00:00.664502]  wlan: [573:E :PE ] CheckParam: 2963: Param id 312 not valid
+[   16.296584] R0: [android.hardwar][08:00:00.664517]  wlan: [573:E :PE ] ProcSetReqInternal: 2880: Check param failed, param 312
+[   16.298423] ueventd: firmware: loading 'wlan/qca_cld/wlan_mac.bin' for '/devices/soc/7864900.sdhci/mmc_host/mmc1/mmc1:0001/mmc1:0001:1/firmware/wlan!qca_cld!wlan_mac.bin'
+[   16.299193] ueventd: firmware: could not find firmware for wlan/qca_cld/wlan_mac.bin
+[   16.299359] ueventd: loading /devices/soc/7864900.sdhci/mmc_host/mmc1/mmc1:0001/mmc1:0001:1/firmware/wlan!qca_cld!wlan_mac.bin took 1ms
+[   16.299728] R0: [android.hardwar][08:00:00.667659]  wlan: [573:E :WDA] MCC TX Pause Event Handler register
+[   16.299757] R0: [android.hardwar][08:00:00.667690]  wlan: [573:E :WDA] Target does not support cesium network
+[   16.299770] R0: [android.hardwar][08:00:00.667703]  wlan: [573:E :PE ] wlan_cfgGetInt: 359: Not valid cfg id 312
+[   16.300336] R0: [android.hardwar][08:00:00.668265]  wlan: [573:E :SME] sme_AddChAvoidCallback: Plug in CH AVOID CB
+[   16.300350] R0: [android.hardwar][08:00:00.668283]  wlan: [573:E :SME] sme_AddCSAIndCallback: Plug in CSA Notify CB
+[   16.301240] R0: [VosMCThread][08:00:00.669169]  wlan: [1376:E :WDA] wma_unified_vdev_create_send: ID = 0 VAP Addr = 50:5b:c2:74:5a:9b
+[   16.301470] R0: [VosMCThread][08:00:00.669402]  wlan: [1376:E :WDA] invalid rate code, ignore.
+[   16.303111] R0: [android.hardwar][08:00:00.671040]  wlan: [573:E :HDD] wlan_hdd_tdls_init TDLS not enabled (0) or FW doesn't support
+[   16.307228] R0: [VosMCThread][08:00:00.675157]  wlan: [1376:E :WDA] Invalid wda_cli_set pdev command/Not yet implemented 0x34
+[   16.307419] R0: [VosMCThread][08:00:00.675350]  wlan: [1376:E :WDA] wma_unified_vdev_create_send: ID = 1 VAP Addr = 52:5b:c2:74:5a:9b
+[   16.307480] R0: [VosMCThread][08:00:00.675413]  wlan: [1376:F :WDA] Creating self peer 52:5b:c2:74:5a:9b, vdev_id 1
+[   16.307511] R0: [VosMCThread][08:00:00.675443]  wlan: [1376:E :WDA] wma_create_peer: Created peer with peer_addr 52:5b:c2:74:5a:9b vdev_id 1, peer_count - 1
+[   16.307649] R0: [VosMCThread][08:00:00.675581]  wlan: [1376:E :WDA] invalid rate code, ignore.
+[   16.309272] R0: [android.hardwar][08:00:00.677178]  wlan: [573:E :HDD] wlan_hdd_tdls_init TDLS not enabled (0) or FW doesn't support
+[   16.311720] R0: [VosMCThread][08:00:00.679650]  wlan: [1376:E :WDA] Invalid wda_cli_set pdev command/Not yet implemented 0x34
+[   16.312053] Host SW:4.0.11.213W, FW:2.0.0.163, HW:QCA9379_REV1_1
+[   16.312496] R0: [VosMCThread][08:00:00.680424]  wlan: [1376:E :WDA] DPD Recal sending the following to firmware: delta_degreeLow 25 delta_degreehigh 35 enable 1 cooling_time 1 dpd_max_duration 120 
+[   16.312512] R0: [VosMCThread][08:00:00.680445]  wlan: [1376:E :WDA] Sending DPD Recal cmd: low temp 25, high temp 35, enabled 1 cooling_time 1, dpd_dur_max 120
+[   16.312587] R0: [android.hardwar][08:00:00.680520]  wlan: [573:E :HDD] hdd_wlan_startup: 17597: enhance green ap is not enabled
+[   16.312639] wlan: driver loaded in 1176987
+[   16.313783] R0: [android.hardwar][08:00:00.681712]  wlan: [0:E :HDD] __hdd_set_multicast_list: 10728: mc addr list ini is disabled
+[   16.314474] R0: [android.hardwar][08:00:00.682403]  wlan: [0:E :HDD] __hdd_set_multicast_list: 10728: mc addr list ini is disabled
+[   16.314494] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+[   16.410182] R0: [Binder:816_2][08:00:00.778109]  wlan: [0:E :HDD] __hdd_set_multicast_list: 10728: mc addr list ini is disabled
+[   16.414769] init: Created socket '/dev/socket/wpa_wlan0', mode 660, user 1010, group 1010
+[   16.736163] R0: [wpa_supplicant][08:00:01.104093]  wlan: [0:E :HDD] __hdd_set_multicast_list: 10728: mc addr list ini is disabled
+[   16.736426] R0: [wpa_supplicant][08:00:01.104358]  wlan: [0:E :HDD] __hdd_set_multicast_list: 10728: mc addr list ini is disabled
+[   17.071578] R0: [wpa_supplicant][08:00:01.439508]  wlan: [1719:E :HDD] hdd_driver_command: SME Change Country code fail, status=1
+[   17.080616] R0: [wpa_supplicant][08:00:01.448545]  wlan: [1719:E :HDD] hdd_set_rx_filter: 4990: mc addr ini is disabled
+[   17.366216] init: processing action (sys.boot_completed=1 && sys.wifitracing.started=0) from (/system/etc/init/wifi-events.rc:20)
+[   17.612985] R0: [Binder:816_2][08:00:01.980912]  wlan: [0:E :HDD] __hdd_set_multicast_list: 10728: mc addr list ini is disabled
+[   21.113300] R0: [kworker/5:1][14:34:05.257466]  wlan: [142:E :WDA] regdmn_set_dfs_region: dfs_region: 2

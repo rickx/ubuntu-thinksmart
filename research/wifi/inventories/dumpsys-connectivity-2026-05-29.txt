@@ -1,0 +1,88 @@
+=== COMMAND ===
+adb_cmd shell dumpsys connectivity 
+=== OUTPUT ===
+NetworkFactories for: WIFI_UT TelephonyNetworkFactory[0] PhoneSwitcherNetworkRequstListener TelephonyNetworkFactory[1] WIFI
+
+Active default network: none
+
+Current Networks:
+
+Network Requests:
+  uid/pid:1000/1468 NetworkRequest [ LISTEN id=6, [ Transports: WIFI Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN] ]
+  uid/pid:1000/1219 NetworkRequest [ LISTEN id=4, [ Capabilities: NOT_RESTRICTED&TRUSTED&NOT_VPN] ]
+  uid/pid:10026/1347 NetworkRequest [ LISTEN id=9, [] ]
+  uid/pid:1000/1219 NetworkRequest [ REQUEST id=1, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN] ]
+  uid/pid:1000/1219 NetworkRequest [ TRACK_DEFAULT id=3, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN] ]
+  uid/pid:1000/1468 NetworkRequest [ LISTEN id=7, [ Transports: CELLULAR Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN] ]
+  uid/pid:1000/1468 NetworkRequest [ TRACK_DEFAULT id=8, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN] ]
+  uid/pid:10066/3078 NetworkRequest [ LISTEN id=10, [ Capabilities: NOT_RESTRICTED&TRUSTED&NOT_VPN&VALIDATED&FOREGROUND] ]
+  uid/pid:1000/1219 NetworkRequest [ BACKGROUND_REQUEST id=2, [ Transports: CELLULAR Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN] ]
+  uid/pid:1000/1219 NetworkRequest [ TRACK_DEFAULT id=5, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN] ]
+  
+mLegacyTypeTracker:
+  Supported types: 1 7 17
+  Current state:
+
+
+Tethering:
+  Configuration:
+    tetherableUsbRegexs: [usb\d, rndis\d]
+    tetherableWifiRegexs: [wigig0, wlan0]
+    tetherableBluetoothRegexs: [bnep\d, bt-pan]
+    isDunRequired: false
+    preferredUpstreamIfaceTypes: [ETHERNET, MOBILE, WIFI, MOBILE_HIPRI, BLUETOOTH]
+    dhcpRanges: [192.168.42.2, 192.168.42.254, 192.168.43.2, 192.168.43.254, 192.168.44.2, 192.168.44.254, 192.168.45.2, 192.168.45.254, 192.168.46.2, 192.168.46.254, 192.168.47.2, 192.168.47.254, 192.168.48.2, 192.168.48.254, 192.168.49.2, 192.168.49.254, 192.168.50.2, 192.168.50.254, 192.168.51.2, 192.168.51.254]
+    defaultIPv4DNS: [8.8.4.4, 8.8.8.8]
+  Tether state:
+    wlan0 - AvailableState - lastError = 0
+    Upstream wanted: false
+    Current upstream interface: null
+  Hardware offload:
+    Offload HALs not started
+    Current upstream: null
+    Exempt prefixes: []
+    NAT timeout update callbacks received during the last offload session: 0
+    NAT timeout update netlink errors during the last offload session: 0
+  Log:
+    1969-12-31T16:00:18.182 - MARK constructed
+    1969-12-31T16:00:18.185 - [config] DUN check returned: DUN_UNSPECIFIED
+    1969-12-31T16:00:18.186 - [config] TetheringConfiguration{tetherableUsbRegexs:[usb\d,rndis\d] tetherableWifiRegexs:[wigig0,wlan0] tetherableBluetoothRegexs:[bnep\d,bt-pan] isDunRequired:false preferredUpstreamIfaceTypes:[ETHERNET,MOBILE,WIFI,MOBILE_HIPRI,BLUETOOTH]}
+    1969-12-31T16:00:18.520 - [config] DUN check returned: DUN_UNSPECIFIED
+    1969-12-31T16:00:18.520 - [config] TetheringConfiguration{tetherableUsbRegexs:[usb\d,rndis\d] tetherableWifiRegexs:[wigig0,wlan0] tetherableBluetoothRegexs:[bnep\d,bt-pan] isDunRequired:false preferredUpstreamIfaceTypes:[ETHERNET,MOBILE,WIFI,MOBILE_HIPRI,BLUETOOTH]}
+    2019-09-17T09:00:00.038 - [config] DUN check returned: DUN_UNSPECIFIED
+    2019-09-17T09:00:00.040 - [config] TetheringConfiguration{tetherableUsbRegexs:[usb\d,rndis\d] tetherableWifiRegexs:[wigig0,wlan0] tetherableBluetoothRegexs:[bnep\d,bt-pan] isDunRequired:false preferredUpstreamIfaceTypes:[ETHERNET,MOBILE,WIFI,MOBILE_HIPRI,BLUETOOTH]}
+    2019-09-17T09:00:00.673 - adding TetheringInterfaceStateMachine for: wlan0
+    2019-09-17T09:00:00.675 - OBSERVED iface=wlan0 state=1 error=0
+    2019-09-17T09:00:00.677 - OBSERVED LinkProperties update iface=wlan0 state=AVAILABLE lp={InterfaceName: wlan0 LinkAddresses: []  Routes: [] DnsAddresses: [] Domains: null MTU: 0}
+    2019-09-17T09:00:00.677 - InitialState got EVENT_IFACE_SERVING_STATE_INACTIVE
+    2019-09-17T09:00:00.679 - InitialState got EVENT_IFACE_UPDATE_LINKPROPERTIES
+    2019-09-17T09:00:00.679 - [wlan0] InitialState got CMD_IPV6_TETHER_UPDATE
+    2019-09-17T09:00:00.686 - p2p0 is not a tetherable iface, ignoring
+    2026-05-28T15:34:29.918 - USB bcast connected:true configured:false rndis:false
+    2026-05-28T15:34:30.029 - USB bcast connected:true configured:true rndis:false
+
+Packet keepalives:
+
+Bad Wi-Fi avoidance: unrestricted
+
+mValidationLogs (most recent first):
+
+mNetworkRequestInfoLogs (most recent first):
+  2026-05-28T17:21:53.736 - REGISTER uid/pid:10066/3078 NetworkRequest [ LISTEN id=10, [ Capabilities: NOT_RESTRICTED&TRUSTED&NOT_VPN&VALIDATED&FOREGROUND] ]
+  2019-09-17T09:00:00.510 - REGISTER uid/pid:10026/1347 NetworkRequest [ LISTEN id=9, [] ]
+  2019-09-17T09:00:00.087 - REGISTER uid/pid:1000/1468 NetworkRequest [ TRACK_DEFAULT id=8, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN] ]
+  2019-09-17T09:00:00.085 - REGISTER uid/pid:1000/1468 NetworkRequest [ LISTEN id=7, [ Transports: CELLULAR Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN] ]
+  2019-09-17T09:00:00.084 - REGISTER uid/pid:1000/1468 NetworkRequest [ LISTEN id=6, [ Transports: WIFI Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN] ]
+  1969-12-31T16:00:18.926 - REGISTER uid/pid:1000/1219 NetworkRequest [ TRACK_DEFAULT id=5, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN] ]
+  1969-12-31T16:00:18.745 - REGISTER uid/pid:1000/1219 NetworkRequest [ LISTEN id=4, [ Capabilities: NOT_RESTRICTED&TRUSTED&NOT_VPN] ]
+  1969-12-31T16:00:18.712 - REGISTER uid/pid:1000/1219 NetworkRequest [ BACKGROUND_REQUEST id=2, [ Transports: CELLULAR Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN] ]
+  1969-12-31T16:00:18.328 - REGISTER uid/pid:1000/1219 NetworkRequest [ TRACK_DEFAULT id=3, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN] ]
+  1969-12-31T16:00:18.176 - REGISTER uid/pid:1000/1219 NetworkRequest [ REQUEST id=1, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN] ]
+
+mNetworkInfoBlockingLogs (most recent first):
+
+NetTransition WakeLock activity (most recent first):
+  total acquisitions: 0
+  total releases: 0
+  cumulative duration: 0s
+  longest duration: 0s

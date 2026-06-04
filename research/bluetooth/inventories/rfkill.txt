@@ -1,0 +1,3 @@
+=== SHELL ===
+rfkill list 2>/dev/null 
+=== OUTPUT ===

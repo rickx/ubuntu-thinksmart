@@ -1,0 +1,65 @@
+=== SHELL ===
+sudo -u user XDG_RUNTIME_DIR=/run/user/1000 wpctl status 2>/dev/null 
+=== OUTPUT ===
+PipeWire 'pipewire-0' [1.0.5, user@lemalo, cookie:133641482]
+ └─ Clients:
+        32. pipewire                            [1.0.5, user@lemalo, pid:1216]
+        34. WirePlumber                         [1.0.5, user@lemalo, pid:1215]
+        35. WirePlumber [export]                [1.0.5, user@lemalo, pid:1215]
+        58. VP5                                 [1.0.5, user@lemalo, pid:1338]
+        59. QtPulseAudio:1442                   [1.0.5, user@lemalo, pid:1442]
+        65. xdg-desktop-portal                  [1.0.5, user@lemalo, pid:1352]
+        66. kwin_wayland                        [1.0.5, user@lemalo, pid:1310]
+        69. plasmashell                         [1.0.5, user@lemalo, pid:1526]
+        73. Plasma PA                           [1.0.5, user@lemalo, pid:1526]
+        74. VP5Daemon                           [1.0.5, user@lemalo, pid:1808]
+        75. VP5                                 [1.0.5, user@lemalo, pid:1338]
+        76. wpctl                               [1.0.5, user@lemalo, pid:18837]
+
+Audio
+ ├─ Devices:
+ │      50. Built-in Audio                      [alsa]
+ │  
+ ├─ Sinks:
+ │  *   53. Built-in Audio Speaker              [vol: 0.19]
+ │  
+ ├─ Sink endpoints:
+ │  
+ ├─ Sources:
+ │  *   52. Built-in Audio Stereo Microphone    [vol: 1.00]
+ │  
+ ├─ Source endpoints:
+ │  
+ └─ Streams:
+        61. QtPulseAudio:1442                                           
+             60. output_FR       > Speaker:playback_FR	[paused]
+             63. output_FL       > Speaker:playback_FL	[paused]
+
+Video
+ ├─ Devices:
+ │      42. Qualcomm Camera Subsystem           [v4l2]
+ │      43. Qualcomm Camera Subsystem           [v4l2]
+ │      44. Qualcomm Camera Subsystem           [v4l2]
+ │      45. Qualcomm Camera Subsystem           [v4l2]
+ │      46. Qualcomm Camera Subsystem           [v4l2]
+ │      47. Qualcomm Camera Subsystem           [v4l2]
+ │      48. Qualcomm Venus video decoder        [v4l2]
+ │      49. Qualcomm Venus video encoder        [v4l2]
+ │  
+ ├─ Sinks:
+ │  
+ ├─ Sink endpoints:
+ │  
+ ├─ Sources:
+ │  
+ ├─ Source endpoints:
+ │  
+ └─ Streams:
+        67. kwin_wayland                                                
+             68. output_1        > plasmashell:input_1	[init]
+        70. plasmashell                                                 
+             71. input_1         < kwin_wayland:output_1	[init]
+
+Settings
+ └─ Default Configured Node Names:
+         0. Audio/Sink    alsa_output.platform-c051000.sound-card.HiFi__hw_cd18781y_0__sink

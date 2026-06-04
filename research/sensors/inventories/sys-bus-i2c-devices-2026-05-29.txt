@@ -1,0 +1,9 @@
+=== COMMAND ===
+adb_cmd shell su -c find /sys/bus/i2c/devices -maxdepth 1 -mindepth 1 | sort 
+=== OUTPUT ===
+/sys/bus/i2c/devices/1-0049
+/sys/bus/i2c/devices/3-0014
+/sys/bus/i2c/devices/3-0038
+/sys/bus/i2c/devices/3-0048
+/sys/bus/i2c/devices/i2c-1
+/sys/bus/i2c/devices/i2c-3

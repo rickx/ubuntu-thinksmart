@@ -1,0 +1,12 @@
+=== COMMAND ===
+adb_cmd shell sh -c getprop | grep -iE 'wifi|wlan|qca' 
+=== OUTPUT ===
+[init.svc.qcamerasvr]: [running]
+[init.svc.wifi_hal_legacy]: [running]
+[init.svc.wificond]: [running]
+[net.tcp.buffersize.wifi]: [524288,2097152,4194304,262144,524288,1048576]
+[persist.data.iwlan.enable]: [true]
+[ro.boot.wificountrycode]: [us]
+[ro.wifi.channels]: []
+[sys.wifitracing.started]: [1]
+[wifi.interface]: [wlan0]

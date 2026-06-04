@@ -1,0 +1,8 @@
+=== COMMAND ===
+adb_cmd logcat -d -b all -s CameraService QCamera CamX mm-camera 
+=== OUTPUT ===
+--------- beginning of kernel
+--------- beginning of events
+--------- beginning of system
+--------- beginning of radio
+--------- beginning of main

@@ -1,0 +1,107 @@
+=== SHELL ===
+lsmod | sort 
+=== OUTPUT ===
+Module                  Size  Used by
+af_alg                 28672  6 algif_hash,algif_skcipher
+algif_hash             16384  1
+algif_skcipher         12288  1
+apr                    20480  8 q6asm,q6cvp,q6core,q6mvm,q6afe,q6cvs,q6voice_common,q6adm
+ath                    36864  1 ath10k_core
+ath10k_core           454656  1 ath10k_sdio
+ath10k_sdio            28672  0
+binfmt_misc            24576  1
+bluetooth             897024  39 btqca,hci_uart,btbcm,rfcomm
+bmc150_accel_core      36864  1 bmc150_accel_i2c
+bmc150_accel_i2c       12288  0
+btbcm                  24576  1 hci_uart
+btqca                  24576  1 hci_uart
+cec                    53248  1 drm_display_helper
+cfg80211             1134592  3 ath,mac80211,ath10k_core
+drm_client_lib         12288  1 msm
+drm_display_helper    217088  1 msm
+drm_exec               16384  2 msm,drm_gpuvm
+drm_gpuvm              45056  1 msm
+drm_kms_helper        217088  4 msm,panel_lenovo_cd_18781y_hx83100a,drm_display_helper,drm_client_lib
+ecc                    45056  1 ecdh_generic
+ecdh_generic           16384  1 bluetooth
+evdev                  24576  9
+fuse                  212992  3
+gpu_sched              61440  1 msm
+hci_uart              106496  0
+himax_hx83112b         16384  0
+i2c_qcom_cci           20480  0
+industrialio_triggered_buffer    12288  1 bmc150_accel_core
+ip_tables              32768  0
+ipa2_lite              32768  0
+ipv6                  577536  48
+kfifo_buf              16384  1 industrialio_triggered_buffer
+libarc4                12288  1 mac80211
+libcomposite           94208  11 usb_f_rndis,u_ether
+mac80211             1155072  1 ath10k_core
+mc                     77824  6 v4l2_async,videodev,qcom_camss,videobuf2_v4l2,videobuf2_common,v4l2_mem2mem
+mdt_loader             12288  3 msm,qcom_q6v5_pas,venus_core
+msm                  1294336  27
+nfnetlink              20480  1
+panel_lenovo_cd_18781y_hx83100a    12288  0
+pdr_interface          24576  1 apr
+q6adm                  16384  1 q6routing
+q6afe                  20480  4 q6voice,q6afe_dai,q6afe_clocks,q6adm
+q6afe_clocks           12288  1
+q6afe_dai              81920  1
+q6asm                  32768  1 q6asm_dai
+q6asm_dai              40960  1
+q6core                 12288  3 q6asm,q6afe,q6adm
+q6cvp                  12288  1 q6voice
+q6cvs                  12288  0
+q6mvm                  12288  1 q6voice
+q6routing             385024  2 q6asm_dai
+q6voice                16384  1 q6voice_dai
+q6voice_common         20480  4 q6cvp,q6voice,q6mvm,q6cvs
+q6voice_dai            24576  1
+qcom_camss            528384  0
+qcom_common            16384  2 ipa2_lite,qcom_q6v5_pas
+qcom_memshare          20480  0
+qcom_pdr_msg           16384  1 pdr_interface
+qcom_pil_info          12288  1 qcom_q6v5_pas
+qcom_pon               12288  0
+qcom_q6v5              16384  1 qcom_q6v5_pas
+qcom_q6v5_pas          40960  0
+qcom_spmi_temp_alarm    20480  0
+qcom_spmi_vadc         28672  0
+qcom_sysmon            24576  2 qcom_q6v5_pas,qcom_q6v5
+qcom_vadc_common       16384  1 qcom_spmi_vadc
+qmi_helpers            28672  5 ipa2_lite,qcom_sysmon,qcom_pdr_msg,pdr_interface,qcom_memshare
+qrtr                   45056  15 qrtr_smd
+qrtr_smd               16384  0
+reboot_mode            12288  1 qcom_pon
+rfcomm                 94208  16
+rfkill                 32768  9 bluetooth,cfg80211
+rmtfs_mem              20480  0
+rtc_pm8xxx             24576  1
+snd_q6dsp_common       49152  4 q6asm,q6afe_dai,q6afe_clocks,q6adm
+snd_seq               114688  7 snd_seq_dummy
+snd_seq_device         16384  1 snd_seq
+snd_seq_dummy          12288  0
+snd_soc_apq8016_sbc    12288  5
+snd_soc_msm8916_analog    49152  1
+snd_soc_msm8916_digital    57344  1
+snd_soc_qcom_common    12288  1 snd_soc_apq8016_sbc
+snd_soc_tas5782m_dbg    24576  1
+socinfo                24576  0
+squashfs               73728  0
+u_ether                32768  1 usb_f_rndis
+ubwc_config            20480  1 msm
+usb_f_rndis            45056  2
+v4l2_async             28672  2 v4l2_fwnode,qcom_camss
+v4l2_fwnode            32768  1 qcom_camss
+v4l2_mem2mem           45056  3 venus_dec,venus_core,venus_enc
+venus_core            172032  2 venus_dec,venus_enc
+venus_dec              36864  0
+venus_enc              32768  0
+videobuf2_common       69632  9 qcom_camss,videobuf2_dma_contig,venus_dec,videobuf2_v4l2,venus_core,videobuf2_dma_sg,venus_enc,v4l2_mem2mem,videobuf2_memops
+videobuf2_dma_contig    24576  2 venus_dec,venus_enc
+videobuf2_dma_sg       20480  1 qcom_camss
+videobuf2_memops       16384  2 videobuf2_dma_contig,videobuf2_dma_sg
+videobuf2_v4l2         32768  4 qcom_camss,venus_dec,venus_enc,v4l2_mem2mem
+videodev              339968  8 v4l2_async,v4l2_fwnode,qcom_camss,venus_dec,videobuf2_v4l2,venus_core,venus_enc,v4l2_mem2mem
+x_tables               53248  1 ip_tables

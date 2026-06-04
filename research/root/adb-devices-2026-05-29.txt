@@ -1,0 +1,6 @@
+=== COMMAND ===
+adb_cmd devices 
+=== OUTPUT ===
+List of devices attached
+HUA0AEFD	device
+

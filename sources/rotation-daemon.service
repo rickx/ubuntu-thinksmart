@@ -1,0 +1,12 @@
+[Unit]
+Description=BMA253 Screen Auto-Rotation Daemon
+After=graphical-session.target
+
+[Service]
+ExecStart=/usr/bin/python3 /usr/local/bin/rotation-daemon.py
+Restart=on-failure
+RestartSec=5
+Environment=XDG_RUNTIME_DIR=/run/user/1000
+
+[Install]
+WantedBy=default.target

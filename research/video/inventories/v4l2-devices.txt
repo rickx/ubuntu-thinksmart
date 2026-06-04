@@ -1,0 +1,16 @@
+=== SHELL ===
+v4l2-ctl --list-devices 2>/dev/null 
+=== OUTPUT ===
+Qualcomm Camera Subsystem (platform:1b00020.camss):
+	/dev/video0
+	/dev/video1
+	/dev/video2
+	/dev/video3
+	/dev/video4
+	/dev/video5
+	/dev/media0
+
+Qualcomm Venus video decoder (platform:qcom-venus):
+	/dev/video6
+	/dev/video7
+

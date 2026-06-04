@@ -1,0 +1,13 @@
+=== SHELL ===
+iw dev wlan0 link 2>/dev/null 
+=== OUTPUT ===
+Connected to 7c:ff:4d:e7:1a:61 (on wlan0)
+	SSID: INTEREL-Holding
+	freq: 5500.0
+	RX: 7535178 bytes (38467 packets)
+	TX: 26374 bytes (109 packets)
+	signal: -36 dBm
+	rx bitrate: 6.0 MBit/s
+	bss flags: short-slot-time
+	dtim period: 1
+	beacon int: 100

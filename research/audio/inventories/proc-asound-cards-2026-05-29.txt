@@ -1,0 +1,5 @@
+=== COMMAND ===
+adb_cmd shell cat /proc/asound/cards 
+=== OUTPUT ===
+ 0 [msm8953sndcardm]: msm8953-snd-car - msm8953-snd-card-mtp
+                      msm8953-snd-card-mtp

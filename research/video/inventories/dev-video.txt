@@ -1,0 +1,12 @@
+=== SHELL ===
+ls -l /dev/video* /dev/media* 2>/dev/null 
+=== OUTPUT ===
+crw-rw----+ 1 root video 242, 0 Mar 13 17:48 /dev/media0
+crw-rw----+ 1 root video  81, 0 Mar 13 17:48 /dev/video0
+crw-rw----+ 1 root video  81, 1 Mar 13 17:48 /dev/video1
+crw-rw----+ 1 root video  81, 2 Mar 13 17:48 /dev/video2
+crw-rw----+ 1 root video  81, 3 Mar 13 17:48 /dev/video3
+crw-rw----+ 1 root video  81, 4 Mar 13 17:48 /dev/video4
+crw-rw----+ 1 root video  81, 5 Mar 13 17:48 /dev/video5
+crw-rw----+ 1 root video  81, 6 Mar 13 17:48 /dev/video6
+crw-rw----+ 1 root video  81, 7 Mar 13 17:48 /dev/video7

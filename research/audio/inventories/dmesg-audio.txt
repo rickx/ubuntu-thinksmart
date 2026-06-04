@@ -1,0 +1,3 @@
+=== SHELL ===
+dmesg | grep -iE 'tas|asoc|mi2s|q6|1-0049|sound-card' 
+=== OUTPUT ===

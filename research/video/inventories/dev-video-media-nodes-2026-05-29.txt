@@ -1,0 +1,9 @@
+=== COMMAND ===
+adb_cmd shell su -c ls -l /dev/video* /dev/media* 2>/dev/null 
+=== OUTPUT ===
+crw-rw---- 1 system camera 251,   0 1969-12-31 16:00 /dev/media0
+crw-rw---- 1 system camera 251,   1 1969-12-31 16:00 /dev/media1
+crw-rw---- 1 system camera  81,   2 1969-12-31 16:00 /dev/video0
+crw-rw---- 1 system camera  81,  22 1969-12-31 16:00 /dev/video1
+crw-rw---- 1 system camera  81,   0 1969-12-31 16:00 /dev/video32
+crw-rw---- 1 system camera  81,   1 1969-12-31 16:00 /dev/video33

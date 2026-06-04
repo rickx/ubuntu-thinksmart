@@ -1,0 +1,319 @@
+=== SHELL ===
+dmesg | grep -iE 'tas|ath10k|qca|bluetooth|venus|video|camss|sensor|vcnl|bma|s5k|q6|asoc' 
+=== OUTPUT ===
+[222817.621985] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[222928.982018] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[222932.054043] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[223417.941589] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[223493.717755] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[223496.789675] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[224018.004070] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[224018.029776] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[224018.029825] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[224018.029843] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[224057.683793] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[224060.756686] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[224618.071264] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[224837.465814] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[224840.537758] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[225218.139880] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[225221.211735] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[225260.892172] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[225263.964132] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[225818.204953] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[225821.277789] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[225860.957147] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[225864.029272] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[226418.269392] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[226421.345010] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[226461.020057] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[226464.092176] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[227018.581696] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[227018.676092] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[227018.676179] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[227018.676197] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[227018.676215] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[227130.192447] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[227133.264471] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[227618.636331] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[227618.745938] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[227618.746021] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[227618.746040] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[227618.746057] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[227658.316383] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[227661.388509] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[228218.697439] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[228294.473604] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[228297.545334] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[228818.757897] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[228894.533825] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[228897.605766] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[229418.818641] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[229458.499063] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[229461.570759] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[230018.880621] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[230021.952477] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[230061.632448] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[230619.197567] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[230622.526099] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[230662.205351] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[231219.258235] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[231295.034165] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[231298.105683] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[231819.319376] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[231858.998991] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[232419.380023] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[232419.501445] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[232419.501476] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[232419.501484] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[232459.060270] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[232462.135527] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[233019.443075] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[233619.506363] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[233619.639384] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[233619.639470] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[233698.864716] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[233702.192086] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[233702.194477] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 0
+[234219.566267] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[234222.893867] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[234262.574242] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[234265.646080] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[234819.627995] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[234822.956873] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[234862.636140] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[234865.707897] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[235419.689518] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[235419.849691] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[235459.369707] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[235462.441481] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[236020.007081] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[236167.462846] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[236170.534797] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[236620.069045] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[236731.683914] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[236735.012403] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[237220.129590] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[237223.201893] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[237370.657222] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[237373.728873] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[237820.191343] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[237823.262562] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[237862.943108] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[237866.018355] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[238420.251841] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[238423.579900] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[238423.583341] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[238423.583383] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[238423.583403] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[238423.583421] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[238463.259489] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[238466.331611] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[239020.569862] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[239060.249339] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[239063.321233] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[239620.632024] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[239660.311685] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[239663.383866] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[240220.693414] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[240260.373245] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[240263.444490] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[240263.449642] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 0
+[240263.449709] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 0
+[240820.758658] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[240820.887971] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[240820.888068] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[240968.210609] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[240971.281998] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[241420.816181] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[241420.952158] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[241420.952245] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[241420.952265] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[241420.952284] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[241420.952302] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[241460.496114] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[241463.568364] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[242020.878174] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[242024.206131] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[242063.885849] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[242621.195719] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[242660.874895] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[242663.947130] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[243221.255995] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[243221.266112] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[243260.935999] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[243264.007993] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[243821.317227] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[243821.330879] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[243821.330956] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[243821.330974] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[243821.330991] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[243897.092923] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[244421.378588] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[244532.994197] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[245021.441252] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[245021.569908] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[245021.569992] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[245097.217458] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[245100.289446] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[245621.762324] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[245661.442256] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[245664.514822] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[246221.824492] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[246261.504164] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[246264.575876] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[246821.890423] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[246821.978632] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[246821.978707] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[246821.978725] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[246861.566395] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[247421.946997] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[247422.048671] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[247422.048764] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[247422.048782] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[247465.211037] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[247468.539626] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[248022.007681] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[248022.114644] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[248022.114726] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[248022.114745] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[248022.114763] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[248022.114781] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[248022.114798] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[248061.688081] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[248064.760049] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[248622.325375] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[248662.005985] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[248665.077519] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[249222.385941] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[249334.001400] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[249337.073197] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[249822.445876] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[249862.125987] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[249865.197999] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[250422.506878] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[250462.186533] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[250465.259060] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[251022.568884] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[251062.249983] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[251622.637531] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[251622.723213] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[251622.723297] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[251622.723314] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[251737.841608] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[251740.909589] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[252222.958247] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[252226.029928] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[252265.709975] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[252268.781712] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[252823.021273] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[252826.093265] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[252865.773437] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[252868.845292] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[253423.082093] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[253426.153781] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[253465.833476] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[253468.905917] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[254023.142843] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[254026.470329] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[254066.151140] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[254069.222924] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[254623.204057] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[254623.270161] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[254623.270242] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[254623.270262] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[254623.270279] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[254623.270297] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[254662.884238] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[255223.520630] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[255226.592614] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[255266.271454] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[255269.344337] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[255823.575549] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[255826.647529] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[255902.167739] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[255905.239779] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[256423.634981] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[256426.706863] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[256466.386962] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[256469.458885] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[257023.694565] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[257026.766817] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[257066.446602] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[257069.519071] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[257623.757302] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[257626.829709] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[257702.349351] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[257705.422412] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[258224.075806] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[258224.799573] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[258336.202853] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[258339.274287] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[258824.137488] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[258824.968226] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[258936.520020] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[258939.591963] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[259424.196902] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[259424.320782] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[259424.320871] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[259571.908696] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[260024.257982] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[260027.329703] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[260138.944882] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[260142.017349] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[260624.574569] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[260664.254288] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[260667.326519] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[261224.635158] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[261265.082744] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[261824.691346] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[261900.466194] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[261903.538157] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[262424.749340] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[262424.862997] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[262424.863078] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[262424.863098] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[262424.863116] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[262464.429595] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[262467.501252] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[262467.504002] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 0
+[262467.504042] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 0
+[262467.504061] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 0
+[262467.504080] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 0
+[262467.504097] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 0
+[263024.808563] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[263064.488771] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[263625.133191] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[263625.203804] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[263625.203888] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[263625.203907] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[263625.203924] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[263625.203942] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[263625.203959] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[263711.918341] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:60: -110
+[263715.246301] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:60: -110
+[264225.202261] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[264225.270766] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[264225.270852] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[264225.270871] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[264225.270890] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[264225.270908] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[264225.270926] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[264264.885725] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[264267.953833] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[264825.522774] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[264825.645644] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[264825.645735] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[264825.645755] ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 118
+[264937.137889] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[264940.209538] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[265425.584633] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[265428.656584] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[265611.952156] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[265615.024455] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[266025.646868] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[266336.178156] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:60: -110
+[266339.246330] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:60: -110
+[266625.709840] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1a:61: -110
+[266740.909379] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110
+[266743.980926] ath10k_sdio mmc1:0001:1: failed to install key for vdev 0 peer 7c:ff:4d:e7:1c:1c: -110

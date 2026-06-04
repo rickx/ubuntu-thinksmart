@@ -1,0 +1,21 @@
+=== SHELL ===
+nmcli device show wlan0 2>/dev/null 
+=== OUTPUT ===
+GENERAL.DEVICE:                         wlan0
+GENERAL.TYPE:                           wifi
+GENERAL.HWADDR:                         3C:91:80:BD:AF:4B
+GENERAL.MTU:                            1500
+GENERAL.STATE:                          100 (connected)
+GENERAL.CONNECTION:                     INTEREL-Holding
+GENERAL.CON-PATH:                       /org/freedesktop/NetworkManager/ActiveConnection/4
+IP4.ADDRESS[1]:                         192.168.0.85/21
+IP4.GATEWAY:                            192.168.0.1
+IP4.ROUTE[1]:                           dst = 0.0.0.0/0, nh = 192.168.0.1, mt = 600
+IP4.ROUTE[2]:                           dst = 192.168.0.0/21, nh = 0.0.0.0, mt = 600
+IP4.DNS[1]:                             192.168.5.22
+IP4.DNS[2]:                             192.168.5.23
+IP4.DNS[3]:                             192.168.0.1
+IP4.DOMAIN[1]:                          interel.local
+IP6.ADDRESS[1]:                         fe80::c36f:9f54:61e9:bed1/64
+IP6.GATEWAY:                            --
+IP6.ROUTE[1]:                           dst = fe80::/64, nh = ::, mt = 1024

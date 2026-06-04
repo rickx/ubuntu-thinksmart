@@ -1,0 +1,8 @@
+=== SHELL ===
+uname -a; echo; uptime; echo; id 
+=== OUTPUT ===
+Linux lemalo 6.19.5-msm8953 #1-postmarketos-qcom-msm8953 SMP PREEMPT Tue Mar  3 20:50:31 UTC aarch64 aarch64 aarch64 GNU/Linux
+
+ 10:08:24 up 3 days,  2:08,  2 users,  load average: 0.69, 0.48, 0.41
+
+uid=0(root) gid=0(root) groups=0(root)

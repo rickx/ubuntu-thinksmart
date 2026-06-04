@@ -1,0 +1,13 @@
+=== SHELL ===
+hciconfig -a 2>/dev/null 
+=== OUTPUT ===
+hci0:	Type: Primary  Bus: UART
+	BD Address: 3C:91:80:BD:AF:4C  ACL MTU: 1024:7  SCO MTU: 60:8
+	DOWN 
+	RX bytes:1086 acl:0 sco:0 events:92 errors:0
+	TX bytes:46870 acl:0 sco:0 commands:239 errors:0
+	Features: 0xff 0xfe 0x8f 0xfe 0xd8 0x3f 0x5b 0x87
+	Packet type: DM1 DM3 DM5 DH1 DH3 DH5 HV1 HV2 HV3 
+	Link policy: RSWITCH HOLD SNIFF 
+	Link mode: PERIPHERAL ACCEPT 
+

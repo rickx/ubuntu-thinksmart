@@ -1,0 +1,83 @@
+=== SHELL ===
+sudo -u user XDG_RUNTIME_DIR=/run/user/1000 journalctl --user -u vcnl4200-proximity-daemon.service -n 80 --no-pager 2>/dev/null 
+=== OUTPUT ===
+May 27 08:27:33 lemalo python3[1211]: 2026-05-27 08:27:33,028 [WARNING] === PROXIMITY DETECTED — WAKING SCREEN ===
+May 27 08:27:33 lemalo sudo[8739]:     user : PWD=/home/user ; USER=root ; COMMAND=/usr/bin/tee /sys/class/backlight/backlight/bl_power
+May 27 08:27:33 lemalo sudo[8739]: pam_unix(sudo:session): session opened for user root(uid=0) by user(uid=1000)
+May 27 08:27:33 lemalo sudo[8739]: pam_unix(sudo:session): session closed for user root
+May 27 08:27:33 lemalo sudo[8741]:     user : PWD=/home/user ; USER=root ; COMMAND=/usr/bin/tee /sys/class/backlight/backlight/brightness
+May 27 08:27:33 lemalo sudo[8741]: pam_unix(sudo:session): session opened for user root(uid=0) by user(uid=1000)
+May 27 08:27:33 lemalo sudo[8741]: pam_unix(sudo:session): session closed for user root
+May 27 08:27:33 lemalo python3[1211]: 2026-05-27 08:27:33,101 [INFO] Screen woken via sudo tee backlight write
+May 27 08:27:33 lemalo python3[1211]: 2026-05-27 08:27:33,617 [INFO] Brightness changed: 0 -> 4095
+May 27 08:27:33 lemalo python3[1211]: 2026-05-27 08:27:33,619 [INFO] Disabling proximity sensor (PS_SD=1)
+May 27 08:27:33 lemalo python3[1211]: 2026-05-27 08:27:33,620 [INFO] Sensor shut down
+May 27 08:32:34 lemalo python3[1211]: 2026-05-27 08:32:34,286 [INFO] Brightness changed: 4095 -> 0
+May 27 08:32:34 lemalo python3[1211]: 2026-05-27 08:32:34,288 [INFO] Enabling proximity sensor
+May 27 08:32:34 lemalo python3[1211]: 2026-05-27 08:32:34,291 [INFO] PS_CONF1 enabled (0xCA), LED=200mA
+May 27 17:00:46 lemalo python3[1211]: 2026-05-27 17:00:46,551 [WARNING] PROXIMITY: 562 counts over 1 readings — triggering wake
+May 27 17:00:46 lemalo python3[1211]: 2026-05-27 17:00:46,553 [WARNING] === PROXIMITY DETECTED — WAKING SCREEN ===
+May 27 17:00:46 lemalo sudo[10222]:     user : PWD=/home/user ; USER=root ; COMMAND=/usr/bin/tee /sys/class/backlight/backlight/bl_power
+May 27 17:00:46 lemalo sudo[10222]: pam_unix(sudo:session): session opened for user root(uid=0) by user(uid=1000)
+May 27 17:00:46 lemalo sudo[10222]: pam_unix(sudo:session): session closed for user root
+May 27 17:00:46 lemalo sudo[10224]:     user : PWD=/home/user ; USER=root ; COMMAND=/usr/bin/tee /sys/class/backlight/backlight/brightness
+May 27 17:00:46 lemalo sudo[10224]: pam_unix(sudo:session): session opened for user root(uid=0) by user(uid=1000)
+May 27 17:00:46 lemalo sudo[10224]: pam_unix(sudo:session): session closed for user root
+May 27 17:00:46 lemalo python3[1211]: 2026-05-27 17:00:46,647 [INFO] Screen woken via sudo tee backlight write
+May 27 17:00:47 lemalo python3[1211]: 2026-05-27 17:00:47,164 [INFO] Brightness changed: 0 -> 4095
+May 27 17:00:47 lemalo python3[1211]: 2026-05-27 17:00:47,166 [INFO] Disabling proximity sensor (PS_SD=1)
+May 27 17:00:47 lemalo python3[1211]: 2026-05-27 17:00:47,168 [INFO] Sensor shut down
+May 27 17:05:48 lemalo python3[1211]: 2026-05-27 17:05:48,363 [INFO] Brightness changed: 4095 -> 0
+May 27 17:05:48 lemalo python3[1211]: 2026-05-27 17:05:48,365 [INFO] Enabling proximity sensor
+May 27 17:05:48 lemalo python3[1211]: 2026-05-27 17:05:48,372 [INFO] PS_CONF1 enabled (0xCA), LED=200mA
+May 28 08:14:31 lemalo python3[1211]: 2026-05-28 08:14:31,425 [WARNING] PROXIMITY: 53 counts over 1 readings — triggering wake
+May 28 08:14:31 lemalo python3[1211]: 2026-05-28 08:14:31,446 [WARNING] === PROXIMITY DETECTED — WAKING SCREEN ===
+May 28 08:14:31 lemalo sudo[13677]:     user : PWD=/home/user ; USER=root ; COMMAND=/usr/bin/tee /sys/class/backlight/backlight/bl_power
+May 28 08:14:31 lemalo sudo[13677]: pam_unix(sudo:session): session opened for user root(uid=0) by user(uid=1000)
+May 28 08:14:31 lemalo sudo[13677]: pam_unix(sudo:session): session closed for user root
+May 28 08:14:31 lemalo sudo[13679]:     user : PWD=/home/user ; USER=root ; COMMAND=/usr/bin/tee /sys/class/backlight/backlight/brightness
+May 28 08:14:31 lemalo sudo[13679]: pam_unix(sudo:session): session opened for user root(uid=0) by user(uid=1000)
+May 28 08:14:31 lemalo sudo[13679]: pam_unix(sudo:session): session closed for user root
+May 28 08:14:31 lemalo python3[1211]: 2026-05-28 08:14:31,553 [INFO] Screen woken via sudo tee backlight write
+May 28 08:14:32 lemalo python3[1211]: 2026-05-28 08:14:32,072 [INFO] Brightness changed: 0 -> 4095
+May 28 08:14:32 lemalo python3[1211]: 2026-05-28 08:14:32,074 [INFO] Disabling proximity sensor (PS_SD=1)
+May 28 08:14:32 lemalo python3[1211]: 2026-05-28 08:14:32,076 [INFO] Sensor shut down
+May 28 08:19:32 lemalo python3[1211]: 2026-05-28 08:19:32,779 [INFO] Brightness changed: 4095 -> 0
+May 28 08:19:32 lemalo python3[1211]: 2026-05-28 08:19:32,781 [INFO] Enabling proximity sensor
+May 28 08:19:32 lemalo python3[1211]: 2026-05-28 08:19:32,784 [INFO] PS_CONF1 enabled (0xCA), LED=200mA
+May 28 10:17:31 lemalo python3[1211]: 2026-05-28 10:17:31,823 [WARNING] PROXIMITY: 52 counts over 1 readings — triggering wake
+May 28 10:17:31 lemalo python3[1211]: 2026-05-28 10:17:31,824 [WARNING] === PROXIMITY DETECTED — WAKING SCREEN ===
+May 28 10:17:31 lemalo sudo[14029]:     user : PWD=/home/user ; USER=root ; COMMAND=/usr/bin/tee /sys/class/backlight/backlight/bl_power
+May 28 10:17:31 lemalo sudo[14029]: pam_unix(sudo:session): session opened for user root(uid=0) by user(uid=1000)
+May 28 10:17:31 lemalo sudo[14029]: pam_unix(sudo:session): session closed for user root
+May 28 10:17:31 lemalo sudo[14031]:     user : PWD=/home/user ; USER=root ; COMMAND=/usr/bin/tee /sys/class/backlight/backlight/brightness
+May 28 10:17:31 lemalo sudo[14031]: pam_unix(sudo:session): session opened for user root(uid=0) by user(uid=1000)
+May 28 10:17:31 lemalo sudo[14031]: pam_unix(sudo:session): session closed for user root
+May 28 10:17:31 lemalo python3[1211]: 2026-05-28 10:17:31,917 [INFO] Screen woken via sudo tee backlight write
+May 28 10:17:32 lemalo python3[1211]: 2026-05-28 10:17:32,433 [INFO] Brightness changed: 0 -> 4095
+May 28 10:17:32 lemalo python3[1211]: 2026-05-28 10:17:32,434 [INFO] Disabling proximity sensor (PS_SD=1)
+May 28 10:17:32 lemalo python3[1211]: 2026-05-28 10:17:32,438 [INFO] Sensor shut down
+May 28 10:22:33 lemalo python3[1211]: 2026-05-28 10:22:33,639 [INFO] Brightness changed: 4095 -> 0
+May 28 10:22:33 lemalo python3[1211]: 2026-05-28 10:22:33,641 [INFO] Enabling proximity sensor
+May 28 10:22:33 lemalo python3[1211]: 2026-05-28 10:22:33,644 [INFO] PS_CONF1 enabled (0xCA), LED=200mA
+May 29 08:19:45 lemalo python3[1211]: 2026-05-29 08:19:45,145 [WARNING] PROXIMITY: 88 counts over 1 readings — triggering wake
+May 29 08:19:45 lemalo python3[1211]: 2026-05-29 08:19:45,148 [WARNING] === PROXIMITY DETECTED — WAKING SCREEN ===
+May 29 08:19:45 lemalo sudo[18408]:     user : PWD=/home/user ; USER=root ; COMMAND=/usr/bin/tee /sys/class/backlight/backlight/bl_power
+May 29 08:19:45 lemalo sudo[18408]: pam_unix(sudo:session): session opened for user root(uid=0) by user(uid=1000)
+May 29 08:19:45 lemalo sudo[18408]: pam_unix(sudo:session): session closed for user root
+May 29 08:19:45 lemalo sudo[18410]:     user : PWD=/home/user ; USER=root ; COMMAND=/usr/bin/tee /sys/class/backlight/backlight/brightness
+May 29 08:19:45 lemalo sudo[18410]: pam_unix(sudo:session): session opened for user root(uid=0) by user(uid=1000)
+May 29 08:19:45 lemalo sudo[18410]: pam_unix(sudo:session): session closed for user root
+May 29 08:19:45 lemalo python3[1211]: 2026-05-29 08:19:45,253 [INFO] Screen woken via sudo tee backlight write
+May 29 08:19:45 lemalo python3[1211]: 2026-05-29 08:19:45,773 [INFO] Brightness changed: 0 -> 4095
+May 29 08:19:45 lemalo python3[1211]: 2026-05-29 08:19:45,775 [INFO] Disabling proximity sensor (PS_SD=1)
+May 29 08:19:45 lemalo python3[1211]: 2026-05-29 08:19:45,778 [INFO] Sensor shut down
+May 29 08:24:46 lemalo python3[1211]: 2026-05-29 08:24:46,455 [INFO] Brightness changed: 4095 -> 0
+May 29 08:24:46 lemalo python3[1211]: 2026-05-29 08:24:46,456 [INFO] Enabling proximity sensor
+May 29 08:24:46 lemalo python3[1211]: 2026-05-29 08:24:46,459 [INFO] PS_CONF1 enabled (0xCA), LED=200mA
+May 29 09:59:13 lemalo python3[1211]: 2026-05-29 09:59:13,807 [INFO] Brightness changed: 0 -> 4095
+May 29 09:59:13 lemalo python3[1211]: 2026-05-29 09:59:13,808 [INFO] Disabling proximity sensor (PS_SD=1)
+May 29 09:59:13 lemalo python3[1211]: 2026-05-29 09:59:13,811 [INFO] Sensor shut down
+May 29 10:04:15 lemalo python3[1211]: 2026-05-29 10:04:15,525 [INFO] Brightness changed: 4095 -> 0
+May 29 10:04:15 lemalo python3[1211]: 2026-05-29 10:04:15,527 [INFO] Enabling proximity sensor
+May 29 10:04:15 lemalo python3[1211]: 2026-05-29 10:04:15,531 [INFO] PS_CONF1 enabled (0xCA), LED=200mA

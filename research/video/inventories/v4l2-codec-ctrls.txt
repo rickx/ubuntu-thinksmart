@@ -1,0 +1,4 @@
+=== SHELL ===
+v4l2-ctl -d /dev/video0 --list-ctrls 2>/dev/null; echo; v4l2-ctl -d /dev/video1 --list-ctrls 2>/dev/null 
+=== OUTPUT ===
+

@@ -1,0 +1,3 @@
+=== SHELL ===
+dmesg | grep -iE 'camss|camera|cci|csi|ov5693|s5k|gc5035' 
+=== OUTPUT ===

@@ -1,0 +1,4 @@
+=== COMMAND ===
+adb_cmd shell cmd media.codec list 
+=== OUTPUT ===
+cmd: Can't find service: media.codec

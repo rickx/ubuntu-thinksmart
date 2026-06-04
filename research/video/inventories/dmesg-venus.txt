@@ -1,0 +1,3 @@
+=== SHELL ===
+dmesg | grep -iE 'venus|v4l2|video' 
+=== OUTPUT ===

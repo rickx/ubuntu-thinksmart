@@ -1,0 +1,4 @@
+=== COMMAND ===
+adb_cmd get-state 
+=== OUTPUT ===
+device

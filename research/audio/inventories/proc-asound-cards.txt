@@ -1,0 +1,5 @@
+=== SHELL ===
+cat /proc/asound/cards 
+=== OUTPUT ===
+ 0 [cd18781y       ]: cd-18781y - cd-18781y
+                      cd-18781y

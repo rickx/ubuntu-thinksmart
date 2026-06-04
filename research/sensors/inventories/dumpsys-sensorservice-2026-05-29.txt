@@ -1,0 +1,121 @@
+=== COMMAND ===
+adb_cmd shell dumpsys sensorservice 
+=== OUTPUT ===
+Sensor Device:
+Total 15 h/w sensors, 15 running:
+0x00000001) active-count = 1; sampling_period(ms) = {66.7}, selected = 66.67 ms; batching_period(ms) = {100.0}, selected = 100.00 ms
+Sensor List:
+0x00000001) BMA255 Accelerometer/Temperature/Double-tap | BOSCH           | ver: 2070902 | type: android.sensor.accelerometer(1) | perm: n/a | flags: 0x00000000
+	continuous | minRate=1.00Hz | maxRate=250.00Hz | FIFO (max,reserved) = (10000, 0) events | non-wakeUp | 
+0x00000002) VCNL4200 PRX              | Capella         | ver: 2 | type: android.sensor.proximity(8) | perm: n/a | flags: 0x00000003
+	on-change | minRate=0.02Hz | minDelay=0us | FIFO (max,reserved) = (8770, 100) events | wakeUp | 
+0x00000003) VCNL4200 ALS              | Capella         | ver: 1 | type: android.sensor.light(5) | perm: n/a | flags: 0x00000002
+	on-change | minRate=0.02Hz | minDelay=0us | FIFO (max,reserved) = (50, 0) events | non-wakeUp | 
+0x00000004) BMA255 Accelerometer/Temperature/Double-tap -Wakeup Secondary | BOSCH           | ver: 2070902 | type: android.sensor.accelerometer(1) | perm: n/a | flags: 0x00000001
+	continuous | minRate=1.00Hz | maxRate=200.00Hz | FIFO (max,reserved) = (10000, 0) events | wakeUp | 
+0x00000005) VCNL4200 PRX -Non Wakeup Secondary | Capella         | ver: 2 | type: android.sensor.proximity(8) | perm: n/a | flags: 0x00000002
+	on-change | minRate=0.02Hz | minDelay=0us | FIFO (max,reserved) = (8770, 100) events | non-wakeUp | 
+0x00000006) VCNL4200 ALS -Wakeup Secondary | Capella         | ver: 1 | type: android.sensor.light(5) | perm: n/a | flags: 0x00000003
+	on-change | minRate=0.02Hz | minDelay=0us | FIFO (max,reserved) = (50, 0) events | wakeUp | 
+0x00000007) Significant Motion Detector | QTI             | ver: 2 | type: android.sensor.significant_motion(17) | perm: n/a | flags: 0x00000005
+	one-shot | maxDelay=0us | minDelay=-1us | no batching | wakeUp | 
+0x00000008) Tilt Detector             | QTI             | ver: 2 | type: android.sensor.tilt_detector(22) | perm: n/a | flags: 0x00000007
+	special-trigger | maxDelay=0us | minDelay=0us | FIFO (max,reserved) = (26311, 0) events | wakeUp | 
+0x00000009) AMD                       | QTI             | ver: 2 | type:   com.qti.sensor.amd(33171006) | perm: n/a | flags: 0x00000002
+	on-change | minRate=0.00Hz | minDelay=0us | no batching | non-wakeUp | 
+0x0000000a) RMD                       | QTI             | ver: 2 | type:   com.qti.sensor.rmd(33171007) | perm: n/a | flags: 0x00000002
+	on-change | minRate=0.00Hz | minDelay=0us | no batching | non-wakeUp | 
+0x0000000b) Basic Gestures            | QTI             | ver: 2 | type: com.qti.sensor.basic_gestures(33171000) | perm: n/a | flags: 0x00000003
+	on-change | minRate=0.00Hz | minDelay=0us | no batching | wakeUp | 
+0x0000000c) Facing                    | QTI             | ver: 2 | type: com.qti.sensor.facing(33171002) | perm: n/a | flags: 0x00000003
+	on-change | minRate=0.00Hz | minDelay=0us | no batching | wakeUp | 
+0x0000000d) Pedometer                 | QTI             | ver: 2 | type: com.qti.sensor.pedometer(33171009) | perm: n/a | flags: 0x00000002
+	on-change | minRate=0.00Hz | minDelay=0us | FIFO (max,reserved) = (8770, 100) events | non-wakeUp | 
+0x0000000e) Motion Accel              | QTI             | ver: 2 | type: com.qti.sensor.motion_accel(33171011) | perm: n/a | flags: 0x00000006
+	special-trigger | maxDelay=0us | minDelay=0us | no batching | non-wakeUp | 
+0x0000000f) Coarse Motion Classifier  | QTI             | ver: 3 | type:   com.qti.sensor.cmc(33171012) | perm: n/a | flags: 0x00000003
+	on-change | minRate=0.00Hz | minDelay=0us | FIFO (max,reserved) = (2505, 0) events | wakeUp | 
+Fusion States:
+9-axis fusion disabled (0 clients), gyro-rate= 200.00Hz, q=< 0, 0, 0, 0 > (0), b=< 0, 0, 0 >
+game fusion(no mag) disabled (0 clients), gyro-rate= 200.00Hz, q=< 0, 0, 0, 0 > (0), b=< 0, 0, 0 >
+geomag fusion (no gyro) disabled (0 clients), gyro-rate= 200.00Hz, q=< 0, 0, 0, 0 > (0), b=< 0, 0, 0 >
+Recent Sensor events:
+VCNL4200 ALS: last 10 events
+	 1 (ts=489.687482862, wall=15:41:53.837) 58.95, 0.00, 0.00, 
+	 2 (ts=494.235517530, wall=15:41:58.386) 52.20, 0.00, 0.00, 
+	 3 (ts=503.951936661, wall=15:42:08.099) 57.75, 0.00, 0.00, 
+	 4 (ts=584.279262926, wall=15:43:28.426) 68.55, 0.00, 0.00, 
+	 5 (ts=584.588650133, wall=15:43:28.739) 55.35, 0.00, 0.00, 
+	 6 (ts=644.664132892, wall=15:44:28.814) 65.85, 0.00, 0.00, 
+	 7 (ts=644.974283039, wall=15:44:29.124) 54.60, 0.00, 0.00, 
+	 8 (ts=5659.640373569, wall=17:08:03.788) 28.20, 0.00, 0.00, 
+	 9 (ts=5941.117642609, wall=17:12:45.268) 24.90, 0.00, 0.00, 
+	10 (ts=5945.461545197, wall=17:12:49.611) 28.05, 0.00, 0.00, 
+BMA255 Accelerometer/Temperature/Double-tap: last 50 events
+	 1 (ts=6486.614532920, wall=17:21:50.764) -0.21, 9.52, -3.08, 
+	 2 (ts=6486.677582236, wall=17:21:50.827) -0.19, 9.50, -3.10, 
+	 3 (ts=6486.740631553, wall=17:21:50.890) -0.21, 9.52, -3.08, 
+	 4 (ts=6486.803680869, wall=17:21:50.953) -0.21, 9.50, -3.10, 
+	 5 (ts=6486.866730186, wall=17:21:51.016) -0.21, 9.52, -3.08, 
+	 6 (ts=6486.929779502, wall=17:21:51.079) -0.21, 9.52, -3.08, 
+	 7 (ts=6486.992828818, wall=17:21:51.143) -0.21, 9.50, -3.10, 
+	 8 (ts=6487.055878135, wall=17:21:51.206) -0.21, 9.50, -3.10, 
+	 9 (ts=6487.118957969, wall=17:21:51.269) -0.21, 9.52, -3.08, 
+	10 (ts=6487.182007285, wall=17:21:51.332) -0.19, 9.50, -3.08, 
+	11 (ts=6487.245056602, wall=17:21:51.395) -0.19, 9.52, -3.08, 
+	12 (ts=6487.308105918, wall=17:21:51.458) -0.21, 9.52, -3.08, 
+	13 (ts=6487.371155234, wall=17:21:51.521) -0.21, 9.50, -3.08, 
+	14 (ts=6487.434174033, wall=17:21:51.584) -0.21, 9.50, -3.08, 
+	15 (ts=6487.497223350, wall=17:21:51.647) -0.21, 9.52, -3.10, 
+	16 (ts=6487.560303184, wall=17:21:51.710) -0.21, 9.52, -3.10, 
+	17 (ts=6487.623321983, wall=17:21:51.773) -0.21, 9.52, -3.08, 
+	18 (ts=6487.686371299, wall=17:21:51.836) -0.21, 9.52, -3.10, 
+	19 (ts=6487.749420615, wall=17:21:51.899) -0.21, 9.50, -3.10, 
+	20 (ts=6487.812469932, wall=17:21:51.962) -0.21, 9.50, -3.10, 
+	21 (ts=6487.875519248, wall=17:21:52.025) -0.21, 9.50, -3.10, 
+	22 (ts=6487.938568565, wall=17:21:52.088) -0.21, 9.52, -3.10, 
+	23 (ts=6488.001617881, wall=17:21:52.148) -0.21, 9.52, -3.08, 
+	24 (ts=6488.064667197, wall=17:21:52.214) -0.21, 9.52, -3.08, 
+	25 (ts=6488.127716514, wall=17:21:52.277) -0.21, 9.50, -3.08, 
+	26 (ts=6488.190765830, wall=17:21:52.341) -0.19, 9.52, -3.10, 
+	27 (ts=6488.253815147, wall=17:21:52.401) -0.21, 9.52, -3.10, 
+	28 (ts=6488.316833945, wall=17:21:52.463) -0.21, 9.50, -3.08, 
+	29 (ts=6488.380493613, wall=17:21:52.526) -0.21, 9.52, -3.10, 
+	30 (ts=6488.442993613, wall=17:21:52.592) -0.21, 9.52, -3.08, 
+	31 (ts=6488.506103965, wall=17:21:52.652) -0.21, 9.52, -3.10, 
+	32 (ts=6488.569125605, wall=17:21:52.716) -0.21, 9.50, -3.10, 
+	33 (ts=6488.632205439, wall=17:21:52.778) -0.21, 9.52, -3.10, 
+	34 (ts=6488.695254755, wall=17:21:52.840) -0.21, 9.50, -3.10, 
+	35 (ts=6488.758273554, wall=17:21:52.904) -0.21, 9.50, -3.08, 
+	36 (ts=6488.821353388, wall=17:21:52.967) -0.21, 9.50, -3.10, 
+	37 (ts=6488.884402704, wall=17:21:53.030) -0.21, 9.52, -3.08, 
+	38 (ts=6488.947421503, wall=17:21:53.093) -0.19, 9.52, -3.10, 
+	39 (ts=6489.010501337, wall=17:21:53.156) -0.19, 9.52, -3.10, 
+	40 (ts=6489.073520136, wall=17:21:53.219) -0.19, 9.52, -3.08, 
+	41 (ts=6489.136569452, wall=17:21:53.282) -0.21, 9.52, -3.08, 
+	42 (ts=6489.199649286, wall=17:21:53.345) -0.21, 9.52, -3.08, 
+	43 (ts=6489.262698603, wall=17:21:53.408) -0.21, 9.52, -3.08, 
+	44 (ts=6489.325747919, wall=17:21:53.471) -0.21, 9.52, -3.08, 
+	45 (ts=6489.388766718, wall=17:21:53.534) -0.21, 9.52, -3.08, 
+	46 (ts=6489.451816034, wall=17:21:53.597) -0.21, 9.50, -3.10, 
+	47 (ts=6489.514834833, wall=17:21:53.661) -0.21, 9.52, -3.10, 
+	48 (ts=6489.577945185, wall=17:21:53.723) -0.21, 9.52, -3.10, 
+	49 (ts=6489.640963984, wall=17:21:53.786) -0.21, 9.50, -3.08, 
+	50 (ts=6489.704013300, wall=17:21:53.849) -0.19, 9.50, -3.10, 
+Active sensors:
+BMA255 Accelerometer/Temperature/Double-tap (handle=0x00000001, connections=1)
+Socket Buffer size = 984 events
+WakeLock Status: not held 
+Mode : NORMAL
+1 active connections
+Connection Number: 0 
+	Operating Mode: NORMAL
+	 com.android.server.policy.WindowOrientationListener | WakeLockRefCount 0 | uid 1000 | cache size 0 | max cache size 0
+	 BMA255 Accelerometer/Temperature/Double-tap 0x00000001 | status: active | pending flush events 0 
+0 direct connections
+Previous Registrations:
+17:18:04 - 0x00000003 pid= 1219 uid= 1000 package=com.android.server.display.AutomaticBrightnessController
+17:08:03 + 0x00000003 pid= 1219 uid= 1000 package=com.android.server.display.AutomaticBrightnessController samplingPeriod=100000us batchingPeriod=0us
+15:44:31 - 0x00000003 pid= 1219 uid= 1000 package=com.android.server.display.AutomaticBrightnessController
+09:00:01 + 0x00000003 pid= 1219 uid= 1000 package=com.android.server.display.AutomaticBrightnessController samplingPeriod=100000us batchingPeriod=0us
+09:00:01 + 0x00000001 pid= 1219 uid= 1000 package=com.android.server.policy.WindowOrientationListener samplingPeriod=66667us batchingPeriod=100000us

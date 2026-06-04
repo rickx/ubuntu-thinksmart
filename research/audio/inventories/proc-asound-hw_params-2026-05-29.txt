@@ -1,0 +1,4 @@
+=== COMMAND ===
+adb_cmd shell cat /proc/asound/card0/pcm0p/sub0/hw_params 
+=== OUTPUT ===
+closed

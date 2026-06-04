@@ -1,0 +1,25 @@
+=== SHELL ===
+systemctl status bluetooth --no-pager 2>/dev/null 
+=== OUTPUT ===
+● bluetooth.service - Bluetooth service
+     Loaded: loaded (/usr/lib/systemd/system/bluetooth.service; enabled; preset: enabled)
+     Active: active (running) since Fri 2026-05-22 19:00:14 CEST; 6 days ago
+       Docs: man:bluetoothd(8)
+   Main PID: 925 (bluetoothd)
+     Status: "Running"
+      Tasks: 1 (limit: 2368)
+     Memory: 1.2M (peak: 4.2M)
+        CPU: 175ms
+     CGroup: /system.slice/bluetooth.service
+             └─925 /usr/libexec/bluetooth/bluetoothd
+
+May 22 19:00:22 lemalo bluetoothd[925]: Endpoint registered: sender=:1.30 path=/MediaEndpoint/A2DPSource/aptx_ll_0
+May 22 19:00:22 lemalo bluetoothd[925]: Endpoint registered: sender=:1.30 path=/MediaEndpoint/A2DPSource/aptx_ll_duplex_1
+May 22 19:00:22 lemalo bluetoothd[925]: Endpoint registered: sender=:1.30 path=/MediaEndpoint/A2DPSource/aptx_ll_duplex_0
+May 22 19:00:22 lemalo bluetoothd[925]: Endpoint registered: sender=:1.30 path=/MediaEndpoint/A2DPSource/faststream
+May 22 19:00:22 lemalo bluetoothd[925]: Endpoint registered: sender=:1.30 path=/MediaEndpoint/A2DPSource/faststream_duplex
+May 22 19:00:22 lemalo bluetoothd[925]: Endpoint registered: sender=:1.30 path=/MediaEndpoint/A2DPSink/opus_05
+May 22 19:00:22 lemalo bluetoothd[925]: Endpoint registered: sender=:1.30 path=/MediaEndpoint/A2DPSource/opus_05
+May 22 19:00:22 lemalo bluetoothd[925]: Endpoint registered: sender=:1.30 path=/MediaEndpoint/A2DPSink/opus_05_duplex
+May 22 19:00:22 lemalo bluetoothd[925]: Endpoint registered: sender=:1.30 path=/MediaEndpoint/A2DPSource/opus_05_duplex
+May 22 19:00:34 lemalo bluetoothd[925]: src/adv_monitor.c:btd_adv_monitor_power_down() Unexpected NULL btd_adv_monitor_manager object upon power down

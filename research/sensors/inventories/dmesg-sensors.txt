@@ -1,0 +1,3 @@
+=== SHELL ===
+dmesg | grep -iE 'vcnl|bma|sensor|slpi|ssc|iio' 
+=== OUTPUT ===
