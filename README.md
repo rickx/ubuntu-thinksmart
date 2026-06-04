@@ -2,7 +2,7 @@
 
 > Custom Ubuntu 24.04 port for the Lenovo ThinkSmart View (CD-18781Y).  
 > APQ8053 / MSM8953 SoC · ARM64 · kernel 6.19.5-msm8953  
-> **Speaker audio confirmed working. Display working. WiFi associates, but ath10k_sdio remains unstable.**
+> **Speaker audio, Bluetooth, and accelerometer confirmed working. Display working. WiFi associates, but ath10k_sdio remains unstable.**
 
 ---
 
@@ -35,8 +35,8 @@
 | Display backlight | ✅ Working | Controlled via display-guard service |
 | Proximity sensor (VCNL4200) | ✅ Working | Userspace daemon, no DTB change; triggers screen wake |
 | Camera | 🔲 Research in progress | Live hardware points to Samsung S5KC505A; see `research/camera/` |
-| Bluetooth | 🔲 Research in progress | `hci0` enumerated, BD address `3C:91:80:BD:AF:4C`, A2DP endpoints registered; controller not powered on, pairing not tested |
-| Accelerometer (BMA255) | 🔲 Not available | Hardware present; runs via ADSP sensor HAL in stock Android, no IIO driver on Ubuntu |
+| Bluetooth | ✅ Working | QCA UART HCI, firmware loads at boot; A2DP tested with WH202A headset |
+| Accelerometer (BMA253) | ✅ Working | `bma253` IIO driver; screen auto-rotation via `iio-sensor-proxy` |
 | USB OTG | 🔲 Not tested | |
 | Hardware video decode | 🔲 Research in progress | Venus driver loads, `/dev/video6` + `/dev/video7` enumerated; actual decode not tested |
 
