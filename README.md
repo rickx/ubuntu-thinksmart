@@ -35,9 +35,10 @@
 | Display backlight | ✅ Working | Controlled via display-guard service |
 | Proximity sensor (VCNL4200) | ✅ Working | Userspace daemon, no DTB change; triggers screen wake |
 | Camera | 🔲 Research in progress | Live hardware points to Samsung S5KC505A; see `research/camera/` |
-| Bluetooth | 🔲 Not tested | |
+| Bluetooth | 🔲 Research in progress | `hci0` enumerated, BD address `3C:91:80:BD:AF:4C`, A2DP endpoints registered; controller not powered on, pairing not tested |
+| Accelerometer (BMA255) | 🔲 Not available | Hardware present; runs via ADSP sensor HAL in stock Android, no IIO driver on Ubuntu |
 | USB OTG | 🔲 Not tested | |
-| Hardware video decode | 🔲 Not tested | Venus VPU present |
+| Hardware video decode | 🔲 Research in progress | Venus driver loads, `/dev/video6` + `/dev/video7` enumerated; actual decode not tested |
 
 ### WiFi Management (temporary workaround)
 
