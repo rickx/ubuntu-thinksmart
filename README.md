@@ -2,7 +2,7 @@
 
 > Custom Ubuntu 24.04 port for the Lenovo ThinkSmart View (CD-18781Y).  
 > APQ8053 / MSM8953 SoC · ARM64 · kernel 6.19.5-msm8953  
-> **Speaker audio confirmed working. Display and WiFi working.**
+> **Speaker audio confirmed working. Display working. WiFi associates, but ath10k_sdio remains unstable.**
 
 ---
 
@@ -16,7 +16,7 @@
 | Storage | 8 GB eMMC |
 | Display | 8-inch IPS touchscreen, DSI |
 | Audio amp | Texas Instruments TAS5782M (I2S Class-D) |
-| WiFi/BT | Qualcomm WCN3660B (ath10k_sdio) |
+| WiFi/BT | Qualcomm QCA9379 hw1.0 SDIO (ath10k_sdio) |
 | Modem | N/A (Teams appliance, no cellular) |
 
 ---
@@ -27,7 +27,7 @@
 |---------|--------|-------|
 | Boot (EDL → lk2nd → extlinux) | ✅ Working | lk2nd.img in this repo |
 | Ubuntu 24.04 userland | ✅ Working | First boot requires on-device WiFi setup before SSH |
-| WiFi (ath10k_sdio) | ✅ Working | WPA2 via NetworkManager |
+| WiFi (ath10k_sdio) | ⚠️ Unstable | Associates via NetworkManager, but intermittent `failed to install key ... -110` and GTK key timeouts still cause disconnects |
 | ADSP / Qualcomm DSP | ✅ Working | Started by systemd service at boot |
 | Speaker audio (TAS5782M) | ✅ Working | Requires custom driver + WirePlumber policy |
 | Plasma Mobile (KDE) | ✅ Working | SDDM, touchscreen |
@@ -38,6 +38,23 @@
 | Bluetooth | 🔲 Not tested | |
 | USB OTG | 🔲 Not tested | |
 | Hardware video decode | 🔲 Not tested | Venus VPU present |
+
+### WiFi Management (temporary workaround)
+
+Until a settings page is available in Plasma Mobile Settings, manage WiFi connections from Konsole:
+
+```
+sudo nmtui
+```
+
+This provides a text UI to connect to new networks, edit saved connections, etc.
+
+### WiFi Note
+
+- Live logs identify the WiFi device as `QCA9379 hw1.0 sdio` with firmware `WLAN.NPL.1.6-00163-QCANPLSWPZ-1`.
+- Current ath10k diagnosis: the `-110` key install/remove failures come from the hardware crypto offload path waiting for the HTT security indication completion.
+- The active 6.19.5 ath10k source already includes the upstream group-key delete workaround, so the remaining issue is not a missing delete-key patch.
+- Firmware features currently log as `wowlan,ignore-otp,mfp` with no `raw-mode`, so `ath10k_core.cryptmode=1` is not a usable workaround on this firmware.
 
 ---
 
