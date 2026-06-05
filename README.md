@@ -2,7 +2,7 @@
 
 > Custom Ubuntu 24.04 port for the Lenovo ThinkSmart View (CD-18781Y).  
 > APQ8053 / MSM8953 SoC · ARM64 · kernel 6.19.5-msm8953  
-> **Speaker audio, microphone, Bluetooth, accelerometer, brightness slider, and proximity wake are confirmed working. WiFi setup UI is working, but ath10k_sdio remains unstable.**
+> **Speaker audio, microphone, Bluetooth, accelerometer, brightness slider, and proximity wake are confirmed working. WiFi setup UI is working and GTK rekey dropouts are fixed with the ath10k_core patch.**
 
 ---
 
@@ -27,7 +27,7 @@
 |---------|--------|-------|
 | Boot (EDL → lk2nd → extlinux) | ✅ Working | lk2nd.img in this repo |
 | Ubuntu 24.04 userland | ✅ Working | First boot requires on-device WiFi setup before SSH |
-| WiFi (ath10k_sdio) | ⚠️ Unstable | Associates via NetworkManager, but intermittent `failed to install key ... -110` and GTK key timeouts still cause disconnects |
+| WiFi (ath10k_sdio) | ✅ Working | GTK rekey dropouts fixed by patched `ath10k_core.ko`; warning line may still appear in dmesg but connection stays up |
 | WiFi settings UI | ✅ Working | Quick Settings deep-link opens the mobile Wi-Fi module, active connection IP is shown in the list |
 | ADSP / Qualcomm DSP | ✅ Working | Started by systemd service at boot |
 | Speaker audio (TAS5782M) | ✅ Working | Requires custom driver + WirePlumber policy |
@@ -64,9 +64,11 @@ This avoids lockout if Wi-Fi setup or policy changes break remote access.
 ### WiFi Note
 
 - Live logs identify the WiFi device as `QCA9379 hw1.0 sdio` with firmware `WLAN.NPL.1.6-00163-QCANPLSWPZ-1`.
-- Current ath10k diagnosis: the `-110` key install/remove failures come from the hardware crypto offload path waiting for the HTT security indication completion.
-- The active 6.19.5 ath10k source already includes the upstream group-key delete workaround, so the remaining issue is not a missing delete-key patch.
+- Root cause: `-110` key install/remove failures come from the hardware crypto offload path waiting for the HTT security indication completion.
+- Fix in use: patched `ath10k_core.ko` swallows `-ETIMEDOUT` in `ath10k_set_key` after warning, preventing mac80211-triggered deauth on GTK rekey.
 - Firmware features currently log as `wowlan,ignore-otp,mfp` with no `raw-mode`, so `ath10k_core.cryptmode=1` is not a usable workaround on this firmware.
+
+Detailed implementation and verification: [research/wifi/analysis/ath10k-gtk-rekey-fix-2026-06-05.md](research/wifi/analysis/ath10k-gtk-rekey-fix-2026-06-05.md)
 
 ---
 
@@ -125,6 +127,8 @@ This repository is public and user-facing.
 - Keep `README.md` focused on tested features, install flow, and known limitations.
 - Keep `research/` focused on technical analysis that helps contributors and advanced users.
 - Keep private work logs, personal notes, and session journals out of this repository.
+
+System-image versus post-install state is tracked in [DEPLOYMENT_STATE.md](DEPLOYMENT_STATE.md).
 
 ---
 
@@ -337,6 +341,7 @@ eMMC
 ```
 FINAL/
 ├── README.md                   ← repository overview
+├── DEPLOYMENT_STATE.md         ← image baseline vs post-install fixes tracker
 ├── AUDIO.md                    ← detailed audio setup and driver documentation
 ├── BUILDING.md                 ← module build workflow
 ├── FLASHING.md                 ← EDL + GPT + image flashing guide
@@ -365,6 +370,7 @@ FINAL/
 If you want to help development or understand internals, start here:
 
 - `research/wifi/analysis/mobile-wifi-kcm-link-fix-2026-06-05.md`
+- `research/wifi/analysis/ath10k-gtk-rekey-fix-2026-06-05.md`
 - `research/root/usb-network-access-2026-06-05.md`
 - `research/camera/README.md`
 - `research/sensors/README.md`
