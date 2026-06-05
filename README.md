@@ -51,6 +51,16 @@ Wi-Fi can be managed from Plasma Mobile Settings (quick settings tile or Setting
 sudo nmtui
 ```
 
+### USB Network Management Access
+
+When testing Wi-Fi UI or network changes, use USB networking as the primary recovery and management path:
+
+```bash
+ssh user@172.16.42.1
+```
+
+This avoids lockout if Wi-Fi setup or policy changes break remote access.
+
 ### WiFi Note
 
 - Live logs identify the WiFi device as `QCA9379 hw1.0 sdio` with firmware `WLAN.NPL.1.6-00163-QCANPLSWPZ-1`.
