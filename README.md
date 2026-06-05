@@ -39,7 +39,7 @@
 | Bluetooth | ✅ Working | QCA UART HCI, firmware loads at boot; A2DP tested with WH202A headset |
 | Accelerometer (BMA253) | ✅ Working | `bma253` IIO driver; screen auto-rotation via `iio-sensor-proxy` |
 | USB OTG | 🔲 Not tested | |
-| Hardware video decode | 🔲 Research in progress | Venus driver loads, `/dev/video6` + `/dev/video7` enumerated; actual decode not tested |
+| Hardware video decode | ✅ Working | Venus V4L2 M2M (`h264_v4l2m2m`, `hevc_v4l2m2m`); H.264 1080p at 1.26× real-time (camera RTSP), HEVC 1080p at 5.7×; **B-frames not supported** — encode source without them (`-bf 0` / `-tune zerolatency`); see `research/video/analysis/venus-decode-findings-2026-06-05.md` |
 
 ### WiFi Management
 
@@ -377,6 +377,7 @@ If you want to help development or understand internals, start here:
 - `research/camera/README.md`
 - `research/sensors/README.md`
 - `research/video/analysis/stock-video-decode-runtime-2026-05-28.md`
+- `research/video/analysis/venus-decode-findings-2026-06-05.md`
 
 ---
 
