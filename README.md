@@ -2,7 +2,7 @@
 
 > Custom Ubuntu 24.04 port for the Lenovo ThinkSmart View (CD-18781Y).  
 > APQ8053 / MSM8953 SoC · ARM64 · kernel 6.19.5-msm8953  
-> **Speaker audio, Bluetooth, and accelerometer confirmed working. Display working. WiFi associates, but ath10k_sdio remains unstable.**
+> **Speaker audio, microphone, Bluetooth, accelerometer, brightness slider, and proximity wake are confirmed working. WiFi setup UI is working, but ath10k_sdio remains unstable.**
 
 ---
 
@@ -28,6 +28,7 @@
 | Boot (EDL → lk2nd → extlinux) | ✅ Working | lk2nd.img in this repo |
 | Ubuntu 24.04 userland | ✅ Working | First boot requires on-device WiFi setup before SSH |
 | WiFi (ath10k_sdio) | ⚠️ Unstable | Associates via NetworkManager, but intermittent `failed to install key ... -110` and GTK key timeouts still cause disconnects |
+| WiFi settings UI | ✅ Working | Quick Settings deep-link opens the mobile Wi-Fi module, active connection IP is shown in the list |
 | ADSP / Qualcomm DSP | ✅ Working | Started by systemd service at boot |
 | Speaker audio (TAS5782M) | ✅ Working | Requires custom driver + WirePlumber policy |
 | Plasma Mobile (KDE) | ✅ Working | SDDM, touchscreen |
@@ -40,15 +41,15 @@
 | USB OTG | 🔲 Not tested | |
 | Hardware video decode | 🔲 Research in progress | Venus driver loads, `/dev/video6` + `/dev/video7` enumerated; actual decode not tested |
 
-### WiFi Management (temporary workaround)
+### WiFi Management
 
-Until a settings page is available in Plasma Mobile Settings, manage WiFi connections from Konsole:
+Wi-Fi can be managed from Plasma Mobile Settings (quick settings tile or Settings app). The current image includes the mobile Wi-Fi module deep-link fix and active-IP display in the Wi-Fi list.
 
-```
+`nmtui` remains available as a fallback:
+
+```bash
 sudo nmtui
 ```
-
-This provides a text UI to connect to new networks, edit saved connections, etc.
 
 ### WiFi Note
 
@@ -104,6 +105,16 @@ Useful links and defaults:
 - userspace helper scripts and daemons under `sources/`: `MIT`
 - documentation: `CC-BY-4.0`
 - third-party reference material and prebuilt artifacts remain under their original upstream licenses
+
+---
+
+## Documentation Scope
+
+This repository is public and user-facing.
+
+- Keep `README.md` focused on tested features, install flow, and known limitations.
+- Keep `research/` focused on technical analysis that helps contributors and advanced users.
+- Keep private work logs, personal notes, and session journals out of this repository.
 
 ---
 
@@ -316,7 +327,6 @@ eMMC
 ```
 FINAL/
 ├── README.md                   ← repository overview
-├── REPO_LOG.md                 ← short publication history and non-obvious repo notes
 ├── AUDIO.md                    ← detailed audio setup and driver documentation
 ├── BUILDING.md                 ← module build workflow
 ├── FLASHING.md                 ← EDL + GPT + image flashing guide
@@ -339,6 +349,16 @@ FINAL/
     ├── vcnl4200-proximity-daemon.py
     └── vcnl4200-proximity-daemon.service
 ```
+
+## Contributor Notes
+
+If you want to help development or understand internals, start here:
+
+- `research/wifi/analysis/mobile-wifi-kcm-link-fix-2026-06-05.md`
+- `research/root/usb-network-access-2026-06-05.md`
+- `research/camera/README.md`
+- `research/sensors/README.md`
+- `research/video/analysis/stock-video-decode-runtime-2026-05-28.md`
 
 ---
 

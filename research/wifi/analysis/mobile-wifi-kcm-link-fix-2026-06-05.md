@@ -33,7 +33,7 @@ Quicksettings Wi-Fi tile now uses:
 
 `settingsCommand: "plasma-settings -s -m kcm_mobile_wifi"`
 
-## Related fix during same session
+## Related fix
 
 Wi-Fi KCM empty-page regression was fixed by removing an invalid QML property handler in `ConnectionItemDelegate.qml` and using safe reactive logic.
 
@@ -41,9 +41,9 @@ Wi-Fi KCM empty-page regression was fixed by removing an invalid QML property ha
 
 Use `kbuildsycoca5` and restart user `plasmashell` after edits; reboot is not required.
 
-## Access path used
+## Safe access path during network UI changes
 
-The debugging and deployment flow in this session used USB networking (not Wi-Fi-only SSH):
+Use USB networking (not Wi-Fi-only SSH) when testing networking UI changes:
 
 - `user@172.16.42.1`
 
