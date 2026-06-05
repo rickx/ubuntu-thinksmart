@@ -8,15 +8,16 @@ Current published image reference:
 
 - `ubuntu-qcom-msm8953.img` (see README links)
 
-## Included In Image
+## Included In Image (Confirmed)
 
-- Plasma Mobile Wi-Fi settings deep-link fix (`plasma-settings -s -m kcm_mobile_wifi`)
-- Wi-Fi page active IP display
-- Brightness helper policy/binary fix
-- Audio stack setup documented in `AUDIO.md`
+- No post-install UI/driver fixes are currently marked as confirmed-in-image.
+- Treat all operational fixes below as post-install unless explicitly promoted after clean-flash verification.
 
 ## Post-Install Fixes (Current)
 
+- Plasma Mobile Wi-Fi settings deep-link fix (`plasma-settings -s -m kcm_mobile_wifi`)
+- Wi-Fi page active IP display
+- Brightness helper policy/binary fix (`sources/scripts/setup-backlighthelper.sh`)
 - ath10k GTK rekey dropout fix (patched `ath10k_core.ko`)
   - scripts in `sources/scripts/`:
     - `patch-ath10k-etimedout.py`

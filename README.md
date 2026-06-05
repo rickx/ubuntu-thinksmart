@@ -43,7 +43,9 @@
 
 ### WiFi Management
 
-Wi-Fi can be managed from Plasma Mobile Settings (quick settings tile or Settings app). The current image includes the mobile Wi-Fi module deep-link fix and active-IP display in the Wi-Fi list.
+Wi-Fi can be managed from Plasma Mobile Settings (quick settings tile or Settings app).
+
+Note: deep-link/IP-display Wi-Fi UI fixes are tracked as post-install unless confirmed in a clean-flash public image. See [DEPLOYMENT_STATE.md](DEPLOYMENT_STATE.md).
 
 `nmtui` remains available as a fallback:
 
@@ -196,7 +198,7 @@ to:
 </defaults>
 ```
 
-The fix is applied in the deployed image. The helper binary at `/usr/lib/kauth/libexec/backlighthelper` is rebuilt from powerdevil 5.27.11 upstream source (the Ubuntu-shipped binary uses `BACKLIGHT_RAW` type detection without the `rawAll` fallback, causing init to fail).
+The fix is validated on development installs. For public-image behavior, treat this as post-install unless marked otherwise in [DEPLOYMENT_STATE.md](DEPLOYMENT_STATE.md). The helper binary at `/usr/lib/kauth/libexec/backlighthelper` is rebuilt from powerdevil 5.27.11 upstream source (the Ubuntu-shipped binary uses `BACKLIGHT_RAW` type detection without the `rawAll` fallback, causing init to fail).
 
 WLED brightness range: 0–4095. Values below ~1200 cause the display to turn off (hardware minimum). The slider covers the visible range.
 
