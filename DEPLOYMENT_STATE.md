@@ -33,10 +33,14 @@ After applying post-install fixes, verify:
 - dmesg can still show key warning lines, but no `wlan0: deauthenticating`
 - normal browsing/SSH stays active across rekey windows
 
-## Release Guidance
+## How Fixes Move Into The Public Image
 
-When post-install steps become stable and low-risk, roll them into the next image release and update this file:
+Some fixes are published first as post-install steps so users can test them safely before they are baked into a new image.
 
-1. Move the item from Post-Install Fixes to Included In Image
-2. Record the image tag/version where it became integrated
-3. Keep scripts available for rollback/recovery for at least one release cycle
+A fix is moved from **Post-Install Fixes** to **Included In Image (Confirmed)** only after:
+
+1. It stays stable in normal use (no regressions reported during the validation window).
+2. It is verified on a clean-flash device with the same public image flow used by users.
+3. The image version that includes it is documented here.
+
+After integration, helper scripts are still kept for at least one release cycle so users can recover or roll back if needed.
