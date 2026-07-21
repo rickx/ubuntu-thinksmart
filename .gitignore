@@ -3,6 +3,8 @@ rootfs/*.img.gz
 rootfs/*.img.xz
 rootfs/*.img.zst
 rootfs/*.img.*
+rootfs/**/*.img
+rootfs/**/*.img.*
 
 *.log
 *.tmp

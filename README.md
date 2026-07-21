@@ -4,6 +4,8 @@
 > APQ8053 / MSM8953 SoC · ARM64 · kernel 6.19.5-msm8953  
 > **Speaker audio, microphone, Bluetooth, accelerometer, brightness slider, and proximity wake are confirmed working. WiFi setup UI is working and GTK rekey dropouts are fixed with the ath10k_core patch.**
 
+**Plasma 6** (KDE neon 6.7.0) is the recommended and primary image.
+
 ---
 
 ## Hardware
@@ -32,6 +34,7 @@
 | ADSP / Qualcomm DSP | ✅ Working | Started by systemd service at boot |
 | Speaker audio (TAS5782M) | ✅ Working | Requires custom driver + WirePlumber policy |
 | Plasma Mobile (KDE) | ✅ Working | SDDM, touchscreen |
+| Virtual keyboard (Maliit) | ✅ Working | Baked into image; Qt5→Qt6 Wayland environment fix |
 | Microphone (DMIC) | ✅ Working | UCM2 HiFi profile |
 | Display backlight | ✅ Working | WLED; Plasma Mobile brightness slider working (polkit fix required — see below) |
 | Proximity sensor (VCNL4200) | ✅ Working | Userspace daemon, no DTB change; triggers screen wake |
@@ -74,13 +77,50 @@ Detailed implementation and verification: [research/wifi/analysis/ath10k-gtk-rek
 
 ---
 
+## Image
+
+A single Ubuntu image is available:
+
+| Image | Desktop | Status | Download |
+|-------|---------|--------|----------|
+| `plasma6-ubuntu-qcom-msm8953.img` | Plasma Mobile 6.7.0 (KDE neon) | Current | [MEGA](https://mega.nz/file/Am9iCDLA#qf-MOY8UILP1oC07goBndVa6Co3wozt7jhhh-qa4KaM) |
+
+### Image Configuration Notes
+
+- Plasma 6 from KDE neon 6.7.0 is installed and verified working.
+- The KDE neon PPA is pre-configured at the correct pin priority — no manual apt changes needed after flash.
+- **DPMS is disabled by default** in `~/.config/powerdevilrc` (`DimDisplayIdleTimeoutSec=0`, `TurnOffDisplayIdleTimeoutSec=0`). This is intentional: Plasma 6 on a DSI display puts the panel into unrecoverable hardware sleep (DRM Off) if any powerdevil display timeout fires. The image includes comprehensive wake handlers:
+  - **Active wake:** `idle-blanker.py` (1800s timeout) with SimulateUserActivity D-Bus calls keeps KWin's idle timer reset, preventing independent DRM Off.
+  - **Passive wake:** `screen-wake-daemon.py` (new 2026-07-21) monitors touch and accelerometer; on motion/touch, it restores brightness and resets KWin's timer. As a fallback for unrecoverable hardware DRM Off, it restarts the KWin compositor.
+  - **Proximity wake:** `vcnl4200-proximity-daemon.py` detects hand approach and wakes display when blanked.
+  - Backlight blanking uses `BLANK_BRIGHTNESS=10` (physically dark but leaves DRM connector alive).
+  - Do not enable any display timeout in Plasma 6 power settings.
+- Virtual keyboard (Maliit) is fixed and integrated: Qt5 maliit runs with `QT_QPA_PLATFORM=wayland` in the Qt6 KWin 6 session, so the keyboard appears automatically on text-field focus. No manual configuration needed.
+- All hardware fixes (WiFi rekey patch, I2C fix, rotation daemon, proximity wake) are baked in.
+
+### Injecting WiFi before first boot
+
+The image ships with no WiFi credentials. Use `prepare-ubuntu-ssh-bootstrap-image.sh` to pre-inject your network so the device connects and becomes SSH-able immediately after flash:
+
+```bash
+sources/scripts/prepare-ubuntu-ssh-bootstrap-image.sh \
+  --src rootfs/plasma6-ubuntu-qcom-msm8953.img \
+  --out rootfs/plasma6-ubuntu-mydevice.img \
+  --ssid "MyWiFi" \
+  --psk "MyPassword"
+```
+
+Without WiFi injection, connect manually from the touchscreen on first boot before attempting SSH.
+
+---
+
 ## What You Need
 
 - A Lenovo ThinkSmart View CD-18781Y
 - A Windows or Linux host with [edl](https://github.com/bkerler/edl) installed
 - USB-A to USB-C cable (device side is USB-C)
 - The generic bootstrap image `bootstrap-pmos-ssh-generic-qcom-msm8953.img` ([GitHub Release](https://github.com/rickx/ubuntu-thinksmart/releases/tag/bootstrap-2026-05-22); includes matching `.sha256`)
-- The Ubuntu image `ubuntu-qcom-msm8953.img` ([MEGA download](https://mega.nz/file/UnsAjSyK#HmUBaxrxxT-Uej4K7eL1vsyYq0l6NygX_w3D5G6hnDo))
+- The Ubuntu image `plasma6-ubuntu-qcom-msm8953.img`; see [Image](#image) above
 - `prebuilt/lk2nd.img`
 - The GPT layout file in `partitions/ubuntu_layout.sfdisk`
 
@@ -96,19 +136,27 @@ Short version:
 
 1. Enter Qualcomm EDL mode.
 2. Flash `lk2nd` with `python edl.py w boot prebuilt/lk2nd.img`.
-3. Build a personalized bootstrap image with `sources/scripts/prepare-pmos-ssh-bootstrap-image.sh` using your WiFi SSID and password.
+3. Build a personalized bootstrap image with `sources/scripts/prepare-pmos-ssh-bootstrap-image.sh` using your WiFi SSID and password:
+   ```bash
+   sources/scripts/prepare-pmos-ssh-bootstrap-image.sh \
+     --src rootfs/bootstrap-pmos-ssh-generic-qcom-msm8953.img \
+     --out rootfs/bootstrap-pmos-ssh-mydevice.img \
+     --login-password thinksmart \
+     --ssid MyWiFiNetwork \
+     --psk MyWiFiPassword
+   ```
 4. Flash the personalized bootstrap image with `python edl.py w system <your-personalized-bootstrap>.img`.
 5. Wait for it to join WiFi, then SSH in as `pmos` / `thinksmart` and run `sudo /usr/local/sbin/apply-ubuntu-gpt.sh`.
 6. Re-enter EDL.
-7. Run `python edl.py w system ubuntu-qcom-msm8953.img`.
-8. Boot the device and connect to WiFi from the touchscreen before attempting SSH.
+7. Run `python edl.py w system ubuntu-qcom-msm8953.img` (or `plasma6-ubuntu-qcom-msm8953.img` for Plasma 6).
+8. Boot the device and connect to WiFi from the touchscreen before attempting SSH (or pre-inject WiFi — see [Images](#images)).
 
 First-time installation uses a temporary SSH-capable bootstrap image so the GPT can be rewritten from the device before flashing the final Ubuntu image.
 
 Useful links and defaults:
 
 - bootstrap image release asset: [bootstrap-2026-05-22](https://github.com/rickx/ubuntu-thinksmart/releases/tag/bootstrap-2026-05-22)
-- final Ubuntu image: [MEGA download](https://mega.nz/file/UnsAjSyK#HmUBaxrxxT-Uej4K7eL1vsyYq0l6NygX_w3D5G6hnDo)
+- Ubuntu image (Plasma 6.7.0): [MEGA](https://mega.nz/file/Am9iCDLA#qf-MOY8UILP1oC07goBndVa6Co3wozt7jhhh-qa4KaM)
 - create a personalized bootstrap image with `sources/scripts/prepare-pmos-ssh-bootstrap-image.sh`
 - bootstrap login: `pmos` / `thinksmart`, hostname `thinksmarter`
 - final Ubuntu login: `ubuntu` / `thinksmart`
@@ -144,7 +192,7 @@ These systemd services are required for correct operation and are pre-installed 
 | `qup-i2c-pinctrl-fix.service` | Restores GPIO2/3 mux to I2C mode after PM autosuspend resets them (required for TAS5782M I2C) |
 | `alsa-restore.service` | Restores ALSA mixer state (volume) at boot |
 | `display-guard.service` | Ensures display backlight is set at boot |
-| `idle-blanker.service` *(user)* | Blanks screen after 5 min of no input; ALS auto-brightness while active. See [sources/idle-blanker.py](sources/idle-blanker.py). |
+| `idle-blanker.service` *(user)* | Blanks screen after 30 min of no input (backlight-only, never DRM Off); ALS auto-brightness while active. See [sources/idle-blanker.py](sources/idle-blanker.py). |
 | `vcnl4200-proximity-daemon.service` *(user)* | Polls VCNL4200 proximity sensor when screen is off; wakes on approach. See [sources/vcnl4200-proximity-daemon.py](sources/vcnl4200-proximity-daemon.py). |
 | `rotation-daemon.service` *(user)* | BMA253 accelerometer → kscreen-doctor screen auto-rotation. See [sources/rotation-daemon.py](sources/rotation-daemon.py). |
 
@@ -206,19 +254,19 @@ WLED brightness range: 0–4095. Values below ~1200 cause the display to turn of
 
 ## Screen Blanking and Proximity Wake
 
-### Background — why KDE powerdevil doesn't work
+### Background — why KDE powerdevil display timeouts are disabled
 
-KDE powerdevil's idle detection returns `GetSessionIdleTime: not supported on this platform` on this Wayland setup. `kded5` is unresponsive and the `/org/kde/KWin/Idle` D-Bus interface does not exist. Powerdevil cannot blank the screen.
+On Plasma 6 (KDE neon), any powerdevil display timeout — both `DimDisplay` and `TurnOffDisplay` — causes KWin to set the DRM connector to Off at hardware level. On this MSM/DSI panel, the connector cannot be re-enabled without restarting the compositor. There is no lightweight wake path (kscreen-doctor crashes, the dpms sysfs node is read-only in Wayland, SimulateUserActivity has no effect). All powerdevil display timeouts are therefore set to 0.
 
-**Workaround:** two cooperating userspace daemons (both deployed as systemd user services):
+**Screen blanking and proximity wake are handled by three userspace daemons (systemd services):**
 
 ### idle-blanker (screen blanking)
 
 `/usr/local/bin/idle-blanker.py` — deployed as `~/.config/systemd/user/idle-blanker.service`
 
 - Watches all `/dev/input/event*` devices via `select()` for physical input events
-- After **5 minutes** of no input, writes `brightness=0` to `/sys/class/backlight/backlight/brightness` via `sudo tee`
-- Restores brightness=4095 if a physical input event arrives while blanked
+- After **30 minutes** of no input, writes `brightness=10` to `/sys/class/backlight/backlight/brightness` (must not be 0 — on Plasma 6, writing 0 triggers DRM Off via KWin; WLED is physically off below ~1200 so 10 is dark but safe)
+- Restores brightness=4095 when a physical input event arrives while blanked
 - Detects external brightness restores (by proximity daemon or other) and resets its idle timer
 
 Requires a sudoers rule (created by the deploy script):
@@ -234,7 +282,7 @@ The VCNL4200 proximity + ambient light sensor is at I2C address `0x51` on `i2c-0
 
 `/usr/local/bin/vcnl4200-proximity-daemon.py` — deployed as `/etc/xdg/systemd/user/vcnl4200-proximity-daemon.service`
 
-- Monitors display state at 2 Hz: screen is considered **OFF** if `brightness=0` (idle-blanker) **or** `bl_power=4` (KDE DPMS). Both paths are handled.
+- Monitors display state at 2 Hz: screen is considered **OFF** if `brightness <= 10` (idle-blanker blanked) **or** `bl_power=4` (legacy DPMS path). Both paths are handled.
 - When screen turns **OFF**: enables sensor at 200mA LED current (`PS_CONF1=0xCA`, `PS_MS=0x0700`)
 - Polls `PS_DATA` register via `smbus2` directly (no subprocess/sudo for I2C)
 - When reading exceeds threshold (default: 50 counts): writes `bl_power=0` then `brightness=4095` via `sudo tee`, then calls `SimulateUserActivity` via D-Bus to reset the idle-blanker's timer
@@ -249,7 +297,7 @@ user ALL=(ALL) NOPASSWD: /usr/bin/tee /sys/class/backlight/backlight/brightness
 user ALL=(ALL) NOPASSWD: /usr/bin/tee /sys/class/backlight/backlight/bl_power
 ```
 
-> ⚠️ **KDE DPMS must be disabled** (or set to a long timeout). KDE powerdevil's default blanks the screen via DPMS (`bl_power=4`) while leaving `brightness=4095`. The daemon detects this correctly, but the 30-second default means the screen goes off in 30s. Set `[AC][DPMSControl] idleTime=0` and `[Battery][DPMSControl] idleTime=0` in `~/.config/powermanagementprofilesrc` so that idle-blanker's 5-minute timeout is the only blanking path.
+> ⚠️ **KDE powerdevil display timeouts must be disabled.** See "Background" above. All timeouts are set to 0 in the shipped image.
 
 ### Tuning
 

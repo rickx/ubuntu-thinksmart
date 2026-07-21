@@ -117,14 +117,11 @@ if [ -d "$MOUNT_DIR/etc/NetworkManager/system-connections" ]; then
     sudo find "$MOUNT_DIR/etc/NetworkManager/system-connections" -maxdepth 1 -type f -name '*.nmconnection' -delete
 fi
 
-if [ -d "$MOUNT_DIR/etc/ssh" ]; then
-    sudo find "$MOUNT_DIR/etc/ssh" -maxdepth 1 -type f -name 'ssh_host_*' -delete
-    sudo install -d -m 755 "$MOUNT_DIR/etc/ssh/sshd_config.d"
-    cat <<'EOF' | sudo tee "$MOUNT_DIR/etc/ssh/sshd_config.d/99-thinksmart-release.conf" >/dev/null
+sudo install -d -m 755 "$MOUNT_DIR/etc/ssh/sshd_config.d"
+cat <<'EOF' | sudo tee "$MOUNT_DIR/etc/ssh/sshd_config.d/99-thinksmart-release.conf" >/dev/null
 PasswordAuthentication yes
 PermitRootLogin yes
 EOF
-fi
 
 if [ -d "$MOUNT_DIR/home/$LOGIN_USER/.ssh" ]; then
     sudo rm -rf "$MOUNT_DIR/home/$LOGIN_USER/.ssh"
@@ -134,17 +131,22 @@ if [ -d "$MOUNT_DIR/root/.ssh" ]; then
     sudo rm -rf "$MOUNT_DIR/root/.ssh"
 fi
 
-if [ -f "$MOUNT_DIR/etc/machine-id" ]; then
-    : | sudo tee "$MOUNT_DIR/etc/machine-id" >/dev/null
-fi
-
-if [ -f "$MOUNT_DIR/var/lib/dbus/machine-id" ]; then
-    : | sudo tee "$MOUNT_DIR/var/lib/dbus/machine-id" >/dev/null
-fi
-
 sudo rm -f "$MOUNT_DIR/var/lib/systemd/random-seed"
 sudo rm -f "$MOUNT_DIR/home/$LOGIN_USER/.bash_history"
 sudo rm -f "$MOUNT_DIR/root/.bash_history"
+
+# Claude Code install artifacts (may be left by install attempts)
+sudo rm -rf "$MOUNT_DIR/home/$LOGIN_USER/.claude"
+sudo rm -rf "$MOUNT_DIR/root/.claude"
+
+# Journal and system logs
+sudo rm -rf "$MOUNT_DIR/var/log/journal"
+sudo find "$MOUNT_DIR/var/log" -maxdepth 2 \( -name "*.log" -o -name "*.log.gz" -o -name "*.log.1" \) -delete 2>/dev/null || true
+
+# Passwordless sudo for the login user (needed for system scripts like screen wake)
+sudo install -d -m 755 "$MOUNT_DIR/etc/sudoers.d"
+echo "$LOGIN_USER ALL=(ALL) NOPASSWD: ALL" | sudo tee "$MOUNT_DIR/etc/sudoers.d/$LOGIN_USER-nopasswd" >/dev/null
+sudo chmod 440 "$MOUNT_DIR/etc/sudoers.d/$LOGIN_USER-nopasswd"
 
 echo "$TARGET_HOSTNAME" | sudo tee "$MOUNT_DIR/etc/hostname" >/dev/null
 if [ -f "$MOUNT_DIR/etc/hosts" ]; then
@@ -161,4 +163,5 @@ echo "Login user: $LOGIN_USER"
 echo "Hostname: $TARGET_HOSTNAME"
 echo "PasswordAuthentication: yes"
 echo "PermitRootLogin: yes"
-echo "Cleared state: WiFi profiles, SSH host keys, machine-id, random seed, shell history"
+echo "Cleared state: WiFi profiles, random seed, shell history, logs, Claude artifacts"
+echo "Kept: SSH host keys (SSH starts immediately on first boot), machine-id (networking works on first boot)"

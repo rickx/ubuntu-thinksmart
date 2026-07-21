@@ -1,0 +1,14 @@
+[Unit]
+Description=Screen Wake Daemon (touch + accelerometer)
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /usr/local/bin/screen-wake-daemon.py
+Restart=always
+RestartSec=1
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

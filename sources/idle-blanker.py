@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 """
 Input-idle screen blanker + ALS auto-brightness for CD-18781Y.
-- Blanks after IDLE_TIMEOUT seconds of no input (writes brightness=0)
+- Blanks after IDLE_TIMEOUT seconds of no input (writes brightness=BLANK_BRIGHTNESS)
 - While screen is on: adjusts brightness from ALS every ALS_INTERVAL seconds
+- Calls SimulateUserActivity on KWin's ScreenSaver every SIMULATE_INTERVAL seconds
+  to prevent KWin/powerdevil from independently setting the DRM connector Off.
 
 Deploy to /usr/local/bin/idle-blanker.py
 Service: ~/.config/systemd/user/idle-blanker.service
@@ -16,17 +18,27 @@ import math
 import select
 import signal
 import logging
+import subprocess
 from pathlib import Path
 
-IDLE_TIMEOUT   = 300       # seconds before blanking
-POLL_INTERVAL  = 1.0
-BACKLIGHT_PATH = "/sys/class/backlight/backlight/brightness"
-MAX_BRIGHTNESS = 4095
-MIN_BRIGHTNESS = 3800      # never go below ~93% in auto mode (WLED minimum ~1200)
+IDLE_TIMEOUT    = 1800     # seconds before blanking
+POLL_INTERVAL   = 1.0
+BACKLIGHT_PATH  = "/sys/class/backlight/backlight/brightness"
+MAX_BRIGHTNESS  = 4095
+MIN_BRIGHTNESS  = 3800     # never go below ~93% in auto mode (WLED minimum ~1200)
+# Blanking value: must be non-zero on Plasma 6 — writing 0 causes KWin 6 to disable
+# the DRM connector at hardware level, making the panel unrecoverable without restarting
+# the compositor. WLED hardware shuts off below ~1200, so 10 is physically dark but
+# KWin never sees 0 and leaves the DRM connector alive.
+BLANK_BRIGHTNESS = 10
 ALS_PATH       = "/tmp/als_lux"
 ALS_INTERVAL   = 10.0      # seconds between ALS adjustments
 ALS_WAKE_COOL  = 30.0      # seconds after wake before ALS kicks in
 ALS_DEADBAND   = 150       # only adjust if target differs by this much
+
+# KWin idle prevention: call SimulateUserActivity this often to keep KWin's own
+# idle timer from firing and setting DRM Off independently of our blanking logic.
+SIMULATE_INTERVAL = 25.0   # seconds between SimulateUserActivity calls
 
 log_file = Path.home() / ".local/share/idle-blanker.log"
 log_file.parent.mkdir(parents=True, exist_ok=True)
@@ -71,7 +83,6 @@ def set_brightness(val):
         Path(BACKLIGHT_PATH).write_text(str(val) + "\n")
         return True
     except PermissionError:
-        import subprocess
         r = subprocess.run(["sudo", "tee", BACKLIGHT_PATH],
                            input=str(val) + "\n", text=True,
                            capture_output=True, timeout=2)
@@ -79,6 +90,20 @@ def set_brightness(val):
     except Exception as e:
         logger.warning(f"set_brightness({val}) failed: {e}")
         return False
+
+
+def simulate_user_activity():
+    """Tell KWin's screensaver interface that the user is active.
+    This resets KWin's/powerdevil's idle timer so they never independently
+    trigger DRM connector Off while our own blanking manages the backlight."""
+    try:
+        subprocess.run(
+            ["qdbus6", "org.kde.KWin", "/ScreenSaver",
+             "org.freedesktop.ScreenSaver.SimulateUserActivity"],
+            capture_output=True, timeout=2
+        )
+    except Exception:
+        pass
 
 
 def open_input_devices():
@@ -111,10 +136,11 @@ def run():
     fds = open_input_devices()
     logger.info(f"Watching {len(fds)} input device(s)")
 
-    last_input  = time.monotonic()
-    last_als    = 0.0
-    last_wake   = 0.0
-    blanked     = False
+    last_input    = time.monotonic()
+    last_als      = 0.0
+    last_wake     = 0.0
+    last_simulate = 0.0
+    blanked       = False
     target_brightness = MAX_BRIGHTNESS
 
     def handle_signal(sig, frame):
@@ -146,7 +172,7 @@ def run():
         brightness = get_brightness()
 
         # External restore (e.g. proximity daemon)
-        if blanked and brightness is not None and brightness > 0:
+        if blanked and brightness is not None and brightness > BLANK_BRIGHTNESS:
             logger.info("Screen restored externally — resetting idle timer")
             last_input = time.monotonic()
             last_wake  = time.monotonic()
@@ -170,13 +196,24 @@ def run():
                         target_brightness = new_target
                         if brightness is not None and brightness > 0:
                             set_brightness(target_brightness)
+                            try:
+                                open("/tmp/user_brightness", "w").write(str(target_brightness))
+                            except Exception:
+                                pass
 
             # Blank on idle
             if idle_secs >= IDLE_TIMEOUT:
                 logger.info(f"Idle for {idle_secs:.1f}s — blanking screen")
-                if set_brightness(0):
+                if set_brightness(BLANK_BRIGHTNESS):
                     logger.info("Screen blanked")
                     blanked = True
+
+        # Keep KWin's idle timer reset so powerdevil never independently
+        # fires its DPMS action and sets the DRM connector Off.
+        now = time.monotonic()
+        if now - last_simulate >= SIMULATE_INTERVAL:
+            last_simulate = now
+            simulate_user_activity()
 
 
 if __name__ == "__main__":

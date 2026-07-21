@@ -177,12 +177,20 @@ sudo install -D -m 644 "$LAYOUT_FILE" "$MOUNT_DIR/usr/local/share/bootstrap/ubun
 sudo rm -f "$MOUNT_DIR/etc/NetworkManager/system-connections/"*.nmconnection
 sudo rm -f "$MOUNT_DIR/etc/ssh/ssh_host_"* "$MOUNT_DIR/etc/ssh/ssh_host_"*.pub
 
-if [ -f "$MOUNT_DIR/etc/machine-id" ]; then
-    : | sudo tee "$MOUNT_DIR/etc/machine-id" >/dev/null
+sudo install -d -m 755 "$MOUNT_DIR/etc/local.d"
+cat <<'EOF' | sudo tee "$MOUNT_DIR/etc/local.d/generate-ssh-keys.start" >/dev/null
+#!/bin/sh
+[ -f /etc/ssh/ssh_host_rsa_key ] || ssh-keygen -A
+EOF
+sudo chmod +x "$MOUNT_DIR/etc/local.d/generate-ssh-keys.start"
+if [ -f "$MOUNT_DIR/etc/init.d/local" ]; then
+    sudo ln -sf /etc/init.d/local "$MOUNT_DIR/etc/runlevels/default/local" 2>/dev/null || true
 fi
 
+NEW_MACHINE_ID=$(uuidgen | tr -d '-')
+echo "$NEW_MACHINE_ID" | sudo tee "$MOUNT_DIR/etc/machine-id" >/dev/null
 if [ -f "$MOUNT_DIR/var/lib/dbus/machine-id" ]; then
-    : | sudo tee "$MOUNT_DIR/var/lib/dbus/machine-id" >/dev/null
+    echo "$NEW_MACHINE_ID" | sudo tee "$MOUNT_DIR/var/lib/dbus/machine-id" >/dev/null
 fi
 
 if [ -n "$SSID" ]; then

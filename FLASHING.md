@@ -11,7 +11,7 @@ Only Qualcomm EDL should be used for flashing on this device. fastboot may appea
 - USB cable
 - [prebuilt/lk2nd.img](prebuilt/lk2nd.img)
 - generic bootstrap image `bootstrap-pmos-ssh-generic-qcom-msm8953.img` ([GitHub Release](https://github.com/rickx/ubuntu-thinksmart/releases/tag/bootstrap-2026-05-22), includes `.sha256`)
-- Ubuntu image `ubuntu-qcom-msm8953.img` ([MEGA download](https://mega.nz/file/UnsAjSyK#HmUBaxrxxT-Uej4K7eL1vsyYq0l6NygX_w3D5G6hnDo))
+- Ubuntu image `plasma6-ubuntu-qcom-msm8953.img` (Plasma 6.7.0; [MEGA download](https://mega.nz/file/Am9iCDLA#qf-MOY8UILP1oC07goBndVa6Co3wozt7jhhh-qa4KaM))
 - GPT layout artifacts from `partitions/`:
 	- `partitions/ubuntu_layout.sfdisk`
 	- `partitions/gpt_ubuntu_main.bin`
@@ -73,7 +73,7 @@ python edl.py w system <your-personalized-bootstrap>.img
 #   sudo /usr/local/sbin/apply-ubuntu-gpt.sh
 
 # Stage 3: after GPT rewrite, run this command
-python edl.py w system ubuntu-qcom-msm8953.img
+python edl.py w system plasma6-ubuntu-qcom-msm8953.img
 ```
 
 ## Bootstrap SSH Step
@@ -88,7 +88,7 @@ That uses the staged `/usr/local/share/bootstrap/ubuntu_layout.sfdisk` to rewrit
 
 1. power the device off or reboot it
 2. re-enter EDL
-3. run `python edl.py w system ubuntu-qcom-msm8953.img`
+3. run `python edl.py w system plasma6-ubuntu-qcom-msm8953.img`
 
 ## First Boot
 
@@ -100,6 +100,6 @@ That uses the staged `/usr/local/share/bootstrap/ubuntu_layout.sfdisk` to rewrit
 ## Notes
 
 - the bootstrap image is published as a GitHub Release asset at [bootstrap-2026-05-22](https://github.com/rickx/ubuntu-thinksmart/releases/tag/bootstrap-2026-05-22)
-- the Ubuntu image is too large for a normal GitHub release asset and is hosted on [MEGA](https://mega.nz/file/UnsAjSyK#HmUBaxrxxT-Uej4K7eL1vsyYq0l6NygX_w3D5G6hnDo)
+- the Ubuntu image (Plasma 6.7.0) is too large for a normal GitHub release asset and is hosted on [MEGA](https://mega.nz/file/Am9iCDLA#qf-MOY8UILP1oC07goBndVa6Co3wozt7jhhh-qa4KaM)
 - GPT background notes belong in [partitions/LAYOUT.md](partitions/LAYOUT.md)
 - generate your personalized bootstrap image locally with `sources/scripts/prepare-pmos-ssh-bootstrap-image.sh` before flashing it
