@@ -1,0 +1,50 @@
+From b588ec07aa160b02e74afe38faa5a2726cfadef6 Mon Sep 17 00:00:00 2001
+From: Mei Tao <gonzolesopela896@gmail.com>
+Date: Sat, 7 Nov 2026 09:34:01 +0800
+Subject: [PATCH v1 1/2] ipa: libipa: camera_sensor_helper: Add Samsung
+ S5KC505A helper
+
+The Samsung S5KC505A sensor is used by the Lenovo ThinkSmart View. Its
+analogue gain is linear: gain = code / 32, with codes from 0x20 to 0x200
+representing gains from 1x to 16x.
+
+The sensor has a black level of 64 in its 10-bit output. Express this as
+4096 in the helper's 16-bit scale (64/1023 is approximately 4096/65535).
+
+Register the helper under the exact sensor model name so the software ISP
+can convert gain codes and use the tunable mean-luminance AGC instead of
+the fallback algorithm. Leave sensor properties unspecified, as pixel
+pitch and control delays have not been characterised. Cross-compilation
+was checked with the simple pipeline and GPU software ISP enabled for an
+AArch64 Debian trixie target.
+
+Signed-off-by: Mei Tao <gonzolesopela896@gmail.com>
+---
+ src/ipa/libipa/camera_sensor_helper.cpp | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+
+diff --git a/src/ipa/libipa/camera_sensor_helper.cpp b/src/ipa/libipa/camera_sensor_helper.cpp
+index 359040ec..9c0f46a5 100644
+--- a/src/ipa/libipa/camera_sensor_helper.cpp
++++ b/src/ipa/libipa/camera_sensor_helper.cpp
+@@ -887,6 +887,17 @@ public:
+ };
+ REGISTER_CAMERA_SENSOR_HELPER("ov13858", CameraSensorHelperOv13858)
+ 
++class CameraSensorHelperS5kc505a : public CameraSensorHelper
++{
++public:
++	CameraSensorHelperS5kc505a()
++	{
++		blackLevel_ = 4096;
++		gain_ = AnalogueGainLinear{ 1, 0, 0, 32 };
++	}
++};
++REGISTER_CAMERA_SENSOR_HELPER("s5kc505a", CameraSensorHelperS5kc505a)
++
+ class CameraSensorHelperVd55g1 : public CameraSensorHelper
+ {
+ public:
+-- 
+2.47.3
+

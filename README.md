@@ -38,7 +38,7 @@
 | Microphone (DMIC) | ✅ Working | UCM2 HiFi profile |
 | Display backlight | ✅ Working | WLED; Plasma Mobile brightness slider working (polkit fix required — see below) |
 | Proximity sensor (VCNL4200) | ✅ Working | Userspace daemon, no DTB change; triggers screen wake |
-| Camera | 🔲 Research in progress | Live hardware points to Samsung S5KC505A; see `research/camera/` |
+| Camera | 🧪 Driver and GPU ISP contribution | S5KC505A streams on a Debian derivative; Ubuntu image validation pending. See `sources/camera/` and `research/camera/` |
 | Bluetooth | ✅ Working | QCA UART HCI, firmware loads at boot; A2DP tested with WH202A headset |
 | Accelerometer (BMA253) | ✅ Working | `bma253` IIO driver; screen auto-rotation via `iio-sensor-proxy` |
 | USB OTG | 🔲 Not tested | |

@@ -37,6 +37,8 @@ All operational fixes are baked into the published image as of 2026-07-21 (vkboa
 
 ## Post-Install Fixes (Current)
 
+- S5KC505A camera contribution: external driver, board DTS patch, libcamera GPU SoftISP fixes and optional capture/calibration tools in `sources/camera/`. Reported working on ThinkSmart Clean 2026.11.01 (Debian trixie, GCC/no KCFI); not included in the published image or verified on upstream Ubuntu 24.04. Its KCFI kernel needs a clang-18 module rebuild.
+
 - Plasma Mobile Wi-Fi settings deep-link fix (`plasma-settings -s -m kcm_mobile_wifi`)
 - Wi-Fi page active IP display
 - Brightness helper policy/binary fix (`sources/scripts/setup-backlighthelper.sh`)

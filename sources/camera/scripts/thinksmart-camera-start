@@ -1,0 +1,13 @@
+#!/bin/sh
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Mei Tao
+set -eu
+for m in dma-heap system_heap videodev v4l2-fwnode v4l2-async v4l2-cci i2c-qcom-cci qcom-camss s5kc505a; do modprobe "$m"; done
+# Initial manual defaults for direct V4L2 tools; libcamera 0.8 AGC overrides them.
+python3 - <<'PY'
+import pathlib,subprocess
+for node in pathlib.Path('/sys/class/video4linux').glob('v4l-subdev*'):
+ if (node/'name').read_text().strip().startswith('s5kc505a '):
+  subprocess.run(['v4l2-ctl','-d','/dev/'+node.name,'--set-ctrl','exposure=1800,analogue_gain=128'],check=True)
+  break
+PY
