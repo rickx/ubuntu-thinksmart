@@ -1,0 +1,5 @@
+#!/bin/sh
+set -e
+ldconfig
+depmod -a 6.19.5-msm8953 || true
+exit 0

@@ -1,0 +1,14 @@
+Package: thinksmart-camera
+Version: 0.2
+Architecture: arm64
+Maintainer: ubuntu-thinksmart <noreply@localhost>
+Depends: libc6, libstdc++6, libgnutls30t64, libudev1, libyaml-0-2, libegl1, libgles2, libgstreamer1.0-0, libgstreamer-plugins-base1.0-0, pipewire, wireplumber, libevent-core-2.1-7t64, libevent-pthreads-2.1-7t64
+Conflicts: pipewire-libcamera, gstreamer1.0-libcamera
+Replaces: pipewire-libcamera, gstreamer1.0-libcamera
+Section: video
+Priority: optional
+Description: Front camera support for the Lenovo ThinkSmart View CD-18781Y
+ S5KC505A sensor driver (kernel 6.19.5-msm8953), libcamera 0.8 with the
+ S5KC505A sensor helper and LSC-aware GPU SoftISP patches (PR #6), installed
+ in /opt/libcamera, plus the PipeWire libcamera SPA plugin and the GStreamer
+ libcamerasrc element built against it.

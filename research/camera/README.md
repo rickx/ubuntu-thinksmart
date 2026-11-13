@@ -8,7 +8,7 @@ This directory is the public-safe camera subset for the `ubuntu-thinksmart` repo
 - canonical sensor ID is `0x5034` at `0x0000/0x0001`
 - the vendor descriptor strongly matches 7-bit I2C address `0x37`
 - the sensor only answers during a powered probe window; a passive Ubuntu-side read currently sees it unpowered
-- A driver, symbolic board DTS patch, GPU SoftISP fixes and capture/calibration tools are now available in [sources/camera](../../sources/camera/README.md). Reported streaming is on the Debian-based ThinkSmart Clean 2026.11.01 derivative; the upstream Ubuntu 24.04 image remains unverified and needs a clang-18/KCFI module rebuild.
+- A driver, symbolic board DTS patch, GPU SoftISP fixes and capture/calibration tools are now available in [sources/camera](../../sources/camera/README.md). First reported streaming on the Debian-based ThinkSmart Clean 2026.11.01 derivative; since 2026-11-13 it also works on the Ubuntu 24.04 image (clang-18/KCFI module, libcamera 0.8 GPU SoftISP, PipeWire camera) — see [sources/camera/ubuntu](../../sources/camera/ubuntu/README.md).
 
 ## What Is Included Here
 

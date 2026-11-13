@@ -1,0 +1,3 @@
+# libcamera's software ISP allocates frame buffers from a DMA-BUF heap.
+# Let members of the video group (the logged-in user, PipeWire) use it.
+SUBSYSTEM=="dma_heap", GROUP="video", MODE="0660"

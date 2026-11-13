@@ -7,8 +7,15 @@ libcamera GPU SoftISP fixes and optional offline snapshot/calibration tools.
 Reported streaming and image-quality results are from the derivative
 **ThinkSmart Clean 2026.11.01**, Debian trixie, kernel
 `6.19.5-thinksmart+` (GCC, no KCFI), Qualcomm MSM8953 / qcom-camss and Adreno
-506. **The upstream Ubuntu 24.04 image has not been tested with this stack.**
-This contribution is not baked into the published Ubuntu image.
+506.
+
+**Ubuntu 24.04 (2026-11-13):** merged as PR #6 and verified on the Ubuntu
+image (clang-18/KCFI module build, 30 fps GPU SoftISP, PipeWire camera). It is
+baked into the 2026-11-13 image as the `thinksmart-camera` package plus the
+patched DTB; see [ubuntu/README.md](ubuntu/README.md) for what is installed,
+what was needed beyond this contribution and how to rebuild it. The original
+pull request description (evidence, validation limits, provenance) is kept in
+[CONTRIBUTION.md](CONTRIBUTION.md).
 
 The register sequences and LSC/CCM/gamma tuning numbers were decoded from
 proprietary Lenovo firmware libraries, not obtained as freely licensed vendor
@@ -25,7 +32,8 @@ decision. Scripts and implementation code have explicit license notices.
 | `../patches/libcamera/` | Two-commit libcamera mail series and build notes |
 | `config/s5kc505a.yaml` | Generic vendor-derived SoftISP tuning; no unit residual |
 | `tools/` | cam-snap, cam-flat, tuning converter and opt-in OTP experiments |
-| `scripts/` and `systemd/` | Libcamera wrapper and boot-time module loading |
+| `scripts/` and `systemd/` | Libcamera wrapper and boot-time module loading (Debian derivative layout) |
+| `ubuntu/` | Ubuntu 24.04 package: build script, package files, PipeWire plugin patch |
 
 ## Build the external module
 

@@ -1,0 +1,55 @@
+diff --git a/spa/plugins/libcamera/libcamera-device.cpp b/spa/plugins/libcamera/libcamera-device.cpp
+index 25a9e2f..1fd24db 100644
+--- a/spa/plugins/libcamera/libcamera-device.cpp
++++ b/spa/plugins/libcamera/libcamera-device.cpp
+@@ -69,7 +69,7 @@ static std::string cameraModel(const Camera *camera)
+ 	const ControlList &props = camera->properties();
+ 
+ 	if (auto model = props.get(properties::Model))
+-		return std::move(model.value());
++		return std::string(model.value());
+ 
+ 	return camera->id();
+ }
+@@ -80,11 +80,11 @@ static const char *cameraLoc(const Camera *camera)
+ 
+ 	if (auto location = props.get(properties::Location)) {
+ 		switch (location.value()) {
+-		case properties::CameraLocationFront:
++		case properties::LocationFront:
+ 			return "front";
+-		case properties::CameraLocationBack:
++		case properties::LocationBack:
+ 			return "back";
+-		case properties::CameraLocationExternal:
++		case properties::LocationExternal:
+ 			return "external";
+ 		}
+ 	}
+diff --git a/spa/plugins/libcamera/libcamera-utils.cpp b/spa/plugins/libcamera/libcamera-utils.cpp
+index 4a5e0f6..4f7894f 100644
+--- a/spa/plugins/libcamera/libcamera-utils.cpp
++++ b/spa/plugins/libcamera/libcamera-utils.cpp
+@@ -503,6 +503,12 @@ next:
+ 	ctrl_id = it->first;
+ 	ctrl_info = it->second;
+ 
++	/* libcamera >= 0.4 exposes array controls (e.g. ColourGains, Ccm);
++	 * they cannot be represented as a scalar PropInfo. */
++	if (ctrl_id->isArray() || ctrl_info.min().isArray() ||
++	    ctrl_info.max().isArray() || ctrl_info.def().isArray())
++		goto next;
++
+ 	id = control_to_prop_id(impl, ctrl_id->id());
+ 
+ 	spa_pod_builder_init(&b, buffer, sizeof(buffer));
+@@ -626,6 +632,9 @@ spa_libcamera_set_control(struct impl *impl, const struct spa_pod_prop *prop)
+ 
+ 	ctrl_id = v->second;
+ 
++	if (ctrl_id->isArray())
++		return -EINVAL;
++
+ 	d.type = ctrl_id->type();
+ 	d.id = ctrl_id->id();
+ 

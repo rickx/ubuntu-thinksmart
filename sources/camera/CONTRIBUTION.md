@@ -1,4 +1,17 @@
-# Add S5KC505A camera driver, GPU SoftISP integration and calibration tools
+# S5KC505A camera contribution (PR #6)
+
+SPDX-License-Identifier: CC-BY-4.0
+
+Description of pull request #6 by Mei Tao (meotao), merged 2026-11-13, kept
+as the record of the contribution's evidence, validation limits and data
+provenance.
+
+> **Update 2026-11-13:** the "not validated on this repository's Ubuntu 24.04
+> image" statement below no longer applies. The driver was rebuilt with
+> clang-18/KCFI and the full stack (libcamera 0.8 GPU SoftISP, PipeWire) runs
+> on the Ubuntu image; see [ubuntu/README.md](ubuntu/README.md).
+
+## Add S5KC505A camera driver, GPU SoftISP integration and calibration tools
 
 This PR carries both libcamera patches in `sources/patches/libcamera/`.
 They have not been submitted separately to the libcamera-devel mailing
@@ -12,7 +25,7 @@ generic reference tuning, optional offline capture/calibration tools and
 contributor documentation. It keeps camera integration separate from the
 existing audio module build.
 
-## Result and scope
+### Result and scope
 
 - Driver: two-lane RAW10, default binned 1304x980, optional 2608x1960,
   exposure/gain/timing controls and Bayer-aware horizontal/vertical flips.
@@ -31,7 +44,7 @@ No binary camera/libcamera artifact, single-unit residual, OTP dump, captured
 image or private signing key is added. Binary builds can be attached later
 as release assets with dependency/license records.
 
-## Platform evidence and validation limits
+### Platform evidence and validation limits
 
 Reported hardware results are from the derivative **ThinkSmart Clean
 2026.11.01**, Debian trixie, GCC/no-KCFI kernel `6.19.5-thinksmart+`,
@@ -65,7 +78,7 @@ checks. Its later message-only revision preserved code trees and reran
 checkstyle/application validation. These QEMU checks do not exercise EGL,
 DMA-buf, CAMSS or sensor streaming.
 
-## Provenance and maintainer decisions
+### Provenance and maintainer decisions
 
 The register sequences in `s5kc505a_regs.h` and LSC/CCM/gamma numbers in
 `s5kc505a_tuning.json` / `s5kc505a.yaml` were decoded from **proprietary Lenovo
@@ -87,5 +100,4 @@ Samsung OTP/SRAM experiment did not correct shading and is explicitly opt-in;
 no proven S5KC505A OTP decoder is claimed. GPU SoftISP still lacks real-time
 denoise, sharpening and anti-flicker; the offline tool's features are separate.
 
-The implementation and contribution preparation used an AI coding assistant;
-the author should review the source, attribution and evidence before posting.
+The implementation and contribution preparation used an AI coding assistant.
