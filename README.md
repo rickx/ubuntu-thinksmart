@@ -2,7 +2,7 @@
 
 > Custom Ubuntu 24.04 port for the Lenovo ThinkSmart View (CD-18781Y).  
 > APQ8053 / MSM8953 SoC · ARM64 · kernel 6.19.5-msm8953  
-> **Speaker audio, microphone, Bluetooth, accelerometer, brightness slider, and proximity wake are confirmed working. WiFi setup UI is working and GTK rekey dropouts are fixed with the ath10k_core patch.**
+> **Speaker audio, microphone, Bluetooth, front camera, accelerometer, brightness slider, and proximity wake are confirmed working. WiFi setup UI is working and GTK rekey dropouts are fixed with the ath10k_core patch.**
 
 **Plasma 6** (KDE neon 6.7.0) is the recommended and primary image.
 
@@ -38,7 +38,7 @@
 | Microphone (DMIC) | ✅ Working | UCM2 HiFi profile |
 | Display backlight | ✅ Working | WLED; Plasma Mobile brightness slider working (polkit fix required — see below) |
 | Proximity sensor (VCNL4200) | ✅ Working | Userspace daemon, no DTB change; triggers screen wake |
-| Camera | 🧪 Driver and GPU ISP contribution | S5KC505A streams on a Debian derivative; Ubuntu image validation pending. See `sources/camera/` and `research/camera/` |
+| Camera (S5KC505A) | ✅ Working | libcamera 0.8 GPU SoftISP, 1280x960 at 30 fps; PipeWire camera "Built-in Front Camera" for apps; picture is rotated 90° in apps that ignore the sensor rotation. See [Camera](#camera) |
 | Bluetooth | ✅ Working | QCA UART HCI, firmware loads at boot; A2DP tested with WH202A headset |
 | Accelerometer (BMA253) | ✅ Working | `bma253` IIO driver; screen auto-rotation via `iio-sensor-proxy` |
 | USB OTG | 🔲 Not tested | |
@@ -61,7 +61,7 @@ sudo nmtui
 When testing Wi-Fi UI or network changes, use USB networking as the primary recovery and management path:
 
 ```bash
-ssh user@172.16.42.1
+ssh ubuntu@172.16.42.1
 ```
 
 This avoids lockout if Wi-Fi setup or policy changes break remote access.
@@ -83,7 +83,9 @@ A single Ubuntu image is available:
 
 | Image | Desktop | Status | Download |
 |-------|---------|--------|----------|
-| `plasma6-ubuntu-qcom-msm8953.img` | Plasma Mobile 6.7.0 (KDE neon) | Current | [MEGA](https://mega.nz/file/Am9iCDLA#qf-MOY8UILP1oC07goBndVa6Co3wozt7jhhh-qa4KaM) |
+| `plasma6-ubuntu-qcom-msm8953-20261113.img` | Plasma Mobile 6.7.0 (KDE neon) | Current (2026-11-13) | [MEGA](https://mega.nz/file/Bq1XDJKC#5c6ZVkPCkul-fUB-ID-WmbcqoHUZDdLWHhhQIEe72Fo) |
+
+SHA-256: `141874888c83f2b739e617dc3306e2bfe0dc2df4462388b0df91c0faa643aac5`
 
 ### Image Configuration Notes
 
@@ -97,6 +99,8 @@ A single Ubuntu image is available:
   - Do not enable any display timeout in Plasma 6 power settings.
 - Virtual keyboard (Maliit) is fixed and integrated: Qt5 maliit runs with `QT_QPA_PLATFORM=wayland` in the Qt6 KWin 6 session, so the keyboard appears automatically on text-field focus. No manual configuration needed.
 - All hardware fixes (WiFi rekey patch, I2C fix, rotation daemon, proximity wake) are baked in.
+- Front camera (2026-11-13): `thinksmart-camera` package (S5KC505A driver, libcamera 0.8 GPU SoftISP, PipeWire plugin) and the camera DTB are baked in. See [Camera](#camera).
+- SSH host keys and `machine-id` are generated on first boot (`thinksmart-ssh-hostkeys.service`), so every flashed device gets its own.
 
 ### Injecting WiFi before first boot
 
@@ -104,7 +108,7 @@ The image ships with no WiFi credentials. Use `prepare-ubuntu-ssh-bootstrap-imag
 
 ```bash
 sources/scripts/prepare-ubuntu-ssh-bootstrap-image.sh \
-  --src rootfs/plasma6-ubuntu-qcom-msm8953.img \
+  --src rootfs/plasma6-ubuntu-qcom-msm8953-20261113.img \
   --out rootfs/plasma6-ubuntu-mydevice.img \
   --ssid "MyWiFi" \
   --psk "MyPassword"
@@ -120,7 +124,7 @@ Without WiFi injection, connect manually from the touchscreen on first boot befo
 - A Windows or Linux host with [edl](https://github.com/bkerler/edl) installed
 - USB-A to USB-C cable (device side is USB-C)
 - The generic bootstrap image `bootstrap-pmos-ssh-generic-qcom-msm8953.img` ([GitHub Release](https://github.com/rickx/ubuntu-thinksmart/releases/tag/bootstrap-2026-05-22); includes matching `.sha256`)
-- The Ubuntu image `plasma6-ubuntu-qcom-msm8953.img`; see [Image](#image) above
+- The Ubuntu image `plasma6-ubuntu-qcom-msm8953-20261113.img`; see [Image](#image) above
 - `prebuilt/lk2nd.img`
 - The GPT layout file in `partitions/ubuntu_layout.sfdisk`
 
@@ -148,15 +152,15 @@ Short version:
 4. Flash the personalized bootstrap image with `python edl.py w system <your-personalized-bootstrap>.img`.
 5. Wait for it to join WiFi, then SSH in as `pmos` / `thinksmart` and run `sudo /usr/local/sbin/apply-ubuntu-gpt.sh`.
 6. Re-enter EDL.
-7. Run `python edl.py w system ubuntu-qcom-msm8953.img` (or `plasma6-ubuntu-qcom-msm8953.img` for Plasma 6).
-8. Boot the device and connect to WiFi from the touchscreen before attempting SSH (or pre-inject WiFi — see [Images](#images)).
+7. Run `python edl.py w system plasma6-ubuntu-qcom-msm8953-20261113.img`.
+8. Boot the device and connect to WiFi from the touchscreen before attempting SSH (or pre-inject WiFi — see [Image](#image)).
 
 First-time installation uses a temporary SSH-capable bootstrap image so the GPT can be rewritten from the device before flashing the final Ubuntu image.
 
 Useful links and defaults:
 
 - bootstrap image release asset: [bootstrap-2026-05-22](https://github.com/rickx/ubuntu-thinksmart/releases/tag/bootstrap-2026-05-22)
-- Ubuntu image (Plasma 6.7.0): [MEGA](https://mega.nz/file/Am9iCDLA#qf-MOY8UILP1oC07goBndVa6Co3wozt7jhhh-qa4KaM)
+- Ubuntu image (Plasma 6.7.0): [MEGA](https://mega.nz/file/Bq1XDJKC#5c6ZVkPCkul-fUB-ID-WmbcqoHUZDdLWHhhQIEe72Fo)
 - create a personalized bootstrap image with `sources/scripts/prepare-pmos-ssh-bootstrap-image.sh`
 - bootstrap login: `pmos` / `thinksmart`, hostname `thinksmarter`
 - final Ubuntu login: `ubuntu` / `thinksmart`
@@ -194,7 +198,8 @@ These systemd services are required for correct operation and are pre-installed 
 | `display-guard.service` | Ensures display backlight is set at boot |
 | `idle-blanker.service` *(user)* | Blanks screen after 30 min of no input (backlight-only, never DRM Off); ALS auto-brightness while active. See [sources/idle-blanker.py](sources/idle-blanker.py). |
 | `vcnl4200-proximity-daemon.service` *(user)* | Polls VCNL4200 proximity sensor when screen is off; wakes on approach. See [sources/vcnl4200-proximity-daemon.py](sources/vcnl4200-proximity-daemon.py). |
-| `rotation-daemon.service` *(user)* | BMA253 accelerometer → kscreen-doctor screen auto-rotation. See [sources/rotation-daemon.py](sources/rotation-daemon.py). |
+| `rotation-daemon.service` *(user)* | BMA253 accelerometer → kscreen-doctor screen auto-rotation; starts after KWin. See [sources/rotation-daemon.py](sources/rotation-daemon.py). |
+| `systemd-modules-load` (`/etc/modules-load.d/s5kc505a.conf`) | Loads the S5KC505A camera driver at boot (from the `thinksmart-camera` package). |
 
 ---
 
@@ -220,6 +225,30 @@ speaker-test -D hw:0,0 -c 2 -t sine -f 1000 -l 1
 ```
 
 **Full audio documentation:** [AUDIO.md](AUDIO.md)
+
+---
+
+## Camera
+
+The front camera is a Samsung S5KC505A (2-lane MIPI CSI-2, RAW10) on CCI bus 0 at `0x37`, driven by the S5KC505A driver contributed by Mei Tao in PR #6.
+
+The image ships it as the `thinksmart-camera` package ([prebuilt/thinksmart-camera_0.2_arm64.deb](prebuilt/thinksmart-camera_0.2_arm64.deb)) plus the camera DTB on the boot partition ([prebuilt/apq8053-lenovo-cd-18781y.dtb](prebuilt/apq8053-lenovo-cd-18781y.dtb)):
+
+- `s5kc505a.ko` (clang-18/KCFI), loaded at boot
+- libcamera 0.8 with the PR #6 patches in `/opt/libcamera` (`simple` pipeline, GPU SoftISP, S5KC505A tuning)
+- PipeWire libcamera plugin rebuilt against it, so applications get a normal camera source ("Built-in Front Camera")
+- GStreamer `libcamerasrc`, `cam` and `libcamerify` (for applications that open `/dev/video*` directly)
+
+Quick test after boot:
+```bash
+wpctl status                       # Video → Sources: Built-in Front Camera
+/opt/libcamera/bin/cam -l          # Internal front camera
+gst-launch-1.0 libcamerasrc ! video/x-raw,width=1280,height=960 ! videoconvert ! autovideosink
+```
+
+Limits: the sensor is mounted landscape in a portrait device, so applications that ignore libcamera's rotation show the picture turned 90°. No GUI camera application is preinstalled.
+
+**Details, rebuild steps and data provenance:** [sources/camera/ubuntu/README.md](sources/camera/ubuntu/README.md), [sources/camera/README.md](sources/camera/README.md), [sources/camera/CONTRIBUTION.md](sources/camera/CONTRIBUTION.md)
 
 ---
 
@@ -269,9 +298,9 @@ On Plasma 6 (KDE neon), any powerdevil display timeout — both `DimDisplay` and
 - Restores brightness=4095 when a physical input event arrives while blanked
 - Detects external brightness restores (by proximity daemon or other) and resets its idle timer
 
-Requires a sudoers rule (created by the deploy script):
+Requires passwordless `sudo tee` for the backlight; the image's `ubuntu` user has passwordless sudo. On a custom install add:
 ```
-user ALL=(ALL) NOPASSWD: /usr/bin/tee /sys/class/backlight/backlight/brightness
+ubuntu ALL=(ALL) NOPASSWD: /usr/bin/tee /sys/class/backlight/backlight/brightness
 ```
 
 ### vcnl4200-proximity-daemon (proximity wake)
@@ -290,11 +319,11 @@ The VCNL4200 proximity + ambient light sensor is at I2C address `0x51` on `i2c-0
 - Logs `VCNL4200 init OK — device ID 0x1058 correct` at startup as a health check
 
 Requires:
-- `user` in the `i2c` group (for direct `/dev/i2c-0` access without sudo)
-- One sudoers rule for the backlight write:
+- the login user (`ubuntu`) in the `i2c` group (for direct `/dev/i2c-0` access without sudo)
+- passwordless `sudo tee` for the backlight writes (the image's `ubuntu` user has passwordless sudo); on a custom install:
 ```
-user ALL=(ALL) NOPASSWD: /usr/bin/tee /sys/class/backlight/backlight/brightness
-user ALL=(ALL) NOPASSWD: /usr/bin/tee /sys/class/backlight/backlight/bl_power
+ubuntu ALL=(ALL) NOPASSWD: /usr/bin/tee /sys/class/backlight/backlight/brightness
+ubuntu ALL=(ALL) NOPASSWD: /usr/bin/tee /sys/class/backlight/backlight/bl_power
 ```
 
 > ⚠️ **KDE powerdevil display timeouts must be disabled.** See "Background" above. All timeouts are set to 0 in the shipped image.
@@ -398,7 +427,9 @@ FINAL/
 ├── LICENSE                     ← repository license split and upstream-license notes
 ├── prebuilt/
 │   ├── lk2nd.img
-│   └── snd-soc-tas5782m-dbg.ko
+│   ├── snd-soc-tas5782m-dbg.ko
+│   ├── thinksmart-camera_0.2_arm64.deb   ← camera driver + libcamera + PipeWire plugin
+│   └── apq8053-lenovo-cd-18781y.dtb      ← board DTB with the camera node
 ├── partitions/
 │   └── LAYOUT.md               ← GPT and repartitioning notes
 ├── research/
@@ -408,7 +439,8 @@ FINAL/
 │       ├── inventories/
 │       └── kernel_references/
 └── sources/
-    ├── driver/                 ← TAS5782M driver source + debug wrappers
+    ├── camera/                 ← S5KC505A camera: tuning, tools, Ubuntu package (ubuntu/)
+    ├── driver/                 ← TAS5782M driver source + debug wrappers, s5kc505a/ camera driver
     ├── scripts/                ← build and deploy helper scripts
     ├── patches/                ← kernel / DTS patches
     ├── vcnl4200-proximity-daemon.py
@@ -431,6 +463,7 @@ If you want to help development or understand internals, start here:
 
 ## Credits
 
+- **Mei Tao (meotao)** — S5KC505A camera driver, board DTS, libcamera sensor helper and LSC-aware GPU statistics, tuning and calibration tools (PR #6).
 - **FelixKa** — original PMOS device package and TAS5782M driver reference implementation; established the register map, preboot sequence, and PDN polarity.
 - **postmarketOS** project — `linux-postmarketos-qcom-msm8953` kernel tree used as the build base.
 - Lenovo open-source release (`lenovo_cd-18781y.201218.2018_opensource`) for Android kernel sources.

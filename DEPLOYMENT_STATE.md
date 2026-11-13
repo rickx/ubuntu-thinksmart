@@ -6,9 +6,11 @@ This file tracks what is already in the published base image versus what must be
 
 | File | Desktop | State | Notes |
 |------|---------|-------|-------|
-| `plasma6-ubuntu-qcom-msm8953.img` | Plasma Mobile 6.7.0 (KDE neon) | Patched, upload to MEGA pending | Updated 2026-07-21: vkboard fix + daemon updates (idle-blanker, screen-wake, vcnl4200) |
+| `plasma6-ubuntu-qcom-msm8953-20261113.img` | Plasma Mobile 6.7.0 (KDE neon) | Published on MEGA (2026-11-13) | 2026-11-13: front camera (PR #6), rotation-daemon fix, first-boot SSH host keys / machine-id; replaces the 2026-07-21 upload, whose boot partition was missing the kernel, initramfs and DTB |
 
-The image uses kernel `6.19.5-msm8953`. It has SSH host keys present and a unique machine-id UUID — SSH and networking work immediately on first boot. WiFi injection works with `prepare-ubuntu-ssh-bootstrap-image.sh`.
+SHA-256 of the 2026-11-13 image: `141874888c83f2b739e617dc3306e2bfe0dc2df4462388b0df91c0faa643aac5`
+
+The image uses kernel `6.19.5-msm8953`. SSH host keys and `machine-id` are generated on first boot, so SSH and networking work immediately and every device gets its own identity. WiFi injection works with `prepare-ubuntu-ssh-bootstrap-image.sh`.
 
 ### Plasma 6 image — what is baked in
 
@@ -19,7 +21,9 @@ The image uses kernel `6.19.5-msm8953`. It has SSH host keys present and a uniqu
 - screen-wake-daemon.py: NEW (2026-07-21) — Touch + accelerometer wake handler on DSI blank; restores backlight and DRM connector state
 - screen-wake.service: Enabled to auto-start screen-wake-daemon
 - vcnl4200-proximity-daemon.py: Updated with latest proximity wake logic (2026-07-21)
-- ath10k GTK rekey patch
+- ath10k GTK rekey patch (patched `ath10k_core.ko`, original kept as `ath10k_core.ko.orig`)
+- Front camera (2026-11-13): `thinksmart-camera` 0.2 package — S5KC505A driver (clang-18/KCFI) loaded via `modules-load.d`, libcamera 0.8 + PR #6 patches in `/opt/libcamera` (GPU SoftISP), PipeWire libcamera plugin, GStreamer `libcamerasrc`, DMA-heap udev rule, WirePlumber rule hiding the raw CAMSS nodes — plus the camera DTB in `/boot`. See `sources/camera/ubuntu/README.md`
+- rotation-daemon waits for KWin before the first `kscreen-doctor` call (no more core dump at every login) (2026-11-13)
 - qup-i2c-pinctrl-fix.service
 - SDDM autologin to `plasma-mobile.desktop`
 - Virtual keyboard (Maliit) fix: Qt5 maliit launched with `QT_QPA_PLATFORM=wayland` in KWin 6 session (2026-07-21)
@@ -28,21 +32,20 @@ The image uses kernel `6.19.5-msm8953`. It has SSH host keys present and a uniqu
   - Keyboard pops up on text-field focus (no manual invocation needed)
 - No snapd
 - WiFi credentials cleared, shell history cleared, logs cleared, Claude artifacts removed
-- SSH host keys present (RSA/ECDSA/Ed25519) — SSH starts immediately on first boot
-- machine-id set to UUID `e4929f7a26e5465b9862f66dcea87041` — networking works on first boot
+- SSH host keys generated on first boot by `thinksmart-ssh-hostkeys.service` (`ssh-keygen -A`, ordered before `ssh.service`)
+- `machine-id` empty in the image, generated on first boot
+- Login `ubuntu` / `thinksmart`, hostname `thinksmarter`
 
 ## Included In Image (Confirmed)
 
-All operational fixes are baked into the published image as of 2026-07-21 (vkboard fix + daemon updates).
+All operational fixes listed above are baked into the published image as of 2026-11-13 (front camera, rotation-daemon fix; earlier: vkboard fix + daemon updates of 2026-07-21).
 
 ## Post-Install Fixes (Current)
-
-- S5KC505A camera contribution: external driver, board DTS patch, libcamera GPU SoftISP fixes and optional capture/calibration tools in `sources/camera/`. Reported working on ThinkSmart Clean 2026.11.01 (Debian trixie, GCC/no KCFI); not included in the published image or verified on upstream Ubuntu 24.04. Its KCFI kernel needs a clang-18 module rebuild.
 
 - Plasma Mobile Wi-Fi settings deep-link fix (`plasma-settings -s -m kcm_mobile_wifi`)
 - Wi-Fi page active IP display
 - Brightness helper policy/binary fix (`sources/scripts/setup-backlighthelper.sh`)
-- ath10k GTK rekey dropout fix (patched `ath10k_core.ko`)
+- ath10k GTK rekey dropout fix: baked into the 2026-11-13 image; scripts kept for custom installs and rollback
   - scripts in `sources/scripts/`:
     - `patch-ath10k-etimedout.py`
     - `install-ath10k-patched-core-only.sh`
