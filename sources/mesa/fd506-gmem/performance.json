@@ -1,0 +1,47 @@
+{
+  "workload": "Fixed 200-element scroll plus animated canvas, 5s warmup, 30s measured; three runs per mode",
+  "sysmem": {
+    "fps": [
+      53,
+      52.6666666667,
+      52.7333333333
+    ],
+    "p95_ms": [
+      33.3,
+      33.4,
+      33.3
+    ],
+    "cpu_core_percent": [
+      161.6,
+      95.3,
+      95.1
+    ],
+    "peak_pss_mib": [
+      311.9,
+      316.5,
+      312.8
+    ]
+  },
+  "patched_gmem": {
+    "fps": [
+      59.8,
+      59.8,
+      59.5666666667
+    ],
+    "p95_ms": [
+      16.7,
+      16.7,
+      16.8
+    ],
+    "cpu_core_percent": [
+      102.1,
+      98.7,
+      96.2
+    ],
+    "peak_pss_mib": [
+      340.1,
+      340.3,
+      339.5
+    ]
+  }
+}

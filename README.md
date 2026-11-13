@@ -44,6 +44,14 @@
 | USB OTG | 🔲 Not tested | |
 | Hardware video decode | ✅ Working | Venus V4L2 M2M (`h264_v4l2m2m`, `hevc_v4l2m2m`); H.264 1080p at 1.26× real-time (camera RTSP), HEVC 1080p at 5.7×; **B-frames not supported** — encode source without them (`-bf 0` / `-tune zerolatency`); see `research/video/analysis/venus-decode-findings-2026-06-05.md` |
 
+### FD506 GPU rendering
+
+An opt-in [Mesa GMEM/MSAA fix](sources/mesa/fd506-gmem/README.md) addresses
+Qt WebEngine blank pages on the tested Ubuntu Mesa `25.2.8-0ubuntu0.24.04.2` runtime
+while retaining GPU acceleration and GMEM rendering. It uses a private application
+driver override; it is not baked into the downloadable image. See the
+[device validation report](research/video/analysis/fd506-gmem-msaa-fix-2026-10-30.md).
+
 ### WiFi Management
 
 Wi-Fi can be managed from Plasma Mobile Settings (quick settings tile or Settings app).

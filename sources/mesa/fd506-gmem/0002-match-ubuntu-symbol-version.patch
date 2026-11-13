@@ -1,0 +1,17 @@
+SPDX-License-Identifier: MIT
+Subject: gallium: match the Ubuntu runtime symbol-version namespace
+
+Ubuntu EGL/GBM require this exact ELF symbol-version namespace. A filename
+symlink alone cannot make a private Gallium library compatible with them.
+
+--- a/src/gallium/targets/dri/meson.build
++++ b/src/gallium/targets/dri/meson.build
+@@ -37,7 +37,7 @@
+ if get_option('unversion-libgallium') or with_platform_android
+   libgallium_name = 'gallium_dri'
+ else
+-  libgallium_name = 'gallium-@0@'.format(meson.project_version())
++  libgallium_name = 'gallium-@0@'.format('25.2.8-0ubuntu0.24.04.2')
+ endif
+ 
+ libgallium_dri = shared_library(
