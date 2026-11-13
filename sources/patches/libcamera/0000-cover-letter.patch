@@ -1,0 +1,67 @@
+From 4687007e00849b555ac23934ddefb3445f8f2c2d Mon Sep 17 00:00:00 2001
+From: Mei Tao <gonzolesopela896@gmail.com>
+Date: Sat, 7 Nov 2026 09:39:32 +0800
+Subject: [PATCH v1 0/2] Add S5KC505A helper and correct software ISP
+ statistics for LSC
+
+This series adds a sensor helper for the Samsung S5KC505A and makes the
+GPU software ISP's statistics account for lens shading correction.
+
+The helper describes the sensor's linear analogue gain and black level,
+allowing the software ISP to use its tunable mean-luminance AGC. The
+statistics change passes the frame's LSC state and table to SwStatsCpu,
+then corrects the sampled Bayer components around their black pedestal
+before accumulating AWB sums and the AGC histogram. The state and consumer
+are kept in one patch so each change is independently useful and builds.
+
+The gain field follows the existing GPU shader's normalized RGBA8 scale,
+bilinear filtering and texture coordinates, with gains cached in Q10.
+Sparse sampling remains, and the CPU renderer retains raw statistics
+because it does not apply LSC to its images.
+
+The reported hardware platform is a Lenovo ThinkSmart View, Qualcomm
+MSM8953 with qcom-camss, Samsung S5KC505A and the GPU software ISP. The
+S5KC505A kernel driver used for these tests is currently out-of-tree.
+Reported neutral-surface measurements improve from roughly 5% warm to
+R/G = 0.999 and B/G = 0.983; an AGC target of 0.12 can replace the previous
+0.10 setting, closer to the default 0.16. These measurements motivate the
+change; the rebased series has not been retested on the device here.
+
+Each patch passes the unmodified utils/checkstyle.py and a fresh AArch64
+Debian trixie cross-build with the simple pipeline, softisp IPA and GPU
+software ISP enabled. A QEMU helper test covers all 481 analogue gain
+codes. A separate statistics test checks 300000 shader-reference gains
+and 840 integration cases covering Bayer formats, phases, windows,
+pedestals, histograms, saturation, caching and LSC state transitions.
+The statistics test remains outside the submitted patches.
+
+The series is based on the upstream master commit listed below.
+
+The implementation was developed with the help of an AI coding assistant
+and reviewed and tested by the author.
+
+Thanks,
+Mei Tao
+
+Mei Tao (2):
+  ipa: libipa: camera_sensor_helper: Add Samsung S5KC505A helper
+  libcamera: software_isp: Apply LSC gains to the statistics on the GPU
+    path
+
+ .../internal/software_isp/debayer_params.h    |   1 +
+ .../internal/software_isp/lsc_stats.h         |  58 +++++
+ .../internal/software_isp/meson.build         |   1 +
+ .../internal/software_isp/swstats_cpu.h       |  32 ++-
+ src/ipa/libipa/camera_sensor_helper.cpp       |  11 +
+ src/ipa/softisp/algorithms/lsc.cpp            |   3 +
+ src/libcamera/software_isp/debayer_cpu.cpp    |   2 +
+ src/libcamera/software_isp/debayer_egl.cpp    |   1 +
+ src/libcamera/software_isp/swstats_cpu.cpp    | 201 +++++++++++++++---
+ 9 files changed, 265 insertions(+), 45 deletions(-)
+ create mode 100644 include/libcamera/internal/software_isp/lsc_stats.h
+
+
+base-commit: be7e83e91348250c015aad6d6f59f1468555bae8
+-- 
+2.47.3
+

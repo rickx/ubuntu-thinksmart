@@ -1,0 +1,7 @@
+#!/bin/sh
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Mei Tao
+# usage: cam-snap [--full] [--native] [--no-ae] [--sharp N] OUT.jpg
+# be the first thing the OOM killer picks, never the system services (device has 2 GB RAM)
+echo 1000 > /proc/self/oom_score_adj 2>/dev/null
+exec "${CAM_ISP_PYTHON:-/usr/bin/python3}" -I "$(dirname "$(readlink -f "$0")")/cam_snap.py" "$@"

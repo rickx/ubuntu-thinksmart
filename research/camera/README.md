@@ -8,11 +8,14 @@ This directory is the public-safe camera subset for the `ubuntu-thinksmart` repo
 - canonical sensor ID is `0x5034` at `0x0000/0x0001`
 - the vendor descriptor strongly matches 7-bit I2C address `0x37`
 - the sensor only answers during a powered probe window; a passive Ubuntu-side read currently sees it unpowered
-- Linux driver work is in progress and the camera is not working yet in Ubuntu
+- A driver, symbolic board DTS patch, GPU SoftISP fixes and capture/calibration tools are now available in [sources/camera](../../sources/camera/README.md). Reported streaming is on the Debian-based ThinkSmart Clean 2026.11.01 derivative; the upstream Ubuntu 24.04 image remains unverified and needs a clang-18/KCFI module rebuild.
 
 ## What Is Included Here
 
 - current driver plan in `analysis/s5kc505a-driver-plan.md`
+- implementation and remaining limits in [s5kc505a-driver-notes.md](analysis/s5kc505a-driver-notes.md)
+- reference tuning and flat-field workflow in [isp-tuning-notes.md](analysis/isp-tuning-notes.md)
+- real-time pipeline and LSC statistics in [libcamera-softisp-notes.md](analysis/libcamera-softisp-notes.md)
 - reverse-engineering notes in `analysis/s5kc505a-reverse-notes.md`
 - supporting public-safe inventories in `inventories/`
 

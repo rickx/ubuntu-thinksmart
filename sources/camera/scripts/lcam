@@ -1,0 +1,17 @@
+#!/bin/sh
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Mei Tao
+# run a command with the user-space libcamera v0.8.0 (does not affect the system libcamera 0.4)
+# be the first thing the OOM killer picks, never the system services (device has 2 GB RAM)
+echo 1000 > /proc/self/oom_score_adj 2>/dev/null
+P=${LIBCAMERA_PREFIX:-/srv/thinksmart/data/opt/libcamera}
+export LD_LIBRARY_PATH=$P/lib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}
+export LIBCAMERA_IPA_MODULE_PATH=$P/lib/libcamera/ipa
+export LIBCAMERA_IPA_PROXY_PATH=$P/libexec/libcamera
+export LIBCAMERA_IPA_CONFIG_PATH=$P/share/libcamera/ipa
+export XDG_CACHE_HOME=${XDG_CACHE_HOME:-${HOME:-/tmp}/.cache}
+export MESA_SHADER_CACHE_DIR=${MESA_SHADER_CACHE_DIR:-$XDG_CACHE_HOME/mesa}
+[ "$#" -gt 0 ] || { echo "usage: lcam <cmd> [args]   e.g. lcam cam -l"; exit 1; }
+cmd=$1; shift
+[ -x "$P/bin/$cmd" ] && cmd=$P/bin/$cmd
+exec "$cmd" "$@"

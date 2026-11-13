@@ -1,0 +1,102 @@
+From: Mei Tao <gonzolesopela896@gmail.com>
+Subject: [PATCH] arm64: dts: qcom: apq8053-lenovo-cd-18781y: Add front camera
+
+Describe the two-lane S5KC505A, its fixed analog/digital rails and CAMSS
+CSI PHY 0 link. Replace numeric boot-DTB phandles with symbolic references.
+The supplied msm8953 tree calls CCI bus 0 cci_i2c0 (cci0_i2c0 in some trees).
+GPIO39 is active-low in the working DTB, unlike the early driver hypothesis.
+
+Base kernel: msm8953-mainline-linux 770e10f (board source as supplied).
+The existing board SPDX-License-Identifier: BSD-3-Clause is retained.
+
+Signed-off-by: Mei Tao <gonzolesopela896@gmail.com>
+Assisted-by: Cindy (https://cindy.app)
+---
+diff --git a/arch/arm64/boot/dts/qcom/apq8053-lenovo-cd-18781y.dts b/arch/arm64/boot/dts/qcom/apq8053-lenovo-cd-18781y.dts
+--- a/arch/arm64/boot/dts/qcom/apq8053-lenovo-cd-18781y.dts
++++ b/arch/arm64/boot/dts/qcom/apq8053-lenovo-cd-18781y.dts
+@@ -24,6 +24,28 @@
+ 	chassis-type = "tablet";
+ 	qcom,msm-id = <QCOM_ID_APQ8053 0>;
+ 	qcom,board-id = <0x1010520 0>;
++
++	cam_front_vana: cam-front-vana-regulator {
++		compatible = "regulator-fixed";
++		regulator-name = "cam_front_vana";
++		regulator-min-microvolt = <2800000>;
++		regulator-max-microvolt = <2800000>;
++		vin-supply = <&pm8953_l17>;
++		gpio = <&tlmm 119 GPIO_ACTIVE_HIGH>;
++		enable-active-high;
++		startup-delay-us = <1000>;
++	};
++
++	cam_front_vdig: cam-front-vdig-regulator {
++		compatible = "regulator-fixed";
++		regulator-name = "cam_front_vdig";
++		regulator-min-microvolt = <1200000>;
++		regulator-max-microvolt = <1200000>;
++		vin-supply = <&pm8953_l2>;
++		gpio = <&tlmm 118 GPIO_ACTIVE_HIGH>;
++		enable-active-high;
++		startup-delay-us = <1000>;
++	};
+ 
+ 	/* Define mmc aliases so they stay the same across boots */
+ 	aliases {
+@@ -579,6 +601,55 @@
+ 	};
+ };
+ 
++&camss {
++	status = "okay";
++
++	ports {
++		port@0 {
++			reg = <0>;
++
++			camss_csiphy0_in: endpoint {
++				clock-lanes = <7>;
++				data-lanes = <0 1>;
++				remote-endpoint = <&s5kc505a_out>;
++			};
++		};
++	};
++};
++
++&cci {
++	pinctrl-names = "default";
++	pinctrl-0 = <&cci0_default>;
++	status = "okay";
++};
++
++&cci_i2c0 {
++	camera-sensor@37 {
++		compatible = "samsung,s5kc505a";
++		reg = <0x37>;
++		clocks = <&gcc GCC_CAMSS_MCLK0_CLK>;
++		assigned-clocks = <&gcc GCC_CAMSS_MCLK0_CLK>;
++		assigned-clock-rates = <24000000>;
++		pinctrl-names = "default";
++		pinctrl-0 = <&camss_mclk0_default>;
++		reset-gpios = <&tlmm 40 GPIO_ACTIVE_LOW>;
++		powerdown-gpios = <&tlmm 39 GPIO_ACTIVE_LOW>;
++		vio-supply = <&pm8953_l6>;
++		vana-supply = <&cam_front_vana>;
++		vdig-supply = <&cam_front_vdig>;
++		orientation = <0>;
++		rotation = <180>;
++
++		port {
++			s5kc505a_out: endpoint {
++				data-lanes = <1 2>;
++				link-frequencies = /bits/ 64 <480000000>;
++				remote-endpoint = <&camss_csiphy0_in>;
++			};
++		};
++	};
++};
++
+ &tlmm {
+ 	accel_int_default: accel-int-default-state {
+ 		pins = "gpio42";
