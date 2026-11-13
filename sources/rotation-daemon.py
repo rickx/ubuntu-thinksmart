@@ -72,22 +72,59 @@ def gravity_to_orientation(x, y, z):
     return "left" if x > 0 else "right"
 
 
-def set_rotation(orientation):
-    env = {
-        **os.environ,
-        "XDG_RUNTIME_DIR": "/run/user/1000",
-        "WAYLAND_DISPLAY": "wayland-0",
-        "QT_QPA_PLATFORM": "wayland",
-    }
-    cmd = ["kscreen-doctor", f"output.{OUTPUT}.rotation.{orientation}"]
+RUNTIME_DIR     = os.environ.get("XDG_RUNTIME_DIR", f"/run/user/{os.getuid()}")
+WAYLAND_DISPLAY = os.environ.get("WAYLAND_DISPLAY", "wayland-0")
+WAYLAND_SOCKET  = Path(RUNTIME_DIR) / WAYLAND_DISPLAY
+COMPOSITOR_WAIT = 120     # seconds to wait for KWin at startup
+
+KSCREEN_ENV = {
+    **os.environ,
+    "XDG_RUNTIME_DIR": RUNTIME_DIR,
+    "WAYLAND_DISPLAY": WAYLAND_DISPLAY,
+    "QT_QPA_PLATFORM": "wayland",
+    "KDE_DEBUG": "1",     # no DrKonqi if kscreen-doctor ever crashes
+}
+
+
+def kscreen_doctor(*args):
+    """Run kscreen-doctor; returns the CompletedProcess or None.
+
+    Never starts it without a Wayland socket: Qt aborts (core dump) when it
+    cannot connect, which is what happened when the service started before
+    KWin had created its socket.
+    """
+    if not WAYLAND_SOCKET.is_socket():
+        return None
     try:
-        r = subprocess.run(cmd, env=env, capture_output=True, timeout=5)
-        if r.returncode == 0:
-            logger.info(f"Rotation set to {orientation}")
-        else:
-            logger.warning(f"kscreen-doctor failed: {r.stderr.decode().strip()}")
+        return subprocess.run(["kscreen-doctor", *args], env=KSCREEN_ENV,
+                              capture_output=True, timeout=5)
     except Exception as e:
         logger.warning(f"kscreen-doctor error: {e}")
+        return None
+
+
+def wait_for_compositor(timeout=COMPOSITOR_WAIT):
+    """Wait until KWin's socket exists and its output management answers."""
+    deadline = time.monotonic() + timeout
+    while time.monotonic() < deadline:
+        r = kscreen_doctor("-o")
+        if r is not None and r.returncode == 0:
+            return True
+        time.sleep(1)
+    logger.warning(f"Compositor not ready after {timeout}s ({WAYLAND_SOCKET})")
+    return False
+
+
+def set_rotation(orientation):
+    r = kscreen_doctor(f"output.{OUTPUT}.rotation.{orientation}")
+    if r is None:
+        logger.warning(f"Cannot set rotation {orientation}: no Wayland socket {WAYLAND_SOCKET}")
+        return False
+    if r.returncode != 0:
+        logger.warning(f"kscreen-doctor failed: {r.stderr.decode().strip()}")
+        return False
+    logger.info(f"Rotation set to {orientation}")
+    return True
 
 
 def run():
@@ -99,8 +136,10 @@ def run():
     signal.signal(signal.SIGTERM, lambda s, f: sys.exit(0))
     signal.signal(signal.SIGINT,  lambda s, f: sys.exit(0))
 
-    # Set initial rotation
-    set_rotation(current)
+    # Set initial rotation once KWin is up (the unit can start before its
+    # Wayland socket exists).
+    if wait_for_compositor():
+        set_rotation(current)
 
     while True:
         x, y, z = read_accel()

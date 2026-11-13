@@ -1,12 +1,15 @@
 [Unit]
-Description=BMA253 Screen Auto-Rotation Daemon
-After=graphical-session.target
+Description=BMA253 screen auto-rotation daemon
+# kscreen-doctor needs KWin's Wayland socket; start with the graphical
+# session, after the compositor, and stop with the session.
+PartOf=graphical-session.target
+After=graphical-session.target plasma-kwin_wayland.service
 
 [Service]
+Type=simple
 ExecStart=/usr/bin/python3 /usr/local/bin/rotation-daemon.py
 Restart=on-failure
 RestartSec=5
-Environment=XDG_RUNTIME_DIR=/run/user/1000
 
 [Install]
-WantedBy=default.target
+WantedBy=graphical-session.target
