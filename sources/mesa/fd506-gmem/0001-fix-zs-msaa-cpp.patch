@@ -1,0 +1,24 @@
+SPDX-License-Identifier: MIT
+Subject: freedreno: count depth/stencil MSAA once in GMEM sizing
+
+layout.cpp includes resource samples. Multiplying it by framebuffer samples
+again can make the minimum FD506 tile exceed GMEM and stall calc_nbins.
+
+--- a/src/gallium/drivers/freedreno/freedreno_gmem.c
++++ b/src/gallium/drivers/freedreno/freedreno_gmem.c
+@@ -462,9 +462,13 @@
+ 
+    if (has_zs || assume_zs) {
+       struct fd_resource *rsc = fd_resource(pfb->zsbuf.texture);
+-      key->zsbuf_cpp[0] = rsc->layout.cpp * pfb->samples;
++      /* layout.cpp already includes resource MSAA samples.  GMEM needs
++       * format bytes per sample multiplied by framebuffer samples once.
++       */
++      key->zsbuf_cpp[0] = util_format_get_blocksize(rsc->layout.format) * pfb->samples;
+       if (rsc->stencil)
+-         key->zsbuf_cpp[1] = rsc->stencil->layout.cpp * pfb->samples;
++         key->zsbuf_cpp[1] =
++            util_format_get_blocksize(rsc->stencil->layout.format) * pfb->samples;
+ 
+       /* If we clear z or s but not both, and we are using z24s8 (ie.
+        * !separate_stencil) then we need to restore the other, even if

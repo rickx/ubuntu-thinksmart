@@ -42,6 +42,9 @@ All operational fixes listed above are baked into the published image as of 2026
 
 ## Post-Install Fixes (Current)
 
+- FD506 depth/stencil MSAA GMEM sizing fix (opt-in, tested with Ubuntu Mesa `25.2.8-0ubuntu0.24.04.2`)
+  - source patches, build and per-application wrapper: [sources/mesa/fd506-gmem](sources/mesa/fd506-gmem/README.md)
+  - device validation: [GMEM/MSAA findings](research/video/analysis/fd506-gmem-msaa-fix-2026-10-30.md)
 - Plasma Mobile Wi-Fi settings deep-link fix (`plasma-settings -s -m kcm_mobile_wifi`)
 - Wi-Fi page active IP display
 - Brightness helper policy/binary fix (`sources/scripts/setup-backlighthelper.sh`)
